@@ -1,0 +1,63 @@
+# 一部を除くルートの全てを除外
+/*
+## ルートの監視対象
+!wp-content/
+!/.gitignore
+!/assets/
+!README.md
+!/pardot_post/
+
+# 一部を除くwp-content以下のディレクトリを除外
+wp-content/*
+## 対象外のディレクトリ
+!wp-content/themes/
+!wp-content/plugins/
+
+# 一部を除くプラグインを除外
+wp-content/plugins/*
+## 対象外のプラグイン
+#!wp-content/plugins/sample-*/
+
+# 特定のテーマを除外
+wp-content/themes/twenty*/
+
+# nodeの依存ファイルを除外
+node_modules/
+
+# ログとDB関連のファイルを除外
+*.log
+*.sql
+*.sqlite
+
+# WordPressの設定ファイル（機密情報を含むため）
+wp-config.php
+
+# WordPressのアップロードファイル（通常は管理対象外）
+wp-content/uploads/
+
+# WordPressのキャッシュファイル
+wp-content/cache/
+wp-content/backup-db/
+wp-content/backups/
+
+# 一時ファイル
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# IDE関連ファイル
+.vscode/
+.idea/
+.cursor/
+*.swp
+*.swo
+
+# 環境設定ファイル
+.env
+.env.local
+.env.production
+
+# ビルドファイル
+dist/
+build/
