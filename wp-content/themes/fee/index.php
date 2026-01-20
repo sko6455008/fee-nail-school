@@ -28,9 +28,16 @@
                     <a href="#access" class="hover:text-rose-gold transition-colors">アクセス</a>
                     <a href="#faq" class="hover:text-rose-gold transition-colors">よくある質問</a>
                 </nav>
-                <a href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer" id="header-contact-btn" class="hidden md:flex px-6 py-2 rounded-full text-sm transition-all shadow-md hover:shadow-lg bg-white/80 text-text-main items-center justify-center">
-                    無料LINE相談
-                </a>
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="https://www.instagram.com/fee.nail.academy/" target="_blank" rel="noopener noreferrer" id="header-instagram-btn" class="px-5 py-2 rounded-full text-sm transition-all shadow-md hover:shadow-lg bg-white/80 text-text-main flex items-center justify-center gap-2">
+                        <i data-lucide="users" class="w-4 h-4"></i>
+                        Instagram
+                    </a>
+                    <a href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer" id="header-contact-btn" class="px-5 py-2 rounded-full text-sm transition-all shadow-md hover:shadow-lg bg-white/80 text-text-main flex items-center justify-center gap-2">
+                        <i data-lucide="calendar" class="w-4 h-4"></i>
+                        無料LINE相談
+                    </a>
+                </div>
                 <!-- Mobile Hamburger Menu Button -->
                 <button id="mobile-menu-btn" class="md:hidden p-2 text-text-main hover:text-rose-gold transition-colors">
                     <i data-lucide="menu" class="w-6 h-6"></i>
@@ -53,9 +60,16 @@
                         <a href="#steps" class="mobile-menu-link text-lg font-medium text-text-main hover:text-rose-gold transition-colors py-2 border-b border-gray-100">入校手順</a>
                         <a href="#access" class="mobile-menu-link text-lg font-medium text-text-main hover:text-rose-gold transition-colors py-2 border-b border-gray-100">アクセス</a>
                         <a href="#faq" class="mobile-menu-link text-lg font-medium text-text-main hover:text-rose-gold transition-colors py-2 border-b border-gray-100">よくある質問</a>
-                        <a href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer" class="mt-auto bg-rose-gold text-white text-center py-3 rounded-full font-medium hover:bg-rose-gold-dark transition-colors">
-                            無料LINE相談
-                        </a>
+                        <div class="mt-auto grid grid-cols-2 gap-3">
+                            <a href="https://www.instagram.com/fee.nail.academy/" target="_blank" rel="noopener noreferrer" class="bg-white border border-rose-gold text-rose-gold text-center py-3 rounded-full font-medium transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                                Instagram
+                            </a>
+                            <a href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer" class="bg-rose-gold text-white text-center py-3 rounded-full font-medium hover:bg-rose-gold-dark transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>
+                                無料LINE相談
+                            </a>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -85,6 +99,7 @@
                         <a href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer" class="relative overflow-hidden transition-all duration-300 transform hover:-translate-y-1 rounded-full font-serif tracking-wider py-4 px-8 shadow-lg hover:shadow-rose-200/50 flex items-center justify-center group bg-rose-gold text-white hover:bg-rose-gold-dark">
                             <span class="absolute inset-0 -translate-x-full group-hover:animate-shimmer bg-gradient-to-r from-transparent via-white/20 to-transparent"></span>
                             <span class="relative z-10 flex items-center gap-2">
+                                <i data-lucide="calendar" class="w-5 h-5"></i>
                                 無料LINE相談する
                             </span>
                         </a>
@@ -208,7 +223,7 @@
                             <div class="w-full border-t border-rose-gold/20"></div>
                         </div>
                         <div class="relative flex justify-center">
-                            <span class="bg-[#FAF8F7] px-4 text-sm text-text-sub font-serif italic tracking-widest">Training Gallery</span>
+                            <span class="bg-[#FAF8F7] px-4 text-sm text-text-sub font-serif italic tracking-widest">卒業生の作品</span>
                         </div>
                     </div>
 
@@ -237,6 +252,43 @@
                                 <i data-lucide="sparkles" class="text-white w-6 h-6 animate-spin-slow"></i>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Atmosphere -->
+            <section id="atmosphere" class="relative py-20 md:py-32 px-4 md:px-8 z-10 bg-white/30">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16 relative">
+                         <span class="block font-script text-3xl md:text-5xl text-dusty-rose mb-2 animate-float">Atmosphere</span>
+                         <h2 class="text-2xl md:text-4xl font-serif text-text-main tracking-widest relative inline-block">
+                            <span class="relative z-10">雰囲気</span>
+                            <span class="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-12 h-0.5 bg-rose-gold"></span>
+                         </h2>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
+                        <?php 
+                        $atmosphere_images = [
+                            get_template_directory_uri() . '/assets/images/atmosphere1.webp',
+                            get_template_directory_uri() . '/assets/images/atmosphere3.webp',
+                            get_template_directory_uri() . '/assets/images/atmosphere4.webp',
+                            get_template_directory_uri() . '/assets/images/atmosphere5.webp',
+                            get_template_directory_uri() . '/assets/images/atmosphere6.webp',
+                            get_template_directory_uri() . '/assets/images/atmosphere2.webp',
+                            get_template_directory_uri() . '/assets/images/atmosphere7.webp',
+                            get_template_directory_uri() . '/assets/images/atmosphere8.webp',
+                            get_template_directory_uri() . '/assets/images/atmosphere9.webp'
+                        ];
+                        foreach($atmosphere_images as $i => $src): 
+                        ?>
+                        <div class="group relative aspect-square overflow-hidden rounded-2xl shadow-md border border-white/50 cursor-pointer">
+                            <div class="absolute inset-0 bg-rose-gold/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-center justify-center">
+                                <span class="text-white font-script text-2xl drop-shadow-md transform scale-0 group-hover:scale-100 transition-transform duration-300 delay-100">Fee Nail</span>
+                            </div>
+                            <img src="<?php echo esc_url($src); ?>" alt="Atmosphere <?php echo $i + 1; ?>" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1" loading="lazy" />
+                        </div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </section>
@@ -761,9 +813,16 @@
         
         <!-- Sticky Bottom CTA for Mobile -->
         <div id="bottom-cta" class="md:hidden fixed bottom-0 left-0 w-full z-40 bg-white/90 backdrop-blur border-t border-rose-gold/20 p-4 transition-transform duration-300 translate-y-full">
-            <a href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer" class="block text-center w-full bg-rose-gold text-white py-3 rounded-full shadow-lg font-bold tracking-wider">
-                無料LINE相談する
-            </a>
+            <div class="grid grid-cols-2 gap-3">
+                <a href="https://www.instagram.com/fee.nail.academy/" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full bg-white border border-rose-gold text-rose-gold py-3 rounded-full shadow-lg font-bold tracking-wider text-sm">
+                    <i data-lucide="users" class="w-5 h-5"></i>
+                    Instagram
+                </a>
+                <a href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-2 w-full bg-rose-gold text-white py-3 rounded-full shadow-lg font-bold tracking-wider text-sm">
+                    <i data-lucide="calendar" class="w-5 h-5"></i>
+                    無料LINE相談
+                </a>
+            </div>
         </div>
 
     </div>

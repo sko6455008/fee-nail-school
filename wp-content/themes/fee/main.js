@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
     const bottomCta = document.getElementById('bottom-cta');
     const contactButton = document.getElementById('header-contact-btn');
+    const instagramButton = document.getElementById('header-instagram-btn');
     const scrollTop = document.getElementById('scroll-top');
 
     const handleScroll = () => {
@@ -19,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (contactButton) {
                 contactButton.classList.remove('bg-white/80', 'text-text-main');
                 contactButton.classList.add('bg-rose-gold', 'text-white');
+            }
+            if (instagramButton) {
+                instagramButton.classList.remove('bg-white/80', 'text-text-main');
+                instagramButton.classList.add('bg-rose-gold', 'text-white');
             }
 
             // Show Bottom CTA (Mobile)
@@ -34,6 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (contactButton) {
                 contactButton.classList.add('bg-white/80', 'text-text-main');
                 contactButton.classList.remove('bg-rose-gold', 'text-white');
+            }
+            if (instagramButton) {
+                instagramButton.classList.add('bg-white/80', 'text-text-main');
+                instagramButton.classList.remove('bg-rose-gold', 'text-white');
             }
 
             // Hide Bottom CTA
