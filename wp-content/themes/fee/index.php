@@ -434,7 +434,7 @@
                                 </li>
                             </ul>
                             <div class="mt-auto pt-6 border-t border-gray-100 text-center">
-                                <p class="text-3xl font-serif text-text-main mb-6">¥298,000 (税込)</p>
+                                <p class="text-3xl font-serif text-text-main mb-6">¥420,000 (税込)</p>
                                 <a href="#steps" class="w-full relative overflow-hidden transition-all duration-300 transform hover:-translate-y-1 rounded-full font-serif tracking-wider py-4 px-8 shadow-lg hover:shadow-rose-200/50 flex items-center justify-center group bg-white text-text-main border border-rose-gold/30 hover:bg-champagne-pink">
                                     <span class="relative z-10 flex items-center gap-2">このコースについて相談する</span>
                                 </a>
@@ -475,7 +475,7 @@
                                 </li>
                             </ul>
                             <div class="mt-auto pt-6 border-t border-gray-100 text-center">
-                                <p class="text-3xl font-serif text-text-main mb-6">¥580,000 (税込)</p>
+                                <p class="text-3xl font-serif text-text-main mb-6">¥450,000 (税込)</p>
                                 <a href="#steps" class="w-full relative overflow-hidden transition-all duration-300 transform hover:-translate-y-1 rounded-full font-serif tracking-wider py-4 px-8 shadow-lg hover:shadow-rose-200/50 flex items-center justify-center group bg-rose-gold text-white hover:bg-rose-gold-dark">
                                     <span class="absolute inset-0 -translate-x-full group-hover:animate-shimmer bg-gradient-to-r from-transparent via-white/20 to-transparent"></span>
                                     <span class="relative z-10 flex items-center gap-2">このコースについて相談する</span>
