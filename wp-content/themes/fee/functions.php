@@ -12,15 +12,10 @@ function fee_nail_academy_scripts() {
     // 2. メインスタイルシート (style.css)
     wp_enqueue_style('main-style', get_stylesheet_uri());
 
-    // 3. Tailwind CSS (CDN)
-    // 本番環境ではビルドプロセスを経ることが望ましいですが、LP移植のためCDNを使用します
-    wp_enqueue_script('tailwindcss', 'https://cdn.tailwindcss.com', [], null, false);
-
-    // 4. Lucide Icons (Reactアイコンの代替)
-    wp_enqueue_script('lucide-icons', 'https://unpkg.com/lucide@latest', [], null, true);
-
-    // 5. メインJS
-    wp_enqueue_script('fee-nail-main', get_template_directory_uri() . '/main.js', ['lucide-icons'], null, true);
+    // 3〜5. 旧LP（HTML版）用のスクリプトは画像版では不要のため停止
+    // wp_enqueue_script('tailwindcss', 'https://cdn.tailwindcss.com', [], null, false);
+    // wp_enqueue_script('lucide-icons', 'https://unpkg.com/lucide@latest', [], null, true);
+    // wp_enqueue_script('fee-nail-main', get_template_directory_uri() . '/main.js', ['lucide-icons'], null, true);
 }
 add_action('wp_enqueue_scripts', 'fee_nail_academy_scripts');
 
@@ -77,7 +72,8 @@ function add_tailwind_config() {
     </script>
     <?php
 }
-add_action('wp_head', 'add_tailwind_config', 20);
+// 画像版では Tailwind 設定は不要のため停止
+// add_action('wp_head', 'add_tailwind_config', 20);
 
 // テーマサポート
 add_theme_support('title-tag');
