@@ -29,10 +29,10 @@ $u = get_template_directory_uri();
 .gl-dots { margin-top: 0.9vw; display: flex; justify-content: center; gap: 1vw; }
 .gl-dots span { width: 0.7vw; height: 0.7vw; border-radius: 50%; }
 
-/* --- 写真グリッド --- */
+/* --- 写真グリッド（均等セル・写真は外観>カスタマイズで差し替え可能） --- */
 .gl-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 16.2vw);
   justify-content: center; gap: 1.35vw 2.35vw; margin-top: 2.2vw; }
-.gl-grid img { display: block; width: 100%; height: auto; }
+.gl-grid img { display: block; width: 100%; aspect-ratio: 310 / 237; object-fit: cover; }
 
 /* --- フッター --- */
 .gl-foot { position: relative; z-index: 1; text-align: center; padding: 2.6vw 0 3vw;
@@ -83,11 +83,11 @@ $u = get_template_directory_uri();
     </div>
   </div>
 
-  <!-- 作品グリッド（仮素材: 既存画像から切り出し） -->
+  <!-- 作品グリッド（写真は 外観 > カスタマイズ > 生徒様の作品例 で管理） -->
   <div class="gl-grid">
-    <?php for ($i = 1; $i <= 12; $i++) : ?>
-    <img src="<?php echo $u; ?>/assets/images/parts/gl-<?php echo $i; ?>.webp" alt="生徒作品例 <?php echo $i; ?>" loading="lazy">
-    <?php endfor; ?>
+    <?php foreach (fee_get_managed_images('fee_gallery_img_', 'gl-%d.webp', '生徒作品例') as $img) : ?>
+    <img src="<?php echo esc_url($img['url']); ?>" alt="<?php echo esc_attr($img['alt']); ?>" loading="lazy">
+    <?php endforeach; ?>
   </div>
 
   <!-- フッター -->

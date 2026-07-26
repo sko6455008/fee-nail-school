@@ -24,9 +24,9 @@ $u = get_template_directory_uri();
 .ar-spark { position: absolute; z-index: 1; pointer-events: none; }
 .ar-spark::before { content: "\2726"; }
 
-/* --- 作品グリッド（均等セル） --- */
-.ar-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(5, 16.8vw);
-  justify-content: center; gap: 1.4vw 1.7vw; margin-top: 1.6vw; }
+/* --- 作品グリッド（均等セル・写真は外観>カスタマイズで差し替え可能） --- */
+.ar-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 20.5vw);
+  justify-content: center; gap: 1.5vw 1.8vw; margin-top: 1.6vw; }
 .ar-grid img { display: block; width: 100%; aspect-ratio: 305 / 233; object-fit: cover; }
 
 /* --- フッター --- */
@@ -62,11 +62,11 @@ $u = get_template_directory_uri();
       <p class="ar-sub">基礎から応用まで、段階的にステップアップ！<br>卒業までに習得できるアートの一例をご紹介します。</p>
     </div>
 
-    <!-- 作品グリッド（仮素材: 既存画像から切り出し） -->
+    <!-- 作品グリッド（写真は 外観 > カスタマイズ > 卒業までにできるアート で管理） -->
     <div class="ar-grid">
-      <?php for ($i = 1; $i <= 15; $i++) : ?>
-      <img src="<?php echo $u; ?>/assets/images/parts/art-<?php echo $i; ?>.webp" alt="卒業までにできるアート例 <?php echo $i; ?>" loading="lazy">
-      <?php endfor; ?>
+      <?php foreach (fee_get_managed_images('fee_art_img_', 'art-%d.webp', '卒業までにできるアート例') as $img) : ?>
+      <img src="<?php echo esc_url($img['url']); ?>" alt="<?php echo esc_attr($img['alt']); ?>" loading="lazy">
+      <?php endforeach; ?>
     </div>
 
     <!-- フッター -->
