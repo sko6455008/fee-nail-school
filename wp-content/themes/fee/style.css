@@ -61,8 +61,81 @@ body {
 
 /* Hero Fee Drop Shadow */
 .hero-fee-shadow {
-    text-shadow: 
+    text-shadow:
         0 4px 8px rgba(0, 0, 0, 0.3),
         0 8px 16px rgba(0, 0, 0, 0.2),
         0 12px 24px rgba(0, 0, 0, 0.15);
 }
+
+/* =============================================================
+   コーディング版LP 共通デザイントークン・共通部品
+   （画像LPのコーディング化用。各セクションは template-parts/ 参照）
+   ============================================================= */
+:root {
+  --c-pink: #ec5a96;        /* メインピンク（見出し強調・ボタン） */
+  --c-pink-soft: #f7a8c6;   /* 淡ピンク（装飾） */
+  --c-pink-bg: #fde9f1;     /* ピンク背景 */
+  --c-teal: #21bcc0;        /* ティール（アイコン・強調） */
+  --c-yellow: #f2c01e;      /* イエロー（バッジ・下線） */
+  --c-purple: #a98ce4;      /* パープル（バッジ） */
+  --c-text: #3f3a38;        /* 見出し文字色 */
+  --c-body: #5D4E4A;        /* 本文文字色 */
+  --c-base: #FAF8F7;        /* ベース背景 */
+  --grad-brand: linear-gradient(100deg, #e85a9b 0%, #b06fd0 52%, #46c3d8 100%); /* ロゴ・英字見出しグラデ */
+  --grad-pink-btn: linear-gradient(135deg, #ff86b9, #ec5a96);                   /* ピンクボタン */
+  --grad-yellow-line: linear-gradient(90deg, #ffd24d, #ffb24d);                 /* 黄マーカー下線 */
+  --font-jp: "Zen Old Mincho", "Yu Mincho", serif;
+  --font-script: "Great Vibes", cursive;
+  --font-en: "Playfair Display", serif;
+  --font-round: "M PLUS Rounded 1c", "Hiragino Maru Gothic ProN", sans-serif; /* 丸ゴシック（キャンペーン・バッジ用） */
+}
+
+/* --- セクション共通見出し（英字スクリプト + 日本語 + 黄下線） --- */
+.sec-head { text-align: center; position: relative; font-family: var(--font-jp); }
+.sec-head .sh-script { font-family: var(--font-script); line-height: 1.15; display: block;
+  background: var(--grad-brand);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent; }
+.sec-head .sh-jp { font-weight: 700; color: #5b4b46; letter-spacing: .14em; display: inline-block; }
+.sec-head .sh-jp u { text-decoration: none; position: relative; padding: 0 .15em; }
+.sec-head .sh-jp u::after { content: ""; position: absolute; left: 0; right: 0; bottom: -.16em;
+  height: .13em; border-radius: 999px; background: var(--grad-yellow-line); }
+
+/* --- グラデーション文字（ブランドロゴ調） --- */
+.grad-text { background: var(--grad-brand);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent; }
+
+/* --- 水彩風装飾（ブロブ・ストライプ・ドット・キラキラ・ハート） --- */
+.deco { position: absolute; z-index: 1; pointer-events: none; }
+.dco-blob { border-radius: 52% 48% 47% 53% / 55% 52% 48% 45%; }
+.dco-stripe { background-image: repeating-linear-gradient(45deg, currentColor 0 .42em, transparent .42em .9em);
+  border-radius: 42% 58% 52% 48% / 56% 44% 56% 44%; opacity: .9; }
+.dco-dots { background-image: radial-gradient(currentColor 26%, transparent 28%); background-size: 1.05em 1.05em; }
+.dco-spark { background: currentColor; clip-path: polygon(50% 0,60% 40%,100% 50%,60% 60%,50% 100%,40% 60%,0 50%,40% 40%); }
+.dco-heart { color: #f7a8c6; line-height: 1; }
+
+/* --- ピンクグラデの丸ボタン --- */
+.btn-pink { display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+  background: var(--grad-pink-btn); color: #fff;
+  font-family: var(--font-jp); font-weight: 700; text-decoration: none;
+  border-radius: 999px; line-height: 1.3; white-space: nowrap;
+  box-shadow: 0 .35em 1em rgba(217,106,142,0.4);
+  outline: none; -webkit-tap-highlight-color: transparent;
+  transition: transform .12s ease, filter .15s ease; }
+.btn-pink:hover { filter: brightness(1.05); }
+.btn-pink:active { transform: scale(0.97); }
+
+/* --- 白の丸ボタン --- */
+.btn-white { display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+  background: #fff; color: #5D4E4A;
+  font-family: var(--font-jp); font-weight: 700; text-decoration: none;
+  border-radius: 999px; line-height: 1.3; white-space: nowrap;
+  box-shadow: 0 .3em .9em rgba(180,120,140,0.25);
+  outline: none; -webkit-tap-highlight-color: transparent;
+  transition: transform .12s ease, filter .15s ease; }
+.btn-white:hover { filter: brightness(0.98); }
+.btn-white:active { transform: scale(0.97); }
+
+/* --- ボタン内の「>」矢印 --- */
+.btn-arrow { font-family: sans-serif; font-weight: 700; line-height: 1; }

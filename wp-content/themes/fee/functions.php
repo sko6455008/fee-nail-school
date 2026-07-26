@@ -4,13 +4,13 @@ function fee_nail_academy_scripts() {
     // 1. Google Fonts
     wp_enqueue_style(
         'google-fonts', 
-        'https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Zen+Old+Mincho:wght@400;500;600;700&display=swap', 
+        'https://fonts.googleapis.com/css2?family=Great+Vibes&family=M+PLUS+Rounded+1c:wght@500;700;800&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Zen+Old+Mincho:wght@400;500;600;700&display=swap',
         [], 
         null
     );
 
-    // 2. メインスタイルシート (style.css)
-    wp_enqueue_style('main-style', get_stylesheet_uri());
+    // 2. メインスタイルシート (style.css) — 更新時刻をバージョンにしてキャッシュを自動更新
+    wp_enqueue_style('main-style', get_stylesheet_uri(), [], filemtime(get_stylesheet_directory() . '/style.css'));
 
     // 3〜5. 旧LP（HTML版）用のスクリプトは画像版では不要のため停止
     // wp_enqueue_script('tailwindcss', 'https://cdn.tailwindcss.com', [], null, false);
@@ -78,6 +78,17 @@ function add_tailwind_config() {
 // テーマサポート
 add_theme_support('title-tag');
 add_theme_support('post-thumbnails');
+
+// 開発用プレビュー: /?lp=dev でコーディング版LP（preview.php）を表示（試作確認用・完成後に削除）
+add_filter('template_include', function ($template) {
+    if (isset($_GET['lp']) && $_GET['lp'] === 'dev') {
+        $preview = get_template_directory() . '/preview.php';
+        if (file_exists($preview)) {
+            return $preview;
+        }
+    }
+    return $template;
+});
 
 // Google Analytics (gtag.js)
 function fee_nail_academy_google_analytics() {

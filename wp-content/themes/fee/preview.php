@@ -1,34 +1,19 @@
 <?php
-// 池袋ネイルカレッジFee LP — コーディング版
-// 各セクションは template-parts/section-*.php に分割（1セクション=1ファイル）。
-// 文字はHTML直書き・写真は assets/images/parts/ のファイル差し替えで個別に編集できる。
+// コーディング版LP 開発プレビュー（/?lp=dev で表示・完成後に削除）
+// 画像版（index.php）と見比べるための骨格。リロード時リダイレクトJSは入れない。
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script>
-    /* リロード時はホーム「/」へ遷移（初回訪問はそのまま表示・URLのアンカーは解除） */
-    (function(){
-      try{
-        var t;
-        var e = (window.performance && performance.getEntriesByType) ? performance.getEntriesByType('navigation')[0] : null;
-        if(e && e.type){ t = e.type; }
-        else if(window.performance && performance.navigation){ t = (performance.navigation.type === 1) ? 'reload' : 'navigate'; }
-        if(t === 'reload'){
-          var atHome = (location.pathname === '/' && !location.hash && !location.search);
-          if(!atHome){ window.location.replace('/'); }
-        }
-      }catch(err){}
-    })();
-    </script>
-    <title><?php bloginfo('name'); ?> | <?php bloginfo('description'); ?></title>
+    <meta name="robots" content="noindex">
+    <title><?php bloginfo('name'); ?> | コーディング版プレビュー</title>
     <?php wp_head(); ?>
     <style>
         html { scroll-behavior: smooth; }
         html, body { margin: 0; padding: 0; background: #FAF8F7; }
-        /* フッター */
+        /* フッター（index.phpと同一・切替時はindex.php側を正とする） */
         .site-footer { background: linear-gradient(160deg, #fde4ee, #f9d2e1);
             color: #5D4E4A; font-family: var(--font-jp);
             padding: 34px 24px 110px; }
@@ -37,7 +22,7 @@
             .site-footer { padding: 28px 20px 100px; }
             .ft-copy { font-size: 12px; }
         }
-        /* 画面下部固定CTA */
+        /* 画面下部固定CTA（index.phpと同一） */
         .cta-bar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 900;
             display: flex; justify-content: center; padding: 10px 14px calc(10px + env(safe-area-inset-bottom));
             background: linear-gradient(to top, rgba(255,255,255,0.95), rgba(255,255,255,0));
@@ -99,7 +84,7 @@
 </div>
 
 <script>
-// ハンバーガーメニュー
+// ハンバーガーメニュー（index.phpと同一ロジック・ID違い）
 (function(){
   var burger = document.getElementById('spBurger2');
   var nav = document.getElementById('spNav2');
