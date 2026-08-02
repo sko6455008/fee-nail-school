@@ -133,7 +133,7 @@ $u = get_template_directory_uri();
     <!-- CTA -->
     <a class="cp-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer" aria-label="無料相談はこちらから">
       <span class="sp1"></span><span class="sp2"></span>
-      <span class="t1">無料相談</span><span class="t2">はこちらから！</span><span class="ar">&#8250;</span>
+      <span class="t1">無料相談</span><span class="t2">はこちらから！</span>
     </a>
   </div>
 </section>

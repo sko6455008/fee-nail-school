@@ -129,9 +129,8 @@ $u = get_template_directory_uri();
   box-shadow: 0 0.2vw 0.6vw rgba(200,150,170,.28); }
 .co-up .u { background: linear-gradient(transparent 78%, #ffd166 78% 96%, transparent 96%); }
 
-.co-buy { position: relative; margin-top: auto; padding-top: 1.4vw;
-  border-top: 0.1vw solid #ece5e2; }
-.co-buy::before { content: ""; position: absolute; left: -2.4vw; top: 0; bottom: -1vw;
+.co-buy { position: relative; margin-top: auto; padding-top: 1.4vw; }
+.co-buy::before { content: ""; position: absolute; left: -1vw; top: 0; bottom: -1vw;
   width: 0.1vw; background: #ece5e2; }
 .co-price { text-align: center; font-family: var(--font-en); font-weight: 600; font-size: 2.8em;
   letter-spacing: .01em; white-space: nowrap; line-height: 1.2; }
@@ -159,7 +158,7 @@ $u = get_template_directory_uri();
     background-image: url('<?php echo $u; ?>/assets/images/corse_bg_sp.png'); }
   .co-head { padding-top: 3vw; min-height: 35vw; }
   .co-head-l { left: 0; top: 0; width: 24.6vw; height: 33.8vw; --base: 24.6vw; }
-  .co-head-r { right: 0; top: 0; width: 27vw; height: 27.4vw; --base: 27vw; }
+  .co-head-r { right: 0; top: 0; width: 24.6vw; height: 33.8vw; --base: 24.6vw; }
   .co-pic { height: 35.9vw; border-radius: 1.8vw; }
   .co-script { font-size: 2.55em; }
   .co-title { font-size: 3.24em; }
@@ -198,7 +197,7 @@ $u = get_template_directory_uri();
   .co-no1 { right: -0.5vw; bottom: -4.4vw; font-size: 2.1em; }
   .co-up { right: -1vw; top: -1.6vw; font-size: 1.3em; padding: 1vw 1.6vw; border-radius: 1.2vw; }
   .co-buy { padding-top: 2.6vw; }
-  .co-buy::before { left: -3.4vw; bottom: -2vw; }
+  .co-buy::before { left: -2vw; bottom: -2vw; }
   .co-price { font-size: 2.9em; }
   .co-cta { height: 6.2vw; margin-top: 2.2vw; font-size: 1.25em; }
 

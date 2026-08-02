@@ -162,7 +162,7 @@ $u = get_template_directory_uri();
      grid-auto-rows:1fr で全カードを最多項目（06）の高さに揃え、写真サイズを統一する */
   .sk-grid { grid-template-columns: 1fr; grid-auto-rows: 1fr; gap: 3vw;
     max-width: 92vw; margin-top: 3vw; }
-  .sk-card { grid-template-columns: 15vw minmax(0, 1fr) 30vw; column-gap: 1.6vw;
+  .sk-card { grid-template-columns: 15vw minmax(0, 1fr) 30vw; column-gap: 5vw;
     padding: 5.5vw 2vw 2.5vw 2.5vw; min-height: 0; border-radius: 2vw; }
   .sk-num { top: 1.2vw; left: 2vw; width: 9vw; height: 9vw; font-size: 2.2em; }
   .sk-t { font-size: 2.1em; }

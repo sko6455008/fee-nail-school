@@ -112,7 +112,7 @@ $u = get_template_directory_uri();
     background-image: url('<?php echo $u; ?>/assets/images/FV_bg_sp.png'); }
   /* 写真（SPはPCより大きく、ネイルは右上いっぱい・ジェルは左下・チャートは右下） */
   /* SPも支給デザインSP版に合わせる（右端は画面外へ見切れる） */
-  .fv-hero { left: 40vw; top: 10vw; width: 90.2vw; }
+  .fv-hero { left: 40vw; width: 90.2vw; }
   .fv-powder { left: -12vw; top: 65vw; width: 57vw; }
   .fv-color { left: 55.7vw; top: 81.9vw; width: 55vw; }
   .fv-splash { filter: blur(0.7vw); }
@@ -173,8 +173,8 @@ $u = get_template_directory_uri();
   <div class="fv-btns">
     <a class="btn-pink" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">
       <span class="btn-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg></span>
-      無料LINE相談する<span class="btn-arrow">&#8250;</span>
+      無料LINE相談する
     </a>
-    <a class="btn-white" href="#courses">コース詳細を見る<span class="btn-arrow">&#8250;</span></a>
+    <a class="btn-white" href="#courses">コース詳細を見る</a>
   </div>
 </section>

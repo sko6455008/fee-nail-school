@@ -25,9 +25,11 @@ section.ar * { box-sizing: border-box; }
 
 /* --- 作品グリッド（均等セル・写真は外観>カスタマイズで差し替え可能） ---
    行の高さを grid-auto-rows で固定し、画像は height:100% + object-fit:cover で埋める。
-   こうしておくとカスタマイザーで縦横比の違う写真に差し替えても高さが揃う。 */
+   こうしておくとカスタマイザーで縦横比の違う写真に差し替えても高さが揃う。
+   セルの縦横比は同梱写真 art-*.webp（305×190）に合わせた 1.605。写真はチップ上端が
+   どれも上から約10%の位置に来るよう下の余白を切り詰めてあるので、拡大せずに揃う。 */
 .ar-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 20.5vw);
-  grid-auto-rows: 15.65vw; justify-content: center; gap: 1.5vw 1.8vw; margin-top: 1.6vw; }
+  grid-auto-rows: 12.77vw; justify-content: center; gap: 1.5vw 1.8vw; margin-top: 1.6vw; }
 .ar-grid img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 /* --- フッター --- */
@@ -43,7 +45,7 @@ section.ar * { box-sizing: border-box; }
   .ar-title { font-size: 2.9em; }
   .ar-sub { font-size: 1.45em; padding: 0 4vw; }
   /* デザイン準拠: SPは3列グリッド */
-  .ar-grid { grid-template-columns: repeat(3, 28.5vw); grid-auto-rows: 21.77vw;
+  .ar-grid { grid-template-columns: repeat(3, 28.5vw); grid-auto-rows: 17.75vw;
     gap: 2vw; margin-top: 3.5vw; }
   .ar-foot { font-size: 1.5em; margin-top: 4vw; }
 }

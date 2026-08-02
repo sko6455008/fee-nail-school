@@ -78,7 +78,7 @@ $u = get_template_directory_uri();
     grid-template-columns: 42vw 1fr; }
   .fu-c2 { grid-template-areas: "title photo" "body photo" "sign photo";
     grid-template-columns: 1fr 42vw; }
-  .fu-photo img { border-radius: 1.8vw; }
+  .fu-photo img { border-radius: 1.8vw; aspect-ratio: 1/1;}
   /* タイトルの折返しを許可してカード外へのはみ出しを防ぐ */
   .fu-t { font-size: 1.9em; white-space: normal; }
   .fu-body { font-size: 1.4em; line-height: 1.9; }

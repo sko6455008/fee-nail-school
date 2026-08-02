@@ -49,9 +49,10 @@ $u = get_template_directory_uri();
   display: flex; align-items: center; justify-content: center;
   font-weight: 800; font-size: 2.4em; line-height: 1;
   box-shadow: 0 0.2vw 0.5vw rgba(160,110,130,0.28); }
-/* アイコンは細い円のリングの中に置く。素材ごとの余白差は --sw/--tx/--ty で吸収 */
+/* アイコン素材(flow*.png)自体に細い円が描かれているので、CSS側でリングは引かない
+   （引くと二重丸になる）。--icsz が素材の円の直径になるよう --sw/--tx/--ty を調整済み */
 .hj-ring { display: block; position: relative; width: 10.6vw; height: 10.6vw; margin: 0 auto;
-  border-radius: 50%; border: 0.1vw solid; --icsz: 7.4vw; }
+  --icsz: 10.6vw; }
 .hj-ring img { position: absolute; left: 50%; top: 50%; height: auto;
   width: calc(var(--icsz) * var(--sw));
   transform: translate(-50%, -50%)
@@ -78,25 +79,21 @@ $u = get_template_directory_uri();
 /* ステップごとの配色 */
 .hj-s1 { border-color: #f4a7c4; }
 .hj-s1 .hj-num { background: #e8397f; }
-.hj-s1 .hj-ring { border-color: #f4a7c4; }
 .hj-s1 .hj-dot { color: #f288b3; }
 .hj-s1 .hj-t span { background: linear-gradient(transparent 58%, #ffeaa0 58% 96%, transparent 96%); }
 .hj-s1 .hj-tx .p { color: #e8397f; }
 .hj-s2 { border-color: #f5c98a; }
 .hj-s2 .hj-num { background: #f0912c; }
-.hj-s2 .hj-ring { border-color: #f5c98a; }
 .hj-s2 .hj-dot { color: #f3b566; }
 .hj-s2 .hj-t span { background: linear-gradient(transparent 58%, #ffeaa0 58% 96%, transparent 96%); }
 .hj-s2 .hj-tx .p { color: #e8397f; }
 .hj-s3 { border-color: #8ed4cc; }
 .hj-s3 .hj-num { background: #2fae9f; }
-.hj-s3 .hj-ring { border-color: #8ed4cc; }
 .hj-s3 .hj-dot { color: #6bc7bd; }
 .hj-s3 .hj-t span { background: linear-gradient(transparent 58%, #b8ecec 58% 96%, transparent 96%); }
 .hj-s3 .hj-tx .p { color: #2fae9f; }
 .hj-s4 { border-color: #c8b2ec; }
 .hj-s4 .hj-num { background: #9270d2; }
-.hj-s4 .hj-ring { border-color: #c8b2ec; }
 .hj-s4 .hj-dot { color: #b195e2; }
 .hj-s4 .hj-t span { background: linear-gradient(transparent 58%, #ffeaa0 58% 96%, transparent 96%); }
 .hj-s4 .hj-tx .p { color: #e8397f; }
@@ -149,7 +146,7 @@ $u = get_template_directory_uri();
     border-left-width: 1.4vw; }
   .hj-num { top: -1.6vw; left: 2.9vw; transform: none; width: 9.1vw; height: 9.1vw; font-size: 2.5em; }
   .hj-ring { grid-row: 1 / 3; align-self: center; width: 19.1vw; height: 19.1vw;
-    border-width: 0.2vw; --icsz: 13.4vw; }
+    --icsz: 19.1vw; }
   .hj-t { margin: 0; text-align: left; font-size: 2.2em; }
   .hj-dot { width: 82%; height: 0.3vw; margin-top: 1.2vw;
     background-size: 1.1vw 0.3vw;
@@ -236,7 +233,7 @@ $u = get_template_directory_uri();
     <div class="hj-first-row">
       <span class="hj-first-script">First Step !</span>
       <span class="hj-first-tx">まずは<span class="p">無料カウンセリング・見学</span>へお越しください。</span>
-      <a class="hj-first-btn" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">無料カウンセリング・見学を予約する<span class="ar">&#8250;</span></a>
+      <a class="hj-first-btn" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">無料カウンセリング・見学を予約する</a>
     </div>
     <div class="hj-first-note">※公式<span class="p">LINE</span> 24時間受付中！</div>
   </div>
