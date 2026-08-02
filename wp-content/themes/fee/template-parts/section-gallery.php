@@ -6,7 +6,8 @@ $u = get_template_directory_uri();
 <style>
 /* ===== 生徒作品（PC: 1920px基準） ===== */
 .gl { position: relative; overflow: hidden; box-sizing: border-box; font-size: 1vw;
-  font-family: var(--font-jp); color: #3a3230; background: #fff; }
+  font-family: var(--font-jp); color: #3a3230;
+  background: #fff url('<?php echo $u; ?>/assets/images/works_bg_pc.png') center / cover no-repeat; }
 .gl * { box-sizing: border-box; }
 
 /* --- 水彩コーナー装飾 --- */
@@ -29,10 +30,12 @@ $u = get_template_directory_uri();
 .gl-dots { margin-top: 0.9vw; display: flex; justify-content: center; gap: 1vw; }
 .gl-dots span { width: 0.7vw; height: 0.7vw; border-radius: 50%; }
 
-/* --- 写真グリッド（均等セル・写真は外観>カスタマイズで差し替え可能） --- */
+/* --- 写真グリッド（均等セル・写真は外観>カスタマイズで差し替え可能） ---
+   行の高さを grid-auto-rows で固定し、画像は height:100% + object-fit:cover で埋める。
+   こうしておくとカスタマイザーで縦横比の違う写真に差し替えても高さが揃う。 */
 .gl-grid { position: relative; z-index: 1; display: grid; grid-template-columns: repeat(4, 16.2vw);
-  justify-content: center; gap: 1.35vw 2.35vw; margin-top: 2.2vw; }
-.gl-grid img { display: block; width: 100%; aspect-ratio: 310 / 237; object-fit: cover; }
+  grid-auto-rows: 12.38vw; justify-content: center; gap: 1.35vw 2.35vw; margin-top: 2.2vw; }
+.gl-grid img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 /* --- フッター --- */
 .gl-foot { position: relative; z-index: 1; text-align: center; padding: 2.6vw 0 3vw;
@@ -43,14 +46,20 @@ $u = get_template_directory_uri();
 
 /* ===== SP（1080px基準: font-size 2vw） ===== */
 @media (max-width: 768px) {
-  .gl { font-size: 2vw; }
+  .gl { font-size: 2vw; padding: 3vw 0 4vw;
+    background-image: url('<?php echo $u; ?>/assets/images/works_bg_sp.png'); }
+  .gl-wc { display: none; }
+  /* デザイン準拠: 白パネルの内側に3列グリッド */
+  .gl-panel { position: relative; z-index: 1; background: #fff; border-radius: 3vw;
+    margin: 0 3vw; padding: 1vw 0 1vw; overflow: hidden; }
   .gl-head { padding-top: 5vw; }
   .gl-t1 { font-size: 2.4em; }
   .gl-t2 { font-size: 3.3em; }
   .gl-t2-line { width: 62vw; height: 0.4vw; }
   .gl-sub { font-size: 1.5em; padding: 0 4vw; }
   .gl-dots span { width: 1.3vw; height: 1.3vw; }
-  .gl-grid { grid-template-columns: repeat(2, 42vw); gap: 2.5vw; margin-top: 4vw; }
+  .gl-grid { grid-template-columns: repeat(3, 28vw); grid-auto-rows: 21.4vw;
+    gap: 2vw; margin-top: 4vw; }
   .gl-foot { padding: 5vw 0 6vw; font-size: 1.4em; letter-spacing: .15em; }
 }
 </style>
@@ -62,6 +71,7 @@ $u = get_template_directory_uri();
   <span class="gl-wc" style="left:-4vw;bottom:14vw;width:18vw;height:14vw;background:#f6c0d6;border-radius:48% 52% 55% 45%/52% 48% 50% 50%;"></span>
   <span class="gl-wc" style="right:-6vw;bottom:-5vw;width:22vw;height:18vw;background:#f9e6ac;border-radius:48% 52% 55% 45%/52% 48% 50% 50%;"></span>
 
+  <div class="gl-panel">
   <!-- ヘッダー -->
   <div class="gl-head">
     <span class="gl-spark" style="left:20vw;top:5vw;color:#f2c94c;font-size:1.7em;"></span>
@@ -70,7 +80,6 @@ $u = get_template_directory_uri();
     <span class="gl-spark" style="right:15vw;top:9.5vw;color:#f2c94c;font-size:1.1em;"></span>
     <div class="gl-script"><span class="sl">＼</span>Student Gallery<span class="sl">／</span></div>
     <div class="gl-t1">初心者からスタートした</div>
-    <span class="gl-heart" style="left:29vw;top:7.5vw;font-size:3.4em;transform:rotate(-12deg);">&#9829;</span>
     <div class="gl-t2">生徒様の作品例</div>
     <span class="gl-t2-line"></span>
     <p class="gl-sub">初心者の方でも、基礎から丁寧に学ぶことで<br>こんなに素敵な作品が描けるようになります！</p>
@@ -92,4 +101,5 @@ $u = get_template_directory_uri();
 
   <!-- フッター -->
   <div class="gl-foot">そのほかにもたくさんのデザインを学べます。<span class="ht">&#9825;</span></div>
+  </div><!-- /.gl-panel -->
 </section>

@@ -3,10 +3,13 @@
 // index.php（画像版）のオーバーレイ実装（$access_html / .access / .acard）を通常フローに移設したもの。
 // 住所・営業時間などの情報は index.php の現行コード化済み内容を正とする。
 $mapurl = "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%B1%8A%E5%B3%B6%E5%8C%BA%E6%B1%A0%E8%A2%8B2-53-12";
+$u = get_template_directory_uri();
 ?>
 <style>
 /* ===== アクセス（通常フロー版） ===== */
-.ac2 { position: relative; overflow: hidden; box-sizing: border-box; background: #FEF9F4;
+/* PC用背景のみ支給済み（SP用 access_bg_sp は未支給） */
+.ac2 { position: relative; overflow: hidden; box-sizing: border-box;
+  background: #FEF9F4 url('<?php echo $u; ?>/assets/images/access_bg_pc.png') center / cover no-repeat;
   color: #5b4b46; font-family: var(--font-jp); font-size: 1.04vw; }
 .ac2 * { box-sizing: border-box; }
 .ac2-inner { position: relative; z-index: 2; padding: 2.2em 3.4em 3em; }
@@ -71,7 +74,7 @@ $mapurl = "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E9
 
 /* ===== SP ===== */
 @media (max-width: 768px) {
-  .ac2 { font-size: 2.3vw; }
+  .ac2 { font-size: 2.3vw; background-image: none; }
   .ac2-inner { padding: 2em 1.2em 2.4em; }
   .ac2-head .ah-script { font-size: 2.2em; }
   .ac2-head .ah-jp { font-size: 2.5em; margin-top: .1em; }

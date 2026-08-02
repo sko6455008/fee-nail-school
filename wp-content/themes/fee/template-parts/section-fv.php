@@ -1,27 +1,34 @@
 <?php
 // ファーストビュー（FV）セクション — コーディング版
-// 再現元: lp-pc-1.webp 上部（PC）/ lp-sp-1.webp 上部（SP）
-// 写真は既存画像からの切り出し（assets/images/parts/）。差し替えはファイル置き換えのみでOK。
-// 配置は vw 単位（PC=1920px基準: 1vw=19.2px / SP=1080px基準: 1vw=10.8px）、文字サイズは em（PC基準 1em=1vw）。
+// レイアウト再現元: 支給デザイン（PC版 / スマホ版）
+// 写真・背景は支給素材（assets/images/FV_*）。透過PNGのためマスク不要。
+// 各素材は周囲に透明余白があるため、被写体の実位置（下記%）を基準に配置している。
+//   FV_nail   : 被写体 x 12.8〜86.0% / y 0〜100%（上下は素材の時点で見切れている正方形）
+//   FV_powder : 被写体 x 3.9〜75.6% / y 24.5〜71.0%
+//   FV_color  : 被写体 x 3.0〜94.9% / y 29.9〜71.2%（扇の柄が外を向くよう回転させて使う）
+// 配置は vw 単位（PC=1920px基準: 1vw=19.2px / SP=1080px基準: 1vw=10.8px）、文字サイズは em（PC基準 1em=1vw / SP 1em=2vw）。
 $u = get_template_directory_uri();
 ?>
 <style>
 /* ===== FV（PC: 1920px基準） ===== */
 .fv { position: relative; overflow: hidden; box-sizing: border-box;
   font-family: var(--font-jp); color: #2f2a28;
-  background: linear-gradient(175deg, #f9ece8 0%, #f8e7e3 55%, #f9ebe6 100%);
+  background: #f9ece8 url('<?php echo $u; ?>/assets/images/FV_bg_pc.png') center / cover no-repeat;
   font-size: 1vw; height: 51vw; }
 .fv * { box-sizing: border-box; }
 
-/* --- 写真（切り出し素材・端をぼかして背景に馴染ませる） --- */
-.fv-photo { position: absolute; display: block; }
+/* --- 写真（支給素材: 透過PNG切り抜き） --- */
+.fv-photo { position: absolute; display: block; z-index: 2; }
 .fv-photo img { display: block; width: 100%; height: auto; }
-.fv-hero { right: 0; top: 0; width: 42.7vw; z-index: 2;
-  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 12%);
-  mask-image: linear-gradient(90deg, transparent 0, #000 12%); }
-.fv-gels { left: 0; top: 31.1vw; width: 24.5vw; z-index: 2;
-  -webkit-mask-image: radial-gradient(115% 115% at 0% 60%, #000 62%, transparent 92%);
-  mask-image: radial-gradient(115% 115% at 0% 60%, #000 62%, transparent 92%); }
+/* ジュエリーネイル（右側。支給デザインPC版と同じ位置・倍率に合わせている。
+   デザイン上でも素材の上端はヘッダーに隠れ、下端は途中で切れて下に余白が入る）
+   ※topはヘッダー高さ5.3vwを差し引いた値 */
+.fv-hero { left: 50.1vw; top: -10.3vw; width: 52.3vw; }
+/* カラージェル3色（左下・左端は見切れ） */
+.fv-powder { left: -5vw; top: 19vw; width: 32vw; }
+/* カラーチャート（右下・柄が右下を向くよう回転。右端と下端は見切れ） */
+.fv-color { left: 81.5vw; top: 24.1vw; width: 35vw; }
+.fv-color img { transform: rotate(-45deg); }
 
 /* --- 水彩風スプラッシュ（CSS近似） --- */
 .fv-splash { position: absolute; z-index: 1; pointer-events: none; filter: blur(0.35vw); opacity: .75; }
@@ -35,87 +42,101 @@ $u = get_template_directory_uri();
   border-radius: 48% 52% 55% 45% / 52% 48% 50% 50%; }
 
 /* --- リボン帯（筆風） --- */
-.fv-ribbon { position: absolute; z-index: 3; left: 14vw; top: 0.7vw; margin: 0;
+.fv-ribbon { position: absolute; z-index: 3; left: 13.4vw; top: 1.8vw; margin: 0;
   transform: rotate(-3.4deg); background: #e0569a;
   border-radius: 0.6em 1.2em 0.7em 1.4em / 1.4em 0.8em 1.2em 0.6em;
-  color: #fff; font-weight: 600; font-size: 1.75em; letter-spacing: .06em;
-  padding: 0.62em 1.15em; white-space: nowrap; }
+  color: #fff; font-weight: 600; font-size: 1.6em; letter-spacing: .06em;
+  line-height: 1.5; padding: 0.55em 1.3em; white-space: nowrap; }
 
-/* --- メイン見出し --- */
-.fv-title { position: absolute; z-index: 3; left: 15.6vw; top: 6vw;
-  margin: 0; font-weight: 700; line-height: 1.28; white-space: nowrap;
-  font-size: 5.4em; letter-spacing: .02em; color: #2f2a28; }
+/* --- メイン見出し（SPのみ3行に改行） --- */
+.fv-br-sp { display: none; }
+.fv-title { position: absolute; z-index: 3; left: 15.6vw; top: 7vw;
+  margin: 0; font-weight: 700; line-height: 1.2; white-space: nowrap;
+  font-size: 5.3em; letter-spacing: .02em; color: #2f2a28; }
 .fv-title .fv-num { font-family: var(--font-en); font-weight: 600; color: #e0569a;
   font-size: 1.75em; line-height: 1; letter-spacing: 0; padding: 0 .04em; position: relative; }
-.fv-title .fv-num::before { content: "\2728"; position: absolute; left: -0.3em; top: -0.14em;
-  font-size: 0.2em; }
-.fv-title .fv-num::after { content: "\2728"; position: absolute; right: -0.32em; top: -0.16em;
-  font-size: 0.24em; }
-.fv-title .fv-pro { color: #e0569a; position: relative; padding-bottom: .08em; }
-.fv-title .fv-pro::after { content: ""; position: absolute; left: .1em; right: .1em; bottom: -.02em;
-  height: .1em; background-image: radial-gradient(circle at 0.11em 50%, #ec5a96 0.075em, transparent 0.09em);
-  background-size: 0.36em 100%; background-repeat: repeat-x; }
+/* デザイン同様「プロ」だけ一段大きく見せる */
+.fv-title .fv-pro { color: #e0569a; position: relative; padding-bottom: .08em; font-size: 1.12em; }
+.fv-title .fv-pro::after { content: ""; position: absolute; left: .1em; right: .1em; bottom: -.04em;
+  height: .1em; background-image: radial-gradient(circle at 0.125em 50%, #ef8fb5 0.05em, transparent 0.065em);
+  background-size: 0.25em 100%; background-repeat: repeat-x; }
+/* SP用のドット（デザインでは見出しの最終行の下に入る） */
 
-/* --- 池袋ネイルカレッジ 枠 --- */
-.fv-college { position: absolute; z-index: 3; left: 15.6vw; top: 25.4vw; width: 30.5vw;
-  border: 0.14em solid; border-image: var(--grad-brand) 1;
-  padding: 0.5em 0; text-align: center;
-  color: #e0569a; font-weight: 700; font-size: 2.7em; letter-spacing: .18em; white-space: nowrap; }
+/* --- 池袋ネイルカレッジ 枠（角丸・ピンク〜ゴールドの細いグラデ罫） --- */
+.fv-college { position: absolute; z-index: 3; left: 15.6vw; top: 26.3vw; width: 31.4vw;
+  padding: 0.5em 0; text-align: center; line-height: 1.2;
+  color: #e0569a; font-weight: 700; font-size: 2.9em; letter-spacing: .1em; white-space: nowrap; }
+.fv-college::before { content: ""; position: absolute; inset: 0; border-radius: 0.42em;
+  padding: 0.07em; background: linear-gradient(100deg, #ef9ec2 0%, #e6c68d 48%, #ef9ec2 100%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude; pointer-events: none; }
 
 /* --- Fee スクリプトロゴ --- */
-.fv-fee { position: absolute; z-index: 3; left: 26vw; top: 32.4vw; width: 17vw; text-align: center;
-  font-family: var(--font-script); font-size: 7.4em; line-height: 1;
+.fv-fee { position: absolute; z-index: 3; left: 25.4vw; top: 36.1vw; width: 17vw; text-align: center;
+  font-family: var(--font-script); font-size: 7.5em; line-height: 1;
   background: var(--grad-brand);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent; }
-.fv-fee-heart { position: absolute; z-index: 3; left: 24.5vw; top: 34.6vw;
-  font-size: 2.2em; color: #ef79ad; transform: rotate(-12deg); }
-.fv-fee-spark { position: absolute; z-index: 3; left: 39.5vw; top: 32.8vw;
+.fv-fee-heart { position: absolute; z-index: 3; left: 25.2vw; top: 36.2vw;
+  font-size: 2.2em; color: #c9a0e8; transform: rotate(-12deg); }
+.fv-fee-heart2 { position: absolute; z-index: 3; left: 25.6vw; top: 38.6vw;
+  font-size: 1.5em; color: #ef79ad; }
+.fv-fee-spark { position: absolute; z-index: 3; left: 38.8vw; top: 34.2vw;
   font-size: 1.6em; color: #56c4d8; }
 
 /* --- 丸バッジ（駅チカ・少人数制） --- */
-.fv-badge { position: absolute; z-index: 3; left: 47.1vw; top: 32vw;
-  width: 12.3vw; height: 12.3vw; border-radius: 50%;
-  background: rgba(255,255,255,0.92); box-shadow: 0 0.3vw 1.2vw rgba(200,140,165,0.25);
+.fv-badge { position: absolute; z-index: 4; left: 48.8vw; top: 29vw;
+  width: 15vw; height: 15vw; border-radius: 50%;
+  background: rgba(255,255,255,0.88); box-shadow: 0 0.3vw 1.2vw rgba(200,140,165,0.22);
   display: flex; flex-direction: column; align-items: center; justify-content: center;
-  text-align: center; line-height: 1.7; font-weight: 700; color: #4a4341; }
+  text-align: center; line-height: 1.6; font-weight: 700; color: #4a4341; }
 .fv-badge .em { color: #e0569a; position: relative; }
 .fv-badge .em::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0.02em;
   height: 0.14em; border-radius: 999px; background: var(--grad-yellow-line); opacity: .9; }
-.fv-badge-l1 { font-size: 1.13em; }
-.fv-badge-l2 { font-size: 1.13em; }
+.fv-badge-l1 { font-size: 1.4em; }
+.fv-badge-l2 { font-size: 1.5em; }
+.fv-badge-l3 { font-size: 1.4em; }
 
 /* --- ボタン --- */
-.fv-btns { position: absolute; z-index: 3; left: 24.5vw; top: 44.3vw;
-  display: flex; gap: 1.1vw; }
-.fv-btns .btn-pink { font-size: 1.45em; padding: 0.85em 1.6em; }
-.fv-btns .btn-white { font-size: 1.45em; padding: 0.85em 1.6em; }
+.fv-btns { position: absolute; z-index: 3; left: 24.8vw; top: 45.4vw;
+  display: flex; gap: 0.7vw; }
+.fv-btns .btn-pink { font-size: 1.35em; padding: 0.8em 1.5em; }
+.fv-btns .btn-white { font-size: 1.35em; padding: 0.8em 1.5em; }
 .fv-btns .btn-ic { display: inline-flex; }
 .fv-btns .btn-ic svg { width: 1.15em; height: 1.15em; }
 
 /* ===== SP（1080px基準: font-size 2vw = 21.6px相当） ===== */
 @media (max-width: 768px) {
-  .fv { font-size: 2vw; height: 139vw; }
-  .fv-hero { width: 43.5vw;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 14%);
-    mask-image: linear-gradient(90deg, transparent 0, #000 14%); }
-  .fv-gels { top: 83.3vw; width: 30.6vw; }
+  .fv { font-size: 2vw; height: 135vw;
+    background-image: url('<?php echo $u; ?>/assets/images/FV_bg_sp.png'); }
+  /* 写真（SPはPCより大きく、ネイルは右上いっぱい・ジェルは左下・チャートは右下） */
+  /* SPも支給デザインSP版に合わせる（右端は画面外へ見切れる） */
+  .fv-hero { left: 40vw; top: 10vw; width: 90.2vw; }
+  .fv-powder { left: -12vw; top: 65vw; width: 57vw; }
+  .fv-color { left: 55.7vw; top: 81.9vw; width: 55vw; }
   .fv-splash { filter: blur(0.7vw); }
   .fv-splash-purple { left: -4vw; top: 5vw; width: 18vw; height: 14vw; }
   .fv-splash-pink { left: 6vw; top: 3vw; width: 11vw; height: 9vw; }
   .fv-splash-yellow { left: -6vw; top: 29vw; width: 20vw; height: 20vw; }
   .fv-splash-rose { left: -4vw; top: 46vw; width: 17vw; height: 16vw; }
-  .fv-ribbon { left: 4.2vw; top: 6.9vw; font-size: 1.85em; transform: rotate(-4deg); }
-  .fv-title { left: 5.1vw; top: 23.1vw; font-size: 4.6em; line-height: 1.32; }
-  .fv-college { left: 7.9vw; top: 69.9vw; width: 53.7vw; font-size: 2.8em; }
-  .fv-fee { left: 20vw; top: 86vw; width: 44vw; font-size: 7.4em; }
-  .fv-fee-heart { left: 24vw; top: 91vw; font-size: 2em; }
+  .fv-ribbon { left: 2.4vw; top: 12.4vw; font-size: 1.45em; padding: 0.4em 1.1em;
+    transform: rotate(-4deg); }
+  .fv-br-sp { display: inline; }
+  .fv-title { left: 4.8vw; top: 22.9vw; font-size: 4.7em; line-height: 1.335; }
+  /* SPは見出しが3行になるため、ドットは最終行の下に独立表示 */
+  .fv-title .fv-pro::after { display: none; }
+  .fv-college { left: 7.6vw; top: 69.7vw; width: 56.3vw; font-size: 2.65em; letter-spacing: .1em; }
+  .fv-fee { left: 20vw; top: 83vw; width: 44vw; font-size: 7.5em; }
+  .fv-fee-heart { left: 24.3vw; top: 88.4vw; font-size: 2em; }
+  .fv-fee-heart2 { display: none; }
   .fv-fee-spark { left: 52vw; top: 87vw; font-size: 1.5em; }
-  .fv-badge { left: 63.9vw; top: 79.2vw; width: 25.9vw; height: 25.9vw; }
+  .fv-badge { left: 66vw; top: 77vw; width: 26vw; height: 26vw; }
   .fv-badge-l1 { display: none; }
-  .fv-badge-l2 { font-size: 1.57em; line-height: 1.9; }
-  .fv-btns { left: 34vw; top: 113.9vw; flex-direction: column; gap: 2vw; align-items: stretch; width: 36vw; }
-  .fv-btns .btn-pink, .fv-btns .btn-white { font-size: 1.6em; padding: 0.72em 1.4em; }
+  .fv-badge-l2 { font-size: 1.7em; }
+  .fv-badge-l3 { font-size: 1.4em; }
+  .fv-btns { left: 34.6vw; top: 113.4vw; flex-direction: column; gap: 1.9vw; align-items: stretch; width: 34.6vw; }
+  .fv-btns .btn-pink, .fv-btns .btn-white { font-size: 1.4em; padding: 0.85em 1em; }
 }
 </style>
 <section class="fv" id="fv">
@@ -125,24 +146,27 @@ $u = get_template_directory_uri();
   <span class="fv-splash fv-splash-yellow"></span>
   <span class="fv-splash fv-splash-rose"></span>
 
-  <!-- 写真（仮素材: 既存画像から切り出し） -->
-  <span class="fv-photo fv-hero"><img src="<?php echo $u; ?>/assets/images/parts/fv-hero.webp" alt="ジュエリーネイルとカラージェルチャート" fetchpriority="high"></span>
-  <span class="fv-photo fv-gels"><img src="<?php echo $u; ?>/assets/images/parts/fv-gels.webp" alt="カラージェル" loading="lazy"></span>
+  <!-- 写真（支給素材） -->
+  <span class="fv-photo fv-hero"><img src="<?php echo $u; ?>/assets/images/FV_nail.png" alt="ジュエリーネイル" fetchpriority="high"></span>
+  <span class="fv-photo fv-powder"><img src="<?php echo $u; ?>/assets/images/FV_powder.png" alt="カラージェル" loading="lazy"></span>
+  <span class="fv-photo fv-color"><img src="<?php echo $u; ?>/assets/images/FV_color.png" alt="カラーチャート" loading="lazy"></span>
 
   <!-- キャッチコピー -->
   <p class="fv-ribbon">あなたの「好き」が一生の仕事に&#9825;</p>
-  <h1 class="fv-title">最短<b class="fv-num">3</b>ヶ月で<br><span class="fv-pro">プロ</span>のネイリストへ</h1>
+  <h1 class="fv-title">最短<b class="fv-num">3</b>ヶ月で<br><span class="fv-pro">プロ</span>の<br class="fv-br-sp">ネイリストへ</h1>
 
   <!-- スクール名 -->
   <div class="fv-college">池袋ネイルカレッジ</div>
   <div class="fv-fee">Fee</div>
   <span class="fv-fee-heart">&#9825;</span>
+  <span class="fv-fee-heart2">&#9829;</span>
   <span class="fv-fee-spark">&#10022;</span>
 
   <!-- 丸バッジ -->
   <div class="fv-badge">
-    <span class="fv-badge-l1"><span class="em">駅チカ</span>で通いやすい&#9834;</span>
-    <span class="fv-badge-l2"><span class="em">少人数制</span>で<br>しっかり学べる！</span>
+    <span class="fv-badge-l1"><span class="em">駅チカ</span>で<br>通いやすい&#9834;</span>
+    <span class="fv-badge-l2"><span class="em">少人数制</span>で</span>
+    <span class="fv-badge-l3">しっかり学べる！</span>
   </div>
 
   <!-- ボタン -->

@@ -1,113 +1,169 @@
 <?php
 // 入校手順（How to Join）セクション — コーディング版
-// 再現元: lp-pc-2-top.webp（y2440〜3440付近）/ lp-sp-2-top.webp
-// 文言は旧HTML版（git 00d4f6a）と現行画像から流用。
+// 寸法はデザインカンプ（全幅=100vw基準）から採寸した値
+// アイコン素材: flow1〜4.png（1024×1536の余白入り透過PNG）
 $u = get_template_directory_uri();
 ?>
 <style>
-/* ===== 入校手順（PC: 1920px基準） ===== */
+/* ===== 入校手順（PC: font-size 1vw = 1em として全サイズを vw 換算） ===== */
 .hj { position: relative; overflow: hidden; box-sizing: border-box; font-size: 1vw;
-  font-family: var(--font-round); color: #3a3230; background: #fbdce8; }
+  font-family: var(--font-round); color: #3a3230;
+  background: #fbdce8 url('<?php echo $u; ?>/assets/images/flow_bg_pc.png') center / cover no-repeat; }
 .hj * { box-sizing: border-box; }
 .hj-blob { position: absolute; pointer-events: none; z-index: 0; }
 .hj-dots { position: absolute; pointer-events: none; z-index: 0;
   background-image: radial-gradient(currentColor 22%, transparent 26%); background-size: 1.3vw 1.3vw; }
 
 /* --- ヘッダー --- */
-.hj-head { position: relative; z-index: 1; text-align: center; padding-top: 2.4vw; }
-.hj-script { font-family: var(--font-script); font-size: 3em;
+.hj-head { position: relative; z-index: 1; text-align: center; padding-top: 1.1vw; }
+.hj-script { display: flex; align-items: center; justify-content: center; gap: 0.9em;
+  font-family: var(--font-script); font-size: 4.2em; line-height: 1.15;
   background: linear-gradient(95deg, #f0a63c 0%, #f0609b 40%, #7c8ce0 75%, #58b8d8 100%);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent; }
-.hj-script .sl { -webkit-text-fill-color: #e8397f; color: #e8397f; font-family: var(--font-jp); font-size: 0.6em; padding: 0 .6em; }
-.hj-title { margin: 0.4vw 0 0; font-weight: 800; font-size: 4.8em; letter-spacing: .18em; color: #2f2a28; }
-.hj-title-line { display: block; width: 26vw; height: 0.6vw; margin: 0.5vw auto 0; border-radius: 999px;
-  background: linear-gradient(90deg, #f088b0, #b183d8 50%, #58b8d8 100%); opacity: .85; }
+/* 見出し脇の3本線 */
+.hj-slash { flex: 0 0 auto; width: 0.32em; height: 0.5em; color: #ef5f96;
+  -webkit-text-fill-color: initial;
+  background:
+    linear-gradient(currentColor, currentColor) 0 0    / 0.3em 0.07em no-repeat,
+    linear-gradient(currentColor, currentColor) 0 50%  / 0.3em 0.07em no-repeat,
+    linear-gradient(currentColor, currentColor) 0 100% / 0.3em 0.07em no-repeat;
+  transform: rotate(-32deg); }
+.hj-slash.r { transform: scaleX(-1) rotate(-32deg); }
+.hj-title { margin: 0.5vw 0 0; font-weight: 800; font-size: 5em; letter-spacing: .05em;
+  padding-left: .05em; line-height: 1.15; color: #3a2b26; }
+.hj-title-line { display: block; width: 32vw; height: 0.9vw; margin: 0.5vw auto 0; border-radius: 999px;
+  background: linear-gradient(90deg, #f088b0, #b183d8 50%, #58b8d8 100%); opacity: .9; }
 .hj-deco { position: absolute; z-index: 1; pointer-events: none; }
 
 /* --- ステップカード --- */
 .hj-grid { position: relative; z-index: 1; display: flex; justify-content: center; align-items: stretch;
-  gap: 1.1vw; max-width: 96vw; margin: 3vw auto 0; }
-.hj-card { position: relative; background: #fff; border-radius: 1.1vw; width: 19.2vw;
-  padding: 3.4vw 1.4vw 1.8vw; text-align: center; border: 0.14vw solid; }
+  gap: 0.5vw; max-width: 94vw; margin: 1.9vw auto 0; }
+.hj-card { position: relative; background: #fff; border-radius: 1.4vw; width: 21.9vw; min-height: 23.7vw;
+  padding: 2.6vw 2.3vw 1.5vw; border: 0.12vw solid; }
 .hj-arrow { align-self: center; width: 0; height: 0; flex: 0 0 auto;
-  border-top: 0.85vw solid transparent; border-bottom: 0.85vw solid transparent;
-  border-left: 1.05vw solid #f088b0; }
-.hj-num { position: absolute; top: -1.5vw; left: 50%; transform: translateX(-50%);
-  width: 3.1vw; height: 3.1vw; border-radius: 50%; color: #fff;
+  border-top: 0.75vw solid transparent; border-bottom: 0.75vw solid transparent;
+  border-left: 0.95vw solid #f27fae; }
+.hj-num { position: absolute; top: -1.4vw; left: 50%; transform: translateX(-50%);
+  width: 3.9vw; height: 3.9vw; border-radius: 50%; color: #fff;
   display: flex; align-items: center; justify-content: center;
-  font-weight: 800; font-size: 1.7em; box-shadow: 0 0.2vw 0.5vw rgba(160,110,130,0.3); }
-.hj-ic { display: block; margin: 0 auto; }
-.hj-ic img { display: block; width: 9.5vw; height: auto; margin: 0 auto; }
-.hj-t { margin: 1vw 0 0; font-weight: 800; font-size: 1.75em; letter-spacing: .08em;
-  display: inline-block; padding-bottom: 0.3em; background-size: 100% 0.12em;
-  background-position: 50% 100%; background-repeat: no-repeat; }
-.hj-tx { margin: 0.7vw 0 0; font-family: var(--font-jp); font-weight: 600; font-size: 1.3em;
-  line-height: 2; text-align: center; }
-.hj-tx .p { color: #e8397f; }
+  font-weight: 800; font-size: 2.4em; line-height: 1;
+  box-shadow: 0 0.2vw 0.5vw rgba(160,110,130,0.28); }
+/* アイコンは細い円のリングの中に置く。素材ごとの余白差は --sw/--tx/--ty で吸収 */
+.hj-ring { display: block; position: relative; width: 10.6vw; height: 10.6vw; margin: 0 auto;
+  border-radius: 50%; border: 0.1vw solid; --icsz: 7.4vw; }
+.hj-ring img { position: absolute; left: 50%; top: 50%; height: auto;
+  width: calc(var(--icsz) * var(--sw));
+  transform: translate(-50%, -50%)
+             translate(calc(var(--icsz) * var(--tx)), calc(var(--icsz) * var(--ty))); }
+.hj-i1 { --sw: 1.513; --tx: -0.002; --ty: 0.070; }
+.hj-i2 { --sw: 1.939; --tx:  0.001; --ty: 0.083; }
+.hj-i3 { --sw: 1.517; --tx: -0.004; --ty: 0.070; }
+.hj-i4 { --sw: 1.533; --tx: -0.002; --ty: 0.082; }
+/* タイトルは下半分に蛍光ペン。区切りは別に点線で引く */
+.hj-t { margin: 1.1vw 0 0; text-align: center; font-weight: 800; font-size: 2em;
+  letter-spacing: .02em; line-height: 1.35; white-space: nowrap; }
+/* 02 は文字数が多いので少し小さく（デザイン準拠） */
+.hj-s2 .hj-t { font-size: 1.78em; }
+.hj-t span { padding: 0 0.25em 0.12em; }
+.hj-dot { display: block; width: 100%; height: 0.13vw; margin: 0.85vw 0 0;
+  background-repeat: repeat-x; background-size: 0.5vw 0.13vw;
+  background-image: radial-gradient(circle at 0.065vw 50%, currentColor 0.065vw, transparent 0.07vw); }
+.hj-tx { margin: 0.9vw 0 0; font-family: var(--font-jp); font-weight: 600; font-size: 1.22em;
+  line-height: 1.85; text-align: left; }
+/* 04 は1行の文字数が多いので少し小さく（デザイン準拠） */
+.hj-s4 .hj-tx { font-size: 1.1em; }
+.hj-tx .p { font-weight: 700; }
+
 /* ステップごとの配色 */
-.hj-s1 { border-color: #f4a7c4; } .hj-s1 .hj-num { background: #e8397f; }
-.hj-s1 .hj-t { background-image: radial-gradient(circle at 0.12em 50%, #e8397f 0.07em, transparent 0.09em); background-size: 0.4em 0.12em; background-repeat: repeat-x; }
-.hj-s2 { border-color: #f5c98a; } .hj-s2 .hj-num { background: #f0912c; }
-.hj-s2 .hj-t { background-image: linear-gradient(90deg, #ffe14d, #ffd24d); background-size: 100% 0.16em; }
-.hj-s3 { border-color: #8ed4cc; } .hj-s3 .hj-num { background: #2fae9f; }
-.hj-s3 .hj-t { background-image: radial-gradient(circle at 0.12em 50%, #2fae9f 0.07em, transparent 0.09em); background-size: 0.4em 0.12em; background-repeat: repeat-x; }
-.hj-s4 { border-color: #c8b2ec; } .hj-s4 .hj-num { background: #9270d2; }
-.hj-s4 .hj-t { background-image: radial-gradient(circle at 0.12em 50%, #9270d2 0.07em, transparent 0.09em); background-size: 0.4em 0.12em; background-repeat: repeat-x; }
+.hj-s1 { border-color: #f4a7c4; }
+.hj-s1 .hj-num { background: #e8397f; }
+.hj-s1 .hj-ring { border-color: #f4a7c4; }
+.hj-s1 .hj-dot { color: #f288b3; }
+.hj-s1 .hj-t span { background: linear-gradient(transparent 58%, #ffeaa0 58% 96%, transparent 96%); }
+.hj-s1 .hj-tx .p { color: #e8397f; }
+.hj-s2 { border-color: #f5c98a; }
+.hj-s2 .hj-num { background: #f0912c; }
+.hj-s2 .hj-ring { border-color: #f5c98a; }
+.hj-s2 .hj-dot { color: #f3b566; }
+.hj-s2 .hj-t span { background: linear-gradient(transparent 58%, #ffeaa0 58% 96%, transparent 96%); }
+.hj-s2 .hj-tx .p { color: #e8397f; }
+.hj-s3 { border-color: #8ed4cc; }
+.hj-s3 .hj-num { background: #2fae9f; }
+.hj-s3 .hj-ring { border-color: #8ed4cc; }
+.hj-s3 .hj-dot { color: #6bc7bd; }
+.hj-s3 .hj-t span { background: linear-gradient(transparent 58%, #b8ecec 58% 96%, transparent 96%); }
+.hj-s3 .hj-tx .p { color: #2fae9f; }
+.hj-s4 { border-color: #c8b2ec; }
+.hj-s4 .hj-num { background: #9270d2; }
+.hj-s4 .hj-ring { border-color: #c8b2ec; }
+.hj-s4 .hj-dot { color: #b195e2; }
+.hj-s4 .hj-t span { background: linear-gradient(transparent 58%, #ffeaa0 58% 96%, transparent 96%); }
+.hj-s4 .hj-tx .p { color: #e8397f; }
 
 /* --- First Step バー --- */
-.hj-first { position: relative; z-index: 1; max-width: 88vw; margin: 2.6vw auto 0;
-  background: #fff; border-radius: 1.4vw; padding: 1.6vw 2.4vw 1.4vw;
-  border: 0.18vw solid transparent;
+.hj-first { position: relative; z-index: 1; max-width: 88.4vw; margin: 2.2vw auto 2.6vw;
+  background: #fff; border-radius: 1.6vw; padding: 1.2vw 2vw 1vw;
+  border: 0.16vw solid transparent;
   background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #f0609b, #8f6fe0 55%, #46a8e0 100%);
-  background-origin: border-box; background-clip: padding-box, border-box;
-  margin-bottom: 3vw; }
-.hj-first-row { display: flex; align-items: center; justify-content: center; gap: 1.6vw; flex-wrap: wrap; }
-.hj-first-script { font-family: var(--font-script); font-size: 2.5em;
+  background-origin: border-box; background-clip: padding-box, border-box; }
+.hj-first-row { display: flex; align-items: center; justify-content: center; gap: 1.4vw; }
+.hj-first-script { font-family: var(--font-script); font-size: 2.6em; line-height: 1.2;
   background: linear-gradient(95deg, #f0a63c, #f0609b 50%, #8f6fe0 100%);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent; white-space: nowrap; }
-.hj-first-tx { font-family: var(--font-jp); font-weight: 600; font-size: 1.5em; }
+.hj-first-tx { font-family: var(--font-jp); font-weight: 600; font-size: 1.38em; white-space: nowrap; }
 .hj-first-tx .p { color: #e8397f; }
-.hj-first-btn { display: inline-flex; align-items: center; gap: 0.8vw;
-  color: #fff; font-weight: 800; font-size: 1.8em; letter-spacing: .06em;
-  padding: 0.65em 1.5em; border-radius: 999px; text-decoration: none; line-height: 1.3;
+.hj-first-btn { display: inline-flex; align-items: center; justify-content: center; gap: 1vw;
+  height: 4.8vw; color: #fff; font-weight: 800; font-size: 1.86em; letter-spacing: .04em;
+  padding: 0 2.4vw; border-radius: 999px; text-decoration: none; line-height: 1.3; white-space: nowrap;
   background: linear-gradient(90deg, #f0609b, #8f6fe0 55%, #46a8e0 100%);
-  box-shadow: 0 0.3vw 1vw rgba(180,100,160,0.35);
+  box-shadow: 0 0.3vw 1vw rgba(180,100,160,0.32);
   transition: transform .12s ease, filter .15s ease; }
 .hj-first-btn:hover { filter: brightness(1.06); }
 .hj-first-btn:active { transform: scale(0.98); }
 .hj-first-btn .ar { font-family: sans-serif; }
-.hj-first-note { margin-top: 0.9vw; text-align: center; font-family: var(--font-jp);
-  font-weight: 600; font-size: 1.35em; color: #3a3230;
-  display: flex; align-items: center; justify-content: center; gap: 0.6vw; }
+.hj-first-note { margin-top: 0.7vw; text-align: center; font-family: var(--font-jp);
+  font-weight: 600; font-size: 1.53em; color: #3a3230;
+  display: flex; align-items: center; justify-content: center; gap: 0.5vw; }
 .hj-first-note .line-ic { display: inline-flex; align-items: center; justify-content: center;
-  width: 1.7em; height: 1.7em; border-radius: 0.4em; background: #06c755; color: #fff;
+  width: 1.9em; height: 1.9em; border-radius: 0.45em; background: #06c755; color: #fff;
   font-weight: 800; font-size: 0.55em; letter-spacing: 0; }
 .hj-first-note .p { color: #e8397f; }
 
-/* ===== SP（1080px基準: font-size 2vw） ===== */
+/* ===== SP（全幅=100vw基準: font-size 2vw = 1em） ===== */
 @media (max-width: 768px) {
-  .hj { font-size: 2vw; }
-  .hj-head { padding-top: 5vw; }
-  .hj-script { font-size: 2.4em; }
-  .hj-title { font-size: 3.8em; }
-  .hj-title-line { width: 44vw; height: 1vw; }
-  .hj-grid { flex-direction: column; align-items: center; gap: 3vw; margin-top: 5vw; }
-  .hj-card { width: 80vw; padding: 6vw 4vw 4vw;
-    display: grid; grid-template-columns: 20vw 1fr; gap: 0 3vw; align-items: center; text-align: left; }
-  .hj-arrow { transform: rotate(90deg); }
-  .hj-num { top: -2.5vw; left: 2vw; transform: none; width: 5.5vw; height: 5.5vw; font-size: 1.6em; }
-  .hj-ic { grid-row: 1 / 3; }
-  .hj-ic img { width: 18vw; }
-  .hj-t { margin: 0; font-size: 1.9em; justify-self: start; }
-  .hj-tx { text-align: left; margin-top: 1vw; font-size: 1.45em; }
-  .hj-first { max-width: 92vw; padding: 3.5vw 4vw; border-radius: 2.4vw; margin-top: 5vw; margin-bottom: 6vw; }
-  .hj-first-row { gap: 1.5vw; }
-  .hj-first-script { font-size: 2.2em; }
-  .hj-first-tx { font-size: 1.4em; }
-  .hj-first-btn { font-size: 1.7em; }
-  .hj-first-note { font-size: 1.35em; }
+  .hj { font-size: 2vw;
+    background-image: url('<?php echo $u; ?>/assets/images/flow_bg_sp.png'); }
+  .hj-head { padding-top: 3vw; }
+  .hj-script { font-size: 3.4em; gap: 0.7em; }
+  .hj-title { font-size: 4.6em; }
+  .hj-title-line { width: 46vw; height: 1.3vw; }
+  .hj-grid { flex-direction: column; align-items: center; gap: 1.6vw; margin-top: 3vw; }
+  /* SPは[アイコン][テキスト]の横並び。ナンバーは左上角にまたがる */
+  .hj-card { width: 90vw; min-height: 22.8vw; border-radius: 2.4vw; border-width: 0.25vw;
+    padding: 1.6vw 2vw 1.6vw 10.1vw;
+    display: grid; grid-template-columns: 19.1vw minmax(0, 1fr); column-gap: 4.5vw;
+    align-content: center; }
+  .hj-arrow { transform: rotate(90deg); border-top-width: 1.1vw; border-bottom-width: 1.1vw;
+    border-left-width: 1.4vw; }
+  .hj-num { top: -1.6vw; left: 2.9vw; transform: none; width: 9.1vw; height: 9.1vw; font-size: 2.5em; }
+  .hj-ring { grid-row: 1 / 3; align-self: center; width: 19.1vw; height: 19.1vw;
+    border-width: 0.2vw; --icsz: 13.4vw; }
+  .hj-t { margin: 0; text-align: left; font-size: 2.2em; }
+  .hj-dot { width: 82%; height: 0.3vw; margin-top: 1.2vw;
+    background-size: 1.1vw 0.3vw;
+    background-image: radial-gradient(circle at 0.15vw 50%, currentColor 0.15vw, transparent 0.17vw); }
+  .hj-tx { margin-top: 1.4vw; font-size: 1.2em; line-height: 1.7; }
+  .hj-tx .sp-none { display: none; }
+
+  .hj-first { max-width: 92vw; padding: 3vw 3vw 2.5vw; border-radius: 3vw;
+    margin: 4vw auto 5vw; border-width: 0.3vw; }
+  .hj-first-row { flex-direction: column; gap: 1vw; }
+  .hj-first-script { font-size: 2.4em; }
+  .hj-first-tx { font-size: 1.35em; }
+  .hj-first-btn { height: 8.4vw; font-size: 1.8em; padding: 0 3vw; gap: 2vw; }
+  .hj-first-note { font-size: 1.35em; margin-top: 1.4vw; }
 }
 </style>
 <section class="hj" id="steps">
@@ -122,12 +178,12 @@ $u = get_template_directory_uri();
 
   <!-- ヘッダー -->
   <div class="hj-head">
-    <span class="hj-deco" style="left:30vw;top:6vw;color:#ef4d86;font-size:2.6em;transform:rotate(-14deg);">&#9829;</span>
-    <span class="hj-deco" style="left:24vw;top:9vw;color:#f2c94c;font-size:1.6em;">&#10022;</span>
-    <span class="hj-deco" style="right:29vw;top:5.5vw;color:#ef7fae;font-size:2em;transform:rotate(12deg);">&#9829;</span>
-    <span class="hj-deco" style="right:23vw;top:7vw;color:#f2c443;font-size:2.2em;">&#9734;</span>
-    <span class="hj-deco" style="right:18vw;top:10vw;color:#a98ce4;font-size:1.4em;">&#9679;</span>
-    <div class="hj-script"><span class="sl">＝</span>How to Join<span class="sl">＝</span></div>
+    <span class="hj-deco" style="left:29vw;top:5.5vw;color:#ef4d86;font-size:2.4em;transform:rotate(-14deg);">&#9829;</span>
+    <span class="hj-deco" style="left:23vw;top:8.5vw;color:#f2c94c;font-size:1.6em;">&#10022;</span>
+    <span class="hj-deco" style="right:28vw;top:5vw;color:#ef7fae;font-size:1.9em;transform:rotate(12deg);">&#9829;</span>
+    <span class="hj-deco" style="right:22vw;top:6.5vw;color:#f2c443;font-size:2.1em;">&#9734;</span>
+    <span class="hj-deco" style="right:17vw;top:9.5vw;color:#a98ce4;font-size:1.3em;">&#9679;</span>
+    <div class="hj-script"><span class="hj-slash"></span>How to Join<span class="hj-slash r"></span></div>
     <h2 class="hj-title">入校手順</h2>
     <span class="hj-title-line"></span>
   </div>
@@ -136,30 +192,42 @@ $u = get_template_directory_uri();
   <div class="hj-grid">
     <div class="hj-card hj-s1">
       <span class="hj-num">1</span>
-      <span class="hj-ic"><img src="<?php echo $u; ?>/assets/images/parts/hj-ic1.webp" alt="" loading="lazy"></span>
-      <div><h3 class="hj-t">お問い合わせ</h3></div>
-      <p class="hj-tx">公式<span class="p">LINE</span>から<br>お気軽にご連絡ください。</p>
+      <span class="hj-ring hj-i1"><img src="<?php echo $u; ?>/assets/images/flow1.png" alt="" loading="lazy" decoding="async"></span>
+      <div>
+        <h3 class="hj-t"><span>お問い合わせ</span></h3>
+        <span class="hj-dot"></span>
+        <p class="hj-tx">公式<span class="p">LINE</span>から<br class="sp-none">お気軽にご連絡ください。</p>
+      </div>
     </div>
     <span class="hj-arrow"></span>
     <div class="hj-card hj-s2">
       <span class="hj-num">2</span>
-      <span class="hj-ic"><img src="<?php echo $u; ?>/assets/images/parts/hj-ic2.webp" alt="" loading="lazy"></span>
-      <div><h3 class="hj-t">無料LINE相談する</h3></div>
-      <p class="hj-tx">スクールの雰囲気を<span class="p">見学</span>し、<br>コースの<span class="p">相談</span>をします。</p>
+      <span class="hj-ring hj-i2"><img src="<?php echo $u; ?>/assets/images/flow2.png" alt="" loading="lazy" decoding="async"></span>
+      <div>
+        <h3 class="hj-t"><span>無料LINE相談する</span></h3>
+        <span class="hj-dot"></span>
+        <p class="hj-tx">スクールの雰囲気を<span class="p">見学</span>し、<br>コースの<span class="p">相談</span>をします。</p>
+      </div>
     </div>
     <span class="hj-arrow"></span>
     <div class="hj-card hj-s3">
       <span class="hj-num">3</span>
-      <span class="hj-ic"><img src="<?php echo $u; ?>/assets/images/parts/hj-ic3.webp" alt="" loading="lazy"></span>
-      <div><h3 class="hj-t">入校手続き</h3></div>
-      <p class="hj-tx">申し込み用紙への記入と、<br>授業料の<span class="p">お支払い</span>。</p>
+      <span class="hj-ring hj-i3"><img src="<?php echo $u; ?>/assets/images/flow3.png" alt="" loading="lazy" decoding="async"></span>
+      <div>
+        <h3 class="hj-t"><span>入校手続き</span></h3>
+        <span class="hj-dot"></span>
+        <p class="hj-tx">申し込み用紙への記入と、<br>授業料の<span class="p">お支払い</span>。</p>
+      </div>
     </div>
     <span class="hj-arrow"></span>
     <div class="hj-card hj-s4">
       <span class="hj-num">4</span>
-      <span class="hj-ic"><img src="<?php echo $u; ?>/assets/images/parts/hj-ic4.webp" alt="" loading="lazy"></span>
-      <div><h3 class="hj-t">レッスン開始</h3></div>
-      <p class="hj-tx">教材を受け取り、<br>いよいよネイリストへの<span class="p">第一歩！</span></p>
+      <span class="hj-ring hj-i4"><img src="<?php echo $u; ?>/assets/images/flow4.png" alt="" loading="lazy" decoding="async"></span>
+      <div>
+        <h3 class="hj-t"><span>レッスン開始</span></h3>
+        <span class="hj-dot"></span>
+        <p class="hj-tx">教材を受け取り、<br>いよいよネイリストへの<span class="p">第一歩！</span></p>
+      </div>
     </div>
   </div>
 
@@ -170,6 +238,6 @@ $u = get_template_directory_uri();
       <span class="hj-first-tx">まずは<span class="p">無料カウンセリング・見学</span>へお越しください。</span>
       <a class="hj-first-btn" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">無料カウンセリング・見学を予約する<span class="ar">&#8250;</span></a>
     </div>
-    <div class="hj-first-note"><span class="line-ic">LINE</span>※公式<span class="p">LINE</span> 24時間受付中！</div>
+    <div class="hj-first-note">※公式<span class="p">LINE</span> 24時間受付中！</div>
   </div>
 </section>

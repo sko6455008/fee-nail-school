@@ -63,18 +63,24 @@ $u = get_template_directory_uri();
 
 /* ===== SP（1080px基準: font-size 2vw） ===== */
 @media (max-width: 768px) {
-  .fu { font-size: 2vw; }
+  /* SP用背景のみ支給済み（PC用 graduation_after_bg_pc は未支給） */
+  .fu { font-size: 2vw;
+    background: #fffdfd url('<?php echo $u; ?>/assets/images/graduation_after_bg_sp.png') center / cover no-repeat; }
   .fu-head { padding-top: 4vw; }
   .fu-script { font-size: 2.2em; }
   .fu-t1 { font-size: 2.4em; }
-  .fu-t2 { font-size: 2.6em; }
+  .fu-t2 { font-size: 2em; }
   .fu-line { width: 76vw; height: 0.5vw; }
   .fu-grid { grid-template-columns: 1fr; gap: 4vw; max-width: 92vw; margin-top: 4vw; }
   .fu-card { border-radius: 2.4vw; padding: 3.5vw; gap: 1.5vw 3vw; }
-  .fu-c1 { grid-template-columns: 30vw 1fr; }
-  .fu-c2, .fu-c3 { grid-template-columns: 1fr 30vw; }
+  /* デザイン準拠: 写真は 1枚目左・2枚目右・3枚目左 の交互配置で大きめに */
+  .fu-c1, .fu-c3 { grid-template-areas: "photo title" "photo body" "photo sign";
+    grid-template-columns: 42vw 1fr; }
+  .fu-c2 { grid-template-areas: "title photo" "body photo" "sign photo";
+    grid-template-columns: 1fr 42vw; }
   .fu-photo img { border-radius: 1.8vw; }
-  .fu-t { font-size: 1.9em; }
+  /* タイトルの折返しを許可してカード外へのはみ出しを防ぐ */
+  .fu-t { font-size: 1.9em; white-space: normal; }
   .fu-body { font-size: 1.4em; line-height: 1.9; }
   .fu-sign { font-size: 2.2em; }
   .fu-foot { font-size: 1.6em; padding: 4.5vw 3vw 5.5vw; }

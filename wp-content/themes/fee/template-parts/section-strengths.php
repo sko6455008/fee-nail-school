@@ -6,7 +6,8 @@ $u = get_template_directory_uri();
 <style>
 /* ===== 7つの強み（PC: 1920px基準） ===== */
 .st { position: relative; overflow: hidden; box-sizing: border-box; font-size: 1vw;
-  font-family: var(--font-round); color: #3a3230; background: #fffdfc; }
+  font-family: var(--font-round); color: #3a3230;
+  background: #fffdfc url('<?php echo $u; ?>/assets/images/strength_bg_pc.png') center / cover no-repeat; }
 .st * { box-sizing: border-box; }
 
 /* --- 水彩ブロブ装飾 --- */
@@ -24,49 +25,71 @@ $u = get_template_directory_uri();
 .st-arc { display: block; width: 30vw; margin: 0.4vw auto 0; }
 .st-deco { position: absolute; pointer-events: none; z-index: 1; }
 
-/* --- カード共通 --- */
+/* --- カード共通（デザイン実測: カード幅45vw / 高さ13.6vw） --- */
 .st-grid4 { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr;
-  gap: 1.6vw 2.3vw; max-width: 92.5vw; margin: 2.4vw auto 0; }
+  gap: 1.3vw 2.3vw; max-width: 92.5vw; margin: 2.4vw auto 0; }
 .st-grid3 { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr 1fr;
-  gap: 1.7vw; max-width: 92.5vw; margin: 1.6vw auto 0; }
-.st-card { position: relative; border-radius: 1.2vw; padding: 1.6vw 1.4vw 1.5vw;
-  display: grid; grid-template-columns: 10.5vw 1fr; align-items: center; gap: 0.8vw;
+  gap: 1.7vw; max-width: 92.5vw; margin: 1.3vw auto 0; }
+.st-card { position: relative; border-radius: 1.2vw; padding: 1.2vw 2vw 1.2vw 5.5vw;
+  display: grid; grid-template-columns: var(--icw) 1fr; align-items: center; gap: 3.2vw;
+  min-height: 13.6vw; --icw: 7.3vw;
   box-shadow: 0 0.25vw 0.9vw rgba(210,150,170,0.12); }
-.st-num { position: absolute; top: -0.7vw; left: -0.5vw; width: 4.6vw; height: 4.6vw; border-radius: 50%;
-  background: #fff; display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-en); font-weight: 700; font-size: 1.7em;
-  box-shadow: 0 0.15vw 0.5vw rgba(180,130,150,0.25); }
-.st-ic { justify-self: center; }
-.st-ic img { display: block; width: 8.6vw; height: auto; }
-.st-body { text-align: center; padding-right: 1vw; }
-.st-ribbon { display: inline-block; position: relative; color: #fff; font-weight: 800;
-  font-size: 1.6em; letter-spacing: .28em; padding: 0.32em 1.5em; line-height: 1.3;
-  clip-path: polygon(0 0, 100% 0, calc(100% - 0.55em) 50%, 100% 100%, 0 100%, 0.55em 50%); }
-.st-big { margin-top: 0.6vw; font-weight: 800; font-size: 2.5em; line-height: 1.4; }
-.st-sub { margin-top: 0.15vw; font-weight: 700; font-size: 1.45em; color: #3a3230; }
 
-/* カードごとの配色 */
-.st-c1 { background: #fdeef2; } .st-c1 .st-num { color: #ec5a96; } .st-c1 .st-ribbon { background: #ec5a96; }
+/* --- ナンバリング（カード色で塗った丸。数字は白抜き） --- */
+.st-num { position: absolute; top: 0.3vw; left: 0.6vw; width: 6.4vw; height: 6.4vw;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--acc); color: #fff; border-radius: 50%;
+  font-family: var(--font-en); font-weight: 700; font-size: 2.4em; line-height: 1; }
+
+/* --- アイコン（支給素材は1024×1536で中身の大きさがバラバラなので、
+       --sw で横幅を、--ty で上下位置を揃えてから表示する） --- */
+.st-ic { position: relative; justify-self: center; width: var(--icw); height: var(--icw); }
+.st-ic img { position: absolute; left: 50%; top: 50%; height: auto;
+  width: calc(var(--icw) * var(--sw));
+  transform: translate(-50%, -50%) translateY(calc(var(--icw) * var(--ty))); }
+
+.st-body { text-align: center; }
+.st-ribbon { display: inline-block; position: relative; color: #fff; font-weight: 800;
+  font-size: 2em; letter-spacing: .28em; padding: 0.22em 1.4em; line-height: 1.2;
+  background: var(--acc);
+  clip-path: polygon(0 0, 100% 0, calc(100% - 0.55em) 50%, 100% 100%, 0 100%, 0.55em 50%); }
+.st-big { margin-top: 0.4vw; font-weight: 800; font-size: 2.75em; line-height: 1.3; }
+.st-sub { margin-top: 0.15vw; font-weight: 700; font-size: 1.75em; line-height: 1.45; color: #3a3230; }
+
+/* カードごとの配色（--acc = ナンバリングとリボンの色）と
+   アイコン正規化係数（--sw = 横幅倍率 / --ty = 上下位置補正） */
+.st-c1 { background: #fdeef2; --acc: #ec5a96; }
+.st-c1 .st-ic { --sw: 1.605; --ty: 0.102; }
 .st-c1 .st-big { color: #e8397f; } .st-c1 .st-big .hl { background: linear-gradient(transparent 15%, #fbd7e5 15% 90%, transparent 90%); }
-.st-c2 { background: #fdf6e5; } .st-c2 .st-num { color: #f0a63c; } .st-c2 .st-ribbon { background: #f0a63c; }
-.st-c2 .st-big .n2 { color: #f0a63c; font-size: 1.5em; }
-.st-c3 { background: #eaf6ec; } .st-c3 .st-num { color: #6bbf7e; } .st-c3 .st-ribbon { background: #6bbf7e; }
-.st-c3 .st-big .n2 { color: #6bbf7e; font-size: 1.5em; }
-.st-c4 { background: #e9f2fb; } .st-c4 .st-num { color: #5a9fdb; } .st-c4 .st-ribbon { background: #5a9fdb; }
+.st-c2 { background: #fdf6e5; --acc: #f0a63c; }
+.st-c2 .st-ic { --sw: 1.757; --ty: 0.021; }
+.st-c2 .st-big .n2 { color: #f0a63c; font-size: 1.25em; }
+.st-c3 { background: #eaf6ec; --acc: #6bbf7e; }
+.st-c3 .st-ic { --sw: 1.564; --ty: 0.083; }
+.st-c3 .st-big .n2 { color: #6bbf7e; font-size: 1.25em; }
+.st-c4 { background: #e9f2fb; --acc: #5a9fdb; }
+.st-c4 .st-ic { --sw: 1.832; --ty: 0.048; }
 .st-c4 .st-big { color: #4a90d0; }
 .st-c4 .st-sub .b { color: #4a90d0; }
-.st-c5 { background: #f3edfb; } .st-c5 .st-num { color: #a98ce4; } .st-c5 .st-ribbon { background: #a98ce4; }
-.st-c5 .st-big { color: #8a68cc; font-size: 1.65em; }
-.st-c6 { background: #fdeff3; } .st-c6 .st-num { color: #ef6da5; } .st-c6 .st-ribbon { background: #ef6da5; }
-.st-c6 .st-sub { font-size: 1.3em; text-align: left; }
+.st-c5 { background: #f3edfb; --acc: #a98ce4; }
+.st-c5 .st-ic { --sw: 1.657; --ty: 0.095; }
+.st-c5 .st-big { color: #8a68cc; }
+.st-c6 { background: #fdeff3; --acc: #ef6da5; }
+.st-c6 .st-ic { --sw: 1.600; --ty: 0.061; }
 .st-c6 .st-sub .b { color: #ef6da5; }
-.st-c7 { background: #e8f5f5; } .st-c7 .st-num { color: #3fb4b8; } .st-c7 .st-ribbon { background: #3fb4b8; }
-.st-c7 .st-sub { font-size: 1.35em; }
+.st-c7 { background: #e8f5f5; --acc: #3fb4b8; }
+.st-c7 .st-ic { --sw: 1.593; --ty: 0.085; }
 
-/* 3列カードはやや小さめ */
-.st-grid3 .st-card { grid-template-columns: 8vw 1fr; padding: 1.7vw 1vw 1.5vw; }
-.st-grid3 .st-ic img { width: 7vw; }
-.st-grid3 .st-ribbon { font-size: 1.35em; letter-spacing: .18em; }
+/* 3列カードはやや小さめ（カード別の指定より後ろに置いて上書きさせる） */
+.st-grid3 .st-card { grid-template-columns: var(--icw) 1fr; gap: 1.6vw;
+  padding: 1.1vw 1.2vw 1.1vw 3.4vw; min-height: 12.4vw; --icw: 5.6vw; }
+.st-grid3 .st-num { width: 5.2vw; height: 5.2vw; font-size: 2em; }
+.st-grid3 .st-ribbon { font-size: 1.5em; letter-spacing: .18em; }
+.st-grid3 .st-big { font-size: 1.8em; }
+.st-grid3 .st-sub { font-size: 1.35em; }
+.st-grid3 .st-c5 .st-big { font-size: 1.5em; }
+.st-grid3 .st-c6 .st-sub { font-size: 1.25em; }
+.st-grid3 .st-c7 .st-sub { font-size: 1.3em; }
 
 /* --- 締めの一言 --- */
 .st-close { position: relative; z-index: 1; text-align: center; padding: 2vw 0 2.6vw;
@@ -79,18 +102,22 @@ $u = get_template_directory_uri();
 
 /* ===== SP（1080px基準: font-size 2vw） ===== */
 @media (max-width: 768px) {
-  .st { font-size: 2vw; }
+  .st { font-size: 2vw;
+    background-image: url('<?php echo $u; ?>/assets/images/strength_bg_sp.png'); }
   .st-head { padding-top: 5vw; }
   .st-lead { font-size: 1.5em; }
   .st-title { font-size: 3.6em; }
   .st-arc { width: 50vw; }
-  .st-grid4, .st-grid3 { grid-template-columns: 1fr; gap: 4vw; max-width: 90vw; margin-top: 4.5vw; }
-  .st-card, .st-grid3 .st-card { grid-template-columns: 16vw 1fr; padding: 3.5vw 2.5vw; border-radius: 2.5vw; }
-  .st-num { top: -1.5vw; left: -1.2vw; width: 8.5vw; height: 8.5vw; font-size: 1.5em; }
-  .st-ic img, .st-grid3 .st-ic img { width: 13vw; }
-  .st-ribbon, .st-grid3 .st-ribbon { font-size: 1.55em; }
-  .st-big { font-size: 2.3em; }
-  .st-sub { font-size: 1.4em; }
+  /* SPもデザイン実測（カード幅94vw / 高さ22.7vw）に合わせる */
+  .st-grid4, .st-grid3 { grid-template-columns: 1fr; gap: 1.5vw; max-width: 94vw; margin-top: 4.5vw; }
+  .st-card, .st-grid3 .st-card { grid-template-columns: var(--icw) 1fr; gap: 10vw;
+    padding: 2vw 1vw 2vw 24vw; min-height: 22.7vw; border-radius: 2.5vw; --icw: 22vw; }
+  .st-num, .st-grid3 .st-num { top: 4vw; left: 5.4vw; width: 15.4vw; height: 15.4vw; font-size: 2.6em; }
+  .st-ribbon, .st-grid3 .st-ribbon { font-size: 1.5em; letter-spacing: .22em; padding: 0.22em 1.1em; }
+  .st-big, .st-grid3 .st-big { font-size: 2.1em; }
+  .st-sub, .st-grid3 .st-sub { font-size: 1.4em; }
+  .st-grid3 .st-c5 .st-big { font-size: 1.75em; }
+  .st-grid3 .st-c6 .st-sub, .st-grid3 .st-c7 .st-sub { font-size: 1.4em; }
   .st-close { padding: 4vw 3vw 6vw; font-size: 1.5em; }
 }
 </style>
@@ -122,7 +149,7 @@ $u = get_template_directory_uri();
   <div class="st-grid4">
     <div class="st-card st-c1">
       <span class="st-num">01</span>
-      <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/parts/st-ic1.webp" alt="" loading="lazy"></span>
+      <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/strength1.png" alt="" loading="lazy"></span>
       <div class="st-body">
         <span class="st-ribbon">圧倒的学習時間</span>
         <div class="st-big"><span class="hl">1コマ8時間！</span></div>
@@ -131,7 +158,7 @@ $u = get_template_directory_uri();
     </div>
     <div class="st-card st-c2">
       <span class="st-num">02</span>
-      <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/parts/st-ic2.webp" alt="" loading="lazy"></span>
+      <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/strength2.png" alt="" loading="lazy"></span>
       <div class="st-body">
         <span class="st-ribbon">総授業時間</span>
         <div class="st-big"><span class="n2">480</span>時間以上</div>
@@ -140,7 +167,7 @@ $u = get_template_directory_uri();
     </div>
     <div class="st-card st-c3">
       <span class="st-num">03</span>
-      <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/parts/st-ic3.webp" alt="" loading="lazy"></span>
+      <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/strength3.png" alt="" loading="lazy"></span>
       <div class="st-body">
         <span class="st-ribbon">実践人数</span>
         <div class="st-big"><span class="n2">240</span>人越え</div>
@@ -149,7 +176,7 @@ $u = get_template_directory_uri();
     </div>
     <div class="st-card st-c4">
       <span class="st-num">04</span>
-      <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/parts/st-ic4.webp" alt="" loading="lazy"></span>
+      <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/strength4.png" alt="" loading="lazy"></span>
       <div class="st-body">
         <span class="st-ribbon">自習室</span>
         <div class="st-big">使い放題</div>
@@ -162,7 +189,7 @@ $u = get_template_directory_uri();
   <div class="st-grid3">
     <div class="st-card st-c5">
       <span class="st-num">05</span>
-      <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/parts/st-ic5.webp" alt="" loading="lazy"></span>
+      <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/strength5.png" alt="" loading="lazy"></span>
       <div class="st-body">
         <span class="st-ribbon">人気セミナー</span>
         <div class="st-big">トレンドアート受け放題</div>
@@ -171,7 +198,7 @@ $u = get_template_directory_uri();
     </div>
     <div class="st-card st-c6">
       <span class="st-num">06</span>
-      <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/parts/st-ic6.webp" alt="" loading="lazy"></span>
+      <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/strength6.png" alt="" loading="lazy"></span>
       <div class="st-body">
         <span class="st-ribbon">開業支援</span>
         <div class="st-sub">開業の<span class="b">ノウハウや集客方法</span>なども手厚くサポート</div>
@@ -179,7 +206,7 @@ $u = get_template_directory_uri();
     </div>
     <div class="st-card st-c7">
       <span class="st-num">07</span>
-      <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/parts/st-ic7.webp" alt="" loading="lazy"></span>
+      <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/strength7.png" alt="" loading="lazy"></span>
       <div class="st-body">
         <span class="st-ribbon">就職相談</span>
         <div class="st-sub">就職までしっかりサポート！</div>

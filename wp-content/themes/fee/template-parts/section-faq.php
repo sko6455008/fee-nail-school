@@ -1,10 +1,12 @@
 <?php
 // よくある質問（Q&A）セクション — コーディング版
 // 見出しを新規コード化し、アコーディオン本体は index.php（画像版）のコード化済み .pcfaq を移設。
+$u = get_template_directory_uri();
 ?>
 <style>
 /* ===== Q&A見出し ===== */
-.fq { position: relative; overflow: hidden; box-sizing: border-box; background: #FEF9F4;
+.fq { position: relative; overflow: hidden; box-sizing: border-box;
+  background: #FEF9F4 url('<?php echo $u; ?>/assets/images/qa_bg_pc.png') center / cover no-repeat;
   font-family: var(--font-jp); font-size: 1vw; }
 .fq * { box-sizing: border-box; }
 .fq-wc { position: absolute; pointer-events: none; filter: blur(1vw); opacity: .5; z-index: 0; }
@@ -21,7 +23,8 @@
 .fq-deco { position: absolute; z-index: 1; pointer-events: none; }
 
 /* ===== アコーディオン（index.phpの.pcfaqを移設） ===== */
-.pcfaq2 { background: #FEF9F4; padding: 6px 0 70px; font-size: 16px; }
+/* 背景はセクション（.fq）の qa_bg 画像を透過で見せる */
+.pcfaq2 { background: transparent; padding: 6px 0 70px; font-size: 16px; }
 .pcfaq2-inner { max-width: 1180px; margin: 0 auto; padding: 0 24px; box-sizing: border-box; }
 .pcfaq2-item { margin: 0 0 20px; }
 .pcfaq2-q { width: 100%; box-sizing: border-box; display: flex; align-items: center; gap: 20px;
@@ -53,7 +56,8 @@
     line-height: 1.9; color: #5D4E4A; padding-top: 4px; }
 .pcfaq2-item.open .pcfaq2-a { max-height: 440px; }
 @media (max-width: 768px) {
-    .fq { font-size: 2vw; }
+    .fq { font-size: 2vw;
+      background-image: url('<?php echo $u; ?>/assets/images/qa_bg_sp.png'); }
     .fq-head { padding: 5vw 0 3vw; }
     .fq-qa { font-size: 4.6em; }
     .fq-jp { font-size: 2.2em; }
