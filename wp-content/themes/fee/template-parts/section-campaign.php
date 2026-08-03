@@ -26,7 +26,16 @@ $u = get_template_directory_uri();
 /* --- 写真（支給素材: 透過PNG切り抜き） --- */
 .cp-photo { position: absolute; display: block; }
 .cp-photo img { display: block; width: 100%; height: auto; }
-.cp-nails { left: -1.5vw; top: -5.8vw; width: 30vw; z-index: 2; }
+/* 左上のネイル写真。素材(campaign_nail.png)は正方形の全面写真なので、ボックスを
+   固定して cover で切り抜いたうえで、支給デザインと同じく右下へふわっと消えるよう
+   マスクをかけている（そのまま置くと四角い写真の輪郭が出てしまう）。
+   デザイン上の占有範囲 x0〜23vw / y0〜17vw に合わせた寸法。左上は画面外へ逃がす。 */
+/* マスクの半径(85%)は、ボックスの左下・右下の隅まで確実に透明になる値。これより
+   大きいと下辺で写真が消えきらず、四角い切れ目が出る。 */
+.cp-nails { left: -3.5vw; top: 0vw; width: 30vw; z-index: 2; }
+.cp-nails img { height: 30vw; object-fit: cover;
+  -webkit-mask-image: radial-gradient(85% 85% at 18% 14%, #000 55%, transparent 88%);
+  mask-image: radial-gradient(85% 85% at 18% 14%, #000 55%, transparent 105%); }
 .cp-gels { left: 0; top: 25.5vw; width: 26vw; z-index: 2; }
 .cp-teacher { right: -2.5vw; top: 2vw; width: 50vw; z-index: 2; }
 
@@ -35,7 +44,7 @@ $u = get_template_directory_uri();
 .cp-bubble img { display: block; width: 100%; height: auto; }
 
 /* --- 期間限定バッジ（支給素材） --- */
-.cp-limited { position: absolute; z-index: 3; left: 10.6vw; top: 15.4vw; width: 20vw; }
+.cp-limited { position: absolute; z-index: 3; left: 17.6vw; top: 15.4vw; width: 20vw; }
 .cp-limited img { display: block; width: 100%; height: auto; }
 .cp-spark { position: absolute; z-index: 3; color: #f8c94f; }
 .cp-spark::before { content: "\2726"; }
@@ -84,7 +93,8 @@ $u = get_template_directory_uri();
   .cp-strip .zero { font-size: 1.25em; }
   .cp-body { height: 94vw;
     background-image: url('<?php echo $u; ?>/assets/images/banner_bg_sp.png'); }
-  .cp-nails { left: -2.4vw; top: -4.6vw; width: 32vw; }
+  .cp-nails { left: -4.5vw; top: 0vw; width: 36vw; }
+  .cp-nails img { height: 35vw; }
   .cp-gels { top: 61vw; width: 31.6vw; }
   .cp-teacher { right: -3vw; top: 10vw; width: 70vw; }
   .cp-bubble { left: 34.4vw; top: -4.6vw; width: 34vw; }
@@ -107,6 +117,7 @@ $u = get_template_directory_uri();
 
   <div class="cp-body">
     <!-- 写真（支給素材） -->
+    <span class="cp-photo cp-nails"><img src="<?php echo $u; ?>/assets/images/campaign_nail.png" alt="ネイルの作品例" loading="lazy"></span>
     <span class="cp-photo cp-gels"><img src="<?php echo $u; ?>/assets/images/banner_powder.png" alt="カラージェルとジュエリーパーツ" loading="lazy"></span>
     <span class="cp-photo cp-teacher"><img src="<?php echo $u; ?>/assets/images/banner_person.png" alt="講師" loading="lazy"></span>
 

@@ -73,8 +73,12 @@ $u = get_template_directory_uri();
   mask-composite: exclude; pointer-events: none; }
 
 /* --- Fee スクリプトロゴ --- */
+/* スクリプト体(Great Vibes)は字面がemボックスの上下にはみ出すが、background-clip:text は
+   ボックスの中しか塗らないため、そのままだとロゴの上端が水平に欠ける。パディングで塗り
+   範囲を広げ、同じ量のネガティブマージンで位置を元に戻している（topの値は変えない）。 */
 .fv-fee { position: absolute; z-index: 3; left: 25.4vw; top: 36.1vw; width: 17vw; text-align: center;
   font-family: var(--font-script); font-size: 7.5em; line-height: 1;
+  padding: 0.14em 0; margin: -0.14em 0;
   background: var(--grad-brand);
   -webkit-background-clip: text; background-clip: text;
   -webkit-text-fill-color: transparent; color: transparent; }

@@ -30,9 +30,9 @@ $u = get_template_directory_uri();
   gap: 1.3vw 2.3vw; max-width: 92.5vw; margin: 2.4vw auto 0; }
 .st-grid3 { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr 1fr;
   gap: 1.7vw; max-width: 92.5vw; margin: 1.3vw auto 0; }
-.st-card { position: relative; border-radius: 1.2vw; padding: 1.2vw 2vw 1.2vw 5.5vw;
-  display: grid; grid-template-columns: var(--icw) 1fr; align-items: center; gap: 3.2vw;
-  min-height: 13.6vw; --icw: 7.3vw;
+.st-card { position: relative; border-radius: 1.2vw; padding: 1.2vw 2vw 1.2vw 7.5vw;
+  display: grid; grid-template-columns: var(--icw) 1fr; align-items: center; gap: 2vw;
+  min-height: 13.6vw; --icw: 9vw;
   box-shadow: 0 0.25vw 0.9vw rgba(210,150,170,0.12); }
 
 /* --- ナンバリング（カード色で塗った丸。数字は白抜き） --- */
@@ -84,7 +84,7 @@ $u = get_template_directory_uri();
 .st-grid3 .st-card { grid-template-columns: var(--icw) 1fr; gap: 1.6vw;
   padding: 1.1vw 1.2vw 1.1vw 3.4vw; min-height: 12.4vw; --icw: 5.6vw; }
 .st-grid3 .st-num { width: 5.2vw; height: 5.2vw; font-size: 2em; }
-.st-grid3 .st-ribbon { font-size: 1.5em; letter-spacing: .18em; }
+.st-grid3 .st-ribbon { font-size: 1.8em; letter-spacing: .18em; }
 .st-grid3 .st-big { font-size: 1.8em; }
 .st-grid3 .st-sub { font-size: 1.35em; }
 .st-grid3 .st-c5 .st-big { font-size: 1.5em; }
@@ -110,10 +110,10 @@ $u = get_template_directory_uri();
   .st-arc { width: 50vw; }
   /* SPもデザイン実測（カード幅94vw / 高さ22.7vw）に合わせる */
   .st-grid4, .st-grid3 { grid-template-columns: 1fr; gap: 1.5vw; max-width: 94vw; margin-top: 4.5vw; }
-  .st-card, .st-grid3 .st-card { grid-template-columns: var(--icw) 1fr; gap: 10vw;
+  .st-card, .st-grid3 .st-card { grid-template-columns: var(--icw) 1fr; gap: 3vw;
     padding: 2vw 1vw 2vw 24vw; min-height: 22.7vw; border-radius: 2.5vw; --icw: 22vw; }
   .st-num, .st-grid3 .st-num { top: 4vw; left: 5.4vw; width: 15.4vw; height: 15.4vw; font-size: 2.6em; }
-  .st-ribbon, .st-grid3 .st-ribbon { font-size: 1.5em; letter-spacing: .22em; padding: 0.22em 1.1em; }
+  .st-ribbon, .st-grid3 .st-ribbon { font-size: 2em; letter-spacing: .22em; padding: 0.22em 1.1em; }
   .st-big, .st-grid3 .st-big { font-size: 2.1em; }
   .st-sub, .st-grid3 .st-sub { font-size: 1.4em; }
   .st-grid3 .st-c5 .st-big { font-size: 1.75em; }

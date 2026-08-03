@@ -11,7 +11,11 @@
     line-height: 1.25; font-size: 1rem; }
 .pchead2-logo { display: flex; flex-direction: column; justify-content: center;
     line-height: 1; text-decoration: none; margin-right: 1.6vw; }
+/* スクリプト体(Great Vibes)は字面がemボックスの上下にはみ出すが、background-clip:text は
+   ボックスの中しか塗らないため、そのままだとロゴの上端が水平にスパッと欠ける。
+   パディングで塗り範囲を広げ、同じ量のネガティブマージンで元のレイアウトに戻している。 */
 .pchead2-fee { font-family: var(--font-script); font-size: 2.45vw; line-height: 1;
+    padding: 0.14em 0; margin: -0.14em 0;
     background: var(--grad-brand);
     -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent; color: transparent; }

@@ -231,7 +231,6 @@ $u = get_template_directory_uri();
       <div class="co-l">
         <div class="co-nrow">
           <span class="co-num">01</span>
-          <span class="co-term"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.4 2"/></svg>期間：3ヶ月</span>
         </div>
         <h3 class="co-t">3ヶ月<span class="p">即戦力</span>コース</h3>
         <p class="co-lead">短期間でプロデビューを目指したい方へ！</p>
@@ -262,7 +261,6 @@ $u = get_template_directory_uri();
       <div class="co-l">
         <div class="co-nrow">
           <span class="co-num">02</span>
-          <span class="co-term"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5.2l3.4 2"/></svg>期間：9ヶ月</span>
         </div>
         <h3 class="co-t">9ヶ月<span class="p">じっくり</span>コース</h3>
         <p class="co-lead">じっくり習得して確実にスキルを身につけたい方へ！</p>
@@ -292,6 +290,5 @@ $u = get_template_directory_uri();
   <!-- 注記 -->
   <div class="co-notes">
     ※分割払いも可能ですのでご相談ください。<br>
-    ※卒業後、1単位(4時間)5,000円(税込)で受講可能です。
   </div>
 </section>

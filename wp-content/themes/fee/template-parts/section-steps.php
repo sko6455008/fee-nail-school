@@ -123,9 +123,9 @@ $u = get_template_directory_uri();
 .hj-first-note { margin-top: 0.7vw; text-align: center; font-family: var(--font-jp);
   font-weight: 600; font-size: 1.53em; color: #3a3230;
   display: flex; align-items: center; justify-content: center; gap: 0.5vw; }
-.hj-first-note .line-ic { display: inline-flex; align-items: center; justify-content: center;
-  width: 1.9em; height: 1.9em; border-radius: 0.45em; background: #06c755; color: #fff;
-  font-weight: 800; font-size: 0.55em; letter-spacing: 0; }
+/* LINEアイコン（緑の角丸＋白い吹き出し）。素材を持たないのでインラインSVGで描いている。
+   サイズは em 指定なので .hj-first-note の font-size に追従し、SP側の調整は不要 */
+.hj-first-note .line-ic { flex: 0 0 auto; display: block; width: 1.5em; height: 1.5em; }
 .hj-first-note .p { color: #e8397f; }
 
 /* ===== SP（全幅=100vw基準: font-size 2vw = 1em） ===== */
@@ -235,6 +235,13 @@ $u = get_template_directory_uri();
       <span class="hj-first-tx">まずは<span class="p">無料カウンセリング・見学</span>へお越しください。</span>
       <a class="hj-first-btn" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">無料カウンセリング・見学を予約する</a>
     </div>
-    <div class="hj-first-note">※公式<span class="p">LINE</span> 24時間受付中！</div>
+    <div class="hj-first-note">
+      <svg class="line-ic" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <rect width="48" height="48" rx="11" fill="#06c755"/>
+        <ellipse cx="24" cy="22.5" rx="15" ry="12" fill="#fff"/>
+        <path d="M16.2 30.5 14 39.2l8.4-6.2z" fill="#fff"/>
+        <text x="24" y="26.3" text-anchor="middle" fill="#06c755"
+              font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700">LINE</text>
+      </svg>※公式<span class="p">LINE</span> 24時間受付中！</div>
   </div>
 </section>

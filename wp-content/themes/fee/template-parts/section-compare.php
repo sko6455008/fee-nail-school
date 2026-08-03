@@ -295,8 +295,6 @@ $u = get_template_directory_uri();
 
     <!-- 行5: モデル人数 -->
     <div class="cm-l cm-row5">
-      <span class="cm-spark" style="right:13vw;top:2.4vw;font-size:1.9em;"></span>
-      <span class="cm-spark" style="right:9vw;bottom:2.6vw;font-size:1.3em;"></span>
       <div class="cm-r5l">
         <span class="cm-ic cm-badge"><img src="<?php echo $u; ?>/assets/images/compare_badge.png" alt="卒業までのモデル人数200人以上" loading="lazy" decoding="async"></span>
         <div>

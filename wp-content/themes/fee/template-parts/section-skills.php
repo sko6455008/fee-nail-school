@@ -85,7 +85,7 @@ $u = get_template_directory_uri();
 .sk-c6 .sk-ic { --sw: 2.035; --tx:  0.010; --ty: 0.205; }
 .sk-list { grid-column: 2; grid-row: 2; align-self: center;
   list-style: none; margin: 0; padding: 0; text-align: left; }
-.sk-list li { display: flex; align-items: center; gap: 0.55vw; font-weight: 600;
+.sk-list li { display: flex; align-items: center; gap: 0.55vw; font-weight: 700;
   font-size: 0.88em; line-height: 1.5; padding: 0.36em 0; letter-spacing: 0; }
 .sk-list .ck { flex: 0 0 auto; width: 1.5em; height: 1.5em; border-radius: 50%;
   border: 0.1em solid currentColor; display: inline-flex; align-items: center; justify-content: center; }
@@ -167,7 +167,7 @@ $u = get_template_directory_uri();
   .sk-num { top: 1.2vw; left: 2vw; width: 9vw; height: 9vw; font-size: 2.2em; }
   .sk-t { font-size: 2.1em; }
   .sk-ic { width: 15vw; height: 15vw; --icsz: 12vw; }
-  .sk-list li { font-size: 1.25em; padding: 0.3em 0; gap: 1vw; }
+  .sk-list li { font-size: 1.5em; padding: 0.3em 0; gap: 1vw; }
   .sk-c6 .sk-list li { font-size: 1.1em; padding: 0.16em 0; }
   .sk-photo { border-radius: 1.2vw; }
 
@@ -213,6 +213,8 @@ $u = get_template_directory_uri();
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>爪の構造</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>病気トラブル</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>衛生管理</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>道具の名称</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>技術理論</li>
       </ul>
       <span class="sk-photo"><img src="<?php echo $u; ?>/assets/images/skills01.png" alt="基礎知識のテキスト教材" loading="lazy"></span>
     </div>
@@ -268,13 +270,13 @@ $u = get_template_directory_uri();
       <h3 class="sk-t"><span class="u">サロンワーク技術</span></h3>
       <span class="sk-ic"><img src="<?php echo $u; ?>/assets/images/skills6.png" alt="" loading="lazy" decoding="async"></span>
       <ul class="sk-list">
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>ヒアリング技術</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>ヒアリング方法</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>メニュー提案の仕方</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>施術中の声かけ</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>手元の見せ方</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>時間管理</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>接客マナー</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>サロンワークのノウハウ</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>ノウハウ</li>
       </ul>
       <span class="sk-photo"><img src="<?php echo $u; ?>/assets/images/skills06.png" alt="サロンワーク研修の様子" loading="lazy"></span>
     </div>
