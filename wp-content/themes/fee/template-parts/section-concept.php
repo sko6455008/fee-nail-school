@@ -104,8 +104,8 @@ $u = get_template_directory_uri();
   <span class="cc-heart" style="right:7.5vw;top:90.5vw;color:#ef6da5;font-size:2.6em;">&#9825;</span>
   <span class="cc-spark" style="right:18vw;top:94.5vw;color:#f0a0c4;font-size:1.3em;"></span>
 
-  <!-- 写真（支給素材） -->
-  <img class="cc-photo" src="<?php echo $u; ?>/assets/images/intro.jpg" alt="仕上がったネイルの手元" loading="lazy">
+  <!-- 写真（外観 > カスタマイズ > コンセプト で差し替え可能） -->
+  <img class="cc-photo" <?php fee_img_attr('concept', 'main'); ?> loading="lazy">
 
   <!-- 紹介文（PC: 従来文言 / SP: スマホ版LPデザインの文言） -->
   <p class="cc-copy cc-copy-pc">

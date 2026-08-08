@@ -246,7 +246,7 @@ $u = get_template_directory_uri();
       </div>
       <div class="co-r">
         <span class="co-photo">
-          <span class="co-pic"><img src="<?php echo $u; ?>/assets/images/course01.jpg" alt="3ヶ月即戦力コースの作品例" loading="lazy"></span>
+          <span class="co-pic"><img <?php fee_img_attr('courses', '1'); ?> loading="lazy"></span>
           <span class="co-no1">人気No.1</span>
         </span>
         <div class="co-buy">
@@ -276,7 +276,7 @@ $u = get_template_directory_uri();
       </div>
       <div class="co-r">
         <span class="co-photo">
-          <span class="co-pic"><img src="<?php echo $u; ?>/assets/images/course02.jpeg" alt="9ヶ月じっくりコースの作品例" loading="lazy"></span>
+          <span class="co-pic"><img <?php fee_img_attr('courses', '2'); ?> loading="lazy"></span>
           <span class="co-no1">スキルUP</span>
         </span>
         <div class="co-buy">

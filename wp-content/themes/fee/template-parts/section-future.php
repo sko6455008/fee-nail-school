@@ -109,20 +109,20 @@ $u = get_template_directory_uri();
   <!-- カード -->
   <div class="fu-grid">
     <div class="fu-card fu-c1">
-      <span class="fu-photo"><img src="<?php echo $u; ?>/assets/images/parts/fu-p1.webp" alt="サロンで施術したネイル" loading="lazy"></span>
+      <span class="fu-photo"><img <?php fee_img_attr('future', '1'); ?> loading="lazy"></span>
       <h3 class="fu-t">人気サロンへ就職<span class="fu-t-line">･----･&#10022;----･</span></h3>
       <p class="fu-body">提携サロンへ優先紹介可能！<br>即戦力としてデビューできます。</p>
       <span class="fu-sign">Debut !&#9825;</span>
     </div>
     <div class="fu-card fu-c2">
       <h3 class="fu-t">自宅サロン開業<span class="fu-t-line">&#9734;----･&#10022;----&#8962;</span></h3>
-      <span class="fu-photo"><img src="<?php echo $u; ?>/assets/images/parts/fu-p2.webp" alt="自宅サロンでのネイル" loading="lazy"></span>
+      <span class="fu-photo"><img <?php fee_img_attr('future', '2'); ?> loading="lazy"></span>
       <p class="fu-body">低コストで開業するノウハウを伝授。自分のペースで働くライフスタイルを実現します。</p>
       <span class="fu-sign">My Salon &#9825;</span>
     </div>
     <div class="fu-card fu-c3">
       <h3 class="fu-t">フリーランスとして活躍<span class="fu-t-line">･----･&#10022;----&#9825;</span></h3>
-      <span class="fu-photo"><img src="<?php echo $u; ?>/assets/images/parts/fu-p3.webp" alt="フリーランスネイリストの作品" loading="lazy"></span>
+      <span class="fu-photo"><img <?php fee_img_attr('future', '3'); ?> loading="lazy"></span>
       <p class="fu-body">シェアサロンを利用したり、出張ネイリストとして自由に働く道もサポートします。</p>
       <span class="fu-sign">Freelance &#9825;</span>
     </div>

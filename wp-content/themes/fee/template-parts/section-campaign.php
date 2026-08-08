@@ -117,9 +117,9 @@ $u = get_template_directory_uri();
 
   <div class="cp-body">
     <!-- 写真（支給素材） -->
-    <span class="cp-photo cp-nails"><img src="<?php echo $u; ?>/assets/images/campaign_nail.png" alt="ネイルの作品例" loading="lazy"></span>
+    <span class="cp-photo cp-nails"><img <?php fee_img_attr('campaign', 'nail'); ?> loading="lazy"></span>
     <span class="cp-photo cp-gels"><img src="<?php echo $u; ?>/assets/images/banner_powder.png" alt="カラージェルとジュエリーパーツ" loading="lazy"></span>
-    <span class="cp-photo cp-teacher"><img src="<?php echo $u; ?>/assets/images/banner_person.png" alt="講師" loading="lazy"></span>
+    <span class="cp-photo cp-teacher"><img <?php fee_img_attr('campaign', 'person'); ?> loading="lazy"></span>
 
     <!-- 吹き出し -->
     <span class="cp-bubble"><img src="<?php echo $u; ?>/assets/images/banner_bubble1.png" alt="スクール見学すると" loading="lazy"></span>
@@ -142,7 +142,7 @@ $u = get_template_directory_uri();
     <span class="cp-pearl" style="left:6.5vw;top:50vw;width:1.2vw;height:1.2vw;"></span>
 
     <!-- CTA -->
-    <a class="cp-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer" aria-label="無料相談はこちらから">
+    <a class="cp-cta pulse-btn" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer" aria-label="無料相談はこちらから">
       <span class="sp1"></span><span class="sp2"></span>
       <span class="t1">無料相談</span><span class="t2">はこちらから！</span>
     </a>

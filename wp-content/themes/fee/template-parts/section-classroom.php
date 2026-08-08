@@ -99,15 +99,15 @@ $u = get_template_directory_uri();
 
   <!-- 写真グリッド（支給写真 classroom0N.png。02と05、03と04は表示位置を入れ替えている） -->
   <div class="cl-grid1">
-    <img src="<?php echo $u; ?>/assets/images/classroom01.png" alt="カラー選びのレッスン風景" loading="lazy">
-    <img src="<?php echo $u; ?>/assets/images/classroom05.png" alt="講師の指導風景" loading="lazy">
-    <img src="<?php echo $u; ?>/assets/images/classroom04.png" alt="マシーンケアの実習" loading="lazy">
+    <img <?php fee_img_attr('classroom', '1'); ?> loading="lazy">
+    <img <?php fee_img_attr('classroom', '2'); ?> loading="lazy">
+    <img <?php fee_img_attr('classroom', '3'); ?> loading="lazy">
   </div>
   <div class="cl-grid2">
-    <img src="<?php echo $u; ?>/assets/images/classroom03.jpg" alt="ジェル塗布の実習" loading="lazy">
-    <img src="<?php echo $u; ?>/assets/images/classroom02.png" alt="ハンドケアのレッスン風景" loading="lazy">
-    <img src="<?php echo $u; ?>/assets/images/classroom06.png" alt="ジェルの筆づかい" loading="lazy">
-    <img src="<?php echo $u; ?>/assets/images/classroom07.png" alt="ファイリングの実習" loading="lazy">
+    <img <?php fee_img_attr('classroom', '4'); ?> loading="lazy">
+    <img <?php fee_img_attr('classroom', '5'); ?> loading="lazy">
+    <img <?php fee_img_attr('classroom', '6'); ?> loading="lazy">
+    <img <?php fee_img_attr('classroom', '7'); ?> loading="lazy">
   </div>
 
   <!-- インフォバー -->

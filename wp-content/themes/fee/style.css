@@ -100,3 +100,19 @@ body {
 
 /* --- ボタン内の「>」矢印 --- */
 .btn-arrow { font-family: sans-serif; font-weight: 700; line-height: 1; }
+
+/* --- CTAボタンの拡大・縮小アニメーション（2秒周期で1.06倍まで） ---
+   キャンペーンCTA / First Stepボタンで共用する。
+   transform を使うのでレイアウトには影響せず、周囲の要素は動かない。
+   倍率を上げすぎるとFirst Stepボタンが左隣の文章や白枠にぶつかるため1.06倍に抑えている。 */
+@keyframes btn-pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.06); }
+}
+.pulse-btn { animation: btn-pulse 2s ease-in-out infinite; }
+/* 押している間はアニメーションを止める（止めないと :active の押し込みが上書きされて効かない） */
+.pulse-btn:active { animation: none; }
+/* OS側で「視差効果を減らす」を有効にしている環境では動かさない */
+@media (prefers-reduced-motion: reduce) {
+  .pulse-btn { animation: none; }
+}

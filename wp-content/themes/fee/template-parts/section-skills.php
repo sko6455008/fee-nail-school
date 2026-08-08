@@ -216,7 +216,7 @@ $u = get_template_directory_uri();
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>道具の名称</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>技術理論</li>
       </ul>
-      <span class="sk-photo"><img src="<?php echo $u; ?>/assets/images/skills01.png" alt="基礎知識のテキスト教材" loading="lazy"></span>
+      <span class="sk-photo"><img <?php fee_img_attr('skills', '1'); ?> loading="lazy"></span>
     </div>
     <div class="sk-card sk-c2">
       <span class="sk-num">02</span>
@@ -228,7 +228,7 @@ $u = get_template_directory_uri();
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>フットケア</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>ウォーターケア</li>
       </ul>
-      <span class="sk-photo"><img src="<?php echo $u; ?>/assets/images/skills02.png" alt="ネイルケアの実習" loading="lazy"></span>
+      <span class="sk-photo"><img <?php fee_img_attr('skills', '2'); ?> loading="lazy"></span>
     </div>
     <div class="sk-card sk-c3">
       <span class="sk-num">03</span>
@@ -240,7 +240,7 @@ $u = get_template_directory_uri();
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>プレパレーション</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>フィルイン</li>
       </ul>
-      <span class="sk-photo"><img src="<?php echo $u; ?>/assets/images/parts/sk-p3.webp" alt="マシーンケアの実習" loading="lazy"></span>
+      <span class="sk-photo"><img <?php fee_img_attr('skills', '3'); ?> loading="lazy"></span>
     </div>
     <div class="sk-card sk-c4">
       <span class="sk-num">04</span>
@@ -251,7 +251,7 @@ $u = get_template_directory_uri();
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>チップ</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>アクリル技術</li>
       </ul>
-      <span class="sk-photo"><img src="<?php echo $u; ?>/assets/images/parts/sk-p4.webp" alt="長さ出しの作品例" loading="lazy"></span>
+      <span class="sk-photo"><img <?php fee_img_attr('skills', '4'); ?> loading="lazy"></span>
     </div>
     <div class="sk-card sk-c5">
       <span class="sk-num">05</span>
@@ -263,7 +263,7 @@ $u = get_template_directory_uri();
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>マグネット</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>トレンドデザイン</li>
       </ul>
-      <span class="sk-photo"><img src="<?php echo $u; ?>/assets/images/parts/sk-p5.webp" alt="カラフルなネイルアート" loading="lazy"></span>
+      <span class="sk-photo"><img <?php fee_img_attr('skills', '5'); ?> loading="lazy"></span>
     </div>
     <div class="sk-card sk-c6">
       <span class="sk-num">06</span>
@@ -278,7 +278,7 @@ $u = get_template_directory_uri();
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>接客マナー</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>ノウハウ</li>
       </ul>
-      <span class="sk-photo"><img src="<?php echo $u; ?>/assets/images/skills06.png" alt="サロンワーク研修の様子" loading="lazy"></span>
+      <span class="sk-photo"><img <?php fee_img_attr('skills', '6'); ?> loading="lazy"></span>
     </div>
   </div>
 

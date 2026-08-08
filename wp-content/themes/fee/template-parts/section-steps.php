@@ -233,7 +233,7 @@ $u = get_template_directory_uri();
     <div class="hj-first-row">
       <span class="hj-first-script">First Step !</span>
       <span class="hj-first-tx">まずは<span class="p">無料カウンセリング・見学</span>へお越しください。</span>
-      <a class="hj-first-btn" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">無料カウンセリング・見学を予約する</a>
+      <a class="hj-first-btn pulse-btn" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">無料カウンセリング・見学を予約する</a>
     </div>
     <div class="hj-first-note">
       <svg class="line-ic" viewBox="0 0 48 48" aria-hidden="true" focusable="false">

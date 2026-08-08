@@ -138,7 +138,7 @@ $u = get_template_directory_uri();
         <h3 class="rs-t">サロンワーク<br><span class="c">特化型</span></h3>
         <p class="rs-tx">即戦力のネイル技術！</p>
       </div>
-      <span class="rs-pic"><img src="<?php echo $u; ?>/assets/images/features01.png" alt="サロンワーク実習の様子" loading="lazy"></span>
+      <span class="rs-pic"><img <?php fee_img_attr('features', '1'); ?> loading="lazy"></span>
     </div>
     <div class="rs-card rs-c2">
       <span class="rs-tag">02</span>
@@ -147,7 +147,7 @@ $u = get_template_directory_uri();
         <h3 class="rs-t"><span class="c">少人数制</span></h3>
         <p class="rs-tx">一人ひとり丁寧指導！！</p>
       </div>
-      <span class="rs-pic"><img src="<?php echo $u; ?>/assets/images/features02.png" alt="少人数制レッスンの様子" loading="lazy"></span>
+      <span class="rs-pic"><img <?php fee_img_attr('features', '2'); ?> loading="lazy"></span>
     </div>
     <div class="rs-card rs-c3">
       <span class="rs-tag">03</span>
@@ -156,7 +156,7 @@ $u = get_template_directory_uri();
         <h3 class="rs-t"><span class="c">就職・開業</span></h3>
         <p class="rs-tx">サポート充実！</p>
       </div>
-      <span class="rs-pic"><img src="<?php echo $u; ?>/assets/images/features03.png" alt="就職相談の様子" loading="lazy"></span>
+      <span class="rs-pic"><img <?php fee_img_attr('features', '3'); ?> loading="lazy"></span>
     </div>
     <div class="rs-card rs-c4">
       <span class="rs-tag">04</span>
@@ -165,7 +165,7 @@ $u = get_template_directory_uri();
         <h3 class="rs-t"><span class="c">授業料がお得</span></h3>
         <p class="rs-tx">安心価格！</p>
       </div>
-      <span class="rs-pic"><img src="<?php echo $u; ?>/assets/images/features04.png" alt="リーズナブルな授業料" loading="lazy"></span>
+      <span class="rs-pic"><img <?php fee_img_attr('features', '4'); ?> loading="lazy"></span>
     </div>
     <div class="rs-card rs-c5">
       <span class="rs-tag">05</span>
@@ -174,7 +174,7 @@ $u = get_template_directory_uri();
         <h3 class="rs-t"><span class="c">初心者歓迎</span></h3>
         <p class="rs-tx">ゼロから安心！</p>
       </div>
-      <span class="rs-pic"><img src="<?php echo $u; ?>/assets/images/features05.png" alt="初心者へのレッスン風景" loading="lazy"></span>
+      <span class="rs-pic"><img <?php fee_img_attr('features', '5'); ?> loading="lazy"></span>
     </div>
     <div class="rs-card rs-c6">
       <span class="rs-tag">06</span>
@@ -183,7 +183,7 @@ $u = get_template_directory_uri();
         <h3 class="rs-t"><span class="c">最新トレンド</span></h3>
         <p class="rs-tx">技術をしっかり習得！</p>
       </div>
-      <span class="rs-pic"><img src="<?php echo $u; ?>/assets/images/features06.jpg" alt="トレンドのネイルデザイン" loading="lazy"></span>
+      <span class="rs-pic"><img <?php fee_img_attr('features', '6'); ?> loading="lazy"></span>
     </div>
   </div>
 </section>
