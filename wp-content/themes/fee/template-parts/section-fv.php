@@ -151,7 +151,7 @@ $u = get_template_directory_uri();
   <span class="fv-splash fv-splash-rose"></span>
 
   <!-- 写真（支給素材） -->
-  <span class="fv-photo fv-hero"><img src="<?php echo $u; ?>/assets/images/FV_nail.png" alt="ジュエリーネイル" fetchpriority="high"></span>
+  <span class="fv-photo fv-hero"><img <?php fee_img_attr('fv', 'nail'); ?> fetchpriority="high"></span>
   <span class="fv-photo fv-powder"><img src="<?php echo $u; ?>/assets/images/FV_powder.png" alt="カラージェル" loading="lazy"></span>
   <span class="fv-photo fv-color"><img src="<?php echo $u; ?>/assets/images/FV_color.png" alt="カラーチャート" loading="lazy"></span>
 

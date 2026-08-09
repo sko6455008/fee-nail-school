@@ -24,6 +24,10 @@ $u = get_template_directory_uri();
   --base: 13.5vw; --sw: 2.873; --tx: -0.042; --ty: 0.063; }
 .co-head-r { right: 1vw; top: 0.5vw; width: 18.3vw; height: 18.5vw;
   --base: 18.3vw; --sw: 2.062; --tx: -0.070; --ty: 0.012; }
+/* 上の倍率(--sw)・位置(--tx/--ty)は支給素材の余白に合わせた値なので、管理画面から
+   差し替えたときはそのまま使えない。差し替え時は拡大せず、枠の中に丸ごと収める。 */
+.co-head-photo.is-custom img { width: 100%; height: 100%; object-fit: contain;
+  transform: translate(-50%, -50%); }
 .co-script { position: relative; font-family: var(--font-script); font-size: 2.7em; line-height: 1.25;
   background: linear-gradient(95deg, #f0a63c 0%, #f0609b 35%, #b183d8 70%, #58b8d8 100%);
   -webkit-background-clip: text; background-clip: text;
@@ -215,8 +219,8 @@ $u = get_template_directory_uri();
 
   <!-- ヘッダー -->
   <div class="co-head">
-    <span class="co-head-photo co-head-l"><img src="<?php echo $u; ?>/assets/images/corse_left.png" alt="" loading="lazy" decoding="async"></span>
-    <span class="co-head-photo co-head-r"><img src="<?php echo $u; ?>/assets/images/corse_right.png" alt="" loading="lazy" decoding="async"></span>
+    <span class="co-head-photo co-head-l<?php echo fee_img_is_custom('courses', 'head_l') ? ' is-custom' : ''; ?>"><img <?php fee_img_attr('courses', 'head_l'); ?> loading="lazy" decoding="async"></span>
+    <span class="co-head-photo co-head-r<?php echo fee_img_is_custom('courses', 'head_r') ? ' is-custom' : ''; ?>"><img <?php fee_img_attr('courses', 'head_r'); ?> loading="lazy" decoding="async"></span>
     <span class="co-bubble co-bub-l"><span><span class="p">初心者</span>も</span><span>安心して</span><span class="p">スタートできる&#9825;</span></span>
     <span class="co-bubble co-bub-r"><span><span class="p">好きなこと</span>を</span><span>一生の仕事に<span class="p">&#9825;</span></span></span>
     <div class="co-script">Choose Your Path &#9825;</div>

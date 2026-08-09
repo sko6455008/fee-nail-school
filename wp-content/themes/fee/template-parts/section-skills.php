@@ -19,6 +19,8 @@ $u = get_template_directory_uri();
 .sk-head-l { left: 0; top: 0.6vw; } .sk-head-l img { width: 16.3vw;
   -webkit-mask-image: radial-gradient(120% 120% at 0% 30%, #000 60%, transparent 95%);
   mask-image: radial-gradient(120% 120% at 0% 30%, #000 60%, transparent 95%); }
+/* 差し替えた写真は縦横比が分からないため、右側と同じく枠を固定して切り抜く（見出しの高さを変えないため） */
+.sk-head-l.is-custom img { height: 13.6vw; object-fit: cover; }
 /* 右はclassroomセクションと同じネイル写真（縦長のためボックス固定＋coverで従来の見え方を維持） */
 .sk-head-r { right: 0; } .sk-head-r img { width: 16.5vw; height: 12.93vw; object-fit: cover;
   -webkit-mask-image: radial-gradient(120% 120% at 100% 30%, #000 60%, transparent 95%);
@@ -189,8 +191,8 @@ $u = get_template_directory_uri();
 
   <!-- ヘッダー -->
   <div class="sk-head">
-    <span class="sk-head-photo sk-head-l"><img src="<?php echo $u; ?>/assets/images/parts/sk-head-l.webp" alt="" loading="lazy"></span>
-    <span class="sk-head-photo sk-head-r"><img src="<?php echo $u; ?>/assets/images/classroom2.png" alt="" loading="lazy"></span>
+    <span class="sk-head-photo sk-head-l<?php echo fee_img_is_custom('skills', 'head_l') ? ' is-custom' : ''; ?>"><img <?php fee_img_attr('skills', 'head_l'); ?> loading="lazy"></span>
+    <span class="sk-head-photo sk-head-r"><img <?php fee_img_attr('skills', 'head_r'); ?> loading="lazy"></span>
     <span class="sk-bubble sk-bub-l">初心者も<br>安心して<br>スタートできる<span class="ht">&#9825;</span></span>
     <span class="sk-bubble sk-bub-r">好きなことを<br>一生の仕事に<span class="ht">&#9825;</span></span>
     <span class="sk-spark" style="left:31vw;top:4vw;color:#f2c94c;font-size:1.7em;"></span>

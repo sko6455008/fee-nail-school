@@ -1,7 +1,19 @@
 <?php
 // よくある質問（Q&A）セクション — コーディング版
 // 見出しを新規コード化し、アコーディオン本体は index.php（画像版）のコード化済み .pcfaq を移設。
-$u = get_template_directory_uri();
+// 質問と回答は管理画面の「よくある質問」（カスタム投稿）から取得する。1件も無ければセクションごと非表示。
+$u    = get_template_directory_uri();
+$faqs = fee_faq_items();
+if (!$faqs) {
+    return;
+}
+// バッジ・枠線の色は表示順に4色を繰り返す（[濃い色, 回答の背景色]）
+$fq_colors = [
+    ['#ec5a96', '#fdeef4'],
+    ['#21bcc0', '#e4f7f7'],
+    ['#f2c01e', '#fdf4dc'],
+    ['#a98ce4', '#f1ecfb'],
+];
 ?>
 <style>
 /* ===== Q&A見出し ===== */
@@ -52,9 +64,16 @@ $u = get_template_directory_uri();
 .pcfaq2-a-badge { flex: 0 0 auto; width: 40px; height: 40px; border-radius: 50%;
     background: var(--c); color: #fff; font-family: var(--font-en); font-weight: 700;
     font-size: 18px; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
-.pcfaq2-a-text { flex: 1 1 auto; font-family: var(--font-jp); font-size: 16.5px;
+.pcfaq2-a-text { flex: 1 1 auto; min-width: 0; font-family: var(--font-jp); font-size: 16.5px;
     line-height: 1.9; color: #5D4E4A; padding-top: 4px; }
-.pcfaq2-item.open .pcfaq2-a { max-height: 440px; }
+/* 回答は管理画面のエディタで書くため、段落・リストの余白をここで整える */
+.pcfaq2-a-text > :first-child { margin-top: 0; }
+.pcfaq2-a-text > :last-child { margin-bottom: 0; }
+.pcfaq2-a-text p { margin: 0 0 0.8em; }
+.pcfaq2-a-text ul, .pcfaq2-a-text ol { margin: 0 0 0.8em; padding-left: 1.4em; }
+.pcfaq2-a-text a { color: var(--c); text-decoration: underline; }
+/* 実際の高さは開くときにJSが実測して指定する。ここはJSが動かない場合の保険 */
+.pcfaq2-item.open .pcfaq2-a { max-height: 1200px; }
 @media (max-width: 768px) {
     .fq { font-size: 2vw;
       background-image: url('<?php echo $u; ?>/assets/images/qa_bg_sp.png'); }
@@ -71,7 +90,6 @@ $u = get_template_directory_uri();
     .pcfaq2-a-in { padding: 14px 15px; gap: 10px; margin: 8px 6px 2px; }
     .pcfaq2-a-badge { width: 32px; height: 32px; font-size: 15px; }
     .pcfaq2-a-text { font-size: 14.5px; }
-    .pcfaq2-item.open .pcfaq2-a { max-height: 560px; }
 }
 </style>
 <section class="fq" id="faq">
@@ -92,46 +110,43 @@ $u = get_template_directory_uri();
   <!-- アコーディオン -->
   <div class="pcfaq2">
     <div class="pcfaq2-inner">
-      <div class="pcfaq2-item" style="--c:#ec5a96;--cl:#fdeef4">
-        <button class="pcfaq2-q" aria-expanded="false"><span class="pcfaq2-badge">Q.</span><span class="pcfaq2-qt">お支払いは分割は可能ですか？</span><span class="pcfaq2-plus">+</span></button>
-        <div class="pcfaq2-a"><div class="pcfaq2-a-in"><span class="pcfaq2-a-badge">A.</span><span class="pcfaq2-a-text">はい、分割でのお支払いも対応しています。例えば24分割なら月4,000円(税込)〜お支払いも可能です。詳細はお問い合わせください。</span></div></div>
+<?php foreach ($faqs as $i => $fq) :
+        $c = $fq_colors[$i % count($fq_colors)]; ?>
+      <div class="pcfaq2-item" style="--c:<?php echo esc_attr($c[0]); ?>;--cl:<?php echo esc_attr($c[1]); ?>">
+        <button class="pcfaq2-q" aria-expanded="false"><span class="pcfaq2-badge">Q.</span><span class="pcfaq2-qt"><?php echo esc_html($fq['q']); ?></span><span class="pcfaq2-plus">+</span></button>
+        <div class="pcfaq2-a"><div class="pcfaq2-a-in"><span class="pcfaq2-a-badge">A.</span><div class="pcfaq2-a-text"><?php echo wp_kses_post($fq['a']); ?></div></div></div>
       </div>
-      <div class="pcfaq2-item" style="--c:#21bcc0;--cl:#e4f7f7">
-        <button class="pcfaq2-q" aria-expanded="false"><span class="pcfaq2-badge">Q.</span><span class="pcfaq2-qt">追加料金はかかりますか？</span><span class="pcfaq2-plus">+</span></button>
-        <div class="pcfaq2-a"><div class="pcfaq2-a-in"><span class="pcfaq2-a-badge">A.</span><span class="pcfaq2-a-text">基本的なコース費用以外に追加料金はかかりません。ただしオプションコースを受講される場合と道具購入の場合は別途費用がかかります。</span></div></div>
-      </div>
-      <div class="pcfaq2-item" style="--c:#f2c01e;--cl:#fdf4dc">
-        <button class="pcfaq2-q" aria-expanded="false"><span class="pcfaq2-badge">Q.</span><span class="pcfaq2-qt">欠席するとどうなりますか？</span><span class="pcfaq2-plus">+</span></button>
-        <div class="pcfaq2-a"><div class="pcfaq2-a-in"><span class="pcfaq2-a-badge">A.</span><span class="pcfaq2-a-text">欠席された場合、振替授業の対応もしています。事前にご連絡頂ければ、別の日程で受講することも可能です。</span></div></div>
-      </div>
-      <div class="pcfaq2-item" style="--c:#a98ce4;--cl:#f1ecfb">
-        <button class="pcfaq2-q" aria-expanded="false"><span class="pcfaq2-badge">Q.</span><span class="pcfaq2-qt">全くの初心者ですが大丈夫ですか？</span><span class="pcfaq2-plus">+</span></button>
-        <div class="pcfaq2-a"><div class="pcfaq2-a-in"><span class="pcfaq2-a-badge">A.</span><span class="pcfaq2-a-text">はい、全くの初心者でも大丈夫です。基礎から丁寧に指導しますので、安心してご受講ください。</span></div></div>
-      </div>
-      <div class="pcfaq2-item" style="--c:#ec5a96;--cl:#fdeef4">
-        <button class="pcfaq2-q" aria-expanded="false"><span class="pcfaq2-badge">Q.</span><span class="pcfaq2-qt">持っている道具を使っても大丈夫ですか？</span><span class="pcfaq2-plus">+</span></button>
-        <div class="pcfaq2-a"><div class="pcfaq2-a-in"><span class="pcfaq2-a-badge">A.</span><span class="pcfaq2-a-text">はい、ご自身でお持ちの道具を使用して頂いても問題ありません。ただし、授業で必要な道具については事前にご確認ください。</span></div></div>
-      </div>
-      <div class="pcfaq2-item" style="--c:#21bcc0;--cl:#e4f7f7">
-        <button class="pcfaq2-q" aria-expanded="false"><span class="pcfaq2-badge">Q.</span><span class="pcfaq2-qt">道具の購入はできますか？</span><span class="pcfaq2-plus">+</span></button>
-        <div class="pcfaq2-a"><div class="pcfaq2-a-in"><span class="pcfaq2-a-badge">A.</span><span class="pcfaq2-a-text">はい、アカデミーで推奨する道具の購入も可能です。詳細は入学時にご案内いたします。</span></div></div>
-      </div>
+      <?php endforeach; ?>
     </div>
   </div>
 </section>
 <script>
 // よくある質問アコーディオン（他の項目を閉じる排他制御）
+// 回答の長さは管理画面で変わるので、開く高さは固定値ではなく毎回実測する
 (function(){
-  var qs = document.querySelectorAll('.pcfaq2-q');
-  qs.forEach(function(q){
+  function closeItem(it){
+    it.classList.remove('open');
+    var a = it.querySelector('.pcfaq2-a'); if(a){ a.style.maxHeight = ''; }
+    var b = it.querySelector('.pcfaq2-q'); if(b){ b.setAttribute('aria-expanded','false'); }
+  }
+  document.querySelectorAll('.pcfaq2-q').forEach(function(q){
     q.addEventListener('click', function(){
       var item = q.parentNode;
       var isOpen = item.classList.contains('open');
-      document.querySelectorAll('.pcfaq2-item.open').forEach(function(it){
-        it.classList.remove('open');
-        var b = it.querySelector('.pcfaq2-q'); if(b){ b.setAttribute('aria-expanded','false'); }
-      });
-      if(!isOpen){ item.classList.add('open'); q.setAttribute('aria-expanded','true'); }
+      document.querySelectorAll('.pcfaq2-item.open').forEach(closeItem);
+      if(!isOpen){
+        item.classList.add('open');
+        q.setAttribute('aria-expanded','true');
+        var a = item.querySelector('.pcfaq2-a');
+        if(a){ a.style.maxHeight = a.scrollHeight + 'px'; }
+      }
+    });
+  });
+  // 画面幅が変わると回答の行数も変わるため、開いている項目の高さを取り直す
+  window.addEventListener('resize', function(){
+    document.querySelectorAll('.pcfaq2-item.open .pcfaq2-a').forEach(function(a){
+      a.style.maxHeight = '';
+      a.style.maxHeight = a.scrollHeight + 'px';
     });
   });
 })();
