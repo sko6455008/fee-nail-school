@@ -97,15 +97,17 @@ $u = get_template_directory_uri();
 .st-close .c1 { color: #ef8bab; }
 .st-close .c2 { color: #f0a63c; }
 .st-close .c3 { color: #5bbfc9; }
-.st-close .dark { color: #3a3230; }
+.st-close .dark { color: #3a3230; display: block; margin-top: .2em; } /* 校名が長くなったので締めの一文は2行目に分ける */
 .st-close .fee { font-family: var(--font-script); color: #e0569a; font-size: 1.25em; padding: 0 .1em; }
+/* SPだけ「夢に向かうあなたを、」の後ろで改行する */
+.st-br-sp { display: none; }
 
 /* ===== SP（1080px基準: font-size 2vw） ===== */
 @media (max-width: 768px) {
   .st { font-size: 2vw;
     background-image: url('<?php echo $u; ?>/assets/images/strength_bg_sp.png'); }
   .st-head { padding-top: 5vw; }
-  .st-lead { font-size: 1.5em; }
+  .st-lead { font-size: 1.35em; letter-spacing: .12em; } /* 校名が長くなった分だけ詰めて1行に収める */
   .st-title { font-size: 3.6em; }
   .st-arc { width: 50vw; }
   /* SPもデザイン実測（カード幅94vw / 高さ22.7vw）に合わせる */
@@ -119,6 +121,7 @@ $u = get_template_directory_uri();
   .st-grid3 .st-c5 .st-big { font-size: 1.75em; }
   .st-grid3 .st-c6 .st-sub, .st-grid3 .st-c7 .st-sub { font-size: 1.4em; }
   .st-close { padding: 4vw 3vw 6vw; font-size: 1.5em; }
+  .st-br-sp { display: inline; }
 }
 </style>
 <section class="st" id="strengths">
@@ -135,7 +138,7 @@ $u = get_template_directory_uri();
 
   <!-- ヘッダー -->
   <div class="st-head">
-    <div class="st-lead"><span class="sl">＼</span>Fee が選ばれる理由<span class="sl">／</span></div>
+    <div class="st-lead"><span class="sl">＼</span>ICA 池袋キャリアアカデミー が選ばれる理由<span class="sl">／</span></div>
     <h2 class="st-title"><span class="n">7</span>つの<span class="g">強み</span></h2>
     <svg class="st-arc" viewBox="0 0 300 22" aria-hidden="true">
       <defs><linearGradient id="starc" x1="0" y1="0" x2="1" y2="0">
@@ -217,6 +220,6 @@ $u = get_template_directory_uri();
   <!-- 締め -->
   <div class="st-close">
     <span class="c1">学ぶ環境も、</span><span class="c2">サポートも、</span><span class="c3">すべてが充実！</span>
-    <span class="dark">　夢に向かうあなたを、<span class="fee">Fee</span> が全力で応援します！</span>
+    <span class="dark">夢に向かうあなたを、<br class="st-br-sp"><span class="fee">Ica</span> 池袋キャリアアカデミー が全力で応援します！</span>
   </div>
 </section>

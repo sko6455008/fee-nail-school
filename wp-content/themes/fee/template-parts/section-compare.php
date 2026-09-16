@@ -1,5 +1,5 @@
 <?php
-// 比較表セクション（池袋ネイルカレッジFee vs 一般的なスクール）— コーディング版
+// 比較表セクション（ICA 池袋キャリアアカデミー vs 一般的なスクール）— コーディング版
 // アイコン素材: compare_icon1〜6.png / compare_badge.png / compare_person.png
 // 寸法はデザインカンプ（PC 全幅=100vw基準 / SP 全幅=100vw基準）から採寸した値
 $u = get_template_directory_uri();
@@ -150,7 +150,7 @@ $u = get_template_directory_uri();
   .cm-row4 { min-height: 43.1vw; }
   .cm-row5 { min-height: 16.3vw; }
 
-  .cm-name { font-size: 3.1em; gap: 0.3em; }
+  .cm-name { font-size: 2.6em; gap: 0.3em; } /* 校名が長くなった分だけ小さくして左列の幅に収める */
   .cm-oursc { margin-top: 1.4vw; font-size: 1.96em; letter-spacing: .28em;
     padding: 0.24em 3.3em 0.24em 3.6em; }
   .cm-other { font-size: 1.88em; }
@@ -210,7 +210,7 @@ $u = get_template_directory_uri();
       <span class="cm-spark" style="left:5vw;top:5.2vw;font-size:1.9em;"></span>
       <span class="cm-spark" style="left:2.6vw;top:3.4vw;font-size:1.2em;"></span>
       <div class="cm-name">
-        <span class="cm-mk">池袋ネイルカレッジ<span class="fee">Fee</span></span>
+        <span class="cm-mk"><span class="fee">Ica</span>池袋キャリアアカデミー</span>
       </div>
       <span class="cm-oursc">当スクール</span>
     </div>

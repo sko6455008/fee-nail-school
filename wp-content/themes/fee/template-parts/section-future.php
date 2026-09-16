@@ -69,7 +69,7 @@ $u = get_template_directory_uri();
   .fu-head { padding-top: 4vw; }
   .fu-script { font-size: 2.2em; }
   .fu-t1 { font-size: 2.4em; }
-  .fu-t2 { font-size: 2em; }
+  .fu-t2 { font-size: 1.8em; } /* 校名が長くなった分だけ小さくして1行に収める */
   .fu-line { width: 76vw; height: 0.5vw; }
   .fu-grid { grid-template-columns: 1fr; gap: 4vw; max-width: 92vw; margin-top: 4vw; }
   .fu-card { border-radius: 2.4vw; padding: 3.5vw; gap: 1.5vw 3vw; }
@@ -102,7 +102,7 @@ $u = get_template_directory_uri();
     <span class="fu-spark" style="right:21vw;top:8.5vw;color:#f2c94c;font-size:1.2em;"></span>
     <div class="fu-script">After Graduation</div>
     <h2 class="fu-t1">卒業後</h2>
-    <div class="fu-t2">池袋ネイルカレッジFee を卒業すると...</div>
+    <div class="fu-t2">ICA 池袋キャリアアカデミー を卒業すると...</div>
     <span class="fu-line"></span>
   </div>
 

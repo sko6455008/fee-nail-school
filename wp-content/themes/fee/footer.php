@@ -4,7 +4,7 @@
 ?>
 <!-- フッター -->
 <footer class="site-footer">
-  <div class="ft-copy">© <?php echo esc_html( date('Y') ); ?> Fee nail academy</div>
+  <div class="ft-copy">© <?php echo esc_html( date('Y') ); ?> ICA 池袋キャリアアカデミー</div>
 </footer>
 
 <!-- 画面下部固定CTA -->

@@ -1,5 +1,5 @@
 <?php
-// コンセプトセクション（Let's Nail♡ 〜 池袋ネイルカレッジFee）— コーディング版
+// コンセプトセクション（Let's Nail♡ 〜 ICA 池袋キャリアアカデミー）— コーディング版
 // 再現元: lp-pc-1.webp（y2400〜4630付近）/ lp-sp-1.webp
 $u = get_template_directory_uri();
 ?>
@@ -39,7 +39,7 @@ $u = get_template_directory_uri();
 .cc-lead .sl { font-weight: 500; padding: 0 .5em; letter-spacing: 0; }
 .cc-name { margin: 1.2vw auto 0; padding-bottom: 4.5vw; font-family: var(--font-round);
   font-weight: 800; font-size: 4.6em; letter-spacing: .04em; color: #2f2a28; line-height: 1.3; }
-.cc-name .fee { color: #ec5a96; padding-left: .12em; }
+.cc-name .fee { color: #ec5a96; padding-right: .12em; }
 .cc-name .u { background: linear-gradient(90deg, #f48ab5, #f06ba8);
   background-size: 100% 0.14em; background-position: 50% 96%; background-repeat: no-repeat;
   padding-bottom: 0.12em; }
@@ -58,7 +58,7 @@ $u = get_template_directory_uri();
   .cc-copy-sp .big { font-size: 1.5em; }
   .cc-close { margin-top: 6vw; }
   .cc-lead { font-size: 1.6em; letter-spacing: .2em; }
-  .cc-name { font-size: 3.4em; padding-bottom: 4vw; }
+  .cc-name { font-size: 3em; padding-bottom: 4vw; } /* 校名が長くなった分だけ小さくして1行に収める */
 }
 </style>
 <section class="cc" id="concept">
@@ -122,6 +122,6 @@ $u = get_template_directory_uri();
   <!-- 締め -->
   <div class="cc-close">
     <div class="cc-lead"><span class="sl">＼</span>プロのネイリストを目指すなら&#9825;<span class="sl">／</span></div>
-    <div class="cc-name"><span class="u">池袋ネイルカレッジ<span class="fee">Fee</span></span></div>
+    <div class="cc-name"><span class="u"><span class="fee">Ica</span>池袋キャリアアカデミー</span></div>
   </div>
 </section>

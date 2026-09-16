@@ -107,13 +107,13 @@ $u = get_template_directory_uri();
     </div>
     <div class="ac2-body">
       <div class="ac2-map">
-        <iframe src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%B1%8A%E5%B3%B6%E5%8C%BA%E6%B1%A0%E8%A2%8B2-53-12&z=16&hl=ja&output=embed" loading="lazy" title="池袋ネイルカレッジ Fee アクセスマップ" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%B1%8A%E5%B3%B6%E5%8C%BA%E6%B1%A0%E8%A2%8B2-53-12&z=16&hl=ja&output=embed" loading="lazy" title="ICA 池袋キャリアアカデミー アクセスマップ" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <a class="ac2-mapbtn" href="<?php echo esc_url( $mapurl ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Googleマップで見る">
           <svg class="mb-pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>マップで見る</span><svg class="mb-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 13.5V19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 19V8a1.5 1.5 0 0 1 1.5-1.5H10"/></svg>
         </a>
       </div>
       <div class="acard2">
-        <div class="acard2-ttl"><span class="acard2-ttl-em">池袋</span> ネイルカレッジ Fee</div>
+        <div class="acard2-ttl"><span class="acard2-ttl-em">ICA</span> 池袋キャリアアカデミー</div>
         <div class="acard2-row">
           <span class="acard2-ic acard2-ic-pin"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
           <div>
@@ -126,7 +126,7 @@ $u = get_template_directory_uri();
           <span class="acard2-ic acard2-ic-clock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3.3 2"/></svg></span>
           <div>
             <div class="acard2-h acard2-h-teal">・営業時間</div>
-            <div class="acard2-txt">平日：11:00 - 21:00<br>土日祝：10:00 - 20:00<br>定休日：<span class="acard2-teal">無休</span></div>
+            <div class="acard2-txt">平日：11:00 - 21:00<br>土日祝：10:00 - 20:00</span></div>
           </div>
         </div>
         <hr class="acard2-div">

@@ -1,5 +1,5 @@
 <?php
-// 池袋ネイルカレッジFee LP — コーディング版
+// ICA 池袋キャリアアカデミー LP — コーディング版
 // 各セクションは template-parts/section-*.php に分割（1セクション=1ファイル）。
 // 文字はHTML直書き・写真は assets/images/parts/ のファイル差し替えで個別に編集できる。
 // <head>とヘッダーは header.php、フッターとCTAバーは footer.php（漫画ページと共用）。
@@ -22,6 +22,7 @@ get_header();
   <?php get_template_part('template-parts/section-steps'); ?>
   <?php get_template_part('template-parts/section-access'); ?>
   <?php get_template_part('template-parts/section-faq'); ?>
+  <?php get_template_part('template-parts/section-sister'); ?>
   <?php get_template_part('template-parts/section-manga'); ?>
 </main>
 

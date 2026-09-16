@@ -62,17 +62,18 @@ $u = get_template_directory_uri();
   background-size: 0.25em 100%; background-repeat: repeat-x; }
 /* SP用のドット（デザインでは見出しの最終行の下に入る） */
 
-/* --- 池袋ネイルカレッジ 枠（角丸・ピンク〜ゴールドの細いグラデ罫） --- */
-.fv-college { position: absolute; z-index: 3; left: 15.6vw; top: 26.3vw; width: 31.4vw;
+/* --- 池袋キャリアアカデミー 枠（角丸・ピンク〜ゴールドの細いグラデ罫） --- */
+/* 校名が2文字長くなったため、枠を少し広げて文字も少し小さくしている（左右の中心位置は変えていない） */
+.fv-college { position: absolute; z-index: 3; left: 14vw; top: 26.3vw; width: 34.6vw;
   padding: 0.5em 0; text-align: center; line-height: 1.2;
-  color: #e0569a; font-weight: 700; font-size: 2.9em; letter-spacing: .1em; white-space: nowrap; }
+  color: #e0569a; font-weight: 700; font-size: 2.6em; letter-spacing: .08em; white-space: nowrap; }
 .fv-college::before { content: ""; position: absolute; inset: 0; border-radius: 0.42em;
   padding: 0.07em; background: linear-gradient(100deg, #ef9ec2 0%, #e6c68d 48%, #ef9ec2 100%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask-composite: exclude; pointer-events: none; }
 
-/* --- Fee スクリプトロゴ --- */
+/* --- ICA スクリプトロゴ --- */
 /* スクリプト体(Great Vibes)は字面がemボックスの上下にはみ出すが、background-clip:text は
    ボックスの中しか塗らないため、そのままだとロゴの上端が水平に欠ける。パディングで塗り
    範囲を広げ、同じ量のネガティブマージンで位置を元に戻している（topの値は変えない）。 */
@@ -130,7 +131,7 @@ $u = get_template_directory_uri();
   .fv-title { left: 4.8vw; top: 22.9vw; font-size: 4.7em; line-height: 1.335; }
   /* SPは見出しが3行になるため、ドットは最終行の下に独立表示 */
   .fv-title .fv-pro::after { display: none; }
-  .fv-college { left: 7.6vw; top: 69.7vw; width: 56.3vw; font-size: 2.65em; letter-spacing: .1em; }
+  .fv-college { left: 5.75vw; top: 69.7vw; width: 60vw; font-size: 2.35em; letter-spacing: .08em; }
   .fv-fee { left: 20vw; top: 83vw; width: 44vw; font-size: 7.5em; }
   .fv-fee-heart { left: 24.3vw; top: 88.4vw; font-size: 2em; }
   .fv-fee-heart2 { display: none; }
@@ -160,8 +161,8 @@ $u = get_template_directory_uri();
   <h1 class="fv-title">最短<b class="fv-num">3</b>ヶ月で<br><span class="fv-pro">プロ</span>の<br class="fv-br-sp">ネイリストへ</h1>
 
   <!-- スクール名 -->
-  <div class="fv-college">池袋ネイルカレッジ</div>
-  <div class="fv-fee">Fee</div>
+  <div class="fv-college">池袋キャリアアカデミー</div>
+  <div class="fv-fee">Ica</div>
   <span class="fv-fee-heart">&#9825;</span>
   <span class="fv-fee-heart2">&#9829;</span>
   <span class="fv-fee-spark">&#10022;</span>

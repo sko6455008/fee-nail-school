@@ -124,7 +124,7 @@ $u = get_template_directory_uri();
       アカデミー<span class="pk">紹介</span>
     </h2>
     <div class="rs-six">
-      <span class="pre">池袋ネイルカレッジ Fee が選ばれる</span>
+      <span class="pre">ICA 池袋キャリアアカデミー が選ばれる</span>
       <span class="big"><span class="n">6</span>つの理由</span>
     </div>
   </div>
