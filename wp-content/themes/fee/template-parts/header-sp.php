@@ -1,7 +1,10 @@
 <?php
 // SPハンバーガーメニュー（コーディング版LP用）
 // index.php（画像版）の .sp-burger / .sp-nav を移植したもの（アンカーは #sp-* ではなく実IDへ統一）。
-// 開閉JSは呼び出し側（preview.php / 切替後のindex.php）に配置する。
+// 開閉JSは呼び出し側（footer.php）に配置する。
+// トップページ以外（漫画ページなど）ではアンカーの前にトップのURLを付けて、
+// 一度トップへ戻ってから各セクションへ飛ぶようにする。
+$a = is_front_page() ? '' : esc_url( home_url('/') );
 ?>
 <style>
 /* ハンバーガーメニュー（SP専用） */
@@ -43,14 +46,14 @@
 <div class="sp2-overlay" id="spOverlay2"></div>
 <nav class="sp2-nav" id="spNav2" aria-label="メニュー">
   <div class="sp2-nav-ttl">MENU</div>
-  <a href="#features">アカデミー紹介</a>
-  <a href="#atmosphere">授業風景</a>
-  <a href="#skills">学べる技術</a>
-  <a href="#courses">コース内容</a>
-  <a href="#future">卒業後</a>
-  <a href="#steps">入校手順</a>
-  <a href="#access">アクセス</a>
-  <a href="#faq">よくある質問</a>
+  <a href="<?php echo $a; ?>#features">アカデミー紹介</a>
+  <a href="<?php echo $a; ?>#atmosphere">授業風景</a>
+  <a href="<?php echo $a; ?>#skills">学べる技術</a>
+  <a href="<?php echo $a; ?>#courses">コース内容</a>
+  <a href="<?php echo $a; ?>#future">卒業後</a>
+  <a href="<?php echo $a; ?>#steps">入校手順</a>
+  <a href="<?php echo $a; ?>#access">アクセス</a>
+  <a href="<?php echo $a; ?>#faq">よくある質問</a>
   <a class="ext" href="https://www.instagram.com/fee.nail.academy/" target="_blank" rel="noopener noreferrer">Instagram</a>
   <a class="ext" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">無料LINE相談</a>
 </nav>

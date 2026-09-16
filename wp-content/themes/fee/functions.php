@@ -369,6 +369,29 @@ function fee_faq_seed_default_posts() {
 }
 add_action('init', 'fee_faq_seed_default_posts', 20);
 
+// 漫画ページ（/manga）を初回アクセス時に1回だけ用意する。
+// 表示は page-manga.php が担当するので、ページ本文は空のままでよい。
+// 手動で消したときに毎回復活しないよう、Q&Aと同じくフラグを先に立てる。
+function fee_create_manga_page() {
+    if (get_option('fee_manga_page_created')) {
+        return;
+    }
+    update_option('fee_manga_page_created', 1, false);
+    if (get_page_by_path('manga')) {
+        return;
+    }
+    wp_insert_post([
+        'post_type'    => 'page',
+        'post_status'  => 'publish',
+        'post_title'   => '漫画',
+        'post_name'    => 'manga',
+        'post_content' => '',
+        'comment_status' => 'closed',
+        'ping_status'    => 'closed',
+    ]);
+}
+add_action('init', 'fee_create_manga_page', 20);
+
 // 表示用のQ&A一覧を返す。戻り値: [ ['q' => 質問, 'a' => 回答HTML], ... ]
 // 公開中の投稿のみ。すべて削除するとQ&Aセクション自体が非表示になる。
 function fee_faq_items() {

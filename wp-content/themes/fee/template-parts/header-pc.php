@@ -2,6 +2,9 @@
 // PCヘッダー（コーディング版LP用）
 // index.php（画像版）の .pchead を通常フロー配置に変更して移植したもの。
 // 切替完了後は index.php からもこのパーツを読み込む。
+// トップページ以外（漫画ページなど）ではアンカーの前にトップのURLを付けて、
+// 一度トップへ戻ってから各セクションへ飛ぶようにする。
+$a = is_front_page() ? '' : esc_url( home_url('/') );
 ?>
 <style>
 /* PCヘッダー（画像に比例：vw単位） */
@@ -43,19 +46,19 @@
 }
 </style>
 <header class="pchead2">
-  <a class="pchead2-logo" href="#pagetop" aria-label="池袋ネイルカレッジ Fee トップへ">
+  <a class="pchead2-logo" href="<?php echo $a; ?>#pagetop" aria-label="池袋ネイルカレッジ Fee トップへ">
     <span class="pchead2-fee">Fee</span>
     <span class="pchead2-sub">池袋ネイルカレッジ</span>
   </a>
   <nav class="pchead2-nav">
-    <a href="#features">アカデミー紹介</a>
-    <a href="#atmosphere">授業風景</a>
-    <a href="#skills">学べる技術</a>
-    <a href="#courses">コース内容</a>
-    <a href="#future">卒業後</a>
-    <a href="#steps">入校手順</a>
-    <a href="#access">アクセス</a>
-    <a href="#faq">よくある質問</a>
+    <a href="<?php echo $a; ?>#features">アカデミー紹介</a>
+    <a href="<?php echo $a; ?>#atmosphere">授業風景</a>
+    <a href="<?php echo $a; ?>#skills">学べる技術</a>
+    <a href="<?php echo $a; ?>#courses">コース内容</a>
+    <a href="<?php echo $a; ?>#future">卒業後</a>
+    <a href="<?php echo $a; ?>#steps">入校手順</a>
+    <a href="<?php echo $a; ?>#access">アクセス</a>
+    <a href="<?php echo $a; ?>#faq">よくある質問</a>
   </nav>
   <div class="pchead2-pills">
     <a class="pchead2-pill pchead2-ig" href="https://www.instagram.com/fee.nail.academy/" target="_blank" rel="noopener noreferrer">
