@@ -1,7 +1,12 @@
 <?php
 // コース内容（Choose Your Path）セクション — コーディング版
-// 寸法はデザインカンプ（全幅=100vw基準）から採寸した値
+// 見出しまわりの寸法はデザインカンプ（全幅=100vw基準）から採寸した値
 // ヘッダー左右の素材: corse_left.png / corse_right.png（余白入り透過PNG）
+// 構成:
+//   グループ1「即戦力ネイリスト養成コース」… 3ヶ月 / 6ヶ月 / 9ヶ月 のタブで切り替え（2枚 / 1枚 / 2枚）
+//   グループ2「アートライトプラン」        … タブなしで2枚を表示
+// 7コースすべてHTMLに書き出してあり、タブは表示・非表示を切り替えるだけ（JSはこのファイル末尾）。
+// コース名・時間・料金・説明文はこのファイルに直書き。料金はすべて税込表記。
 $u = get_template_directory_uri();
 ?>
 <style>
@@ -53,60 +58,53 @@ $u = get_template_directory_uri();
 .co-spark { position: absolute; z-index: 1; pointer-events: none; }
 .co-spark::before { content: "\2726"; }
 
-/* --- コースカード --- */
-.co-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 1fr;
-  gap: 1.2vw; max-width: 95.4vw; margin: 0.9vw auto 0; padding-bottom: 1.4vw; }
-.co-card { position: relative; background: #fff; border-radius: 1.2vw; padding: 1.1vw 1.9vw 1.5vw;
-  min-height: 33.2vw;
-  display: grid; grid-template-columns: minmax(0, 1fr) 20.3vw; column-gap: 1vw;
-  box-shadow: 0 0.3vw 1vw rgba(210,150,170,0.14); }
-.co-card1 { border: 0.1vw solid #cfe9e5; }
-.co-card2 { border: 0.1vw solid #f3cfdf; }
-.co-l, .co-r { display: flex; flex-direction: column; min-width: 0; }
+/* --- コースグループ（白い大枠。1グループ = 見出し + タブ + コースカード） --- */
+.co-group { position: relative; z-index: 1; max-width: 95.4vw; margin: 0.9vw auto 0;
+  background: #fff; border-radius: 1.2vw; padding: 1.6vw 1.9vw 1.9vw;
+  box-shadow: 0 0.3vw 1vw rgba(210,150,170,0.14);
+  --gc: #21a89c; --gc-l: rgba(110,200,190,.18); --gline: #e3f1ef; }   /* グループ色（初期値: ティール） */
+.co-group + .co-group { margin-top: 1.4vw; }
+.co-g1 { border: 0.1vw solid #cfe9e5; }
+.co-g2 { border: 0.1vw solid #f3cfdf; --gc: #d9569a; --gc-l: rgba(236,140,180,.18); --gline: #f6e6ec; }
 
-/* ナンバリング（水彩のにじみ風）＋ 期間バッジ（PCデザインには無いのでSPのみ表示） */
-.co-nrow { display: flex; align-items: center; gap: 1.2vw; }
-.co-num { flex: 0 0 auto; width: 4.2vw; height: 4vw;
+/* グループ見出し: 左に写真、右に [ナンバー＋コース名] / [リード＋おすすめチップ]
+   写真は右側テキストの高さいっぱいに伸ばして、写真だけが小さく浮かないようにする */
+.co-ghead { display: grid; grid-template-columns: 15vw minmax(0, 1fr); grid-template-rows: auto auto;
+  column-gap: 1.6vw; row-gap: 0.8vw; align-items: center; }
+.co-gpic { position: relative; grid-row: 1 / 3; align-self: stretch; min-height: 10.5vw;
+  overflow: hidden; border-radius: 0.9vw; }
+.co-gpic img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.co-gtitle { display: flex; align-items: center; gap: 1vw; min-width: 0; }
+/* ナンバリング（水彩のにじみ風） */
+.co-num { flex: 0 0 auto; width: 3.6vw; height: 3.4vw;
   display: flex; align-items: center; justify-content: center;
   color: #fff; font-family: var(--font-en); font-style: italic; font-weight: 600;
-  font-size: 1.9em; line-height: 1;
+  font-size: 1.6em; line-height: 1;
   border-radius: 46% 54% 52% 48% / 52% 46% 54% 48%; }
-.co-card1 .co-num { background: radial-gradient(circle at 45% 38%, #7cd6ca, #29a99a 72%); }
-.co-card2 .co-num { background: radial-gradient(circle at 45% 38%, #cbaaee, #9b6fd6 72%); }
-.co-term { display: none; }
-
-/* タイトルとリードは2枚とも同じ幅に収まるよう、カードごとに文字サイズを調整（デザイン準拠） */
-.co-t { margin: 0.9vw 0 0; font-weight: 700; font-size: 2.28em; line-height: 1.3;
-  letter-spacing: .02em; white-space: nowrap; }
-.co-card2 .co-t { font-size: 2.03em; }
+.co-g1 .co-num { background: radial-gradient(circle at 45% 38%, #7cd6ca, #29a99a 72%); }
+.co-g2 .co-num { background: radial-gradient(circle at 45% 38%, #cbaaee, #9b6fd6 72%); }
+.co-t { margin: 0; font-weight: 700; font-size: 2.28em; line-height: 1.3; letter-spacing: .02em; }
 .co-t .p { color: #e8397f; font-size: 1.12em; padding: 0 .1em; }
+.co-gdesc { min-width: 0; }
 /* リード文の下線は端がぼけた筆跡風。文字より少し長く引く */
-.co-lead { position: relative; align-self: flex-start; margin: 0.9vw 0 0;
-  font-weight: 700; font-size: 1.03em; line-height: 1.5; white-space: nowrap;
-  padding: 0 0.3em 0.55em; }
-.co-card2 .co-lead { font-size: 0.89em; }
+.co-lead { position: relative; display: inline-block; margin: 0;
+  font-weight: 700; font-size: 1.03em; line-height: 1.5; padding: 0 0.3em 0.5em; }
 .co-lead::after { content: ""; position: absolute; left: 0; right: -0.5em; bottom: 0.05em;
   height: 0.17em; border-radius: 999px;
   background: linear-gradient(90deg, rgba(255,206,90,0) 0%, #ffd166 10%, #ffc233 55%, rgba(255,194,51,0) 100%); }
-.co-body { margin: 1vw 0 0; font-weight: 500; font-size: 0.93em; line-height: 1.67; color: #4a4340; }
-
-.co-osusume { margin-top: auto; padding-top: 1.4vw; }
-.co-osusume-t { display: block; width: 87%; text-align: center; font-weight: 600;
-  font-size: 1.07em; letter-spacing: .1em; padding: 0.28em 0; line-height: 1.4;
-  clip-path: polygon(0 0, 100% 0, calc(100% - 0.55em) 50%, 100% 100%, 0 100%, 0.55em 50%); }
-.co-card1 .co-osusume-t { background: linear-gradient(90deg, rgba(110,200,190,.45), rgba(110,200,190,.14)); }
-.co-card2 .co-osusume-t { background: linear-gradient(90deg, rgba(236,140,180,.42), rgba(236,140,180,.12)); }
-.co-ics { display: flex; margin-top: 1.1vw; }
-.co-ic { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; align-items: center;
-  gap: 0.7vw; font-weight: 600; font-size: 0.82em; line-height: 1.55; text-align: center; }
+/* 「こんな方におすすめ」: 見出しラベル＋アイコン入りチップを横一列に */
+.co-recs { display: flex; align-items: center; flex-wrap: wrap; gap: 0.6vw 0.7vw; margin-top: 0.9vw; }
+.co-recs-t { font-weight: 700; font-size: 0.95em; letter-spacing: .08em; color: var(--gc); margin-right: 0.3vw; }
+.co-chip { display: inline-flex; align-items: center; gap: 0.5vw; padding: 0.3vw 1vw 0.3vw 0.4vw;
+  border-radius: 999px; background: var(--gc-l); font-weight: 600; font-size: 0.9em; line-height: 1.3;
+  white-space: nowrap; }
 /* 支給アイコン（course*.png）は余白が大きい透過PNG。--sw/--tx/--ty で大きさと位置を揃える */
-.co-icb { position: relative; width: 4vw; height: 4vw; border-radius: 50%; --icsz: 2.5vw; }
+.co-icb { position: relative; flex: 0 0 auto; width: 2.6vw; height: 2.6vw; border-radius: 50%;
+  background: #fff; --icsz: 1.6vw; }
 .co-icb img { position: absolute; left: 50%; top: 50%; height: auto;
   width: calc(var(--icsz) * var(--sw));
   transform: translate(-50%, -50%)
              translate(calc(var(--icsz) * var(--tx)), calc(var(--icsz) * var(--ty))); }
-.co-card1 .co-icb { background: rgba(110,200,190,.22); }
-.co-card2 .co-icb { background: rgba(236,140,180,.20); }
 .co-i1 { --sw: 1.812; --tx:  0;      --ty: 0.049; }
 .co-i2 { --sw: 1.676; --tx:  0;      --ty: 0.116; }
 .co-i3 { --sw: 2.008; --tx: -0.023;  --ty: 0.174; }
@@ -114,46 +112,68 @@ $u = get_template_directory_uri();
 .co-i5 { --sw: 2.138; --tx:  0.002;  --ty: 0.083; }
 .co-i6 { --sw: 2.086; --tx: -0.069;  --ty: 0.053; }
 
-/* --- 右カラム（写真 / 価格 / CTA） --- */
-.co-photo { position: relative; display: block; }
-/* 支給写真（course01/02）に差し替え済み。旧素材はキャッチ文言の焼き込みを隠すため
-   拡大トリミングしていたが、新素材では不要なので等倍のcoverに戻している */
-.co-pic { display: block; overflow: hidden; border-radius: 0.9vw; height: 18.2vw; }
-.co-pic img { display: block; width: 100%; height: 100%; object-fit: cover; }
-/* 写真に重なるキャッチ */
-.co-no1 { position: absolute; right: -0.4vw; bottom: -2.4vw; z-index: 2; white-space: nowrap;
-  color: #e8397f; font-weight: 700; font-style: italic; font-size: 1.7em; line-height: 1.2;
-  transform: rotate(-7deg); padding: 0 0.35em 0.22em; }
-.co-no1::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0;
-  height: 0.16em; border-radius: 999px;
-  background: linear-gradient(90deg, rgba(255,206,90,0), #ffd166 18%, #ffb733 72%, rgba(255,183,51,0)); }
-.co-up { position: absolute; right: -0.8vw; top: -1vw; z-index: 2; background: #fff;
-  border-radius: 0.7vw; padding: 0.5vw 0.9vw; text-align: center; line-height: 1.5;
-  color: #e8397f; font-weight: 700; font-size: 1.15em; white-space: nowrap;
-  box-shadow: 0 0.2vw 0.6vw rgba(200,150,170,.28); }
-.co-up .u { background: linear-gradient(transparent 78%, #ffd166 78% 96%, transparent 96%); }
+/* --- 期間タブ（グループ1のみ。見出しとの間に薄い区切り線） --- */
+.co-tabs { display: flex; justify-content: center; gap: 0.8vw; margin-top: 1.5vw;
+  padding-top: 1.4vw; border-top: 0.1vw solid var(--gline); }
+.co-tab { appearance: none; -webkit-appearance: none; cursor: pointer; margin: 0; min-width: 13vw;
+  border: 0.12vw solid #29a99a; background: #fff; color: #1e8f86;
+  font-family: var(--font-jp); font-weight: 700; font-size: 1.2em; letter-spacing: .06em;
+  padding: 0.55em 1.6em; border-radius: 999px; line-height: 1.3; white-space: nowrap; text-align: center;
+  transition: background .15s ease, color .15s ease, transform .12s ease;
+  outline: none; -webkit-tap-highlight-color: transparent; }
+.co-tab:hover { background: #eef9f8; }
+.co-tab:active { transform: scale(.97); }
+.co-tab:focus-visible { box-shadow: 0 0 0 0.25vw rgba(30,163,168,.3); }
+.co-tab.is-active { background: linear-gradient(135deg, #4fcbb8, #1ea3a8); color: #fff;
+  border-color: transparent; box-shadow: 0 0.3vw 0.9vw rgba(30,163,168,.3); }
+.co-tab.is-active:hover { background: linear-gradient(135deg, #4fcbb8, #1ea3a8); }
+.co-panel[hidden] { display: none; }
 
-.co-buy { position: relative; margin-top: auto; padding-top: 1.4vw; }
-.co-buy::before { content: ""; position: absolute; left: -1vw; top: 0; bottom: -1vw;
-  width: 0.1vw; background: #ece5e2; }
-.co-price { text-align: center; font-family: var(--font-en); font-weight: 600; font-size: 2.8em;
-  letter-spacing: .01em; white-space: nowrap; line-height: 1.2; }
-.co-card1 .co-price { color: #21a89c; }
-.co-card2 .co-price { color: #d9569a; }
+/* --- コースカード（PC2列。1枚だけのタブは中央に置く） --- */
+.co-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.4vw; margin-top: 1.4vw; }
+/* タブのないグループ2は、見出しとカードの間にタブと同じ区切り線を入れて揃える */
+.co-g2 .co-items { margin-top: 1.5vw; padding-top: 1.4vw; border-top: 0.1vw solid var(--gline); }
+.co-item { flex: 0 0 calc((100% - 1.4vw) / 2); display: flex; flex-direction: column;
+  border-radius: 1vw; padding: 1.3vw 1.5vw 1.4vw; border: 0.1vw solid; }
+.co-g1 .co-item { background: #f4fbfa; border-color: #cfe9e5; }
+.co-g2 .co-item { background: #fff5f9; border-color: #f3cfdf; }
+/* 期間バッジ ＋ 授業時間（タブ内では時間数が主役なので大きめ） */
+.co-item-head { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5vw 0.9vw; }
+.co-item-term { display: inline-block; color: #fff; font-weight: 700; font-size: 0.95em;
+  letter-spacing: .06em; padding: 0.3em 0.95em; border-radius: 999px; line-height: 1.3; white-space: nowrap; }
+.co-g1 .co-item-term { background: linear-gradient(135deg, #4fcbb8, #1ea3a8); }
+.co-g2 .co-item-term { background: linear-gradient(135deg, #f37bab, #e0439a); }
+.co-item-hours { font-weight: 700; font-size: 1.35em; line-height: 1.3; color: #2f2a28; white-space: nowrap; }
+.co-item-hours .n { font-family: var(--font-en); font-size: 1.45em; padding: 0 .04em; color: var(--gc); }
+.co-item-hours small { font-size: .72em; font-weight: 600; color: #6b5b57; }
+/* 説明文（支給テキストをそのまま掲載） */
+.co-item-body { margin: 0.8vw 0 0; font-weight: 500; font-size: 0.95em; line-height: 1.78; color: #4a4340; }
+.co-item-body p { margin: 0; }
+.co-item-body p + p { margin-top: 0.5em; }
+/* 「〜な方におすすめ」は薄い黄色の箱で目立たせる */
+.co-item-rec { margin: 0.9vw 0 1.1vw; padding: 0.55em 0.8em; border-radius: 0.5em;
+  background: rgba(255,209,102,.26); font-weight: 700; font-size: 0.95em; line-height: 1.7; color: #2f2a28; }
+/* 下段: 左に料金、右に相談ボタン（カードの高さが揃うよう常に最下部へ） */
+.co-item-foot { margin-top: auto; padding-top: 1vw; border-top: 0.1vw solid #e6ddd9;
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8vw 1vw; }
+.co-item-price { display: flex; align-items: baseline; gap: 0.5vw; white-space: nowrap; }
+.co-item-fee { font-size: 0.9em; font-weight: 600; letter-spacing: .1em; color: #6b5b57; }
+.co-price { font-family: var(--font-en); font-weight: 600; font-size: 2em; letter-spacing: .01em;
+  line-height: 1.2; color: var(--gc); }
 .co-price .tax { font-family: var(--font-jp); font-size: 0.42em; font-weight: 600; color: #4a4340; }
-.co-cta { margin-top: 1.1vw; height: 3.9vw; display: flex; align-items: center; justify-content: center;
-  gap: 0.6vw; color: #fff; font-weight: 700; font-size: 1.19em; white-space: nowrap;
+.co-cta { flex: 0 0 auto; height: 3.1vw; padding: 0 1.6em; display: inline-flex; align-items: center; justify-content: center;
+  gap: 0.4vw; color: #fff; font-weight: 700; font-size: 1em; white-space: nowrap;
   border-radius: 999px; text-decoration: none; line-height: 1.3;
   transition: transform .12s ease, filter .15s ease;
   box-shadow: 0 0.3vw 0.9vw rgba(150,120,140,0.28); }
-.co-card1 .co-cta { background: linear-gradient(135deg, #4fcbb8, #1ea3a8); }
-.co-card2 .co-cta { background: linear-gradient(135deg, #f37bab, #e0439a); }
+.co-g1 .co-cta { background: linear-gradient(135deg, #4fcbb8, #1ea3a8); }
+.co-g2 .co-cta { background: linear-gradient(135deg, #f37bab, #e0439a); }
 .co-cta:hover { filter: brightness(1.05); }
 .co-cta:active { transform: scale(0.98); }
 .co-cta .ar { font-family: sans-serif; font-size: 1.15em; }
 
 /* --- 注記 --- */
-.co-notes { position: relative; z-index: 1; text-align: center; padding-bottom: 2.4vw;
+.co-notes { position: relative; z-index: 1; text-align: center; padding: 1.4vw 0 2.4vw;
   font-weight: 500; font-size: 1.05em; line-height: 2; color: #6b5b57; }
 
 /* ===== SP（全幅=100vw基準: font-size 2vw = 1em） ===== */
@@ -163,7 +183,6 @@ $u = get_template_directory_uri();
   .co-head { padding-top: 3vw; min-height: 35vw; }
   .co-head-l { left: 0; top: 0; width: 24.6vw; height: 33.8vw; --base: 24.6vw; }
   .co-head-r { right: 0; top: 0; width: 24.6vw; height: 33.8vw; --base: 24.6vw; }
-  .co-pic { height: 35.9vw; border-radius: 1.8vw; }
   .co-script { font-size: 2.55em; }
   .co-title { font-size: 3.24em; }
   .co-ribbon { font-size: 1.21em; padding: 0.42em 1.3em; }
@@ -173,39 +192,40 @@ $u = get_template_directory_uri();
   .co-bub-l { left: 7.4vw; top: 14.1vw; }
   .co-bub-r { right: 7.4vw; top: 15.3vw; }
 
-  .co-grid { grid-template-columns: 1fr; gap: 4vw; max-width: 95.3vw; margin-top: 3vw;
-    padding-bottom: 3vw; }
-  .co-card { grid-template-columns: minmax(0, 1fr) 40.3vw; column-gap: 2vw;
-    padding: 3.2vw; min-height: 0; border-radius: 2.4vw; }
-  .co-nrow { gap: 2.4vw; }
-  .co-num { width: 8.9vw; height: 8.4vw; font-size: 1.9em; }
-  /* 期間バッジはSPデザインのみ */
-  .co-term { display: inline-flex; align-items: center; gap: 0.7vw;
-    padding: 0.35em 1.2em; border-radius: 0.5vw; font-weight: 600; font-size: 1.1em;
-    letter-spacing: .05em; line-height: 1.5; }
-  .co-term svg { width: 1.15em; height: 1.15em; flex: 0 0 auto; }
-  .co-card1 .co-term { background: rgba(110,200,190,.22); color: #1e8f86; }
-  .co-card2 .co-term { background: rgba(236,140,180,.20); color: #cf4b8c; }
+  .co-group { max-width: 95.3vw; margin-top: 3vw; padding: 3.2vw; border-radius: 2.4vw; }
+  .co-group + .co-group { margin-top: 4vw; }
+  /* SPは 1行目: 写真（正方形）＋ナンバー・コース名 / 2行目: リード＋チップ（全幅） */
+  .co-ghead { grid-template-columns: 24vw minmax(0, 1fr); column-gap: 2.5vw; row-gap: 2.4vw; align-items: center; }
+  .co-gpic { grid-row: 1; height: 24vw; min-height: 0; border-radius: 1.8vw; }
+  .co-gtitle { flex-direction: column; align-items: flex-start; gap: 1.4vw; }
+  .co-num { width: 6.4vw; height: 6vw; font-size: 1.4em; }
+  .co-t { font-size: 2em; line-height: 1.3; }
+  .co-gdesc { grid-column: 1 / -1; }
+  .co-lead { font-size: 1.04em; padding-bottom: 0.6em; }
+  .co-recs { gap: 1.2vw 1.5vw; margin-top: 2vw; }
+  .co-recs-t { font-size: 0.95em; width: 100%; margin-right: 0; }
+  .co-chip { font-size: 0.9em; gap: 1vw; padding: 0.5vw 1.8vw 0.5vw 0.8vw; }
+  .co-icb { width: 5.6vw; height: 5.6vw; --icsz: 3.4vw; }
 
-  .co-t { margin-top: 1.8vw; font-size: 2.24em; }
-  .co-card2 .co-t { font-size: 2em; }
-  .co-lead { margin-top: 1.6vw; font-size: 1.04em; padding-bottom: 0.6em; }
-  .co-card2 .co-lead { font-size: 0.9em; }
-  .co-body { margin-top: 1.8vw; font-size: 1em; line-height: 1.76; }
-  .co-osusume { padding-top: 2.6vw; }
-  .co-osusume-t { font-size: 1.05em; }
-  .co-ics { margin-top: 2vw; }
-  .co-ic { gap: 1.2vw; font-size: 0.8em; }
-  .co-icb { width: 8.9vw; height: 8.9vw; --icsz: 5.5vw; }
+  .co-tabs { gap: 1.5vw; margin-top: 3vw; padding-top: 2.6vw; border-top-width: 0.2vw; }
+  .co-tab { flex: 1 1 0; min-width: 0; font-size: 1.15em; padding: 0.65em 0.4em; border-width: 0.3vw; }
 
-  .co-no1 { right: -0.5vw; bottom: -4.4vw; font-size: 2.1em; }
-  .co-up { right: -1vw; top: -1.6vw; font-size: 1.3em; padding: 1vw 1.6vw; border-radius: 1.2vw; }
-  .co-buy { padding-top: 2.6vw; }
-  .co-buy::before { left: -2vw; bottom: -2vw; }
-  .co-price { font-size: 2.9em; }
-  .co-cta { height: 6.2vw; margin-top: 2.2vw; font-size: 1.25em; }
+  .co-items { flex-direction: column; gap: 3vw; margin-top: 3vw; }
+  .co-g2 .co-items { margin-top: 3vw; padding-top: 2.6vw; border-top-width: 0.2vw; }
+  .co-item { flex: 1 1 auto; padding: 3vw 3.2vw 3.4vw; border-radius: 2vw; }
+  .co-item-head { gap: 1vw 2vw; }
+  .co-item-term { font-size: 1.05em; }
+  .co-item-hours { font-size: 1.4em; }
+  .co-item-body { margin-top: 1.8vw; font-size: 1em; line-height: 1.76; }
+  .co-item-rec { margin: 1.8vw 0 2.4vw; font-size: 1em; }
+  /* SPは料金を中央、ボタンを全幅に */
+  .co-item-foot { flex-direction: column; align-items: stretch; gap: 2vw; padding-top: 2.4vw; border-top-width: 0.2vw; }
+  .co-item-price { justify-content: center; gap: 1vw; }
+  .co-item-fee { font-size: 0.95em; }
+  .co-price { font-size: 2.6em; }
+  .co-cta { height: 6.2vw; font-size: 1.25em; }
 
-  .co-notes { font-size: 1.2em; padding: 0 4vw 5vw; }
+  .co-notes { font-size: 1.2em; padding: 3vw 4vw 5vw; }
 }
 </style>
 <section class="co" id="courses">
@@ -228,64 +248,171 @@ $u = get_template_directory_uri();
     <div><span class="co-ribbon">なりたい未来に合わせて選べる&#9825;</span></div>
   </div>
 
-  <!-- コースカード -->
-  <div class="co-grid">
-    <!-- 3ヶ月即戦力コース -->
-    <div class="co-card co-card1">
-      <div class="co-l">
-        <div class="co-nrow">
-          <span class="co-num">01</span>
-        </div>
-        <h3 class="co-t">3ヶ月<span class="p">即戦力</span>コース</h3>
-        <p class="co-lead">短期間でプロデビューを目指したい方へ！</p>
-        <p class="co-body">3ヶ月間で480時間分の授業を消化して頂く<br>短期集中型のコースになります。<br>強い意欲を持ち、最短距離でプロデビューを<br>目指したい方におすすめです。</p>
-        <div class="co-osusume">
-          <span class="co-osusume-t">こんな方におすすめ</span>
-          <div class="co-ics">
-            <span class="co-ic"><span class="co-icb co-i1"><img src="<?php echo $u; ?>/assets/images/course1.png" alt="" loading="lazy" decoding="async"></span>学習密度が高い</span>
-            <span class="co-ic"><span class="co-icb co-i2"><img src="<?php echo $u; ?>/assets/images/course2.png" alt="" loading="lazy" decoding="async"></span>就職までの<br>スピードが早い</span>
-            <span class="co-ic"><span class="co-icb co-i3"><img src="<?php echo $u; ?>/assets/images/course3.png" alt="" loading="lazy" decoding="async"></span>サロンワーク<br>特化</span>
-          </div>
-        </div>
+  <!-- グループ1: 即戦力ネイリスト養成コース（3ヶ月 / 6ヶ月 / 9ヶ月 のタブ切り替え） -->
+  <div class="co-group co-g1">
+    <div class="co-ghead">
+      <span class="co-gpic"><img <?php fee_img_attr('courses', '1'); ?> loading="lazy"></span>
+      <div class="co-gtitle">
+        <span class="co-num">01</span>
+        <h3 class="co-t">即戦力ネイリスト養成<span class="p">コース</span></h3>
       </div>
-      <div class="co-r">
-        <span class="co-photo">
-          <span class="co-pic"><img <?php fee_img_attr('courses', '1'); ?> loading="lazy"></span>
-          <span class="co-no1">人気No.1</span>
-        </span>
-        <div class="co-buy">
-          <div class="co-price">&yen;420,000<span class="tax">（税込）</span></div>
-          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースについて相談する<span class="ar">&#8250;</span></a>
+      <div class="co-gdesc">
+        <p class="co-lead">期間は3ヶ月・6ヶ月・9ヶ月から。基礎技術からサロンワークまで学び、プロデビューを目指すコース</p>
+        <div class="co-recs">
+          <span class="co-recs-t">こんな方におすすめ</span>
+          <span class="co-chip"><span class="co-icb co-i1"><img src="<?php echo $u; ?>/assets/images/course1.png" alt="" loading="lazy" decoding="async"></span>基礎からサロンワークまで</span>
+          <span class="co-chip"><span class="co-icb co-i2"><img src="<?php echo $u; ?>/assets/images/course2.png" alt="" loading="lazy" decoding="async"></span>期間を選んでプロデビュー</span>
+          <span class="co-chip"><span class="co-icb co-i3"><img src="<?php echo $u; ?>/assets/images/course3.png" alt="" loading="lazy" decoding="async"></span>サロンワーク特化</span>
         </div>
       </div>
     </div>
 
-    <!-- 9ヶ月じっくりコース -->
-    <div class="co-card co-card2">
-      <div class="co-l">
-        <div class="co-nrow">
-          <span class="co-num">02</span>
+    <!-- 期間タブ -->
+    <div class="co-tabs" role="tablist" aria-label="コースの期間">
+      <button class="co-tab is-active" type="button" role="tab" id="co-tab-3m" aria-controls="co-panel-3m" aria-selected="true" tabindex="0">3ヶ月コース</button>
+      <button class="co-tab" type="button" role="tab" id="co-tab-6m" aria-controls="co-panel-6m" aria-selected="false" tabindex="-1">6ヶ月コース</button>
+      <button class="co-tab" type="button" role="tab" id="co-tab-9m" aria-controls="co-panel-9m" aria-selected="false" tabindex="-1">9ヶ月コース</button>
+    </div>
+
+    <!-- 3ヶ月 -->
+    <div class="co-panel co-items" id="co-panel-3m" role="tabpanel" aria-labelledby="co-tab-3m">
+      <div class="co-item">
+        <div class="co-item-head">
+          <span class="co-item-term">3ヶ月コース</span>
+          <span class="co-item-hours">全<span class="n">240</span>時間 <small>（4時間×60回）</small></span>
         </div>
-        <h3 class="co-t">9ヶ月<span class="p">じっくり</span>コース</h3>
-        <p class="co-lead">じっくり習得して確実にスキルを身につけたい方へ！</p>
-        <p class="co-body">9ヶ月間で480時間分の授業を消化して頂く<br>じっくり習得型のコースになります。<br>ゆとりある期間で技術を定着させ、仕事や生活と<br>両立しながら、プロデビューを目指したい方に<br>おすすめです。</p>
-        <div class="co-osusume">
-          <span class="co-osusume-t">こんな方におすすめ</span>
-          <div class="co-ics">
-            <span class="co-ic"><span class="co-icb co-i4"><img src="<?php echo $u; ?>/assets/images/course4.png" alt="" loading="lazy" decoding="async"></span>無理ないペース</span>
-            <span class="co-ic"><span class="co-icb co-i5"><img src="<?php echo $u; ?>/assets/images/course5.png" alt="" loading="lazy" decoding="async"></span>働きながら<br>通いやすい</span>
-            <span class="co-ic"><span class="co-icb co-i6"><img src="<?php echo $u; ?>/assets/images/course6.png" alt="" loading="lazy" decoding="async"></span>サロンワーク<br>特化</span>
-          </div>
+        <div class="co-item-body">
+          <p>3ヶ月間で全240時間の授業を受講する、短期集中型のコースです。</p>
+          <p>基礎技術からサロンワークまで集中的に学び、限られた期間で効率よく技術を身につけます。</p>
+        </div>
+        <p class="co-item-rec">強い意欲を持ち、最短距離でプロデビューを目指したい方におすすめです。</p>
+        <div class="co-item-foot">
+          <div class="co-item-price"><span class="co-item-fee">受講料</span><span class="co-price">&yen;350,000<span class="tax">（税込）</span></span></div>
+          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースを相談する<span class="ar">&#8250;</span></a>
         </div>
       </div>
-      <div class="co-r">
-        <span class="co-photo">
-          <span class="co-pic"><img <?php fee_img_attr('courses', '2'); ?> loading="lazy"></span>
-          <span class="co-no1">スキルUP</span>
-        </span>
-        <div class="co-buy">
-          <div class="co-price">&yen;450,000<span class="tax">（税込）</span></div>
-          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースについて相談する<span class="ar">&#8250;</span></a>
+
+      <div class="co-item">
+        <div class="co-item-head">
+          <span class="co-item-term">3ヶ月コース</span>
+          <span class="co-item-hours">全<span class="n">480</span>時間 <small>（4時間×120回）</small></span>
+        </div>
+        <div class="co-item-body">
+          <p>3ヶ月間で全480時間の授業を受講する、より実践量の多い短期集中型のコースです。</p>
+          <p>基礎技術から応用技術、モデル施術、サロンワークまで、豊富な練習時間を通して即戦力となる技術を身につけます。</p>
+        </div>
+        <p class="co-item-rec">強い意欲を持ち、短期間で徹底的に学び、最短距離でプロデビューを目指したい方におすすめです。</p>
+        <div class="co-item-foot">
+          <div class="co-item-price"><span class="co-item-fee">受講料</span><span class="co-price">&yen;450,000<span class="tax">（税込）</span></span></div>
+          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースを相談する<span class="ar">&#8250;</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6ヶ月 -->
+    <div class="co-panel co-items" id="co-panel-6m" role="tabpanel" aria-labelledby="co-tab-6m" hidden>
+      <div class="co-item">
+        <div class="co-item-head">
+          <span class="co-item-term">6ヶ月コース</span>
+          <span class="co-item-hours">全<span class="n">192</span>時間 <small>（4時間×48回）</small></span>
+        </div>
+        <div class="co-item-body">
+          <p>6ヶ月間で全192時間の授業を受講する、無理なく学べる習得型のコースです。</p>
+          <p>基礎からサロンワークまで段階的に学び、ゆとりある期間の中で技術を着実に定着させます。</p>
+        </div>
+        <p class="co-item-rec">仕事や生活と両立しながら、自分のペースでプロデビューを目指したい方におすすめです。</p>
+        <div class="co-item-foot">
+          <div class="co-item-price"><span class="co-item-fee">受講料</span><span class="co-price">&yen;330,000<span class="tax">（税込）</span></span></div>
+          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースを相談する<span class="ar">&#8250;</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9ヶ月 -->
+    <div class="co-panel co-items" id="co-panel-9m" role="tabpanel" aria-labelledby="co-tab-9m" hidden>
+      <div class="co-item">
+        <div class="co-item-head">
+          <span class="co-item-term">9ヶ月コース</span>
+          <span class="co-item-hours">全<span class="n">240</span>時間 <small>（4時間×60回）</small></span>
+        </div>
+        <div class="co-item-body">
+          <p>9ヶ月間で全240時間の授業を受講する、じっくり習得型のコースです。</p>
+          <p>十分な練習期間を確保しながら、一つひとつの技術を丁寧に身につけ、サロンワークに必要な実践力を養います。</p>
+        </div>
+        <p class="co-item-rec">仕事や生活と両立しながら、時間をかけて着実にプロデビューを目指したい方におすすめです。</p>
+        <div class="co-item-foot">
+          <div class="co-item-price"><span class="co-item-fee">受講料</span><span class="co-price">&yen;450,000<span class="tax">（税込）</span></span></div>
+          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースを相談する<span class="ar">&#8250;</span></a>
+        </div>
+      </div>
+
+      <div class="co-item">
+        <div class="co-item-head">
+          <span class="co-item-term">9ヶ月コース</span>
+          <span class="co-item-hours">全<span class="n">480</span>時間 <small>（4時間×120回）</small></span>
+        </div>
+        <div class="co-item-body">
+          <p>9ヶ月間で全480時間の授業を受講する、実践重視のプロフェッショナルコースです。</p>
+          <p>基礎技術から応用技術、モデル施術、サロンワークまで、豊富な実践経験を積みながら、技術力・施術スピード・接客力を総合的に身につけます。</p>
+        </div>
+        <p class="co-item-rec">じっくり時間をかけて高い技術力を習得し、卒業後すぐに現場で活躍できるネイリストを目指したい方におすすめです。</p>
+        <div class="co-item-foot">
+          <div class="co-item-price"><span class="co-item-fee">受講料</span><span class="co-price">&yen;550,000<span class="tax">（税込）</span></span></div>
+          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースを相談する<span class="ar">&#8250;</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- グループ2: アートライトプラン（3ヶ月・タブなし） -->
+  <div class="co-group co-g2">
+    <div class="co-ghead">
+      <span class="co-gpic"><img <?php fee_img_attr('courses', '2'); ?> loading="lazy"></span>
+      <div class="co-gtitle">
+        <span class="co-num">02</span>
+        <h3 class="co-t">アートライト<span class="p">プラン</span></h3>
+      </div>
+      <div class="co-gdesc">
+        <p class="co-lead">アート技術に絞って、必要な内容を効率よく学べる3ヶ月のプラン</p>
+        <div class="co-recs">
+          <span class="co-recs-t">こんな方におすすめ</span>
+          <span class="co-chip"><span class="co-icb co-i4"><img src="<?php echo $u; ?>/assets/images/course4.png" alt="" loading="lazy" decoding="async"></span>短期間で効率よく学べる</span>
+          <span class="co-chip"><span class="co-icb co-i5"><img src="<?php echo $u; ?>/assets/images/course5.png" alt="" loading="lazy" decoding="async"></span>アート技術に特化</span>
+          <span class="co-chip"><span class="co-icb co-i6"><img src="<?php echo $u; ?>/assets/images/course6.png" alt="" loading="lazy" decoding="async"></span>サロンで活かせる表現力</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="co-items">
+      <div class="co-item">
+        <div class="co-item-head">
+          <span class="co-item-term">3ヶ月コース</span>
+          <span class="co-item-hours">全<span class="n">24</span>時間 <small>（4時間×6回）</small></span>
+        </div>
+        <div class="co-item-body">
+          <p>3ヶ月間で全24時間の授業を受講する、アート技術に特化したライトプランです。</p>
+          <p>ネイルアートの基礎やデザイン技術を中心に学び、通常のネイル施術に活かせる表現力を身につけます。</p>
+        </div>
+        <p class="co-item-rec">アート技術を重点的に学びたい方や、必要な内容を絞って効率よく受講したい方におすすめです。</p>
+        <div class="co-item-foot">
+          <div class="co-item-price"><span class="co-item-fee">受講料</span><span class="co-price">&yen;128,000<span class="tax">（税込）</span></span></div>
+          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースを相談する<span class="ar">&#8250;</span></a>
+        </div>
+      </div>
+
+      <div class="co-item">
+        <div class="co-item-head">
+          <span class="co-item-term">3ヶ月コース</span>
+          <span class="co-item-hours">全<span class="n">40</span>時間 <small>（4時間×10回）</small></span>
+        </div>
+        <div class="co-item-body">
+          <p>3ヶ月間で全40時間の授業を受講する、アート技術をより実践的に学べるライトプランです。</p>
+          <p>基本的なアート技術から応用デザインまで、練習時間を確保しながら幅広く習得します。</p>
+        </div>
+        <p class="co-item-rec">ネイルアートの技術力を高めたい方や、サロンで活かせるデザインの幅を広げたい方におすすめです。</p>
+        <div class="co-item-foot">
+          <div class="co-item-price"><span class="co-item-fee">受講料</span><span class="co-price">&yen;178,000<span class="tax">（税込）</span></span></div>
+          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースを相談する<span class="ar">&#8250;</span></a>
         </div>
       </div>
     </div>
@@ -296,3 +423,32 @@ $u = get_template_directory_uri();
     ※分割払いも可能ですのでご相談ください。<br>
   </div>
 </section>
+
+<script>
+// コース内容: 期間タブ（3ヶ月 / 6ヶ月 / 9ヶ月）の切り替え。左右キーでも移動できる
+(function(){
+  var wrap = document.querySelector('.co-g1');
+  if(!wrap) return;
+  var tabs = Array.prototype.slice.call(wrap.querySelectorAll('.co-tab'));
+  var panels = Array.prototype.slice.call(wrap.querySelectorAll('.co-panel'));
+  if(!tabs.length || tabs.length !== panels.length) return;
+  function activate(idx){
+    tabs.forEach(function(t, k){
+      var on = (k === idx);
+      t.classList.toggle('is-active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.setAttribute('tabindex', on ? '0' : '-1');
+    });
+    panels.forEach(function(p, k){ p.hidden = (k !== idx); });
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ activate(i); });
+    t.addEventListener('keydown', function(e){
+      var n = null;
+      if(e.key === 'ArrowRight'){ n = (i + 1) % tabs.length; }
+      else if(e.key === 'ArrowLeft'){ n = (i - 1 + tabs.length) % tabs.length; }
+      if(n !== null){ e.preventDefault(); activate(n); tabs[n].focus(); }
+    });
+  });
+})();
+</script>

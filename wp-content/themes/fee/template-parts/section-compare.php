@@ -235,7 +235,7 @@ $u = get_template_directory_uri();
       <div class="cm-koma">
         <div class="cm-koma-t">
           <span class="cm-slash"></span>
-          <span class="cm-mk"><span class="n">1</span>コマ<span class="n">8</span>時間</span>
+          <span class="cm-mk"><span class="n">1</span>コマ<span class="n">4</span>時間</span>
           <span class="cm-slash r"></span>
         </div>
         <div class="cm-koma-s">総授業時間 <span class="n">480</span> 時間<span class="pc">　</span><span class="sp"></span>1時間あたり <span class="n">875</span> 円</div>

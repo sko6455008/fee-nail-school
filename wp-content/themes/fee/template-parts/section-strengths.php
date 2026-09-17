@@ -155,7 +155,7 @@ $u = get_template_directory_uri();
       <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/strength1.png" alt="" loading="lazy"></span>
       <div class="st-body">
         <span class="st-ribbon">圧倒的学習時間</span>
-        <div class="st-big"><span class="hl">1コマ8時間！</span></div>
+        <div class="st-big"><span class="hl">1コマ4時間！</span></div>
         <div class="st-sub">基礎から応用まで学べる！</div>
       </div>
     </div>
