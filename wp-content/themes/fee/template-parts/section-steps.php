@@ -180,8 +180,8 @@ $u = get_template_directory_uri();
     <span class="hj-deco" style="right:28vw;top:5vw;color:#ef7fae;font-size:1.9em;transform:rotate(12deg);">&#9829;</span>
     <span class="hj-deco" style="right:22vw;top:6.5vw;color:#f2c443;font-size:2.1em;">&#9734;</span>
     <span class="hj-deco" style="right:17vw;top:9.5vw;color:#a98ce4;font-size:1.3em;">&#9679;</span>
-    <div class="hj-script"><span class="hj-slash"></span>How to Join<span class="hj-slash r"></span></div>
-    <h2 class="hj-title">入校手順</h2>
+    <div class="hj-script"><span class="hj-slash"></span><?php fee_text('steps_001'); ?><span class="hj-slash r"></span></div>
+    <h2 class="hj-title"><?php fee_text('steps_002'); ?></h2>
     <span class="hj-title-line"></span>
   </div>
 
@@ -191,9 +191,9 @@ $u = get_template_directory_uri();
       <span class="hj-num">1</span>
       <span class="hj-ring hj-i1"><img src="<?php echo $u; ?>/assets/images/flow1.png" alt="" loading="lazy" decoding="async"></span>
       <div>
-        <h3 class="hj-t"><span>お問い合わせ</span></h3>
+        <h3 class="hj-t"><span><?php fee_text('steps_003'); ?></span></h3>
         <span class="hj-dot"></span>
-        <p class="hj-tx">公式<span class="p">LINE</span>から<br class="sp-none">お気軽にご連絡ください。</p>
+        <p class="hj-tx"><?php fee_text('steps_004'); ?><span class="p"><?php fee_text('steps_005'); ?></span><?php fee_text('steps_006'); ?><br class="sp-none"><?php fee_text('steps_007'); ?></p>
       </div>
     </div>
     <span class="hj-arrow"></span>
@@ -201,9 +201,9 @@ $u = get_template_directory_uri();
       <span class="hj-num">2</span>
       <span class="hj-ring hj-i2"><img src="<?php echo $u; ?>/assets/images/flow2.png" alt="" loading="lazy" decoding="async"></span>
       <div>
-        <h3 class="hj-t"><span>無料LINE相談する</span></h3>
+        <h3 class="hj-t"><span><?php fee_text('steps_008'); ?></span></h3>
         <span class="hj-dot"></span>
-        <p class="hj-tx">スクールの雰囲気を<span class="p">見学</span>し、<br>コースの<span class="p">相談</span>をします。</p>
+        <p class="hj-tx"><?php fee_text('steps_009'); ?><span class="p"><?php fee_text('steps_010'); ?></span><?php fee_text('steps_011'); ?><br><?php fee_text('steps_012'); ?><span class="p"><?php fee_text('steps_013'); ?></span><?php fee_text('steps_014'); ?></p>
       </div>
     </div>
     <span class="hj-arrow"></span>
@@ -211,9 +211,9 @@ $u = get_template_directory_uri();
       <span class="hj-num">3</span>
       <span class="hj-ring hj-i3"><img src="<?php echo $u; ?>/assets/images/flow3.png" alt="" loading="lazy" decoding="async"></span>
       <div>
-        <h3 class="hj-t"><span>入校手続き</span></h3>
+        <h3 class="hj-t"><span><?php fee_text('steps_015'); ?></span></h3>
         <span class="hj-dot"></span>
-        <p class="hj-tx">申し込み用紙への記入と、<br>授業料の<span class="p">お支払い</span>。</p>
+        <p class="hj-tx"><?php fee_text('steps_016'); ?><br><?php fee_text('steps_017'); ?><span class="p"><?php fee_text('steps_018'); ?></span>。</p>
       </div>
     </div>
     <span class="hj-arrow"></span>
@@ -221,9 +221,9 @@ $u = get_template_directory_uri();
       <span class="hj-num">4</span>
       <span class="hj-ring hj-i4"><img src="<?php echo $u; ?>/assets/images/flow4.png" alt="" loading="lazy" decoding="async"></span>
       <div>
-        <h3 class="hj-t"><span>レッスン開始</span></h3>
+        <h3 class="hj-t"><span><?php fee_text('steps_019'); ?></span></h3>
         <span class="hj-dot"></span>
-        <p class="hj-tx">教材を受け取り、<br>いよいよネイリストへの<span class="p">第一歩！</span></p>
+        <p class="hj-tx"><?php fee_text('steps_020'); ?><br><?php fee_text('steps_021'); ?><span class="p"><?php fee_text('steps_022'); ?></span></p>
       </div>
     </div>
   </div>
@@ -231,9 +231,9 @@ $u = get_template_directory_uri();
   <!-- First Step バー -->
   <div class="hj-first">
     <div class="hj-first-row">
-      <span class="hj-first-script">First Step !</span>
-      <span class="hj-first-tx">まずは<span class="p">無料カウンセリング・見学</span>へお越しください。</span>
-      <a class="hj-first-btn pulse-btn" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">無料カウンセリング・見学を予約する</a>
+      <span class="hj-first-script"><?php fee_text('steps_023'); ?></span>
+      <span class="hj-first-tx"><?php fee_text('steps_024'); ?><span class="p"><?php fee_text('steps_025'); ?></span><?php fee_text('steps_026'); ?></span>
+      <a class="hj-first-btn pulse-btn" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer"><?php fee_text('steps_027'); ?></a>
     </div>
     <div class="hj-first-note">
       <svg class="line-ic" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
@@ -242,6 +242,6 @@ $u = get_template_directory_uri();
         <path d="M16.2 30.5 14 39.2l8.4-6.2z" fill="#fff"/>
         <text x="24" y="26.3" text-anchor="middle" fill="#06c755"
               font-family="Arial, Helvetica, sans-serif" font-size="10.5" font-weight="700">LINE</text>
-      </svg>※公式<span class="p">LINE</span> 24時間受付中！</div>
+      </svg><?php fee_text('steps_028'); ?><span class="p"><?php fee_text('steps_029'); ?></span> <?php fee_text('steps_030'); ?></div>
   </div>
 </section>

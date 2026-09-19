@@ -7,7 +7,7 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<?php if ( is_front_page() ) : ?>
+<?php if ( is_front_page() && !is_array(fee_text_preview_values(get_queried_object_id())) ) : ?>
     <script>
     /* リロード時はホーム「/」へ遷移（初回訪問はそのまま表示・URLのアンカーは解除） */
     (function(){

@@ -137,8 +137,8 @@ $u = get_template_directory_uri();
 
   <!-- ヘッダー -->
   <div class="st-head">
-    <div class="st-lead"><span class="sl">＼</span>ICA 池袋キャリアアカデミー が選ばれる理由<span class="sl">／</span></div>
-    <h2 class="st-title"><span class="n">7</span>つの<span class="g">強み</span></h2>
+    <div class="st-lead"><span class="sl">＼</span><?php fee_text('strengths_001'); ?><span class="sl">／</span></div>
+    <h2 class="st-title"><span class="n"><?php fee_text('strengths_002'); ?></span><?php fee_text('strengths_003'); ?><span class="g"><?php fee_text('strengths_004'); ?></span></h2>
     <svg class="st-arc" viewBox="0 0 300 22" aria-hidden="true">
       <defs><linearGradient id="starc" x1="0" y1="0" x2="1" y2="0">
         <stop offset="0" stop-color="#e85a9b"/><stop offset="0.5" stop-color="#b06fd0"/><stop offset="1" stop-color="#46c3d8"/>
@@ -153,36 +153,36 @@ $u = get_template_directory_uri();
       <span class="st-num">01</span>
       <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/strength1.png" alt="" loading="lazy"></span>
       <div class="st-body">
-        <span class="st-ribbon">圧倒的学習時間</span>
-        <div class="st-big"><span class="hl">1コマ4時間！</span></div>
-        <div class="st-sub">基礎から応用まで学べる！</div>
+        <span class="st-ribbon"><?php fee_text('strengths_005'); ?></span>
+        <div class="st-big"><span class="hl"><?php fee_text('strengths_006'); ?></span></div>
+        <div class="st-sub"><?php fee_text('strengths_007'); ?></div>
       </div>
     </div>
     <div class="st-card st-c2">
       <span class="st-num">02</span>
       <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/strength2.png" alt="" loading="lazy"></span>
       <div class="st-body">
-        <span class="st-ribbon">総授業時間</span>
-        <div class="st-big"><span class="n2">480</span>時間以上</div>
-        <div class="st-sub">即戦力を目指せる！</div>
+        <span class="st-ribbon"><?php fee_text('strengths_008'); ?></span>
+        <div class="st-big"><span class="n2"><?php fee_text('strengths_009'); ?></span><?php fee_text('strengths_010'); ?></div>
+        <div class="st-sub"><?php fee_text('strengths_011'); ?></div>
       </div>
     </div>
     <div class="st-card st-c3">
       <span class="st-num">03</span>
       <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/strength3.png" alt="" loading="lazy"></span>
       <div class="st-body">
-        <span class="st-ribbon">実践人数</span>
-        <div class="st-big"><span class="n2">240</span>人越え</div>
-        <div class="st-sub">実践重視の環境！</div>
+        <span class="st-ribbon"><?php fee_text('strengths_012'); ?></span>
+        <div class="st-big"><span class="n2"><?php fee_text('strengths_013'); ?></span><?php fee_text('strengths_014'); ?></div>
+        <div class="st-sub"><?php fee_text('strengths_015'); ?></div>
       </div>
     </div>
     <div class="st-card st-c4">
       <span class="st-num">04</span>
       <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/strength4.png" alt="" loading="lazy"></span>
       <div class="st-body">
-        <span class="st-ribbon">自習室</span>
-        <div class="st-big">使い放題</div>
-        <div class="st-sub">授業がない日も<span class="b">自由に使える！</span></div>
+        <span class="st-ribbon"><?php fee_text('strengths_016'); ?></span>
+        <div class="st-big"><?php fee_text('strengths_017'); ?></div>
+        <div class="st-sub"><?php fee_text('strengths_018'); ?><span class="b"><?php fee_text('strengths_019'); ?></span></div>
       </div>
     </div>
   </div>
@@ -193,31 +193,31 @@ $u = get_template_directory_uri();
       <span class="st-num">05</span>
       <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/strength5.png" alt="" loading="lazy"></span>
       <div class="st-body">
-        <span class="st-ribbon">人気セミナー</span>
-        <div class="st-big">トレンドアート受け放題</div>
-        <div class="st-sub">最新デザインが学べる！</div>
+        <span class="st-ribbon"><?php fee_text('strengths_020'); ?></span>
+        <div class="st-big"><?php fee_text('strengths_021'); ?></div>
+        <div class="st-sub"><?php fee_text('strengths_022'); ?></div>
       </div>
     </div>
     <div class="st-card st-c6">
       <span class="st-num">06</span>
       <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/strength6.png" alt="" loading="lazy"></span>
       <div class="st-body">
-        <span class="st-ribbon">開業支援</span>
-        <div class="st-sub">開業の<span class="b">ノウハウや集客方法</span>なども手厚くサポート</div>
+        <span class="st-ribbon"><?php fee_text('strengths_023'); ?></span>
+        <div class="st-sub"><?php fee_text('strengths_024'); ?><span class="b"><?php fee_text('strengths_025'); ?></span><?php fee_text('strengths_026'); ?></div>
       </div>
     </div>
     <div class="st-card st-c7">
       <span class="st-num">07</span>
       <span class="st-ic"><img src="<?php echo $u; ?>/assets/images/strength7.png" alt="" loading="lazy"></span>
       <div class="st-body">
-        <span class="st-ribbon">就職相談</span>
-        <div class="st-sub">就職までしっかりサポート！</div>
+        <span class="st-ribbon"><?php fee_text('strengths_027'); ?></span>
+        <div class="st-sub"><?php fee_text('strengths_028'); ?></div>
       </div>
     </div>
   </div>
 
   <!-- 費用の案内 -->
   <div class="st-close">
-    <span class="st-cost">教材費込み</span><span class="st-divider">／</span><span class="st-cost">モデル代込み</span><span class="st-divider">／</span><span class="st-cost">追加料金なし</span>
+    <span class="st-cost"><?php fee_text('strengths_029'); ?></span><span class="st-divider">／</span><span class="st-cost"><?php fee_text('strengths_030'); ?></span><span class="st-divider">／</span><span class="st-cost"><?php fee_text('strengths_031'); ?></span>
   </div>
 </section>

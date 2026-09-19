@@ -45,15 +45,15 @@ $a = is_front_page() ? '' : esc_url( home_url('/') );
 </button>
 <div class="sp2-overlay" id="spOverlay2"></div>
 <nav class="sp2-nav" id="spNav2" aria-label="メニュー">
-  <div class="sp2-nav-ttl">MENU</div>
-  <a href="<?php echo $a; ?>#features">アカデミー紹介</a>
-  <a href="<?php echo $a; ?>#atmosphere">授業風景</a>
-  <a href="<?php echo $a; ?>#skills">学べる技術</a>
-  <a href="<?php echo $a; ?>#courses">コース内容</a>
-  <a href="<?php echo $a; ?>#future">卒業後</a>
-  <a href="<?php echo $a; ?>#steps">入校手順</a>
-  <a href="<?php echo $a; ?>#access">アクセス</a>
-  <a href="<?php echo $a; ?>#faq">よくある質問</a>
-  <a class="ext" href="https://www.instagram.com/fee.nail.academy/" target="_blank" rel="noopener noreferrer">Instagram</a>
-  <a class="ext" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">無料LINE相談</a>
+  <div class="sp2-nav-ttl"><?php fee_text('header_013'); ?></div>
+  <a href="<?php echo $a; ?>#features"><?php fee_text('header_003'); ?></a>
+  <a href="<?php echo $a; ?>#atmosphere"><?php fee_text('header_004'); ?></a>
+  <a href="<?php echo $a; ?>#skills"><?php fee_text('header_005'); ?></a>
+  <a href="<?php echo $a; ?>#courses"><?php fee_text('header_006'); ?></a>
+  <a href="<?php echo $a; ?>#future"><?php fee_text('header_007'); ?></a>
+  <a href="<?php echo $a; ?>#steps"><?php fee_text('header_008'); ?></a>
+  <a href="<?php echo $a; ?>#access"><?php fee_text('header_009'); ?></a>
+  <a href="<?php echo $a; ?>#faq"><?php fee_text('header_010'); ?></a>
+  <a class="ext" href="https://www.instagram.com/fee.nail.academy/" target="_blank" rel="noopener noreferrer"><?php fee_text('header_011'); ?></a>
+  <a class="ext" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer"><?php fee_text('header_012'); ?></a>
 </nav>

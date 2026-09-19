@@ -47,27 +47,27 @@ $a = is_front_page() ? '' : esc_url( home_url('/') );
 </style>
 <header class="pchead2">
   <a class="pchead2-logo" href="<?php echo $a; ?>#pagetop" aria-label="ICA 池袋キャリアアカデミー トップへ">
-    <span class="pchead2-fee">Ica</span>
-    <span class="pchead2-sub">池袋キャリアアカデミー</span>
+    <span class="pchead2-fee"><?php fee_text('header_001'); ?></span>
+    <span class="pchead2-sub"><?php fee_text('header_002'); ?></span>
   </a>
   <nav class="pchead2-nav">
-    <a href="<?php echo $a; ?>#features">アカデミー紹介</a>
-    <a href="<?php echo $a; ?>#atmosphere">授業風景</a>
-    <a href="<?php echo $a; ?>#skills">学べる技術</a>
-    <a href="<?php echo $a; ?>#courses">コース内容</a>
-    <a href="<?php echo $a; ?>#future">卒業後</a>
-    <a href="<?php echo $a; ?>#steps">入校手順</a>
-    <a href="<?php echo $a; ?>#access">アクセス</a>
-    <a href="<?php echo $a; ?>#faq">よくある質問</a>
+    <a href="<?php echo $a; ?>#features"><?php fee_text('header_003'); ?></a>
+    <a href="<?php echo $a; ?>#atmosphere"><?php fee_text('header_004'); ?></a>
+    <a href="<?php echo $a; ?>#skills"><?php fee_text('header_005'); ?></a>
+    <a href="<?php echo $a; ?>#courses"><?php fee_text('header_006'); ?></a>
+    <a href="<?php echo $a; ?>#future"><?php fee_text('header_007'); ?></a>
+    <a href="<?php echo $a; ?>#steps"><?php fee_text('header_008'); ?></a>
+    <a href="<?php echo $a; ?>#access"><?php fee_text('header_009'); ?></a>
+    <a href="<?php echo $a; ?>#faq"><?php fee_text('header_010'); ?></a>
   </nav>
   <div class="pchead2-pills">
     <a class="pchead2-pill pchead2-ig" href="https://www.instagram.com/fee.nail.academy/" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="0.6" fill="currentColor" stroke="none"/></svg>
-      Instagram
+      <?php fee_text('header_011'); ?>
     </a>
     <a class="pchead2-pill pchead2-line" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg>
-      無料LINE相談
+      <?php fee_text('header_012'); ?>
     </a>
   </div>
 </header>

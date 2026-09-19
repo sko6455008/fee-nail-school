@@ -210,11 +210,11 @@ $u = get_template_directory_uri();
       <span class="cm-spark" style="left:5vw;top:5.2vw;font-size:1.9em;"></span>
       <span class="cm-spark" style="left:2.6vw;top:3.4vw;font-size:1.2em;"></span>
       <div class="cm-name">
-        <span class="cm-mk"><span class="fee">Ica</span>池袋<span class="cm-school-name">キャリアアカデミー</span></span>
+        <span class="cm-mk"><span class="fee"><?php fee_text('compare_001'); ?></span><?php fee_text('compare_002'); ?><span class="cm-school-name"><?php fee_text('compare_003'); ?></span></span>
       </div>
-      <span class="cm-oursc">当スクール</span>
+      <span class="cm-oursc"><?php fee_text('compare_004'); ?></span>
     </div>
-    <div class="cm-r cm-hd"><div class="cm-other">一般的なスクール</div></div>
+    <div class="cm-r cm-hd"><div class="cm-other"><?php fee_text('compare_005'); ?></div></div>
 
     <!-- 行1: 期間 -->
     <div class="cm-l cm-row1">
@@ -223,37 +223,37 @@ $u = get_template_directory_uri();
       <span class="cm-spark" style="right:11vw;top:2.6vw;font-size:1.8em;"></span>
       <span class="cm-spark" style="right:13.5vw;top:4.6vw;font-size:1.1em;"></span>
       <div class="cm-r1l">
-        <span class="cm-tag">最短</span>
-        <span class="cm-m3"><span class="n">3</span>ヶ月</span>
+        <span class="cm-tag"><?php fee_text('compare_006'); ?></span>
+        <span class="cm-m3"><span class="n"><?php fee_text('compare_007'); ?></span><?php fee_text('compare_008'); ?></span>
       </div>
-      <div class="cm-pill">でネイリストに！</div>
+      <div class="cm-pill"><?php fee_text('compare_009'); ?></div>
     </div>
-    <div class="cm-r cm-row1"><div class="cm-m6"><span class="n">6</span>ヶ月〜</div></div>
+    <div class="cm-r cm-row1"><div class="cm-m6"><span class="n"><?php fee_text('compare_010'); ?></span><?php fee_text('compare_011'); ?></div></div>
 
     <!-- 行2: 1コマ -->
     <div class="cm-l cm-row2">
       <div class="cm-koma">
         <div class="cm-koma-t">
           <span class="cm-slash"></span>
-          <span class="cm-mk"><span class="n">1</span>コマ<span class="n">4</span>時間</span>
+          <span class="cm-mk"><span class="n"><?php fee_text('compare_012'); ?></span><?php fee_text('compare_013'); ?><span class="n"><?php fee_text('compare_014'); ?></span><?php fee_text('compare_015'); ?></span>
           <span class="cm-slash r"></span>
         </div>
-        <div class="cm-koma-s">総授業時間 <span class="cm-stat"><span class="n">480</span> 時間</span><span class="pc">　</span><span class="sp"></span>1時間あたり <span class="cm-stat"><span class="n">875</span> 円</span></div>
+        <div class="cm-koma-s"><?php fee_text('compare_016'); ?> <span class="cm-stat"><span class="n"><?php fee_text('compare_017'); ?></span> <?php fee_text('compare_018'); ?></span><span class="pc">　</span><span class="sp"></span><?php fee_text('compare_019'); ?> <span class="cm-stat"><span class="n"><?php fee_text('compare_020'); ?></span> <?php fee_text('compare_021'); ?></span></div>
       </div>
     </div>
     <div class="cm-r cm-row2">
-      <div class="cm-koma3">1コマ<span class="n">3</span>時間</div>
-      <div class="cm-short">短時間授業</div>
+      <div class="cm-koma3"><?php fee_text('compare_022'); ?><span class="n"><?php fee_text('compare_023'); ?></span><?php fee_text('compare_024'); ?></div>
+      <div class="cm-short"><?php fee_text('compare_025'); ?></div>
     </div>
 
     <!-- 行3: モデル -->
     <div class="cm-l cm-row3">
       <div class="cm-model-t">
-        <span class="cm-slash"></span><span class="cm-model-copy"><span class="cm-phrase">モデルは</span><span class="cm-phrase">スクールが用意！</span></span><span class="cm-slash r"></span>
+        <span class="cm-slash"></span><span class="cm-model-copy"><span class="cm-phrase"><?php fee_text('compare_026'); ?></span><span class="cm-phrase"><?php fee_text('compare_027'); ?></span></span><span class="cm-slash r"></span>
       </div>
-      <div class="cm-model-s">自分で探す<span class="cm-mk">必要なし</span></div>
+      <div class="cm-model-s"><?php fee_text('compare_028'); ?><span class="cm-mk"><?php fee_text('compare_029'); ?></span></div>
     </div>
-    <div class="cm-r cm-row3"><div class="cm-model-r"><span class="cm-phrase">自分で</span><span class="cm-phrase">モデルを探す</span><br>必要がある</div></div>
+    <div class="cm-r cm-row3"><div class="cm-model-r"><span class="cm-phrase"><?php fee_text('compare_030'); ?></span><span class="cm-phrase"><?php fee_text('compare_031'); ?></span><br><?php fee_text('compare_032'); ?></div></div>
 
     <!-- 行4: 0円 -->
     <div class="cm-l cm-row4">
@@ -262,19 +262,19 @@ $u = get_template_directory_uri();
       <span class="cm-spark" style="right:8vw;top:3.2vw;font-size:1.9em;"></span>
       <span class="cm-spark" style="right:11vw;top:5.4vw;font-size:1.1em;"></span>
       <div class="cm-zerobox">
-        <div class="cm-zero"><span class="t">すべて</span><span class="n">0</span><span class="y">円</span><span class="t">で学べる！</span></div>
+        <div class="cm-zero"><span class="t"><?php fee_text('compare_033'); ?></span><span class="n"><?php fee_text('compare_034'); ?></span><span class="y"><?php fee_text('compare_035'); ?></span><span class="t"><?php fee_text('compare_036'); ?></span></div>
         <div class="cm-frees">
           <div class="cm-free">
             <span class="cm-ic cm-free1"><img src="<?php echo $u; ?>/assets/images/compare_icon1.png" alt="" loading="lazy" decoding="async"></span>
-            <span class="t"><span class="p">商材費</span>無料</span>
+            <span class="t"><span class="p"><?php fee_text('compare_037'); ?></span><?php fee_text('compare_038'); ?></span>
           </div>
           <div class="cm-free">
             <span class="cm-ic cm-free2"><img src="<?php echo $u; ?>/assets/images/compare_icon2.png" alt="" loading="lazy" decoding="async"></span>
-            <span class="t"><span class="p">教材費</span>無料</span>
+            <span class="t"><span class="p"><?php fee_text('compare_039'); ?></span><?php fee_text('compare_040'); ?></span>
           </div>
           <div class="cm-free">
             <span class="cm-ic cm-free3"><img src="<?php echo $u; ?>/assets/images/compare_icon3.png" alt="" loading="lazy" decoding="async"></span>
-            <span class="t"><span class="p">アートセミナー</span>無料</span>
+            <span class="t"><span class="p"><?php fee_text('compare_041'); ?></span><?php fee_text('compare_042'); ?></span>
           </div>
         </div>
       </div>
@@ -282,13 +282,13 @@ $u = get_template_directory_uri();
     <div class="cm-r cm-row4">
       <div class="cm-paid">
         <div class="cm-paid-row">
-          <span class="cm-ic cm-paid1"><img src="<?php echo $u; ?>/assets/images/compare_icon4.png" alt="" loading="lazy" decoding="async"></span>商材も有料
+          <span class="cm-ic cm-paid1"><img src="<?php echo $u; ?>/assets/images/compare_icon4.png" alt="" loading="lazy" decoding="async"></span><?php fee_text('compare_043'); ?>
         </div>
         <div class="cm-paid-row">
-          <span class="cm-ic cm-paid2"><img src="<?php echo $u; ?>/assets/images/compare_icon5.png" alt="" loading="lazy" decoding="async"></span>教材費有料
+          <span class="cm-ic cm-paid2"><img src="<?php echo $u; ?>/assets/images/compare_icon5.png" alt="" loading="lazy" decoding="async"></span><?php fee_text('compare_044'); ?>
         </div>
         <div class="cm-paid-row">
-          <span class="cm-ic cm-paid3"><img src="<?php echo $u; ?>/assets/images/compare_icon6.png" alt="" loading="lazy" decoding="async"></span>オプション別料金
+          <span class="cm-ic cm-paid3"><img src="<?php echo $u; ?>/assets/images/compare_icon6.png" alt="" loading="lazy" decoding="async"></span><?php fee_text('compare_045'); ?>
         </div>
       </div>
     </div>
@@ -298,15 +298,15 @@ $u = get_template_directory_uri();
       <div class="cm-r5l">
         <span class="cm-ic cm-badge"><img src="<?php echo $u; ?>/assets/images/compare_badge.png" alt="卒業までのモデル人数200人以上" loading="lazy" decoding="async"></span>
         <div>
-          <div class="cm-r5-t">卒業までのモデル人数</div>
-          <div class="cm-r5-n cm-ul"><span class="n">200</span><span class="s">人以上</span></div>
+          <div class="cm-r5-t"><?php fee_text('compare_046'); ?></div>
+          <div class="cm-r5-n cm-ul"><span class="n"><?php fee_text('compare_047'); ?></span><span class="s"><?php fee_text('compare_048'); ?></span></div>
         </div>
       </div>
     </div>
     <div class="cm-r cm-row5">
       <div class="cm-r5r">
         <span class="cm-ic cm-ppl"><img src="<?php echo $u; ?>/assets/images/compare_person.png" alt="" loading="lazy" decoding="async"></span>
-        <span><span class="n">30</span>人程度</span>
+        <span><span class="n"><?php fee_text('compare_049'); ?></span><?php fee_text('compare_050'); ?></span>
       </div>
     </div>
   </div>

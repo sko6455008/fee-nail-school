@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/inc/page-text.php';
+
 // テーマのセットアップとスクリプト読み込み
 function fee_nail_academy_scripts() {
     // 1. Google Fonts
@@ -422,7 +424,7 @@ add_action('init', 'fee_create_legal_page', 20);
 
 // パーマリンク設定が異なる環境でも、固定ページの実際のURLを使う。
 function fee_legal_page_url() {
-    $page = get_page_by_path('legal');
+    $page = fee_text_page_id('legal') ? get_post(fee_text_page_id('legal')) : get_page_by_path('legal');
     return $page ? get_permalink($page) : home_url('/legal/');
 }
 
@@ -437,10 +439,14 @@ function fee_faq_items() {
     ]);
     $items = [];
     foreach ($posts as $p) {
+        $question_key = 'faq_' . $p->ID . '_question';
+        $answer_key = 'faq_' . $p->ID . '_answer';
+        $answer = fee_text_value($answer_key);
         $items[] = [
-            'q' => $p->post_title,
+            'q' => fee_text_value($question_key),
             // the_content フィルタは他プラグインの追記が混ざるため、段落化だけ自前で行う
-            'a' => wpautop(do_shortcode($p->post_content)),
+            'a' => $answer === fee_text_field($answer_key)['default']
+                ? wpautop(do_shortcode($p->post_content)) : wpautop(esc_html($answer)),
         ];
     }
     if (!$items && !get_option('fee_faq_seeded')) {

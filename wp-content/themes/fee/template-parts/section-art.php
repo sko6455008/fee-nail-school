@@ -54,9 +54,9 @@ section.ar * { box-sizing: border-box; }
   <div class="ar-panel">
     <!-- ヘッダー -->
     <div class="ar-head">
-      <div class="ar-script"><span class="sl">＼</span>Graduation Nails<span class="sl">／</span></div>
-      <h2 class="ar-title">卒業までにできる<span class="p">アート</span></h2>
-      <p class="ar-sub">基礎から応用まで、段階的にステップアップ！<br>卒業までに習得できるアートの一例をご紹介します。</p>
+      <div class="ar-script"><span class="sl">＼</span><?php fee_text('art_001'); ?><span class="sl">／</span></div>
+      <h2 class="ar-title"><?php fee_text('art_002'); ?><span class="p"><?php fee_text('art_003'); ?></span></h2>
+      <p class="ar-sub"><?php fee_text('art_004'); ?><br><?php fee_text('art_005'); ?></p>
     </div>
 
     <!-- 作品グリッド（写真は 外観 > カスタマイズ > 卒業までにできるアート で管理） -->
@@ -67,6 +67,6 @@ section.ar * { box-sizing: border-box; }
     </div>
 
     <!-- フッター -->
-    <div class="ar-foot">たくさんのアートを習得して、<br>あなたらしい「好き」を仕事にしていきましょう&#9825;</div>
+    <div class="ar-foot"><?php fee_text('art_006'); ?><br><?php fee_text('art_007'); ?></div>
   </div>
 </section>

@@ -157,29 +157,29 @@ $u = get_template_directory_uri();
   <span class="fv-photo fv-color"><img src="<?php echo $u; ?>/assets/images/FV_color.png" alt="カラーチャート" loading="lazy"></span>
 
   <!-- キャッチコピー -->
-  <p class="fv-ribbon">あなたの「好き」が一生の仕事に&#9825;</p>
-  <h1 class="fv-title">最短<b class="fv-num">3</b>ヶ月で<br><span class="fv-pro">プロ</span>の<br class="fv-br-sp">ネイリストへ</h1>
+  <p class="fv-ribbon"><?php fee_text('fv_001'); ?></p>
+  <h1 class="fv-title"><?php fee_text('fv_002'); ?><b class="fv-num"><?php fee_text('fv_003'); ?></b><?php fee_text('fv_004'); ?><br><span class="fv-pro"><?php fee_text('fv_005'); ?></span><?php fee_text('fv_006'); ?><br class="fv-br-sp"><?php fee_text('fv_007'); ?></h1>
 
   <!-- スクール名 -->
-  <div class="fv-college">池袋キャリアアカデミー</div>
-  <div class="fv-fee">Ica</div>
+  <div class="fv-college"><?php fee_text('fv_008'); ?></div>
+  <div class="fv-fee"><?php fee_text('fv_009'); ?></div>
   <span class="fv-fee-heart">&#9825;</span>
   <span class="fv-fee-heart2">&#9829;</span>
   <span class="fv-fee-spark">&#10022;</span>
 
   <!-- 丸バッジ -->
   <div class="fv-badge">
-    <span class="fv-badge-l1"><span class="em">駅チカ</span>で<br>通いやすい&#9834;</span>
-    <span class="fv-badge-l2"><span class="em">少人数制</span>で</span>
-    <span class="fv-badge-l3">しっかり学べる！</span>
+    <span class="fv-badge-l1"><span class="em"><?php fee_text('fv_010'); ?></span><?php fee_text('fv_011'); ?><br><?php fee_text('fv_012'); ?></span>
+    <span class="fv-badge-l2"><span class="em"><?php fee_text('fv_013'); ?></span><?php fee_text('fv_014'); ?></span>
+    <span class="fv-badge-l3"><?php fee_text('fv_015'); ?></span>
   </div>
 
   <!-- ボタン -->
   <div class="fv-btns">
     <a class="btn-pink" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">
       <span class="btn-ic"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="16.5" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4"/></svg></span>
-      無料LINE相談する
+      <?php fee_text('fv_016'); ?>
     </a>
-    <a class="btn-white" href="#courses">コース詳細を見る</a>
+    <a class="btn-white" href="#courses"><?php fee_text('fv_017'); ?></a>
   </div>
 </section>

@@ -100,9 +100,9 @@ $u = get_template_directory_uri();
     <span class="fu-spark" style="left:22vw;top:8vw;color:#8ad6df;font-size:1.3em;"></span>
     <span class="fu-spark" style="right:25vw;top:4.5vw;color:#c5a6ec;font-size:1.6em;"></span>
     <span class="fu-spark" style="right:21vw;top:8.5vw;color:#f2c94c;font-size:1.2em;"></span>
-    <div class="fu-script">After Graduation</div>
-    <h2 class="fu-t1">卒業後</h2>
-    <div class="fu-t2">ICA 池袋キャリアアカデミー を卒業すると...</div>
+    <div class="fu-script"><?php fee_text('future_001'); ?></div>
+    <h2 class="fu-t1"><?php fee_text('future_002'); ?></h2>
+    <div class="fu-t2"><?php fee_text('future_003'); ?></div>
     <span class="fu-line"></span>
   </div>
 
@@ -110,24 +110,24 @@ $u = get_template_directory_uri();
   <div class="fu-grid">
     <div class="fu-card fu-c1">
       <span class="fu-photo"><img <?php fee_img_attr('future', '1'); ?> loading="lazy"></span>
-      <h3 class="fu-t">人気サロンへ就職<span class="fu-t-line">･----･&#10022;----･</span></h3>
-      <p class="fu-body">提携サロンへ優先紹介可能！<br>即戦力としてデビューできます。</p>
-      <span class="fu-sign">Debut !&#9825;</span>
+      <h3 class="fu-t"><?php fee_text('future_004'); ?><span class="fu-t-line">･----･&#10022;----･</span></h3>
+      <p class="fu-body"><?php fee_text('future_005'); ?><br><?php fee_text('future_006'); ?></p>
+      <span class="fu-sign"><?php fee_text('future_007'); ?></span>
     </div>
     <div class="fu-card fu-c2">
-      <h3 class="fu-t">自宅サロン開業<span class="fu-t-line">&#9734;----･&#10022;----&#8962;</span></h3>
+      <h3 class="fu-t"><?php fee_text('future_008'); ?><span class="fu-t-line">&#9734;----･&#10022;----&#8962;</span></h3>
       <span class="fu-photo"><img <?php fee_img_attr('future', '2'); ?> loading="lazy"></span>
-      <p class="fu-body">低コストで開業するノウハウを伝授。自分のペースで働くライフスタイルを実現します。</p>
-      <span class="fu-sign">My Salon &#9825;</span>
+      <p class="fu-body"><?php fee_text('future_009'); ?></p>
+      <span class="fu-sign"><?php fee_text('future_010'); ?></span>
     </div>
     <div class="fu-card fu-c3">
-      <h3 class="fu-t">フリーランスで<span class="fu-t-line">･----･&#10022;----&#9825;</span></h3>
+      <h3 class="fu-t"><?php fee_text('future_011'); ?><span class="fu-t-line">･----･&#10022;----&#9825;</span></h3>
       <span class="fu-photo"><img <?php fee_img_attr('future', '3'); ?> loading="lazy"></span>
-      <p class="fu-body">シェアサロンを利用したり、出張ネイリストとして自由に働く道もサポートします。</p>
-      <span class="fu-sign">Freelance &#9825;</span>
+      <p class="fu-body"><?php fee_text('future_012'); ?></p>
+      <span class="fu-sign"><?php fee_text('future_013'); ?></span>
     </div>
   </div>
 
   <!-- フッター -->
-  <div class="fu-foot">あなたらしい未来へ、<span class="p">一歩踏み出すお手伝い</span>をします。</div>
+  <div class="fu-foot"><?php fee_text('future_014'); ?><span class="p"><?php fee_text('future_015'); ?></span><?php fee_text('future_016'); ?></div>
 </section>

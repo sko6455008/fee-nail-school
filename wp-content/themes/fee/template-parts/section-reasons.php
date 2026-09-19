@@ -118,14 +118,14 @@ $u = get_template_directory_uri();
     <span class="rs-deco" style="right:8vw;top:5vw;color:#e8548e;font-size:3.2em;transform:rotate(10deg);">&#9829;</span>
     <span class="rs-deco" style="right:16vw;top:2.5vw;color:#f2c94c;font-size:1.4em;">&#10022;</span>
     <span class="rs-deco" style="left:17vw;top:8vw;color:#8ad6df;font-size:1.2em;">&#10022;</span>
-    <div class="rs-why">Why Choose Us</div>
-    <div><span class="rs-band">なりたい自分になる第一歩を</span></div>
+    <div class="rs-why"><?php fee_text('reasons_001'); ?></div>
+    <div><span class="rs-band"><?php fee_text('reasons_002'); ?></span></div>
     <h2 class="rs-title">
-      アカデミー<span class="pk">紹介</span>
+      <?php fee_text('reasons_003'); ?><span class="pk"><?php fee_text('reasons_004'); ?></span>
     </h2>
     <div class="rs-six">
-      <span class="pre">ICA 池袋キャリアアカデミー が選ばれる</span>
-      <span class="big"><span class="n">6</span>つの理由</span>
+      <span class="pre"><?php fee_text('reasons_005'); ?></span>
+      <span class="big"><span class="n"><?php fee_text('reasons_006'); ?></span><?php fee_text('reasons_007'); ?></span>
     </div>
   </div>
 
@@ -135,8 +135,8 @@ $u = get_template_directory_uri();
       <span class="rs-tag">01</span>
       <span class="rs-ic"><img src="<?php echo $u; ?>/assets/images/reason1.png" alt="" loading="lazy"></span>
       <div class="rs-body">
-        <h3 class="rs-t">サロンワーク<br><span class="c">特化型</span></h3>
-        <p class="rs-tx">即戦力のネイル技術！</p>
+        <h3 class="rs-t"><?php fee_text('reasons_008'); ?><br><span class="c"><?php fee_text('reasons_009'); ?></span></h3>
+        <p class="rs-tx"><?php fee_text('reasons_010'); ?></p>
       </div>
       <span class="rs-pic"><img <?php fee_img_attr('features', '1'); ?> loading="lazy"></span>
     </div>
@@ -144,8 +144,8 @@ $u = get_template_directory_uri();
       <span class="rs-tag">02</span>
       <span class="rs-ic"><img src="<?php echo $u; ?>/assets/images/reason2.png" alt="" loading="lazy"></span>
       <div class="rs-body">
-        <h3 class="rs-t"><span class="c">少人数制</span></h3>
-        <p class="rs-tx">一人ひとり丁寧指導！！</p>
+        <h3 class="rs-t"><span class="c"><?php fee_text('reasons_011'); ?></span></h3>
+        <p class="rs-tx"><?php fee_text('reasons_012'); ?></p>
       </div>
       <span class="rs-pic"><img <?php fee_img_attr('features', '2'); ?> loading="lazy"></span>
     </div>
@@ -153,8 +153,8 @@ $u = get_template_directory_uri();
       <span class="rs-tag">03</span>
       <span class="rs-ic"><img src="<?php echo $u; ?>/assets/images/reason3.png" alt="" loading="lazy"></span>
       <div class="rs-body">
-        <h3 class="rs-t"><span class="c">就職・開業</span></h3>
-        <p class="rs-tx">サポート充実！</p>
+        <h3 class="rs-t"><span class="c"><?php fee_text('reasons_013'); ?></span></h3>
+        <p class="rs-tx"><?php fee_text('reasons_014'); ?></p>
       </div>
       <span class="rs-pic"><img <?php fee_img_attr('features', '3'); ?> loading="lazy"></span>
     </div>
@@ -162,8 +162,8 @@ $u = get_template_directory_uri();
       <span class="rs-tag">04</span>
       <span class="rs-ic"><img src="<?php echo $u; ?>/assets/images/reason4.png" alt="" loading="lazy"></span>
       <div class="rs-body">
-        <h3 class="rs-t"><span class="c">授業料がお得</span></h3>
-        <p class="rs-tx">安心価格！</p>
+        <h3 class="rs-t"><span class="c"><?php fee_text('reasons_015'); ?></span></h3>
+        <p class="rs-tx"><?php fee_text('reasons_016'); ?></p>
       </div>
       <span class="rs-pic"><img <?php fee_img_attr('features', '4'); ?> loading="lazy"></span>
     </div>
@@ -171,8 +171,8 @@ $u = get_template_directory_uri();
       <span class="rs-tag">05</span>
       <span class="rs-ic"><img src="<?php echo $u; ?>/assets/images/reason5.png" alt="" loading="lazy"></span>
       <div class="rs-body">
-        <h3 class="rs-t"><span class="c">初心者歓迎</span></h3>
-        <p class="rs-tx">ゼロから安心！</p>
+        <h3 class="rs-t"><span class="c"><?php fee_text('reasons_017'); ?></span></h3>
+        <p class="rs-tx"><?php fee_text('reasons_018'); ?></p>
       </div>
       <span class="rs-pic"><img <?php fee_img_attr('features', '5'); ?> loading="lazy"></span>
     </div>
@@ -180,8 +180,8 @@ $u = get_template_directory_uri();
       <span class="rs-tag">06</span>
       <span class="rs-ic"><img src="<?php echo $u; ?>/assets/images/reason6.png" alt="" loading="lazy"></span>
       <div class="rs-body">
-        <h3 class="rs-t"><span class="c">最新トレンド</span></h3>
-        <p class="rs-tx">技術をしっかり習得！</p>
+        <h3 class="rs-t"><span class="c"><?php fee_text('reasons_019'); ?></span></h3>
+        <p class="rs-tx"><?php fee_text('reasons_020'); ?></p>
       </div>
       <span class="rs-pic"><img <?php fee_img_attr('features', '6'); ?> loading="lazy"></span>
     </div>

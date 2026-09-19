@@ -236,11 +236,11 @@ $u = get_template_directory_uri();
   <div class="co-head">
     <span class="co-head-photo co-head-l<?php echo fee_img_is_custom('courses', 'head_l') ? ' is-custom' : ''; ?>"><img <?php fee_img_attr('courses', 'head_l'); ?> loading="lazy" decoding="async"></span>
     <span class="co-head-photo co-head-r<?php echo fee_img_is_custom('courses', 'head_r') ? ' is-custom' : ''; ?>"><img <?php fee_img_attr('courses', 'head_r'); ?> loading="lazy" decoding="async"></span>
-    <span class="co-bubble co-bub-l"><span><span class="p">初心者</span>も</span><span>安心して</span><span class="p">スタートできる&#9825;</span></span>
-    <span class="co-bubble co-bub-r"><span><span class="p">好きなこと</span>を</span><span>一生の仕事に<span class="p">&#9825;</span></span></span>
-    <div class="co-script">Choose Your Path &#9825;</div>
-    <h2 class="co-title"><span class="g">コース</span>内容</h2>
-    <div><span class="co-ribbon">なりたい未来に合わせて選べる&#9825;</span></div>
+    <span class="co-bubble co-bub-l"><span><span class="p"><?php fee_text('courses_001'); ?></span><?php fee_text('courses_002'); ?></span><span><?php fee_text('courses_003'); ?></span><span class="p"><?php fee_text('courses_004'); ?></span></span>
+    <span class="co-bubble co-bub-r"><span><span class="p"><?php fee_text('courses_005'); ?></span><?php fee_text('courses_006'); ?></span><span><?php fee_text('courses_007'); ?><span class="p">&#9825;</span></span></span>
+    <div class="co-script"><?php fee_text('courses_008'); ?></div>
+    <h2 class="co-title"><span class="g"><?php fee_text('courses_009'); ?></span><?php fee_text('courses_010'); ?></h2>
+    <div><span class="co-ribbon"><?php fee_text('courses_011'); ?></span></div>
   </div>
 
   <!-- グループ1: 即戦力ネイリストコース 3ヶ月 -->
@@ -249,15 +249,15 @@ $u = get_template_directory_uri();
       <span class="co-gpic"><img <?php fee_img_attr('courses', '1'); ?> loading="lazy"></span>
       <div class="co-gtitle">
         <span class="co-num">01</span>
-        <h3 class="co-t" id="co-title-3m"><span>即戦力ネイリスト<span class="p">コース</span></span><span class="co-duration"><strong>3</strong>ヶ月</span></h3>
+        <h3 class="co-t" id="co-title-3m"><span><?php fee_text('courses_012'); ?><span class="p"><?php fee_text('courses_013'); ?></span></span><span class="co-duration"><strong><?php fee_text('courses_014'); ?></strong><?php fee_text('courses_015'); ?></span></h3>
       </div>
       <div class="co-gdesc">
-        <p class="co-lead">基礎技術からサロンワークまで集中的に学び、短期間でプロデビューを目指すコース</p>
+        <p class="co-lead"><?php fee_text('courses_016'); ?></p>
         <div class="co-recs">
-          <span class="co-recs-t">こんな方におすすめ</span>
-          <span class="co-chip"><span class="co-icb co-i1"><img src="<?php echo $u; ?>/assets/images/course1.png" alt="" loading="lazy" decoding="async"></span>基礎からサロンワークまで</span>
-          <span class="co-chip"><span class="co-icb co-i2"><img src="<?php echo $u; ?>/assets/images/course2.png" alt="" loading="lazy" decoding="async"></span>短期集中でプロデビュー</span>
-          <span class="co-chip"><span class="co-icb co-i3"><img src="<?php echo $u; ?>/assets/images/course3.png" alt="" loading="lazy" decoding="async"></span>サロンワーク特化</span>
+          <span class="co-recs-t"><?php fee_text('courses_017'); ?></span>
+          <span class="co-chip"><span class="co-icb co-i1"><img src="<?php echo $u; ?>/assets/images/course1.png" alt="" loading="lazy" decoding="async"></span><?php fee_text('courses_018'); ?></span>
+          <span class="co-chip"><span class="co-icb co-i2"><img src="<?php echo $u; ?>/assets/images/course2.png" alt="" loading="lazy" decoding="async"></span><?php fee_text('courses_019'); ?></span>
+          <span class="co-chip"><span class="co-icb co-i3"><img src="<?php echo $u; ?>/assets/images/course3.png" alt="" loading="lazy" decoding="async"></span><?php fee_text('courses_020'); ?></span>
         </div>
       </div>
     </div>
@@ -265,33 +265,33 @@ $u = get_template_directory_uri();
     <div class="co-items">
       <div class="co-item">
         <div class="co-item-head">
-          <span class="co-item-term">3ヶ月コース</span>
-          <span class="co-item-hours">全<span class="n">240</span>時間 <small>（4時間×60回）</small></span>
+          <span class="co-item-term"><?php fee_text('courses_021'); ?></span>
+          <span class="co-item-hours"><?php fee_text('courses_022'); ?><span class="n"><?php fee_text('courses_023'); ?></span><?php fee_text('courses_024'); ?> <small><?php fee_text('courses_025'); ?></small></span>
         </div>
         <div class="co-item-body">
-          <p>3ヶ月間で全240時間の授業を受講する、短期集中型のコースです。</p>
-          <p>基礎技術からサロンワークまで集中的に学び、限られた期間で効率よく技術を身につけます。</p>
+          <p><?php fee_text('courses_026'); ?></p>
+          <p><?php fee_text('courses_027'); ?></p>
         </div>
-        <p class="co-item-rec">強い意欲を持ち、最短距離でプロデビューを目指したい方におすすめです。</p>
+        <p class="co-item-rec"><?php fee_text('courses_028'); ?></p>
         <div class="co-item-foot">
-          <div class="co-item-price"><span class="co-item-fee">受講料</span><span class="co-price">&yen;350,000<span class="tax">（税込）</span></span></div>
-          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースを相談する<span class="ar">&#8250;</span></a>
+          <div class="co-item-price"><span class="co-item-fee"><?php fee_text('courses_029'); ?></span><span class="co-price"><?php fee_text('courses_030'); ?><span class="tax"><?php fee_text('courses_031'); ?></span></span></div>
+          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer"><?php fee_text('courses_032'); ?><span class="ar">&#8250;</span></a>
         </div>
       </div>
 
       <div class="co-item">
         <div class="co-item-head">
-          <span class="co-item-term">3ヶ月コース</span>
-          <span class="co-item-hours">全<span class="n">480</span>時間 <small>（4時間×120回）</small></span>
+          <span class="co-item-term"><?php fee_text('courses_033'); ?></span>
+          <span class="co-item-hours"><?php fee_text('courses_034'); ?><span class="n"><?php fee_text('courses_035'); ?></span><?php fee_text('courses_036'); ?> <small><?php fee_text('courses_037'); ?></small></span>
         </div>
         <div class="co-item-body">
-          <p>3ヶ月間で全480時間の授業を受講する、より実践量の多い短期集中型のコースです。</p>
-          <p>基礎技術から応用技術、モデル施術、サロンワークまで、豊富な練習時間を通して即戦力となる技術を身につけます。</p>
+          <p><?php fee_text('courses_038'); ?></p>
+          <p><?php fee_text('courses_039'); ?></p>
         </div>
-        <p class="co-item-rec">強い意欲を持ち、短期間で徹底的に学び、最短距離でプロデビューを目指したい方におすすめです。</p>
+        <p class="co-item-rec"><?php fee_text('courses_040'); ?></p>
         <div class="co-item-foot">
-          <div class="co-item-price"><span class="co-item-fee">受講料</span><span class="co-price">&yen;450,000<span class="tax">（税込）</span></span></div>
-          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースを相談する<span class="ar">&#8250;</span></a>
+          <div class="co-item-price"><span class="co-item-fee"><?php fee_text('courses_041'); ?></span><span class="co-price"><?php fee_text('courses_042'); ?><span class="tax"><?php fee_text('courses_043'); ?></span></span></div>
+          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer"><?php fee_text('courses_044'); ?><span class="ar">&#8250;</span></a>
         </div>
       </div>
     </div>
@@ -304,32 +304,32 @@ $u = get_template_directory_uri();
       <span class="co-gpic"><img <?php fee_img_attr('courses', '6m'); ?> loading="lazy"></span>
       <div class="co-gtitle">
         <span class="co-num">02</span>
-        <h3 class="co-t" id="co-title-6m"><span>即戦力ネイリスト<span class="p">コース</span></span><span class="co-duration"><strong>6</strong>ヶ月</span></h3>
+        <h3 class="co-t" id="co-title-6m"><span><?php fee_text('courses_045'); ?><span class="p"><?php fee_text('courses_046'); ?></span></span><span class="co-duration"><strong><?php fee_text('courses_047'); ?></strong><?php fee_text('courses_048'); ?></span></h3>
       </div>
       <div class="co-gdesc">
-        <p class="co-lead">基礎からサロンワークまで段階的に学び、自分のペースで技術を身につけるコース</p>
+        <p class="co-lead"><?php fee_text('courses_049'); ?></p>
         <div class="co-recs">
-          <span class="co-recs-t">こんな方におすすめ</span>
-          <span class="co-chip"><span class="co-icb co-i1"><img src="<?php echo $u; ?>/assets/images/course1.png" alt="" loading="lazy" decoding="async"></span>基礎からサロンワークまで</span>
-          <span class="co-chip"><span class="co-icb co-i2"><img src="<?php echo $u; ?>/assets/images/course2.png" alt="" loading="lazy" decoding="async"></span>仕事や生活と両立</span>
-          <span class="co-chip"><span class="co-icb co-i3"><img src="<?php echo $u; ?>/assets/images/course3.png" alt="" loading="lazy" decoding="async"></span>無理なく技術を習得</span>
+          <span class="co-recs-t"><?php fee_text('courses_050'); ?></span>
+          <span class="co-chip"><span class="co-icb co-i1"><img src="<?php echo $u; ?>/assets/images/course1.png" alt="" loading="lazy" decoding="async"></span><?php fee_text('courses_051'); ?></span>
+          <span class="co-chip"><span class="co-icb co-i2"><img src="<?php echo $u; ?>/assets/images/course2.png" alt="" loading="lazy" decoding="async"></span><?php fee_text('courses_052'); ?></span>
+          <span class="co-chip"><span class="co-icb co-i3"><img src="<?php echo $u; ?>/assets/images/course3.png" alt="" loading="lazy" decoding="async"></span><?php fee_text('courses_053'); ?></span>
         </div>
       </div>
     </div>
     <div class="co-items">
       <div class="co-item">
         <div class="co-item-head">
-          <span class="co-item-term">6ヶ月コース</span>
-          <span class="co-item-hours">全<span class="n">192</span>時間 <small>（4時間×48回）</small></span>
+          <span class="co-item-term"><?php fee_text('courses_054'); ?></span>
+          <span class="co-item-hours"><?php fee_text('courses_055'); ?><span class="n"><?php fee_text('courses_056'); ?></span><?php fee_text('courses_057'); ?> <small><?php fee_text('courses_058'); ?></small></span>
         </div>
         <div class="co-item-body">
-          <p>6ヶ月間で全192時間の授業を受講する、無理なく学べる習得型のコースです。</p>
-          <p>基礎からサロンワークまで段階的に学び、ゆとりある期間の中で技術を着実に定着させます。</p>
+          <p><?php fee_text('courses_059'); ?></p>
+          <p><?php fee_text('courses_060'); ?></p>
         </div>
-        <p class="co-item-rec">仕事や生活と両立しながら、自分のペースでプロデビューを目指したい方におすすめです。</p>
+        <p class="co-item-rec"><?php fee_text('courses_061'); ?></p>
         <div class="co-item-foot">
-          <div class="co-item-price"><span class="co-item-fee">受講料</span><span class="co-price">&yen;330,000<span class="tax">（税込）</span></span></div>
-          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースを相談する<span class="ar">&#8250;</span></a>
+          <div class="co-item-price"><span class="co-item-fee"><?php fee_text('courses_062'); ?></span><span class="co-price"><?php fee_text('courses_063'); ?><span class="tax"><?php fee_text('courses_064'); ?></span></span></div>
+          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer"><?php fee_text('courses_065'); ?><span class="ar">&#8250;</span></a>
         </div>
       </div>
     </div>
@@ -342,48 +342,48 @@ $u = get_template_directory_uri();
       <span class="co-gpic"><img <?php fee_img_attr('courses', '9m'); ?> loading="lazy"></span>
       <div class="co-gtitle">
         <span class="co-num">03</span>
-        <h3 class="co-t" id="co-title-9m"><span>即戦力ネイリスト<span class="p">コース</span></span><span class="co-duration"><strong>9</strong>ヶ月</span></h3>
+        <h3 class="co-t" id="co-title-9m"><span><?php fee_text('courses_066'); ?><span class="p"><?php fee_text('courses_067'); ?></span></span><span class="co-duration"><strong><?php fee_text('courses_068'); ?></strong><?php fee_text('courses_069'); ?></span></h3>
       </div>
       <div class="co-gdesc">
-        <p class="co-lead">十分な練習期間を確保し、サロンワークに必要な実践力をじっくり養うコース</p>
+        <p class="co-lead"><?php fee_text('courses_070'); ?></p>
         <div class="co-recs">
-          <span class="co-recs-t">こんな方におすすめ</span>
-          <span class="co-chip"><span class="co-icb co-i1"><img src="<?php echo $u; ?>/assets/images/course1.png" alt="" loading="lazy" decoding="async"></span>基礎から応用まで</span>
-          <span class="co-chip"><span class="co-icb co-i2"><img src="<?php echo $u; ?>/assets/images/course2.png" alt="" loading="lazy" decoding="async"></span>じっくり着実に学べる</span>
-          <span class="co-chip"><span class="co-icb co-i3"><img src="<?php echo $u; ?>/assets/images/course3.png" alt="" loading="lazy" decoding="async"></span>実践力を身につけたい</span>
+          <span class="co-recs-t"><?php fee_text('courses_071'); ?></span>
+          <span class="co-chip"><span class="co-icb co-i1"><img src="<?php echo $u; ?>/assets/images/course1.png" alt="" loading="lazy" decoding="async"></span><?php fee_text('courses_072'); ?></span>
+          <span class="co-chip"><span class="co-icb co-i2"><img src="<?php echo $u; ?>/assets/images/course2.png" alt="" loading="lazy" decoding="async"></span><?php fee_text('courses_073'); ?></span>
+          <span class="co-chip"><span class="co-icb co-i3"><img src="<?php echo $u; ?>/assets/images/course3.png" alt="" loading="lazy" decoding="async"></span><?php fee_text('courses_074'); ?></span>
         </div>
       </div>
     </div>
     <div class="co-items">
       <div class="co-item">
         <div class="co-item-head">
-          <span class="co-item-term">9ヶ月コース</span>
-          <span class="co-item-hours">全<span class="n">240</span>時間 <small>（4時間×60回）</small></span>
+          <span class="co-item-term"><?php fee_text('courses_075'); ?></span>
+          <span class="co-item-hours"><?php fee_text('courses_076'); ?><span class="n"><?php fee_text('courses_077'); ?></span><?php fee_text('courses_078'); ?> <small><?php fee_text('courses_079'); ?></small></span>
         </div>
         <div class="co-item-body">
-          <p>9ヶ月間で全240時間の授業を受講する、じっくり習得型のコースです。</p>
-          <p>十分な練習期間を確保しながら、一つひとつの技術を丁寧に身につけ、サロンワークに必要な実践力を養います。</p>
+          <p><?php fee_text('courses_080'); ?></p>
+          <p><?php fee_text('courses_081'); ?></p>
         </div>
-        <p class="co-item-rec">仕事や生活と両立しながら、時間をかけて着実にプロデビューを目指したい方におすすめです。</p>
+        <p class="co-item-rec"><?php fee_text('courses_082'); ?></p>
         <div class="co-item-foot">
-          <div class="co-item-price"><span class="co-item-fee">受講料</span><span class="co-price">&yen;450,000<span class="tax">（税込）</span></span></div>
-          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースを相談する<span class="ar">&#8250;</span></a>
+          <div class="co-item-price"><span class="co-item-fee"><?php fee_text('courses_083'); ?></span><span class="co-price"><?php fee_text('courses_084'); ?><span class="tax"><?php fee_text('courses_085'); ?></span></span></div>
+          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer"><?php fee_text('courses_086'); ?><span class="ar">&#8250;</span></a>
         </div>
       </div>
 
       <div class="co-item">
         <div class="co-item-head">
-          <span class="co-item-term">9ヶ月コース</span>
-          <span class="co-item-hours">全<span class="n">480</span>時間 <small>（4時間×120回）</small></span>
+          <span class="co-item-term"><?php fee_text('courses_087'); ?></span>
+          <span class="co-item-hours"><?php fee_text('courses_088'); ?><span class="n"><?php fee_text('courses_089'); ?></span><?php fee_text('courses_090'); ?> <small><?php fee_text('courses_091'); ?></small></span>
         </div>
         <div class="co-item-body">
-          <p>9ヶ月間で全480時間の授業を受講する、実践重視のプロフェッショナルコースです。</p>
-          <p>基礎技術から応用技術、モデル施術、サロンワークまで、豊富な実践経験を積みながら、技術力・施術スピード・接客力を総合的に身につけます。</p>
+          <p><?php fee_text('courses_092'); ?></p>
+          <p><?php fee_text('courses_093'); ?></p>
         </div>
-        <p class="co-item-rec">じっくり時間をかけて高い技術力を習得し、卒業後すぐに現場で活躍できるネイリストを目指したい方におすすめです。</p>
+        <p class="co-item-rec"><?php fee_text('courses_094'); ?></p>
         <div class="co-item-foot">
-          <div class="co-item-price"><span class="co-item-fee">受講料</span><span class="co-price">&yen;550,000<span class="tax">（税込）</span></span></div>
-          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースを相談する<span class="ar">&#8250;</span></a>
+          <div class="co-item-price"><span class="co-item-fee"><?php fee_text('courses_095'); ?></span><span class="co-price"><?php fee_text('courses_096'); ?><span class="tax"><?php fee_text('courses_097'); ?></span></span></div>
+          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer"><?php fee_text('courses_098'); ?><span class="ar">&#8250;</span></a>
         </div>
       </div>
     </div>
@@ -395,15 +395,15 @@ $u = get_template_directory_uri();
       <span class="co-gpic"><img <?php fee_img_attr('courses', '2'); ?> loading="lazy"></span>
       <div class="co-gtitle">
         <span class="co-num">04</span>
-        <h3 class="co-t" id="co-title-art"><span>アート<span class="p">コース</span></span></h3>
+        <h3 class="co-t" id="co-title-art"><span><?php fee_text('courses_099'); ?><span class="p"><?php fee_text('courses_100'); ?></span></span></h3>
       </div>
       <div class="co-gdesc">
-        <p class="co-lead">アート技術に絞って、必要な内容を効率よく学べる3ヶ月のライトプラン</p>
+        <p class="co-lead"><?php fee_text('courses_101'); ?></p>
         <div class="co-recs">
-          <span class="co-recs-t">こんな方におすすめ</span>
-          <span class="co-chip"><span class="co-icb co-i4"><img src="<?php echo $u; ?>/assets/images/course4.png" alt="" loading="lazy" decoding="async"></span>短期間で効率よく学べる</span>
-          <span class="co-chip"><span class="co-icb co-i5"><img src="<?php echo $u; ?>/assets/images/course5.png" alt="" loading="lazy" decoding="async"></span>アート技術に特化</span>
-          <span class="co-chip"><span class="co-icb co-i6"><img src="<?php echo $u; ?>/assets/images/course6.png" alt="" loading="lazy" decoding="async"></span>サロンで活かせる表現力</span>
+          <span class="co-recs-t"><?php fee_text('courses_102'); ?></span>
+          <span class="co-chip"><span class="co-icb co-i4"><img src="<?php echo $u; ?>/assets/images/course4.png" alt="" loading="lazy" decoding="async"></span><?php fee_text('courses_103'); ?></span>
+          <span class="co-chip"><span class="co-icb co-i5"><img src="<?php echo $u; ?>/assets/images/course5.png" alt="" loading="lazy" decoding="async"></span><?php fee_text('courses_104'); ?></span>
+          <span class="co-chip"><span class="co-icb co-i6"><img src="<?php echo $u; ?>/assets/images/course6.png" alt="" loading="lazy" decoding="async"></span><?php fee_text('courses_105'); ?></span>
         </div>
       </div>
     </div>
@@ -411,33 +411,33 @@ $u = get_template_directory_uri();
     <div class="co-items">
       <div class="co-item">
         <div class="co-item-head">
-          <span class="co-item-term">3ヶ月コース</span>
-          <span class="co-item-hours">全<span class="n">24</span>時間 <small>（4時間×6回）</small></span>
+          <span class="co-item-term"><?php fee_text('courses_106'); ?></span>
+          <span class="co-item-hours"><?php fee_text('courses_107'); ?><span class="n"><?php fee_text('courses_108'); ?></span><?php fee_text('courses_109'); ?> <small><?php fee_text('courses_110'); ?></small></span>
         </div>
         <div class="co-item-body">
-          <p>3ヶ月間で全24時間の授業を受講する、アート技術に特化したライトプランです。</p>
-          <p>ネイルアートの基礎やデザイン技術を中心に学び、通常のネイル施術に活かせる表現力を身につけます。</p>
+          <p><?php fee_text('courses_111'); ?></p>
+          <p><?php fee_text('courses_112'); ?></p>
         </div>
-        <p class="co-item-rec">アート技術を重点的に学びたい方や、必要な内容を絞って効率よく受講したい方におすすめです。</p>
+        <p class="co-item-rec"><?php fee_text('courses_113'); ?></p>
         <div class="co-item-foot">
-          <div class="co-item-price"><span class="co-item-fee">受講料</span><span class="co-price">&yen;128,000<span class="tax">（税込）</span></span></div>
-          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースを相談する<span class="ar">&#8250;</span></a>
+          <div class="co-item-price"><span class="co-item-fee"><?php fee_text('courses_114'); ?></span><span class="co-price"><?php fee_text('courses_115'); ?><span class="tax"><?php fee_text('courses_116'); ?></span></span></div>
+          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer"><?php fee_text('courses_117'); ?><span class="ar">&#8250;</span></a>
         </div>
       </div>
 
       <div class="co-item">
         <div class="co-item-head">
-          <span class="co-item-term">3ヶ月コース</span>
-          <span class="co-item-hours">全<span class="n">40</span>時間 <small>（4時間×10回）</small></span>
+          <span class="co-item-term"><?php fee_text('courses_118'); ?></span>
+          <span class="co-item-hours"><?php fee_text('courses_119'); ?><span class="n"><?php fee_text('courses_120'); ?></span><?php fee_text('courses_121'); ?> <small><?php fee_text('courses_122'); ?></small></span>
         </div>
         <div class="co-item-body">
-          <p>3ヶ月間で全40時間の授業を受講する、アート技術をより実践的に学べるライトプランです。</p>
-          <p>基本的なアート技術から応用デザインまで、練習時間を確保しながら幅広く習得します。</p>
+          <p><?php fee_text('courses_123'); ?></p>
+          <p><?php fee_text('courses_124'); ?></p>
         </div>
-        <p class="co-item-rec">ネイルアートの技術力を高めたい方や、サロンで活かせるデザインの幅を広げたい方におすすめです。</p>
+        <p class="co-item-rec"><?php fee_text('courses_125'); ?></p>
         <div class="co-item-foot">
-          <div class="co-item-price"><span class="co-item-fee">受講料</span><span class="co-price">&yen;178,000<span class="tax">（税込）</span></span></div>
-          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer">このコースを相談する<span class="ar">&#8250;</span></a>
+          <div class="co-item-price"><span class="co-item-fee"><?php fee_text('courses_126'); ?></span><span class="co-price"><?php fee_text('courses_127'); ?><span class="tax"><?php fee_text('courses_128'); ?></span></span></div>
+          <a class="co-cta" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer"><?php fee_text('courses_129'); ?><span class="ar">&#8250;</span></a>
         </div>
       </div>
     </div>
@@ -445,6 +445,6 @@ $u = get_template_directory_uri();
 
   <!-- 注記 -->
   <div class="co-notes">
-    ※分割払いも可能ですのでご相談ください。<br>
+    <?php fee_text('courses_130'); ?><br>
   </div>
 </section>

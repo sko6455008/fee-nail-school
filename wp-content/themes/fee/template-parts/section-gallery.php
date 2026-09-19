@@ -78,11 +78,11 @@ $u = get_template_directory_uri();
     <span class="gl-spark" style="left:16vw;top:9vw;color:#c5a6ec;font-size:1.2em;"></span>
     <span class="gl-spark" style="right:19vw;top:5.5vw;color:#8ad6df;font-size:1.5em;"></span>
     <span class="gl-spark" style="right:15vw;top:9.5vw;color:#f2c94c;font-size:1.1em;"></span>
-    <div class="gl-script"><span class="sl">＼</span>Student Gallery<span class="sl">／</span></div>
-    <div class="gl-t1">初心者からスタートした</div>
-    <div class="gl-t2">生徒様の作品例</div>
+    <div class="gl-script"><span class="sl">＼</span><?php fee_text('gallery_001'); ?><span class="sl">／</span></div>
+    <div class="gl-t1"><?php fee_text('gallery_002'); ?></div>
+    <div class="gl-t2"><?php fee_text('gallery_003'); ?></div>
     <span class="gl-t2-line"></span>
-    <p class="gl-sub">初心者の方でも、基礎から丁寧に学ぶことで<br>こんなに素敵な作品が描けるようになります！</p>
+    <p class="gl-sub"><?php fee_text('gallery_004'); ?><br><?php fee_text('gallery_005'); ?></p>
     <div class="gl-dots">
       <span style="background:#ef6da5;"></span>
       <span style="background:#f2c443;"></span>
@@ -100,6 +100,6 @@ $u = get_template_directory_uri();
   </div>
 
   <!-- フッター -->
-  <div class="gl-foot">そのほかにもたくさんのデザインを学べます。<span class="ht">&#9825;</span></div>
+  <div class="gl-foot"><?php fee_text('gallery_006'); ?><span class="ht">&#9825;</span></div>
   </div><!-- /.gl-panel -->
 </section>

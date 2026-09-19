@@ -113,7 +113,7 @@ $u = get_template_directory_uri();
 </style>
 <section class="cp" id="campaign">
   <!-- 上部白帯 -->
-  <div class="cp-strip"><span class="sl">＼</span> 今なら入学金 <span class="zero">0</span> 円キャンペーン実施中！<span class="sl">／</span></div>
+  <div class="cp-strip"><span class="sl">＼</span> <?php fee_text('campaign_001'); ?> <span class="zero"><?php fee_text('campaign_002'); ?></span> <?php fee_text('campaign_003'); ?><span class="sl">／</span></div>
 
   <div class="cp-body">
     <!-- 写真（支給素材） -->
@@ -133,7 +133,7 @@ $u = get_template_directory_uri();
     <div class="cp-main">
       <img src="<?php echo $u; ?>/assets/images/banner_fee.png" alt="入学金0円" loading="lazy">
     </div>
-    <div class="cp-usually">【通常】33,000円</div>
+    <div class="cp-usually"><?php fee_text('campaign_004'); ?></div>
 
     <!-- パール -->
     <span class="cp-pearl" style="left:3vw;top:23vw;width:1.3vw;height:1.3vw;"></span>
@@ -144,7 +144,7 @@ $u = get_template_directory_uri();
     <!-- CTA -->
     <a class="cp-cta pulse-btn" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer" aria-label="無料相談はこちらから">
       <span class="sp1"></span><span class="sp2"></span>
-      <span class="t1">無料相談</span><span class="t2">はこちらから！</span>
+      <span class="t1"><?php fee_text('campaign_005'); ?></span><span class="t2"><?php fee_text('campaign_006'); ?></span>
     </a>
   </div>
 </section>

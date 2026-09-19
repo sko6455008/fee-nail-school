@@ -2,7 +2,7 @@
 // アクセス（Location）セクション — コーディング版
 // index.php（画像版）のオーバーレイ実装（$access_html / .access / .acard）を通常フローに移設したもの。
 // 所在地の表示・地図リンク・埋め込み地図で同じ住所を使用する。
-$address = '東京都豊島区池袋2丁目53-12 中條ビル7F';
+$address = fee_text_value('access_address');
 $mapquery = rawurlencode($address);
 $mapurl = 'https://www.google.com/maps/search/?api=1&query=' . $mapquery;
 $mapembedurl = 'https://maps.google.com/maps?q=' . $mapquery . '&z=16&hl=ja&output=embed';
@@ -105,39 +105,39 @@ $u = get_template_directory_uri();
 
   <div class="ac2-inner">
     <div class="ac2-head">
-      <span class="ah-script">Location</span>
-      <div class="ah-jp"><u>アクセス</u></div>
+      <span class="ah-script"><?php fee_text('access_001'); ?></span>
+      <div class="ah-jp"><u><?php fee_text('access_002'); ?></u></div>
     </div>
     <div class="ac2-body">
       <div class="ac2-map">
         <iframe src="<?php echo esc_url( $mapembedurl ); ?>" loading="lazy" title="ICA 池袋キャリアアカデミー アクセスマップ" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <a class="ac2-mapbtn" href="<?php echo esc_url( $mapurl ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Googleマップで見る">
-          <svg class="mb-pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>マップで見る</span><svg class="mb-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 13.5V19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 19V8a1.5 1.5 0 0 1 1.5-1.5H10"/></svg>
+          <svg class="mb-pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span><?php fee_text('access_003'); ?></span><svg class="mb-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 13.5V19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 19V8a1.5 1.5 0 0 1 1.5-1.5H10"/></svg>
         </a>
       </div>
       <div class="acard2">
-        <div class="acard2-ttl"><span class="acard2-ttl-em">ICA</span> 池袋<span class="acard2-school-name">キャリアアカデミー</span></div>
+        <div class="acard2-ttl"><span class="acard2-ttl-em"><?php fee_text('access_004'); ?></span> <?php fee_text('access_005'); ?><span class="acard2-school-name"><?php fee_text('access_006'); ?></span></div>
         <div class="acard2-row">
           <span class="acard2-ic acard2-ic-pin"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
           <div>
-            <div class="acard2-h acard2-h-pink">・所在地</div>
-            <div class="acard2-txt">〒171-0014<br><?php echo esc_html( $address ); ?><br>池袋駅 <span class="acard2-pink">徒歩5分</span></div>
+            <div class="acard2-h acard2-h-pink"><?php fee_text('access_007'); ?></div>
+            <div class="acard2-txt"><?php fee_text('access_008'); ?><br><?php echo esc_html( $address ); ?><br><?php fee_text('access_009'); ?> <span class="acard2-pink"><?php fee_text('access_010'); ?></span></div>
           </div>
         </div>
         <hr class="acard2-div">
         <div class="acard2-row">
           <span class="acard2-ic acard2-ic-clock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5l3.3 2"/></svg></span>
           <div>
-            <div class="acard2-h acard2-h-teal">・営業時間</div>
-            <div class="acard2-txt">平日：11:00 - 21:00<br>土日祝：10:00 - 20:00</span></div>
+            <div class="acard2-h acard2-h-teal"><?php fee_text('access_011'); ?></div>
+            <div class="acard2-txt"><?php fee_text('access_012'); ?><br><?php fee_text('access_013'); ?></span></div>
           </div>
         </div>
         <hr class="acard2-div">
         <div class="acard2-row">
           <span class="acard2-ic acard2-ic-tel"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z"/></svg></span>
           <div>
-            <div class="acard2-h acard2-h-tel">・お問い合わせ</div>
-            <a class="acard2-tel" href="https://lin.ee/pc9cpjG" target="_blank" rel="noopener noreferrer">LINEで相談する</a>
+            <div class="acard2-h acard2-h-tel"><?php fee_text('access_014'); ?></div>
+            <a class="acard2-tel" href="https://lin.ee/pc9cpjG" target="_blank" rel="noopener noreferrer"><?php fee_text('access_015'); ?></a>
           </div>
         </div>
       </div>

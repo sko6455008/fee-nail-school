@@ -1,0 +1,3349 @@
+{
+  "header": {
+    "title": "共通ヘッダー・メニュー",
+    "fields": {
+      "header_001": {
+        "label": "リンクの文字",
+        "context": "Ica 池袋キャリアアカデミー",
+        "raw": "Ica",
+        "default": "Ica",
+        "type": "text"
+      },
+      "header_002": {
+        "label": "リンクの文字",
+        "context": "Ica 池袋キャリアアカデミー",
+        "raw": "池袋キャリアアカデミー",
+        "default": "池袋キャリアアカデミー",
+        "type": "text"
+      },
+      "header_003": {
+        "label": "リンクの文字",
+        "context": "アカデミー紹介",
+        "raw": "アカデミー紹介",
+        "default": "アカデミー紹介",
+        "type": "text"
+      },
+      "header_004": {
+        "label": "リンクの文字",
+        "context": "授業風景",
+        "raw": "授業風景",
+        "default": "授業風景",
+        "type": "text"
+      },
+      "header_005": {
+        "label": "リンクの文字",
+        "context": "学べる技術",
+        "raw": "学べる技術",
+        "default": "学べる技術",
+        "type": "text"
+      },
+      "header_006": {
+        "label": "リンクの文字",
+        "context": "コース内容",
+        "raw": "コース内容",
+        "default": "コース内容",
+        "type": "text"
+      },
+      "header_007": {
+        "label": "リンクの文字",
+        "context": "卒業後",
+        "raw": "卒業後",
+        "default": "卒業後",
+        "type": "text"
+      },
+      "header_008": {
+        "label": "リンクの文字",
+        "context": "入校手順",
+        "raw": "入校手順",
+        "default": "入校手順",
+        "type": "text"
+      },
+      "header_009": {
+        "label": "リンクの文字",
+        "context": "アクセス",
+        "raw": "アクセス",
+        "default": "アクセス",
+        "type": "text"
+      },
+      "header_010": {
+        "label": "リンクの文字",
+        "context": "よくある質問",
+        "raw": "よくある質問",
+        "default": "よくある質問",
+        "type": "text"
+      },
+      "header_011": {
+        "label": "リンクの文字",
+        "context": "Instagram",
+        "raw": "Instagram",
+        "default": "Instagram",
+        "type": "text"
+      },
+      "header_012": {
+        "label": "リンクの文字",
+        "context": "無料LINE相談",
+        "raw": "無料LINE相談",
+        "default": "無料LINE相談",
+        "type": "text"
+      },
+      "header_013": {
+        "label": "表示テキスト",
+        "context": "MENU",
+        "raw": "MENU",
+        "default": "MENU",
+        "type": "text"
+      }
+    }
+  },
+  "fv": {
+    "title": "ファーストビュー",
+    "fields": {
+      "fv_001": {
+        "label": "説明文",
+        "context": "あなたの「好き」が一生の仕事に♡",
+        "raw": "あなたの「好き」が一生の仕事に&#9825;",
+        "default": "あなたの「好き」が一生の仕事に♡",
+        "type": "text"
+      },
+      "fv_002": {
+        "label": "メイン見出し",
+        "context": "最短3ヶ月でプロのネイリストへ",
+        "raw": "最短",
+        "default": "最短",
+        "type": "text"
+      },
+      "fv_003": {
+        "label": "数字",
+        "context": "最短3ヶ月でプロのネイリストへ",
+        "raw": "3",
+        "default": "3",
+        "type": "text"
+      },
+      "fv_004": {
+        "label": "メイン見出し",
+        "context": "最短3ヶ月でプロのネイリストへ",
+        "raw": "ヶ月で",
+        "default": "ヶ月で",
+        "type": "text"
+      },
+      "fv_005": {
+        "label": "メイン見出し",
+        "context": "最短3ヶ月でプロのネイリストへ",
+        "raw": "プロ",
+        "default": "プロ",
+        "type": "text"
+      },
+      "fv_006": {
+        "label": "メイン見出し",
+        "context": "最短3ヶ月でプロのネイリストへ",
+        "raw": "の",
+        "default": "の",
+        "type": "text"
+      },
+      "fv_007": {
+        "label": "メイン見出し",
+        "context": "最短3ヶ月でプロのネイリストへ",
+        "raw": "ネイリストへ",
+        "default": "ネイリストへ",
+        "type": "text"
+      },
+      "fv_008": {
+        "label": "表示テキスト",
+        "context": "池袋キャリアアカデミー",
+        "raw": "池袋キャリアアカデミー",
+        "default": "池袋キャリアアカデミー",
+        "type": "text"
+      },
+      "fv_009": {
+        "label": "表示テキスト",
+        "context": "Ica",
+        "raw": "Ica",
+        "default": "Ica",
+        "type": "text"
+      },
+      "fv_010": {
+        "label": "強調する文字",
+        "context": "駅チカで通いやすい♪ 少人数制で しっかり学べる！",
+        "raw": "駅チカ",
+        "default": "駅チカ",
+        "type": "text"
+      },
+      "fv_011": {
+        "label": "表示テキスト",
+        "context": "駅チカで通いやすい♪ 少人数制で しっかり学べる！",
+        "raw": "で",
+        "default": "で",
+        "type": "text"
+      },
+      "fv_012": {
+        "label": "表示テキスト",
+        "context": "駅チカで通いやすい♪ 少人数制で しっかり学べる！",
+        "raw": "通いやすい&#9834;",
+        "default": "通いやすい♪",
+        "type": "text"
+      },
+      "fv_013": {
+        "label": "強調する文字",
+        "context": "駅チカで通いやすい♪ 少人数制で しっかり学べる！",
+        "raw": "少人数制",
+        "default": "少人数制",
+        "type": "text"
+      },
+      "fv_014": {
+        "label": "表示テキスト",
+        "context": "駅チカで通いやすい♪ 少人数制で しっかり学べる！",
+        "raw": "で",
+        "default": "で",
+        "type": "text"
+      },
+      "fv_015": {
+        "label": "表示テキスト",
+        "context": "駅チカで通いやすい♪ 少人数制で しっかり学べる！",
+        "raw": "しっかり学べる！",
+        "default": "しっかり学べる！",
+        "type": "text"
+      },
+      "fv_016": {
+        "label": "リンクの文字",
+        "context": "無料LINE相談する",
+        "raw": "無料LINE相談する",
+        "default": "無料LINE相談する",
+        "type": "text"
+      },
+      "fv_017": {
+        "label": "リンクの文字",
+        "context": "コース詳細を見る",
+        "raw": "コース詳細を見る",
+        "default": "コース詳細を見る",
+        "type": "text"
+      }
+    }
+  },
+  "campaign": {
+    "title": "キャンペーン",
+    "fields": {
+      "campaign_001": {
+        "label": "表示テキスト",
+        "context": "＼ 今なら入学金 0 円キャンペーン実施中！／",
+        "raw": "今なら入学金",
+        "default": "今なら入学金",
+        "type": "text"
+      },
+      "campaign_002": {
+        "label": "数字",
+        "context": "＼ 今なら入学金 0 円キャンペーン実施中！／",
+        "raw": "0",
+        "default": "0",
+        "type": "text"
+      },
+      "campaign_003": {
+        "label": "表示テキスト",
+        "context": "＼ 今なら入学金 0 円キャンペーン実施中！／",
+        "raw": "円キャンペーン実施中！",
+        "default": "円キャンペーン実施中！",
+        "type": "text"
+      },
+      "campaign_004": {
+        "label": "表示テキスト",
+        "context": "【通常】33,000円",
+        "raw": "【通常】33,000円",
+        "default": "【通常】33,000円",
+        "type": "text"
+      },
+      "campaign_005": {
+        "label": "リンクの文字",
+        "context": "無料相談はこちらから！",
+        "raw": "無料相談",
+        "default": "無料相談",
+        "type": "text"
+      },
+      "campaign_006": {
+        "label": "リンクの文字",
+        "context": "無料相談はこちらから！",
+        "raw": "はこちらから！",
+        "default": "はこちらから！",
+        "type": "text"
+      }
+    }
+  },
+  "concept": {
+    "title": "コンセプト",
+    "fields": {
+      "concept_001": {
+        "label": "説明文",
+        "context": "技術 スピード 接客 デザイン 集客 5つを身につけて、卒業後すぐ現場へ！",
+        "raw": "技術",
+        "default": "技術",
+        "type": "text"
+      },
+      "concept_002": {
+        "label": "説明文",
+        "context": "技術 スピード 接客 デザイン 集客 5つを身につけて、卒業後すぐ現場へ！",
+        "raw": "スピード",
+        "default": "スピード",
+        "type": "text"
+      },
+      "concept_003": {
+        "label": "説明文",
+        "context": "技術 スピード 接客 デザイン 集客 5つを身につけて、卒業後すぐ現場へ！",
+        "raw": "接客",
+        "default": "接客",
+        "type": "text"
+      },
+      "concept_004": {
+        "label": "説明文",
+        "context": "技術 スピード 接客 デザイン 集客 5つを身につけて、卒業後すぐ現場へ！",
+        "raw": "デザイン",
+        "default": "デザイン",
+        "type": "text"
+      },
+      "concept_005": {
+        "label": "説明文",
+        "context": "技術 スピード 接客 デザイン 集客 5つを身につけて、卒業後すぐ現場へ！",
+        "raw": "集客",
+        "default": "集客",
+        "type": "text"
+      },
+      "concept_006": {
+        "label": "説明文",
+        "context": "技術 スピード 接客 デザイン 集客 5つを身につけて、卒業後すぐ現場へ！",
+        "raw": "5つを身につけて、",
+        "default": "5つを身につけて、",
+        "type": "text"
+      },
+      "concept_007": {
+        "label": "説明文",
+        "context": "技術 スピード 接客 デザイン 集客 5つを身につけて、卒業後すぐ現場へ！",
+        "raw": "卒業後すぐ現場へ！",
+        "default": "卒業後すぐ現場へ！",
+        "type": "text"
+      },
+      "concept_008": {
+        "label": "表示テキスト",
+        "context": "＼プロのネイリストを目指すなら／",
+        "raw": "プロのネイリストを目指すなら",
+        "default": "プロのネイリストを目指すなら",
+        "type": "text"
+      },
+      "concept_009": {
+        "label": "表示テキスト",
+        "context": "Ica池袋キャリアアカデミー",
+        "raw": "Ica",
+        "default": "Ica",
+        "type": "text"
+      },
+      "concept_010": {
+        "label": "表示テキスト",
+        "context": "Ica池袋キャリアアカデミー",
+        "raw": "池袋キャリアアカデミー",
+        "default": "池袋キャリアアカデミー",
+        "type": "text"
+      }
+    }
+  },
+  "reasons": {
+    "title": "アカデミー紹介・6つの理由",
+    "fields": {
+      "reasons_001": {
+        "label": "表示テキスト",
+        "context": "Why Choose Us",
+        "raw": "Why Choose Us",
+        "default": "Why Choose Us",
+        "type": "text"
+      },
+      "reasons_002": {
+        "label": "表示テキスト",
+        "context": "なりたい自分になる第一歩を",
+        "raw": "なりたい自分になる第一歩を",
+        "default": "なりたい自分になる第一歩を",
+        "type": "text"
+      },
+      "reasons_003": {
+        "label": "見出し",
+        "context": "アカデミー紹介",
+        "raw": "アカデミー",
+        "default": "アカデミー",
+        "type": "text"
+      },
+      "reasons_004": {
+        "label": "強調する文字",
+        "context": "アカデミー紹介",
+        "raw": "紹介",
+        "default": "紹介",
+        "type": "text"
+      },
+      "reasons_005": {
+        "label": "表示テキスト",
+        "context": "ICA 池袋キャリアアカデミー が選ばれる 6つの理由",
+        "raw": "ICA 池袋キャリアアカデミー が選ばれる",
+        "default": "ICA 池袋キャリアアカデミー が選ばれる",
+        "type": "text"
+      },
+      "reasons_006": {
+        "label": "数字",
+        "context": "ICA 池袋キャリアアカデミー が選ばれる 6つの理由",
+        "raw": "6",
+        "default": "6",
+        "type": "text"
+      },
+      "reasons_007": {
+        "label": "表示テキスト",
+        "context": "ICA 池袋キャリアアカデミー が選ばれる 6つの理由",
+        "raw": "つの理由",
+        "default": "つの理由",
+        "type": "text"
+      },
+      "reasons_008": {
+        "label": "小見出し",
+        "context": "サロンワーク特化型",
+        "raw": "サロンワーク",
+        "default": "サロンワーク",
+        "type": "text"
+      },
+      "reasons_009": {
+        "label": "強調する文字",
+        "context": "サロンワーク特化型",
+        "raw": "特化型",
+        "default": "特化型",
+        "type": "text"
+      },
+      "reasons_010": {
+        "label": "説明文",
+        "context": "即戦力のネイル技術！",
+        "raw": "即戦力のネイル技術！",
+        "default": "即戦力のネイル技術！",
+        "type": "text"
+      },
+      "reasons_011": {
+        "label": "強調する文字",
+        "context": "少人数制",
+        "raw": "少人数制",
+        "default": "少人数制",
+        "type": "text"
+      },
+      "reasons_012": {
+        "label": "説明文",
+        "context": "一人ひとり丁寧指導！！",
+        "raw": "一人ひとり丁寧指導！！",
+        "default": "一人ひとり丁寧指導！！",
+        "type": "text"
+      },
+      "reasons_013": {
+        "label": "強調する文字",
+        "context": "就職・開業",
+        "raw": "就職・開業",
+        "default": "就職・開業",
+        "type": "text"
+      },
+      "reasons_014": {
+        "label": "説明文",
+        "context": "サポート充実！",
+        "raw": "サポート充実！",
+        "default": "サポート充実！",
+        "type": "text"
+      },
+      "reasons_015": {
+        "label": "強調する文字",
+        "context": "授業料がお得",
+        "raw": "授業料がお得",
+        "default": "授業料がお得",
+        "type": "text"
+      },
+      "reasons_016": {
+        "label": "説明文",
+        "context": "安心価格！",
+        "raw": "安心価格！",
+        "default": "安心価格！",
+        "type": "text"
+      },
+      "reasons_017": {
+        "label": "強調する文字",
+        "context": "初心者歓迎",
+        "raw": "初心者歓迎",
+        "default": "初心者歓迎",
+        "type": "text"
+      },
+      "reasons_018": {
+        "label": "説明文",
+        "context": "ゼロから安心！",
+        "raw": "ゼロから安心！",
+        "default": "ゼロから安心！",
+        "type": "text"
+      },
+      "reasons_019": {
+        "label": "強調する文字",
+        "context": "最新トレンド",
+        "raw": "最新トレンド",
+        "default": "最新トレンド",
+        "type": "text"
+      },
+      "reasons_020": {
+        "label": "説明文",
+        "context": "技術をしっかり習得！",
+        "raw": "技術をしっかり習得！",
+        "default": "技術をしっかり習得！",
+        "type": "text"
+      }
+    }
+  },
+  "strengths": {
+    "title": "7つの強み",
+    "fields": {
+      "strengths_001": {
+        "label": "表示テキスト",
+        "context": "＼ICA 池袋キャリアアカデミー が選ばれる理由／",
+        "raw": "ICA 池袋キャリアアカデミー が選ばれる理由",
+        "default": "ICA 池袋キャリアアカデミー が選ばれる理由",
+        "type": "text"
+      },
+      "strengths_002": {
+        "label": "数字",
+        "context": "7つの強み",
+        "raw": "7",
+        "default": "7",
+        "type": "text"
+      },
+      "strengths_003": {
+        "label": "見出し",
+        "context": "7つの強み",
+        "raw": "つの",
+        "default": "つの",
+        "type": "text"
+      },
+      "strengths_004": {
+        "label": "強調する文字",
+        "context": "7つの強み",
+        "raw": "強み",
+        "default": "強み",
+        "type": "text"
+      },
+      "strengths_005": {
+        "label": "表示テキスト",
+        "context": "圧倒的学習時間 1コマ4時間！ 基礎から応用まで学べる！",
+        "raw": "圧倒的学習時間",
+        "default": "圧倒的学習時間",
+        "type": "text"
+      },
+      "strengths_006": {
+        "label": "強調する文字",
+        "context": "1コマ4時間！",
+        "raw": "1コマ4時間！",
+        "default": "1コマ4時間！",
+        "type": "text"
+      },
+      "strengths_007": {
+        "label": "表示テキスト",
+        "context": "基礎から応用まで学べる！",
+        "raw": "基礎から応用まで学べる！",
+        "default": "基礎から応用まで学べる！",
+        "type": "text"
+      },
+      "strengths_008": {
+        "label": "表示テキスト",
+        "context": "総授業時間 480時間以上 即戦力を目指せる！",
+        "raw": "総授業時間",
+        "default": "総授業時間",
+        "type": "text"
+      },
+      "strengths_009": {
+        "label": "数字",
+        "context": "480時間以上",
+        "raw": "480",
+        "default": "480",
+        "type": "text"
+      },
+      "strengths_010": {
+        "label": "表示テキスト",
+        "context": "480時間以上",
+        "raw": "時間以上",
+        "default": "時間以上",
+        "type": "text"
+      },
+      "strengths_011": {
+        "label": "表示テキスト",
+        "context": "即戦力を目指せる！",
+        "raw": "即戦力を目指せる！",
+        "default": "即戦力を目指せる！",
+        "type": "text"
+      },
+      "strengths_012": {
+        "label": "表示テキスト",
+        "context": "実践人数 240人越え 実践重視の環境！",
+        "raw": "実践人数",
+        "default": "実践人数",
+        "type": "text"
+      },
+      "strengths_013": {
+        "label": "数字",
+        "context": "240人越え",
+        "raw": "240",
+        "default": "240",
+        "type": "text"
+      },
+      "strengths_014": {
+        "label": "表示テキスト",
+        "context": "240人越え",
+        "raw": "人越え",
+        "default": "人越え",
+        "type": "text"
+      },
+      "strengths_015": {
+        "label": "表示テキスト",
+        "context": "実践重視の環境！",
+        "raw": "実践重視の環境！",
+        "default": "実践重視の環境！",
+        "type": "text"
+      },
+      "strengths_016": {
+        "label": "表示テキスト",
+        "context": "自習室 使い放題 授業がない日も自由に使える！",
+        "raw": "自習室",
+        "default": "自習室",
+        "type": "text"
+      },
+      "strengths_017": {
+        "label": "表示テキスト",
+        "context": "使い放題",
+        "raw": "使い放題",
+        "default": "使い放題",
+        "type": "text"
+      },
+      "strengths_018": {
+        "label": "表示テキスト",
+        "context": "授業がない日も自由に使える！",
+        "raw": "授業がない日も",
+        "default": "授業がない日も",
+        "type": "text"
+      },
+      "strengths_019": {
+        "label": "強調する文字",
+        "context": "授業がない日も自由に使える！",
+        "raw": "自由に使える！",
+        "default": "自由に使える！",
+        "type": "text"
+      },
+      "strengths_020": {
+        "label": "表示テキスト",
+        "context": "人気セミナー トレンドアート受け放題 最新デザインが学べる！",
+        "raw": "人気セミナー",
+        "default": "人気セミナー",
+        "type": "text"
+      },
+      "strengths_021": {
+        "label": "表示テキスト",
+        "context": "トレンドアート受け放題",
+        "raw": "トレンドアート受け放題",
+        "default": "トレンドアート受け放題",
+        "type": "text"
+      },
+      "strengths_022": {
+        "label": "表示テキスト",
+        "context": "最新デザインが学べる！",
+        "raw": "最新デザインが学べる！",
+        "default": "最新デザインが学べる！",
+        "type": "text"
+      },
+      "strengths_023": {
+        "label": "表示テキスト",
+        "context": "開業支援 開業のノウハウや集客方法なども手厚くサポート",
+        "raw": "開業支援",
+        "default": "開業支援",
+        "type": "text"
+      },
+      "strengths_024": {
+        "label": "表示テキスト",
+        "context": "開業のノウハウや集客方法なども手厚くサポート",
+        "raw": "開業の",
+        "default": "開業の",
+        "type": "text"
+      },
+      "strengths_025": {
+        "label": "強調する文字",
+        "context": "開業のノウハウや集客方法なども手厚くサポート",
+        "raw": "ノウハウや集客方法",
+        "default": "ノウハウや集客方法",
+        "type": "text"
+      },
+      "strengths_026": {
+        "label": "表示テキスト",
+        "context": "開業のノウハウや集客方法なども手厚くサポート",
+        "raw": "なども手厚くサポート",
+        "default": "なども手厚くサポート",
+        "type": "text"
+      },
+      "strengths_027": {
+        "label": "表示テキスト",
+        "context": "就職相談 就職までしっかりサポート！",
+        "raw": "就職相談",
+        "default": "就職相談",
+        "type": "text"
+      },
+      "strengths_028": {
+        "label": "表示テキスト",
+        "context": "就職までしっかりサポート！",
+        "raw": "就職までしっかりサポート！",
+        "default": "就職までしっかりサポート！",
+        "type": "text"
+      },
+      "strengths_029": {
+        "label": "表示テキスト",
+        "context": "教材費込み／モデル代込み／追加料金なし",
+        "raw": "教材費込み",
+        "default": "教材費込み",
+        "type": "text"
+      },
+      "strengths_030": {
+        "label": "表示テキスト",
+        "context": "教材費込み／モデル代込み／追加料金なし",
+        "raw": "モデル代込み",
+        "default": "モデル代込み",
+        "type": "text"
+      },
+      "strengths_031": {
+        "label": "表示テキスト",
+        "context": "教材費込み／モデル代込み／追加料金なし",
+        "raw": "追加料金なし",
+        "default": "追加料金なし",
+        "type": "text"
+      }
+    }
+  },
+  "compare": {
+    "title": "スクール比較",
+    "fields": {
+      "compare_001": {
+        "label": "表示テキスト",
+        "context": "Ica池袋キャリアアカデミー",
+        "raw": "Ica",
+        "default": "Ica",
+        "type": "text"
+      },
+      "compare_002": {
+        "label": "表示テキスト",
+        "context": "Ica池袋キャリアアカデミー",
+        "raw": "池袋",
+        "default": "池袋",
+        "type": "text"
+      },
+      "compare_003": {
+        "label": "表示テキスト",
+        "context": "Ica池袋キャリアアカデミー",
+        "raw": "キャリアアカデミー",
+        "default": "キャリアアカデミー",
+        "type": "text"
+      },
+      "compare_004": {
+        "label": "表示テキスト",
+        "context": "Ica池袋キャリアアカデミー 当スクール",
+        "raw": "当スクール",
+        "default": "当スクール",
+        "type": "text"
+      },
+      "compare_005": {
+        "label": "表示テキスト",
+        "context": "一般的なスクール",
+        "raw": "一般的なスクール",
+        "default": "一般的なスクール",
+        "type": "text"
+      },
+      "compare_006": {
+        "label": "表示テキスト",
+        "context": "最短 3ヶ月",
+        "raw": "最短",
+        "default": "最短",
+        "type": "text"
+      },
+      "compare_007": {
+        "label": "数字",
+        "context": "最短 3ヶ月",
+        "raw": "3",
+        "default": "3",
+        "type": "text"
+      },
+      "compare_008": {
+        "label": "表示テキスト",
+        "context": "最短 3ヶ月",
+        "raw": "ヶ月",
+        "default": "ヶ月",
+        "type": "text"
+      },
+      "compare_009": {
+        "label": "表示テキスト",
+        "context": "でネイリストに！",
+        "raw": "でネイリストに！",
+        "default": "でネイリストに！",
+        "type": "text"
+      },
+      "compare_010": {
+        "label": "数字",
+        "context": "6ヶ月〜",
+        "raw": "6",
+        "default": "6",
+        "type": "text"
+      },
+      "compare_011": {
+        "label": "表示テキスト",
+        "context": "6ヶ月〜",
+        "raw": "ヶ月〜",
+        "default": "ヶ月〜",
+        "type": "text"
+      },
+      "compare_012": {
+        "label": "数字",
+        "context": "1コマ4時間",
+        "raw": "1",
+        "default": "1",
+        "type": "text"
+      },
+      "compare_013": {
+        "label": "表示テキスト",
+        "context": "1コマ4時間",
+        "raw": "コマ",
+        "default": "コマ",
+        "type": "text"
+      },
+      "compare_014": {
+        "label": "数字",
+        "context": "1コマ4時間",
+        "raw": "4",
+        "default": "4",
+        "type": "text"
+      },
+      "compare_015": {
+        "label": "表示テキスト",
+        "context": "1コマ4時間",
+        "raw": "時間",
+        "default": "時間",
+        "type": "text"
+      },
+      "compare_016": {
+        "label": "表示テキスト",
+        "context": "総授業時間 480 時間 1時間あたり 875 円",
+        "raw": "総授業時間",
+        "default": "総授業時間",
+        "type": "text"
+      },
+      "compare_017": {
+        "label": "数字",
+        "context": "総授業時間 480 時間 1時間あたり 875 円",
+        "raw": "480",
+        "default": "480",
+        "type": "text"
+      },
+      "compare_018": {
+        "label": "表示テキスト",
+        "context": "総授業時間 480 時間 1時間あたり 875 円",
+        "raw": "時間",
+        "default": "時間",
+        "type": "text"
+      },
+      "compare_019": {
+        "label": "表示テキスト",
+        "context": "総授業時間 480 時間 1時間あたり 875 円",
+        "raw": "1時間あたり",
+        "default": "1時間あたり",
+        "type": "text"
+      },
+      "compare_020": {
+        "label": "数字",
+        "context": "総授業時間 480 時間 1時間あたり 875 円",
+        "raw": "875",
+        "default": "875",
+        "type": "text"
+      },
+      "compare_021": {
+        "label": "表示テキスト",
+        "context": "総授業時間 480 時間 1時間あたり 875 円",
+        "raw": "円",
+        "default": "円",
+        "type": "text"
+      },
+      "compare_022": {
+        "label": "表示テキスト",
+        "context": "1コマ3時間",
+        "raw": "1コマ",
+        "default": "1コマ",
+        "type": "text"
+      },
+      "compare_023": {
+        "label": "数字",
+        "context": "1コマ3時間",
+        "raw": "3",
+        "default": "3",
+        "type": "text"
+      },
+      "compare_024": {
+        "label": "表示テキスト",
+        "context": "1コマ3時間",
+        "raw": "時間",
+        "default": "時間",
+        "type": "text"
+      },
+      "compare_025": {
+        "label": "表示テキスト",
+        "context": "短時間授業",
+        "raw": "短時間授業",
+        "default": "短時間授業",
+        "type": "text"
+      },
+      "compare_026": {
+        "label": "表示テキスト",
+        "context": "モデルはスクールが用意！",
+        "raw": "モデルは",
+        "default": "モデルは",
+        "type": "text"
+      },
+      "compare_027": {
+        "label": "表示テキスト",
+        "context": "モデルはスクールが用意！",
+        "raw": "スクールが用意！",
+        "default": "スクールが用意！",
+        "type": "text"
+      },
+      "compare_028": {
+        "label": "表示テキスト",
+        "context": "自分で探す必要なし",
+        "raw": "自分で探す",
+        "default": "自分で探す",
+        "type": "text"
+      },
+      "compare_029": {
+        "label": "表示テキスト",
+        "context": "自分で探す必要なし",
+        "raw": "必要なし",
+        "default": "必要なし",
+        "type": "text"
+      },
+      "compare_030": {
+        "label": "表示テキスト",
+        "context": "自分でモデルを探す必要がある",
+        "raw": "自分で",
+        "default": "自分で",
+        "type": "text"
+      },
+      "compare_031": {
+        "label": "表示テキスト",
+        "context": "自分でモデルを探す必要がある",
+        "raw": "モデルを探す",
+        "default": "モデルを探す",
+        "type": "text"
+      },
+      "compare_032": {
+        "label": "表示テキスト",
+        "context": "自分でモデルを探す必要がある",
+        "raw": "必要がある",
+        "default": "必要がある",
+        "type": "text"
+      },
+      "compare_033": {
+        "label": "表示テキスト",
+        "context": "すべて0円で学べる！",
+        "raw": "すべて",
+        "default": "すべて",
+        "type": "text"
+      },
+      "compare_034": {
+        "label": "数字",
+        "context": "すべて0円で学べる！",
+        "raw": "0",
+        "default": "0",
+        "type": "text"
+      },
+      "compare_035": {
+        "label": "表示テキスト",
+        "context": "すべて0円で学べる！",
+        "raw": "円",
+        "default": "円",
+        "type": "text"
+      },
+      "compare_036": {
+        "label": "表示テキスト",
+        "context": "すべて0円で学べる！",
+        "raw": "で学べる！",
+        "default": "で学べる！",
+        "type": "text"
+      },
+      "compare_037": {
+        "label": "強調する文字",
+        "context": "商材費無料",
+        "raw": "商材費",
+        "default": "商材費",
+        "type": "text"
+      },
+      "compare_038": {
+        "label": "表示テキスト",
+        "context": "商材費無料",
+        "raw": "無料",
+        "default": "無料",
+        "type": "text"
+      },
+      "compare_039": {
+        "label": "強調する文字",
+        "context": "教材費無料",
+        "raw": "教材費",
+        "default": "教材費",
+        "type": "text"
+      },
+      "compare_040": {
+        "label": "表示テキスト",
+        "context": "教材費無料",
+        "raw": "無料",
+        "default": "無料",
+        "type": "text"
+      },
+      "compare_041": {
+        "label": "強調する文字",
+        "context": "アートセミナー無料",
+        "raw": "アートセミナー",
+        "default": "アートセミナー",
+        "type": "text"
+      },
+      "compare_042": {
+        "label": "表示テキスト",
+        "context": "アートセミナー無料",
+        "raw": "無料",
+        "default": "無料",
+        "type": "text"
+      },
+      "compare_043": {
+        "label": "表示テキスト",
+        "context": "商材も有料",
+        "raw": "商材も有料",
+        "default": "商材も有料",
+        "type": "text"
+      },
+      "compare_044": {
+        "label": "表示テキスト",
+        "context": "教材費有料",
+        "raw": "教材費有料",
+        "default": "教材費有料",
+        "type": "text"
+      },
+      "compare_045": {
+        "label": "表示テキスト",
+        "context": "オプション別料金",
+        "raw": "オプション別料金",
+        "default": "オプション別料金",
+        "type": "text"
+      },
+      "compare_046": {
+        "label": "表示テキスト",
+        "context": "卒業までのモデル人数",
+        "raw": "卒業までのモデル人数",
+        "default": "卒業までのモデル人数",
+        "type": "text"
+      },
+      "compare_047": {
+        "label": "数字",
+        "context": "200人以上",
+        "raw": "200",
+        "default": "200",
+        "type": "text"
+      },
+      "compare_048": {
+        "label": "表示テキスト",
+        "context": "200人以上",
+        "raw": "人以上",
+        "default": "人以上",
+        "type": "text"
+      },
+      "compare_049": {
+        "label": "数字",
+        "context": "30人程度",
+        "raw": "30",
+        "default": "30",
+        "type": "text"
+      },
+      "compare_050": {
+        "label": "表示テキスト",
+        "context": "30人程度",
+        "raw": "人程度",
+        "default": "人程度",
+        "type": "text"
+      }
+    }
+  },
+  "classroom": {
+    "title": "授業風景",
+    "fields": {
+      "classroom_001": {
+        "label": "表示テキスト",
+        "context": "Classroom",
+        "raw": "Classroom",
+        "default": "Classroom",
+        "type": "text"
+      },
+      "classroom_002": {
+        "label": "見出し",
+        "context": "授業風景",
+        "raw": "授業風景",
+        "default": "授業風景",
+        "type": "text"
+      },
+      "classroom_003": {
+        "label": "表示テキスト",
+        "context": "少人数制で、楽しくしっかり学べる♡",
+        "raw": "少人数制で、楽しくしっかり学べる&#9825;",
+        "default": "少人数制で、楽しくしっかり学べる♡",
+        "type": "text"
+      },
+      "classroom_004": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ！ ネイルが大好き！ 手に職をつけて働きたい！ 自分のサロンを持ちたい！ オシャレな仕事がしたい！",
+        "raw": "こんな方におすすめ！",
+        "default": "こんな方におすすめ！",
+        "type": "text"
+      },
+      "classroom_005": {
+        "label": "リスト項目",
+        "context": "ネイルが大好き！",
+        "raw": "ネイルが大好き！",
+        "default": "ネイルが大好き！",
+        "type": "text"
+      },
+      "classroom_006": {
+        "label": "リスト項目",
+        "context": "手に職をつけて働きたい！",
+        "raw": "手に職をつけて働きたい！",
+        "default": "手に職をつけて働きたい！",
+        "type": "text"
+      },
+      "classroom_007": {
+        "label": "リスト項目",
+        "context": "自分のサロンを持ちたい！",
+        "raw": "自分のサロンを持ちたい！",
+        "default": "自分のサロンを持ちたい！",
+        "type": "text"
+      },
+      "classroom_008": {
+        "label": "リスト項目",
+        "context": "オシャレな仕事がしたい！",
+        "raw": "オシャレな仕事がしたい！",
+        "default": "オシャレな仕事がしたい！",
+        "type": "text"
+      },
+      "classroom_009": {
+        "label": "表示テキスト",
+        "context": "夢をカタチにする第一歩を応援します♡",
+        "raw": "夢をカタチにする",
+        "default": "夢をカタチにする",
+        "type": "text"
+      },
+      "classroom_010": {
+        "label": "表示テキスト",
+        "context": "夢をカタチにする第一歩を応援します♡",
+        "raw": "第一歩を",
+        "default": "第一歩を",
+        "type": "text"
+      },
+      "classroom_011": {
+        "label": "表示テキスト",
+        "context": "夢をカタチにする第一歩を応援します♡",
+        "raw": "応援します&#9825;",
+        "default": "応援します♡",
+        "type": "text"
+      },
+      "classroom_012": {
+        "label": "表示テキスト",
+        "context": "少人数制だから、一人ひとりにしっかり向き合います。 わからないことはすぐに質問できて、苦手なところも丁寧にサポート。楽しく学びながら、着実にスキルを身につけられる環境です。",
+        "raw": "少人数制だから、一人ひとりにしっかり向き合います。",
+        "default": "少人数制だから、一人ひとりにしっかり向き合います。",
+        "type": "text"
+      },
+      "classroom_013": {
+        "label": "説明文",
+        "context": "わからないことはすぐに質問できて、苦手なところも丁寧にサポート。楽しく学びながら、着実にスキルを身につけられる環境です。",
+        "raw": "わからないことはすぐに質問できて、苦手なところも丁寧にサポート。",
+        "default": "わからないことはすぐに質問できて、苦手なところも丁寧にサポート。",
+        "type": "text"
+      },
+      "classroom_014": {
+        "label": "説明文",
+        "context": "わからないことはすぐに質問できて、苦手なところも丁寧にサポート。楽しく学びながら、着実にスキルを身につけられる環境です。",
+        "raw": "楽しく学びながら、着実にスキルを身につけられる環境です。",
+        "default": "楽しく学びながら、着実にスキルを身につけられる環境です。",
+        "type": "text"
+      }
+    }
+  },
+  "gallery": {
+    "title": "生徒様の作品例",
+    "fields": {
+      "gallery_001": {
+        "label": "表示テキスト",
+        "context": "＼Student Gallery／",
+        "raw": "Student Gallery",
+        "default": "Student Gallery",
+        "type": "text"
+      },
+      "gallery_002": {
+        "label": "表示テキスト",
+        "context": "初心者からスタートした",
+        "raw": "初心者からスタートした",
+        "default": "初心者からスタートした",
+        "type": "text"
+      },
+      "gallery_003": {
+        "label": "表示テキスト",
+        "context": "生徒様の作品例",
+        "raw": "生徒様の作品例",
+        "default": "生徒様の作品例",
+        "type": "text"
+      },
+      "gallery_004": {
+        "label": "説明文",
+        "context": "初心者の方でも、基礎から丁寧に学ぶことでこんなに素敵な作品が描けるようになります！",
+        "raw": "初心者の方でも、基礎から丁寧に学ぶことで",
+        "default": "初心者の方でも、基礎から丁寧に学ぶことで",
+        "type": "text"
+      },
+      "gallery_005": {
+        "label": "説明文",
+        "context": "初心者の方でも、基礎から丁寧に学ぶことでこんなに素敵な作品が描けるようになります！",
+        "raw": "こんなに素敵な作品が描けるようになります！",
+        "default": "こんなに素敵な作品が描けるようになります！",
+        "type": "text"
+      },
+      "gallery_006": {
+        "label": "表示テキスト",
+        "context": "そのほかにもたくさんのデザインを学べます。♡",
+        "raw": "そのほかにもたくさんのデザインを学べます。",
+        "default": "そのほかにもたくさんのデザインを学べます。",
+        "type": "text"
+      }
+    }
+  },
+  "skills": {
+    "title": "学べる技術",
+    "fields": {
+      "skills_001": {
+        "label": "表示テキスト",
+        "context": "初心者も安心してスタートできる♡ 好きなことを一生の仕事に♡ ♡ Skills You Learn 学べる技術 基礎から応用まで、トータルで身につける！",
+        "raw": "初心者も",
+        "default": "初心者も",
+        "type": "text"
+      },
+      "skills_002": {
+        "label": "表示テキスト",
+        "context": "初心者も安心してスタートできる♡ 好きなことを一生の仕事に♡ ♡ Skills You Learn 学べる技術 基礎から応用まで、トータルで身につける！",
+        "raw": "安心して",
+        "default": "安心して",
+        "type": "text"
+      },
+      "skills_003": {
+        "label": "表示テキスト",
+        "context": "初心者も安心してスタートできる♡ 好きなことを一生の仕事に♡ ♡ Skills You Learn 学べる技術 基礎から応用まで、トータルで身につける！",
+        "raw": "スタートできる",
+        "default": "スタートできる",
+        "type": "text"
+      },
+      "skills_004": {
+        "label": "表示テキスト",
+        "context": "初心者も安心してスタートできる♡ 好きなことを一生の仕事に♡ ♡ Skills You Learn 学べる技術 基礎から応用まで、トータルで身につける！",
+        "raw": "好きなことを",
+        "default": "好きなことを",
+        "type": "text"
+      },
+      "skills_005": {
+        "label": "表示テキスト",
+        "context": "初心者も安心してスタートできる♡ 好きなことを一生の仕事に♡ ♡ Skills You Learn 学べる技術 基礎から応用まで、トータルで身につける！",
+        "raw": "一生の仕事に",
+        "default": "一生の仕事に",
+        "type": "text"
+      },
+      "skills_006": {
+        "label": "表示テキスト",
+        "context": "Skills You Learn",
+        "raw": "Skills You Learn",
+        "default": "Skills You Learn",
+        "type": "text"
+      },
+      "skills_007": {
+        "label": "見出し",
+        "context": "学べる技術",
+        "raw": "学べる技術",
+        "default": "学べる技術",
+        "type": "text"
+      },
+      "skills_008": {
+        "label": "表示テキスト",
+        "context": "基礎から応用まで、トータルで身につける！",
+        "raw": "基礎から応用まで、",
+        "default": "基礎から応用まで、",
+        "type": "text"
+      },
+      "skills_009": {
+        "label": "表示テキスト",
+        "context": "基礎から応用まで、トータルで身につける！",
+        "raw": "トータルで身につける！",
+        "default": "トータルで身につける！",
+        "type": "text"
+      },
+      "skills_010": {
+        "label": "小見出し",
+        "context": "基礎知識",
+        "raw": "基礎知識",
+        "default": "基礎知識",
+        "type": "text"
+      },
+      "skills_011": {
+        "label": "リスト項目",
+        "context": "爪の構造",
+        "raw": "爪の構造",
+        "default": "爪の構造",
+        "type": "text"
+      },
+      "skills_012": {
+        "label": "リスト項目",
+        "context": "病気トラブル",
+        "raw": "病気トラブル",
+        "default": "病気トラブル",
+        "type": "text"
+      },
+      "skills_013": {
+        "label": "リスト項目",
+        "context": "衛生管理",
+        "raw": "衛生管理",
+        "default": "衛生管理",
+        "type": "text"
+      },
+      "skills_014": {
+        "label": "リスト項目",
+        "context": "道具の名称",
+        "raw": "道具の名称",
+        "default": "道具の名称",
+        "type": "text"
+      },
+      "skills_015": {
+        "label": "リスト項目",
+        "context": "技術理論",
+        "raw": "技術理論",
+        "default": "技術理論",
+        "type": "text"
+      },
+      "skills_016": {
+        "label": "小見出し",
+        "context": "ネイルケア",
+        "raw": "ネイルケア",
+        "default": "ネイルケア",
+        "type": "text"
+      },
+      "skills_017": {
+        "label": "リスト項目",
+        "context": "ファイリング",
+        "raw": "ファイリング",
+        "default": "ファイリング",
+        "type": "text"
+      },
+      "skills_018": {
+        "label": "リスト項目",
+        "context": "ハンドケア",
+        "raw": "ハンドケア",
+        "default": "ハンドケア",
+        "type": "text"
+      },
+      "skills_019": {
+        "label": "リスト項目",
+        "context": "フットケア",
+        "raw": "フットケア",
+        "default": "フットケア",
+        "type": "text"
+      },
+      "skills_020": {
+        "label": "リスト項目",
+        "context": "ウォーターケア",
+        "raw": "ウォーターケア",
+        "default": "ウォーターケア",
+        "type": "text"
+      },
+      "skills_021": {
+        "label": "小見出し",
+        "context": "マシーンケア",
+        "raw": "マシーンケア",
+        "default": "マシーンケア",
+        "type": "text"
+      },
+      "skills_022": {
+        "label": "リスト項目",
+        "context": "マシーンケア基礎",
+        "raw": "マシーンケア基礎",
+        "default": "マシーンケア基礎",
+        "type": "text"
+      },
+      "skills_023": {
+        "label": "リスト項目",
+        "context": "オフ",
+        "raw": "オフ",
+        "default": "オフ",
+        "type": "text"
+      },
+      "skills_024": {
+        "label": "リスト項目",
+        "context": "プレパレーション",
+        "raw": "プレパレーション",
+        "default": "プレパレーション",
+        "type": "text"
+      },
+      "skills_025": {
+        "label": "リスト項目",
+        "context": "フィルイン",
+        "raw": "フィルイン",
+        "default": "フィルイン",
+        "type": "text"
+      },
+      "skills_026": {
+        "label": "小見出し",
+        "context": "長さ出し・補強",
+        "raw": "長さ出し・補強",
+        "default": "長さ出し・補強",
+        "type": "text"
+      },
+      "skills_027": {
+        "label": "リスト項目",
+        "context": "ジェル",
+        "raw": "ジェル",
+        "default": "ジェル",
+        "type": "text"
+      },
+      "skills_028": {
+        "label": "リスト項目",
+        "context": "チップ",
+        "raw": "チップ",
+        "default": "チップ",
+        "type": "text"
+      },
+      "skills_029": {
+        "label": "リスト項目",
+        "context": "アクリル技術",
+        "raw": "アクリル技術",
+        "default": "アクリル技術",
+        "type": "text"
+      },
+      "skills_030": {
+        "label": "小見出し",
+        "context": "ネイルアート",
+        "raw": "ネイルアート",
+        "default": "ネイルアート",
+        "type": "text"
+      },
+      "skills_031": {
+        "label": "リスト項目",
+        "context": "ワンカラー",
+        "raw": "ワンカラー",
+        "default": "ワンカラー",
+        "type": "text"
+      },
+      "skills_032": {
+        "label": "リスト項目",
+        "context": "ラメグラ",
+        "raw": "ラメグラ",
+        "default": "ラメグラ",
+        "type": "text"
+      },
+      "skills_033": {
+        "label": "リスト項目",
+        "context": "マグネット",
+        "raw": "マグネット",
+        "default": "マグネット",
+        "type": "text"
+      },
+      "skills_034": {
+        "label": "リスト項目",
+        "context": "トレンドデザイン",
+        "raw": "トレンドデザイン",
+        "default": "トレンドデザイン",
+        "type": "text"
+      },
+      "skills_035": {
+        "label": "小見出し",
+        "context": "サロンワーク技術",
+        "raw": "サロンワーク技術",
+        "default": "サロンワーク技術",
+        "type": "text"
+      },
+      "skills_036": {
+        "label": "リスト項目",
+        "context": "ヒアリング方法",
+        "raw": "ヒアリング方法",
+        "default": "ヒアリング方法",
+        "type": "text"
+      },
+      "skills_037": {
+        "label": "リスト項目",
+        "context": "メニュー提案",
+        "raw": "メニュー提案",
+        "default": "メニュー提案",
+        "type": "text"
+      },
+      "skills_038": {
+        "label": "リスト項目",
+        "context": "施術中の声かけ",
+        "raw": "施術中の声かけ",
+        "default": "施術中の声かけ",
+        "type": "text"
+      },
+      "skills_039": {
+        "label": "リスト項目",
+        "context": "手元の見せ方",
+        "raw": "手元の見せ方",
+        "default": "手元の見せ方",
+        "type": "text"
+      },
+      "skills_040": {
+        "label": "リスト項目",
+        "context": "時間管理",
+        "raw": "時間管理",
+        "default": "時間管理",
+        "type": "text"
+      },
+      "skills_041": {
+        "label": "リスト項目",
+        "context": "接客マナー",
+        "raw": "接客マナー",
+        "default": "接客マナー",
+        "type": "text"
+      },
+      "skills_042": {
+        "label": "リスト項目",
+        "context": "ノウハウ",
+        "raw": "ノウハウ",
+        "default": "ノウハウ",
+        "type": "text"
+      },
+      "skills_043": {
+        "label": "表示テキスト",
+        "context": "＋開業サポート✨ ネイル技術、場所・道具、手続き、集客、運営体制など、 開業に必要なことも学べます。",
+        "raw": "＋開業サポート&#10024;",
+        "default": "＋開業サポート✨",
+        "type": "text"
+      },
+      "skills_044": {
+        "label": "表示テキスト",
+        "context": "ネイル技術、場所・道具、手続き、集客、運営体制など、",
+        "raw": "ネイル技術、場所・道具、手続き、集客、運営体制など、",
+        "default": "ネイル技術、場所・道具、手続き、集客、運営体制など、",
+        "type": "text"
+      },
+      "skills_045": {
+        "label": "強調する文字",
+        "context": "開業に必要なことも学べます。",
+        "raw": "開業に必要なこと",
+        "default": "開業に必要なこと",
+        "type": "text"
+      },
+      "skills_046": {
+        "label": "表示テキスト",
+        "context": "開業に必要なことも学べます。",
+        "raw": "も学べます。",
+        "default": "も学べます。",
+        "type": "text"
+      },
+      "skills_047": {
+        "label": "表示テキスト",
+        "context": "夢をカタチにする第一歩を応援します♡",
+        "raw": "夢をカタチにする",
+        "default": "夢をカタチにする",
+        "type": "text"
+      },
+      "skills_048": {
+        "label": "表示テキスト",
+        "context": "夢をカタチにする第一歩を応援します♡",
+        "raw": "第一歩を",
+        "default": "第一歩を",
+        "type": "text"
+      },
+      "skills_049": {
+        "label": "表示テキスト",
+        "context": "夢をカタチにする第一歩を応援します♡",
+        "raw": "応援します&#9825;",
+        "default": "応援します♡",
+        "type": "text"
+      }
+    }
+  },
+  "courses": {
+    "title": "コース内容",
+    "fields": {
+      "courses_001": {
+        "label": "強調する文字",
+        "context": "初心者も安心してスタートできる♡ 好きなことを一生の仕事に♡ Choose Your Path ♡ コース内容 なりたい未来に合わせて選べる♡",
+        "raw": "初心者",
+        "default": "初心者",
+        "type": "text"
+      },
+      "courses_002": {
+        "label": "表示テキスト",
+        "context": "初心者も安心してスタートできる♡ 好きなことを一生の仕事に♡ Choose Your Path ♡ コース内容 なりたい未来に合わせて選べる♡",
+        "raw": "も",
+        "default": "も",
+        "type": "text"
+      },
+      "courses_003": {
+        "label": "表示テキスト",
+        "context": "初心者も安心してスタートできる♡ 好きなことを一生の仕事に♡ Choose Your Path ♡ コース内容 なりたい未来に合わせて選べる♡",
+        "raw": "安心して",
+        "default": "安心して",
+        "type": "text"
+      },
+      "courses_004": {
+        "label": "強調する文字",
+        "context": "初心者も安心してスタートできる♡ 好きなことを一生の仕事に♡ Choose Your Path ♡ コース内容 なりたい未来に合わせて選べる♡",
+        "raw": "スタートできる&#9825;",
+        "default": "スタートできる♡",
+        "type": "text"
+      },
+      "courses_005": {
+        "label": "強調する文字",
+        "context": "初心者も安心してスタートできる♡ 好きなことを一生の仕事に♡ Choose Your Path ♡ コース内容 なりたい未来に合わせて選べる♡",
+        "raw": "好きなこと",
+        "default": "好きなこと",
+        "type": "text"
+      },
+      "courses_006": {
+        "label": "表示テキスト",
+        "context": "初心者も安心してスタートできる♡ 好きなことを一生の仕事に♡ Choose Your Path ♡ コース内容 なりたい未来に合わせて選べる♡",
+        "raw": "を",
+        "default": "を",
+        "type": "text"
+      },
+      "courses_007": {
+        "label": "表示テキスト",
+        "context": "初心者も安心してスタートできる♡ 好きなことを一生の仕事に♡ Choose Your Path ♡ コース内容 なりたい未来に合わせて選べる♡",
+        "raw": "一生の仕事に",
+        "default": "一生の仕事に",
+        "type": "text"
+      },
+      "courses_008": {
+        "label": "表示テキスト",
+        "context": "Choose Your Path ♡",
+        "raw": "Choose Your Path &#9825;",
+        "default": "Choose Your Path ♡",
+        "type": "text"
+      },
+      "courses_009": {
+        "label": "強調する文字",
+        "context": "コース内容",
+        "raw": "コース",
+        "default": "コース",
+        "type": "text"
+      },
+      "courses_010": {
+        "label": "見出し",
+        "context": "コース内容",
+        "raw": "内容",
+        "default": "内容",
+        "type": "text"
+      },
+      "courses_011": {
+        "label": "表示テキスト",
+        "context": "なりたい未来に合わせて選べる♡",
+        "raw": "なりたい未来に合わせて選べる&#9825;",
+        "default": "なりたい未来に合わせて選べる♡",
+        "type": "text"
+      },
+      "courses_012": {
+        "label": "小見出し",
+        "context": "即戦力ネイリストコース3ヶ月",
+        "raw": "即戦力ネイリスト",
+        "default": "即戦力ネイリスト",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月"
+      },
+      "courses_013": {
+        "label": "強調する文字",
+        "context": "即戦力ネイリストコース3ヶ月",
+        "raw": "コース",
+        "default": "コース",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月"
+      },
+      "courses_014": {
+        "label": "数字",
+        "context": "即戦力ネイリストコース3ヶ月",
+        "raw": "3",
+        "default": "3",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月"
+      },
+      "courses_015": {
+        "label": "小見出し",
+        "context": "即戦力ネイリストコース3ヶ月",
+        "raw": "ヶ月",
+        "default": "ヶ月",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月"
+      },
+      "courses_016": {
+        "label": "説明文",
+        "context": "基礎技術からサロンワークまで集中的に学び、短期間でプロデビューを目指すコース",
+        "raw": "基礎技術からサロンワークまで集中的に学び、短期間でプロデビューを目指すコース",
+        "default": "基礎技術からサロンワークまで集中的に学び、短期間でプロデビューを目指すコース",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月"
+      },
+      "courses_017": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 基礎からサロンワークまで 短期集中でプロデビュー サロンワーク特化",
+        "raw": "こんな方におすすめ",
+        "default": "こんな方におすすめ",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月"
+      },
+      "courses_018": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 基礎からサロンワークまで 短期集中でプロデビュー サロンワーク特化",
+        "raw": "基礎からサロンワークまで",
+        "default": "基礎からサロンワークまで",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月"
+      },
+      "courses_019": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 基礎からサロンワークまで 短期集中でプロデビュー サロンワーク特化",
+        "raw": "短期集中でプロデビュー",
+        "default": "短期集中でプロデビュー",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月"
+      },
+      "courses_020": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 基礎からサロンワークまで 短期集中でプロデビュー サロンワーク特化",
+        "raw": "サロンワーク特化",
+        "default": "サロンワーク特化",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月"
+      },
+      "courses_021": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全240時間 （4時間×60回）",
+        "raw": "3ヶ月コース",
+        "default": "3ヶ月コース",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 240時間プラン"
+      },
+      "courses_022": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全240時間 （4時間×60回）",
+        "raw": "全",
+        "default": "全",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 240時間プラン"
+      },
+      "courses_023": {
+        "label": "数字",
+        "context": "3ヶ月コース 全240時間 （4時間×60回）",
+        "raw": "240",
+        "default": "240",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 240時間プラン"
+      },
+      "courses_024": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全240時間 （4時間×60回）",
+        "raw": "時間",
+        "default": "時間",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 240時間プラン"
+      },
+      "courses_025": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全240時間 （4時間×60回）",
+        "raw": "（4時間×60回）",
+        "default": "（4時間×60回）",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 240時間プラン"
+      },
+      "courses_026": {
+        "label": "説明文",
+        "context": "3ヶ月間で全240時間の授業を受講する、短期集中型のコースです。",
+        "raw": "3ヶ月間で全240時間の授業を受講する、短期集中型のコースです。",
+        "default": "3ヶ月間で全240時間の授業を受講する、短期集中型のコースです。",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 240時間プラン"
+      },
+      "courses_027": {
+        "label": "説明文",
+        "context": "基礎技術からサロンワークまで集中的に学び、限られた期間で効率よく技術を身につけます。",
+        "raw": "基礎技術からサロンワークまで集中的に学び、限られた期間で効率よく技術を身につけます。",
+        "default": "基礎技術からサロンワークまで集中的に学び、限られた期間で効率よく技術を身につけます。",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 240時間プラン"
+      },
+      "courses_028": {
+        "label": "説明文",
+        "context": "強い意欲を持ち、最短距離でプロデビューを目指したい方におすすめです。",
+        "raw": "強い意欲を持ち、最短距離でプロデビューを目指したい方におすすめです。",
+        "default": "強い意欲を持ち、最短距離でプロデビューを目指したい方におすすめです。",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 240時間プラン"
+      },
+      "courses_029": {
+        "label": "表示テキスト",
+        "context": "受講料¥350,000（税込）",
+        "raw": "受講料",
+        "default": "受講料",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 240時間プラン"
+      },
+      "courses_030": {
+        "label": "表示テキスト",
+        "context": "受講料¥350,000（税込）",
+        "raw": "&yen;350,000",
+        "default": "¥350,000",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 240時間プラン"
+      },
+      "courses_031": {
+        "label": "表示テキスト",
+        "context": "受講料¥350,000（税込）",
+        "raw": "（税込）",
+        "default": "（税込）",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 240時間プラン"
+      },
+      "courses_032": {
+        "label": "リンクの文字",
+        "context": "このコースを相談する›",
+        "raw": "このコースを相談する",
+        "default": "このコースを相談する",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 240時間プラン"
+      },
+      "courses_033": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全480時間 （4時間×120回）",
+        "raw": "3ヶ月コース",
+        "default": "3ヶ月コース",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 480時間プラン"
+      },
+      "courses_034": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全480時間 （4時間×120回）",
+        "raw": "全",
+        "default": "全",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 480時間プラン"
+      },
+      "courses_035": {
+        "label": "数字",
+        "context": "3ヶ月コース 全480時間 （4時間×120回）",
+        "raw": "480",
+        "default": "480",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 480時間プラン"
+      },
+      "courses_036": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全480時間 （4時間×120回）",
+        "raw": "時間",
+        "default": "時間",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 480時間プラン"
+      },
+      "courses_037": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全480時間 （4時間×120回）",
+        "raw": "（4時間×120回）",
+        "default": "（4時間×120回）",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 480時間プラン"
+      },
+      "courses_038": {
+        "label": "説明文",
+        "context": "3ヶ月間で全480時間の授業を受講する、より実践量の多い短期集中型のコースです。",
+        "raw": "3ヶ月間で全480時間の授業を受講する、より実践量の多い短期集中型のコースです。",
+        "default": "3ヶ月間で全480時間の授業を受講する、より実践量の多い短期集中型のコースです。",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 480時間プラン"
+      },
+      "courses_039": {
+        "label": "説明文",
+        "context": "基礎技術から応用技術、モデル施術、サロンワークまで、豊富な練習時間を通して即戦力となる技術を身につけます。",
+        "raw": "基礎技術から応用技術、モデル施術、サロンワークまで、豊富な練習時間を通して即戦力となる技術を身につけます。",
+        "default": "基礎技術から応用技術、モデル施術、サロンワークまで、豊富な練習時間を通して即戦力となる技術を身につけます。",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 480時間プラン"
+      },
+      "courses_040": {
+        "label": "説明文",
+        "context": "強い意欲を持ち、短期間で徹底的に学び、最短距離でプロデビューを目指したい方におすすめです。",
+        "raw": "強い意欲を持ち、短期間で徹底的に学び、最短距離でプロデビューを目指したい方におすすめです。",
+        "default": "強い意欲を持ち、短期間で徹底的に学び、最短距離でプロデビューを目指したい方におすすめです。",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 480時間プラン"
+      },
+      "courses_041": {
+        "label": "表示テキスト",
+        "context": "受講料¥450,000（税込）",
+        "raw": "受講料",
+        "default": "受講料",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 480時間プラン"
+      },
+      "courses_042": {
+        "label": "表示テキスト",
+        "context": "受講料¥450,000（税込）",
+        "raw": "&yen;450,000",
+        "default": "¥450,000",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 480時間プラン"
+      },
+      "courses_043": {
+        "label": "表示テキスト",
+        "context": "受講料¥450,000（税込）",
+        "raw": "（税込）",
+        "default": "（税込）",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 480時間プラン"
+      },
+      "courses_044": {
+        "label": "リンクの文字",
+        "context": "このコースを相談する›",
+        "raw": "このコースを相談する",
+        "default": "このコースを相談する",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・3ヶ月 ／ 480時間プラン"
+      },
+      "courses_045": {
+        "label": "小見出し",
+        "context": "即戦力ネイリストコース6ヶ月",
+        "raw": "即戦力ネイリスト",
+        "default": "即戦力ネイリスト",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月"
+      },
+      "courses_046": {
+        "label": "強調する文字",
+        "context": "即戦力ネイリストコース6ヶ月",
+        "raw": "コース",
+        "default": "コース",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月"
+      },
+      "courses_047": {
+        "label": "数字",
+        "context": "即戦力ネイリストコース6ヶ月",
+        "raw": "6",
+        "default": "6",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月"
+      },
+      "courses_048": {
+        "label": "小見出し",
+        "context": "即戦力ネイリストコース6ヶ月",
+        "raw": "ヶ月",
+        "default": "ヶ月",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月"
+      },
+      "courses_049": {
+        "label": "説明文",
+        "context": "基礎からサロンワークまで段階的に学び、自分のペースで技術を身につけるコース",
+        "raw": "基礎からサロンワークまで段階的に学び、自分のペースで技術を身につけるコース",
+        "default": "基礎からサロンワークまで段階的に学び、自分のペースで技術を身につけるコース",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月"
+      },
+      "courses_050": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 基礎からサロンワークまで 仕事や生活と両立 無理なく技術を習得",
+        "raw": "こんな方におすすめ",
+        "default": "こんな方におすすめ",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月"
+      },
+      "courses_051": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 基礎からサロンワークまで 仕事や生活と両立 無理なく技術を習得",
+        "raw": "基礎からサロンワークまで",
+        "default": "基礎からサロンワークまで",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月"
+      },
+      "courses_052": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 基礎からサロンワークまで 仕事や生活と両立 無理なく技術を習得",
+        "raw": "仕事や生活と両立",
+        "default": "仕事や生活と両立",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月"
+      },
+      "courses_053": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 基礎からサロンワークまで 仕事や生活と両立 無理なく技術を習得",
+        "raw": "無理なく技術を習得",
+        "default": "無理なく技術を習得",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月"
+      },
+      "courses_054": {
+        "label": "表示テキスト",
+        "context": "6ヶ月コース 全192時間 （4時間×48回）",
+        "raw": "6ヶ月コース",
+        "default": "6ヶ月コース",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月 ／ 192時間プラン"
+      },
+      "courses_055": {
+        "label": "表示テキスト",
+        "context": "6ヶ月コース 全192時間 （4時間×48回）",
+        "raw": "全",
+        "default": "全",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月 ／ 192時間プラン"
+      },
+      "courses_056": {
+        "label": "数字",
+        "context": "6ヶ月コース 全192時間 （4時間×48回）",
+        "raw": "192",
+        "default": "192",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月 ／ 192時間プラン"
+      },
+      "courses_057": {
+        "label": "表示テキスト",
+        "context": "6ヶ月コース 全192時間 （4時間×48回）",
+        "raw": "時間",
+        "default": "時間",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月 ／ 192時間プラン"
+      },
+      "courses_058": {
+        "label": "表示テキスト",
+        "context": "6ヶ月コース 全192時間 （4時間×48回）",
+        "raw": "（4時間×48回）",
+        "default": "（4時間×48回）",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月 ／ 192時間プラン"
+      },
+      "courses_059": {
+        "label": "説明文",
+        "context": "6ヶ月間で全192時間の授業を受講する、無理なく学べる習得型のコースです。",
+        "raw": "6ヶ月間で全192時間の授業を受講する、無理なく学べる習得型のコースです。",
+        "default": "6ヶ月間で全192時間の授業を受講する、無理なく学べる習得型のコースです。",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月 ／ 192時間プラン"
+      },
+      "courses_060": {
+        "label": "説明文",
+        "context": "基礎からサロンワークまで段階的に学び、ゆとりある期間の中で技術を着実に定着させます。",
+        "raw": "基礎からサロンワークまで段階的に学び、ゆとりある期間の中で技術を着実に定着させます。",
+        "default": "基礎からサロンワークまで段階的に学び、ゆとりある期間の中で技術を着実に定着させます。",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月 ／ 192時間プラン"
+      },
+      "courses_061": {
+        "label": "説明文",
+        "context": "仕事や生活と両立しながら、自分のペースでプロデビューを目指したい方におすすめです。",
+        "raw": "仕事や生活と両立しながら、自分のペースでプロデビューを目指したい方におすすめです。",
+        "default": "仕事や生活と両立しながら、自分のペースでプロデビューを目指したい方におすすめです。",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月 ／ 192時間プラン"
+      },
+      "courses_062": {
+        "label": "表示テキスト",
+        "context": "受講料¥330,000（税込）",
+        "raw": "受講料",
+        "default": "受講料",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月 ／ 192時間プラン"
+      },
+      "courses_063": {
+        "label": "表示テキスト",
+        "context": "受講料¥330,000（税込）",
+        "raw": "&yen;330,000",
+        "default": "¥330,000",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月 ／ 192時間プラン"
+      },
+      "courses_064": {
+        "label": "表示テキスト",
+        "context": "受講料¥330,000（税込）",
+        "raw": "（税込）",
+        "default": "（税込）",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月 ／ 192時間プラン"
+      },
+      "courses_065": {
+        "label": "リンクの文字",
+        "context": "このコースを相談する›",
+        "raw": "このコースを相談する",
+        "default": "このコースを相談する",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・6ヶ月 ／ 192時間プラン"
+      },
+      "courses_066": {
+        "label": "小見出し",
+        "context": "即戦力ネイリストコース9ヶ月",
+        "raw": "即戦力ネイリスト",
+        "default": "即戦力ネイリスト",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月"
+      },
+      "courses_067": {
+        "label": "強調する文字",
+        "context": "即戦力ネイリストコース9ヶ月",
+        "raw": "コース",
+        "default": "コース",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月"
+      },
+      "courses_068": {
+        "label": "数字",
+        "context": "即戦力ネイリストコース9ヶ月",
+        "raw": "9",
+        "default": "9",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月"
+      },
+      "courses_069": {
+        "label": "小見出し",
+        "context": "即戦力ネイリストコース9ヶ月",
+        "raw": "ヶ月",
+        "default": "ヶ月",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月"
+      },
+      "courses_070": {
+        "label": "説明文",
+        "context": "十分な練習期間を確保し、サロンワークに必要な実践力をじっくり養うコース",
+        "raw": "十分な練習期間を確保し、サロンワークに必要な実践力をじっくり養うコース",
+        "default": "十分な練習期間を確保し、サロンワークに必要な実践力をじっくり養うコース",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月"
+      },
+      "courses_071": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 基礎から応用まで じっくり着実に学べる 実践力を身につけたい",
+        "raw": "こんな方におすすめ",
+        "default": "こんな方におすすめ",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月"
+      },
+      "courses_072": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 基礎から応用まで じっくり着実に学べる 実践力を身につけたい",
+        "raw": "基礎から応用まで",
+        "default": "基礎から応用まで",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月"
+      },
+      "courses_073": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 基礎から応用まで じっくり着実に学べる 実践力を身につけたい",
+        "raw": "じっくり着実に学べる",
+        "default": "じっくり着実に学べる",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月"
+      },
+      "courses_074": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 基礎から応用まで じっくり着実に学べる 実践力を身につけたい",
+        "raw": "実践力を身につけたい",
+        "default": "実践力を身につけたい",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月"
+      },
+      "courses_075": {
+        "label": "表示テキスト",
+        "context": "9ヶ月コース 全240時間 （4時間×60回）",
+        "raw": "9ヶ月コース",
+        "default": "9ヶ月コース",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 240時間プラン"
+      },
+      "courses_076": {
+        "label": "表示テキスト",
+        "context": "9ヶ月コース 全240時間 （4時間×60回）",
+        "raw": "全",
+        "default": "全",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 240時間プラン"
+      },
+      "courses_077": {
+        "label": "数字",
+        "context": "9ヶ月コース 全240時間 （4時間×60回）",
+        "raw": "240",
+        "default": "240",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 240時間プラン"
+      },
+      "courses_078": {
+        "label": "表示テキスト",
+        "context": "9ヶ月コース 全240時間 （4時間×60回）",
+        "raw": "時間",
+        "default": "時間",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 240時間プラン"
+      },
+      "courses_079": {
+        "label": "表示テキスト",
+        "context": "9ヶ月コース 全240時間 （4時間×60回）",
+        "raw": "（4時間×60回）",
+        "default": "（4時間×60回）",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 240時間プラン"
+      },
+      "courses_080": {
+        "label": "説明文",
+        "context": "9ヶ月間で全240時間の授業を受講する、じっくり習得型のコースです。",
+        "raw": "9ヶ月間で全240時間の授業を受講する、じっくり習得型のコースです。",
+        "default": "9ヶ月間で全240時間の授業を受講する、じっくり習得型のコースです。",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 240時間プラン"
+      },
+      "courses_081": {
+        "label": "説明文",
+        "context": "十分な練習期間を確保しながら、一つひとつの技術を丁寧に身につけ、サロンワークに必要な実践力を養います。",
+        "raw": "十分な練習期間を確保しながら、一つひとつの技術を丁寧に身につけ、サロンワークに必要な実践力を養います。",
+        "default": "十分な練習期間を確保しながら、一つひとつの技術を丁寧に身につけ、サロンワークに必要な実践力を養います。",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 240時間プラン"
+      },
+      "courses_082": {
+        "label": "説明文",
+        "context": "仕事や生活と両立しながら、時間をかけて着実にプロデビューを目指したい方におすすめです。",
+        "raw": "仕事や生活と両立しながら、時間をかけて着実にプロデビューを目指したい方におすすめです。",
+        "default": "仕事や生活と両立しながら、時間をかけて着実にプロデビューを目指したい方におすすめです。",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 240時間プラン"
+      },
+      "courses_083": {
+        "label": "表示テキスト",
+        "context": "受講料¥450,000（税込）",
+        "raw": "受講料",
+        "default": "受講料",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 240時間プラン"
+      },
+      "courses_084": {
+        "label": "表示テキスト",
+        "context": "受講料¥450,000（税込）",
+        "raw": "&yen;450,000",
+        "default": "¥450,000",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 240時間プラン"
+      },
+      "courses_085": {
+        "label": "表示テキスト",
+        "context": "受講料¥450,000（税込）",
+        "raw": "（税込）",
+        "default": "（税込）",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 240時間プラン"
+      },
+      "courses_086": {
+        "label": "リンクの文字",
+        "context": "このコースを相談する›",
+        "raw": "このコースを相談する",
+        "default": "このコースを相談する",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 240時間プラン"
+      },
+      "courses_087": {
+        "label": "表示テキスト",
+        "context": "9ヶ月コース 全480時間 （4時間×120回）",
+        "raw": "9ヶ月コース",
+        "default": "9ヶ月コース",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 480時間プラン"
+      },
+      "courses_088": {
+        "label": "表示テキスト",
+        "context": "9ヶ月コース 全480時間 （4時間×120回）",
+        "raw": "全",
+        "default": "全",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 480時間プラン"
+      },
+      "courses_089": {
+        "label": "数字",
+        "context": "9ヶ月コース 全480時間 （4時間×120回）",
+        "raw": "480",
+        "default": "480",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 480時間プラン"
+      },
+      "courses_090": {
+        "label": "表示テキスト",
+        "context": "9ヶ月コース 全480時間 （4時間×120回）",
+        "raw": "時間",
+        "default": "時間",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 480時間プラン"
+      },
+      "courses_091": {
+        "label": "表示テキスト",
+        "context": "9ヶ月コース 全480時間 （4時間×120回）",
+        "raw": "（4時間×120回）",
+        "default": "（4時間×120回）",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 480時間プラン"
+      },
+      "courses_092": {
+        "label": "説明文",
+        "context": "9ヶ月間で全480時間の授業を受講する、実践重視のプロフェッショナルコースです。",
+        "raw": "9ヶ月間で全480時間の授業を受講する、実践重視のプロフェッショナルコースです。",
+        "default": "9ヶ月間で全480時間の授業を受講する、実践重視のプロフェッショナルコースです。",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 480時間プラン"
+      },
+      "courses_093": {
+        "label": "説明文",
+        "context": "基礎技術から応用技術、モデル施術、サロンワークまで、豊富な実践経験を積みながら、技術力・施術スピード・接客力を総合的に身につけます。",
+        "raw": "基礎技術から応用技術、モデル施術、サロンワークまで、豊富な実践経験を積みながら、技術力・施術スピード・接客力を総合的に身につけます。",
+        "default": "基礎技術から応用技術、モデル施術、サロンワークまで、豊富な実践経験を積みながら、技術力・施術スピード・接客力を総合的に身につけます。",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 480時間プラン"
+      },
+      "courses_094": {
+        "label": "説明文",
+        "context": "じっくり時間をかけて高い技術力を習得し、卒業後すぐに現場で活躍できるネイリストを目指したい方におすすめです。",
+        "raw": "じっくり時間をかけて高い技術力を習得し、卒業後すぐに現場で活躍できるネイリストを目指したい方におすすめです。",
+        "default": "じっくり時間をかけて高い技術力を習得し、卒業後すぐに現場で活躍できるネイリストを目指したい方におすすめです。",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 480時間プラン"
+      },
+      "courses_095": {
+        "label": "表示テキスト",
+        "context": "受講料¥550,000（税込）",
+        "raw": "受講料",
+        "default": "受講料",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 480時間プラン"
+      },
+      "courses_096": {
+        "label": "表示テキスト",
+        "context": "受講料¥550,000（税込）",
+        "raw": "&yen;550,000",
+        "default": "¥550,000",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 480時間プラン"
+      },
+      "courses_097": {
+        "label": "表示テキスト",
+        "context": "受講料¥550,000（税込）",
+        "raw": "（税込）",
+        "default": "（税込）",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 480時間プラン"
+      },
+      "courses_098": {
+        "label": "リンクの文字",
+        "context": "このコースを相談する›",
+        "raw": "このコースを相談する",
+        "default": "このコースを相談する",
+        "type": "text",
+        "subsection": "即戦力ネイリストコース・9ヶ月 ／ 480時間プラン"
+      },
+      "courses_099": {
+        "label": "小見出し",
+        "context": "アートコース",
+        "raw": "アート",
+        "default": "アート",
+        "type": "text",
+        "subsection": "アートコース"
+      },
+      "courses_100": {
+        "label": "強調する文字",
+        "context": "アートコース",
+        "raw": "コース",
+        "default": "コース",
+        "type": "text",
+        "subsection": "アートコース"
+      },
+      "courses_101": {
+        "label": "説明文",
+        "context": "アート技術に絞って、必要な内容を効率よく学べる3ヶ月のライトプラン",
+        "raw": "アート技術に絞って、必要な内容を効率よく学べる3ヶ月のライトプラン",
+        "default": "アート技術に絞って、必要な内容を効率よく学べる3ヶ月のライトプラン",
+        "type": "text",
+        "subsection": "アートコース"
+      },
+      "courses_102": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 短期間で効率よく学べる アート技術に特化 サロンで活かせる表現力",
+        "raw": "こんな方におすすめ",
+        "default": "こんな方におすすめ",
+        "type": "text",
+        "subsection": "アートコース"
+      },
+      "courses_103": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 短期間で効率よく学べる アート技術に特化 サロンで活かせる表現力",
+        "raw": "短期間で効率よく学べる",
+        "default": "短期間で効率よく学べる",
+        "type": "text",
+        "subsection": "アートコース"
+      },
+      "courses_104": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 短期間で効率よく学べる アート技術に特化 サロンで活かせる表現力",
+        "raw": "アート技術に特化",
+        "default": "アート技術に特化",
+        "type": "text",
+        "subsection": "アートコース"
+      },
+      "courses_105": {
+        "label": "表示テキスト",
+        "context": "こんな方におすすめ 短期間で効率よく学べる アート技術に特化 サロンで活かせる表現力",
+        "raw": "サロンで活かせる表現力",
+        "default": "サロンで活かせる表現力",
+        "type": "text",
+        "subsection": "アートコース"
+      },
+      "courses_106": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全24時間 （4時間×6回）",
+        "raw": "3ヶ月コース",
+        "default": "3ヶ月コース",
+        "type": "text",
+        "subsection": "アートコース ／ 24時間プラン"
+      },
+      "courses_107": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全24時間 （4時間×6回）",
+        "raw": "全",
+        "default": "全",
+        "type": "text",
+        "subsection": "アートコース ／ 24時間プラン"
+      },
+      "courses_108": {
+        "label": "数字",
+        "context": "3ヶ月コース 全24時間 （4時間×6回）",
+        "raw": "24",
+        "default": "24",
+        "type": "text",
+        "subsection": "アートコース ／ 24時間プラン"
+      },
+      "courses_109": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全24時間 （4時間×6回）",
+        "raw": "時間",
+        "default": "時間",
+        "type": "text",
+        "subsection": "アートコース ／ 24時間プラン"
+      },
+      "courses_110": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全24時間 （4時間×6回）",
+        "raw": "（4時間×6回）",
+        "default": "（4時間×6回）",
+        "type": "text",
+        "subsection": "アートコース ／ 24時間プラン"
+      },
+      "courses_111": {
+        "label": "説明文",
+        "context": "3ヶ月間で全24時間の授業を受講する、アート技術に特化したライトプランです。",
+        "raw": "3ヶ月間で全24時間の授業を受講する、アート技術に特化したライトプランです。",
+        "default": "3ヶ月間で全24時間の授業を受講する、アート技術に特化したライトプランです。",
+        "type": "text",
+        "subsection": "アートコース ／ 24時間プラン"
+      },
+      "courses_112": {
+        "label": "説明文",
+        "context": "ネイルアートの基礎やデザイン技術を中心に学び、通常のネイル施術に活かせる表現力を身につけます。",
+        "raw": "ネイルアートの基礎やデザイン技術を中心に学び、通常のネイル施術に活かせる表現力を身につけます。",
+        "default": "ネイルアートの基礎やデザイン技術を中心に学び、通常のネイル施術に活かせる表現力を身につけます。",
+        "type": "text",
+        "subsection": "アートコース ／ 24時間プラン"
+      },
+      "courses_113": {
+        "label": "説明文",
+        "context": "アート技術を重点的に学びたい方や、必要な内容を絞って効率よく受講したい方におすすめです。",
+        "raw": "アート技術を重点的に学びたい方や、必要な内容を絞って効率よく受講したい方におすすめです。",
+        "default": "アート技術を重点的に学びたい方や、必要な内容を絞って効率よく受講したい方におすすめです。",
+        "type": "text",
+        "subsection": "アートコース ／ 24時間プラン"
+      },
+      "courses_114": {
+        "label": "表示テキスト",
+        "context": "受講料¥128,000（税込）",
+        "raw": "受講料",
+        "default": "受講料",
+        "type": "text",
+        "subsection": "アートコース ／ 24時間プラン"
+      },
+      "courses_115": {
+        "label": "表示テキスト",
+        "context": "受講料¥128,000（税込）",
+        "raw": "&yen;128,000",
+        "default": "¥128,000",
+        "type": "text",
+        "subsection": "アートコース ／ 24時間プラン"
+      },
+      "courses_116": {
+        "label": "表示テキスト",
+        "context": "受講料¥128,000（税込）",
+        "raw": "（税込）",
+        "default": "（税込）",
+        "type": "text",
+        "subsection": "アートコース ／ 24時間プラン"
+      },
+      "courses_117": {
+        "label": "リンクの文字",
+        "context": "このコースを相談する›",
+        "raw": "このコースを相談する",
+        "default": "このコースを相談する",
+        "type": "text",
+        "subsection": "アートコース ／ 24時間プラン"
+      },
+      "courses_118": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全40時間 （4時間×10回）",
+        "raw": "3ヶ月コース",
+        "default": "3ヶ月コース",
+        "type": "text",
+        "subsection": "アートコース ／ 40時間プラン"
+      },
+      "courses_119": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全40時間 （4時間×10回）",
+        "raw": "全",
+        "default": "全",
+        "type": "text",
+        "subsection": "アートコース ／ 40時間プラン"
+      },
+      "courses_120": {
+        "label": "数字",
+        "context": "3ヶ月コース 全40時間 （4時間×10回）",
+        "raw": "40",
+        "default": "40",
+        "type": "text",
+        "subsection": "アートコース ／ 40時間プラン"
+      },
+      "courses_121": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全40時間 （4時間×10回）",
+        "raw": "時間",
+        "default": "時間",
+        "type": "text",
+        "subsection": "アートコース ／ 40時間プラン"
+      },
+      "courses_122": {
+        "label": "表示テキスト",
+        "context": "3ヶ月コース 全40時間 （4時間×10回）",
+        "raw": "（4時間×10回）",
+        "default": "（4時間×10回）",
+        "type": "text",
+        "subsection": "アートコース ／ 40時間プラン"
+      },
+      "courses_123": {
+        "label": "説明文",
+        "context": "3ヶ月間で全40時間の授業を受講する、アート技術をより実践的に学べるライトプランです。",
+        "raw": "3ヶ月間で全40時間の授業を受講する、アート技術をより実践的に学べるライトプランです。",
+        "default": "3ヶ月間で全40時間の授業を受講する、アート技術をより実践的に学べるライトプランです。",
+        "type": "text",
+        "subsection": "アートコース ／ 40時間プラン"
+      },
+      "courses_124": {
+        "label": "説明文",
+        "context": "基本的なアート技術から応用デザインまで、練習時間を確保しながら幅広く習得します。",
+        "raw": "基本的なアート技術から応用デザインまで、練習時間を確保しながら幅広く習得します。",
+        "default": "基本的なアート技術から応用デザインまで、練習時間を確保しながら幅広く習得します。",
+        "type": "text",
+        "subsection": "アートコース ／ 40時間プラン"
+      },
+      "courses_125": {
+        "label": "説明文",
+        "context": "ネイルアートの技術力を高めたい方や、サロンで活かせるデザインの幅を広げたい方におすすめです。",
+        "raw": "ネイルアートの技術力を高めたい方や、サロンで活かせるデザインの幅を広げたい方におすすめです。",
+        "default": "ネイルアートの技術力を高めたい方や、サロンで活かせるデザインの幅を広げたい方におすすめです。",
+        "type": "text",
+        "subsection": "アートコース ／ 40時間プラン"
+      },
+      "courses_126": {
+        "label": "表示テキスト",
+        "context": "受講料¥178,000（税込）",
+        "raw": "受講料",
+        "default": "受講料",
+        "type": "text",
+        "subsection": "アートコース ／ 40時間プラン"
+      },
+      "courses_127": {
+        "label": "表示テキスト",
+        "context": "受講料¥178,000（税込）",
+        "raw": "&yen;178,000",
+        "default": "¥178,000",
+        "type": "text",
+        "subsection": "アートコース ／ 40時間プラン"
+      },
+      "courses_128": {
+        "label": "表示テキスト",
+        "context": "受講料¥178,000（税込）",
+        "raw": "（税込）",
+        "default": "（税込）",
+        "type": "text",
+        "subsection": "アートコース ／ 40時間プラン"
+      },
+      "courses_129": {
+        "label": "リンクの文字",
+        "context": "このコースを相談する›",
+        "raw": "このコースを相談する",
+        "default": "このコースを相談する",
+        "type": "text",
+        "subsection": "アートコース ／ 40時間プラン"
+      },
+      "courses_130": {
+        "label": "表示テキスト",
+        "context": "※分割払いも可能ですのでご相談ください。",
+        "raw": "※分割払いも可能ですのでご相談ください。",
+        "default": "※分割払いも可能ですのでご相談ください。",
+        "type": "text"
+      }
+    }
+  },
+  "art": {
+    "title": "卒業までにできるアート",
+    "fields": {
+      "art_001": {
+        "label": "表示テキスト",
+        "context": "＼Graduation Nails／",
+        "raw": "Graduation Nails",
+        "default": "Graduation Nails",
+        "type": "text"
+      },
+      "art_002": {
+        "label": "見出し",
+        "context": "卒業までにできるアート",
+        "raw": "卒業までにできる",
+        "default": "卒業までにできる",
+        "type": "text"
+      },
+      "art_003": {
+        "label": "強調する文字",
+        "context": "卒業までにできるアート",
+        "raw": "アート",
+        "default": "アート",
+        "type": "text"
+      },
+      "art_004": {
+        "label": "説明文",
+        "context": "基礎から応用まで、段階的にステップアップ！卒業までに習得できるアートの一例をご紹介します。",
+        "raw": "基礎から応用まで、段階的にステップアップ！",
+        "default": "基礎から応用まで、段階的にステップアップ！",
+        "type": "text"
+      },
+      "art_005": {
+        "label": "説明文",
+        "context": "基礎から応用まで、段階的にステップアップ！卒業までに習得できるアートの一例をご紹介します。",
+        "raw": "卒業までに習得できるアートの一例をご紹介します。",
+        "default": "卒業までに習得できるアートの一例をご紹介します。",
+        "type": "text"
+      },
+      "art_006": {
+        "label": "表示テキスト",
+        "context": "たくさんのアートを習得して、あなたらしい「好き」を仕事にしていきましょう♡",
+        "raw": "たくさんのアートを習得して、",
+        "default": "たくさんのアートを習得して、",
+        "type": "text"
+      },
+      "art_007": {
+        "label": "表示テキスト",
+        "context": "たくさんのアートを習得して、あなたらしい「好き」を仕事にしていきましょう♡",
+        "raw": "あなたらしい「好き」を仕事にしていきましょう&#9825;",
+        "default": "あなたらしい「好き」を仕事にしていきましょう♡",
+        "type": "text"
+      }
+    }
+  },
+  "future": {
+    "title": "卒業後",
+    "fields": {
+      "future_001": {
+        "label": "表示テキスト",
+        "context": "After Graduation",
+        "raw": "After Graduation",
+        "default": "After Graduation",
+        "type": "text"
+      },
+      "future_002": {
+        "label": "見出し",
+        "context": "卒業後",
+        "raw": "卒業後",
+        "default": "卒業後",
+        "type": "text"
+      },
+      "future_003": {
+        "label": "表示テキスト",
+        "context": "ICA 池袋キャリアアカデミー を卒業すると...",
+        "raw": "ICA 池袋キャリアアカデミー を卒業すると...",
+        "default": "ICA 池袋キャリアアカデミー を卒業すると...",
+        "type": "text"
+      },
+      "future_004": {
+        "label": "小見出し",
+        "context": "人気サロンへ就職･----･✦----･",
+        "raw": "人気サロンへ就職",
+        "default": "人気サロンへ就職",
+        "type": "text"
+      },
+      "future_005": {
+        "label": "説明文",
+        "context": "提携サロンへ優先紹介可能！即戦力としてデビューできます。",
+        "raw": "提携サロンへ優先紹介可能！",
+        "default": "提携サロンへ優先紹介可能！",
+        "type": "text"
+      },
+      "future_006": {
+        "label": "説明文",
+        "context": "提携サロンへ優先紹介可能！即戦力としてデビューできます。",
+        "raw": "即戦力としてデビューできます。",
+        "default": "即戦力としてデビューできます。",
+        "type": "text"
+      },
+      "future_007": {
+        "label": "表示テキスト",
+        "context": "人気サロンへ就職･----･✦----･ 提携サロンへ優先紹介可能！即戦力としてデビューできます。 Debut !♡",
+        "raw": "Debut !&#9825;",
+        "default": "Debut !♡",
+        "type": "text"
+      },
+      "future_008": {
+        "label": "小見出し",
+        "context": "自宅サロン開業☆----･✦----⌂",
+        "raw": "自宅サロン開業",
+        "default": "自宅サロン開業",
+        "type": "text"
+      },
+      "future_009": {
+        "label": "説明文",
+        "context": "低コストで開業するノウハウを伝授。自分のペースで働くライフスタイルを実現します。",
+        "raw": "低コストで開業するノウハウを伝授。自分のペースで働くライフスタイルを実現します。",
+        "default": "低コストで開業するノウハウを伝授。自分のペースで働くライフスタイルを実現します。",
+        "type": "text"
+      },
+      "future_010": {
+        "label": "表示テキスト",
+        "context": "自宅サロン開業☆----･✦----⌂ 低コストで開業するノウハウを伝授。自分のペースで働くライフスタイルを実現します。 My Salon ♡",
+        "raw": "My Salon &#9825;",
+        "default": "My Salon ♡",
+        "type": "text"
+      },
+      "future_011": {
+        "label": "小見出し",
+        "context": "フリーランスで･----･✦----♡",
+        "raw": "フリーランスで",
+        "default": "フリーランスで",
+        "type": "text"
+      },
+      "future_012": {
+        "label": "説明文",
+        "context": "シェアサロンを利用したり、出張ネイリストとして自由に働く道もサポートします。",
+        "raw": "シェアサロンを利用したり、出張ネイリストとして自由に働く道もサポートします。",
+        "default": "シェアサロンを利用したり、出張ネイリストとして自由に働く道もサポートします。",
+        "type": "text"
+      },
+      "future_013": {
+        "label": "表示テキスト",
+        "context": "フリーランスで･----･✦----♡ シェアサロンを利用したり、出張ネイリストとして自由に働く道もサポートします。 Freelance ♡",
+        "raw": "Freelance &#9825;",
+        "default": "Freelance ♡",
+        "type": "text"
+      },
+      "future_014": {
+        "label": "表示テキスト",
+        "context": "あなたらしい未来へ、一歩踏み出すお手伝いをします。",
+        "raw": "あなたらしい未来へ、",
+        "default": "あなたらしい未来へ、",
+        "type": "text"
+      },
+      "future_015": {
+        "label": "強調する文字",
+        "context": "あなたらしい未来へ、一歩踏み出すお手伝いをします。",
+        "raw": "一歩踏み出すお手伝い",
+        "default": "一歩踏み出すお手伝い",
+        "type": "text"
+      },
+      "future_016": {
+        "label": "表示テキスト",
+        "context": "あなたらしい未来へ、一歩踏み出すお手伝いをします。",
+        "raw": "をします。",
+        "default": "をします。",
+        "type": "text"
+      }
+    }
+  },
+  "steps": {
+    "title": "入校手順",
+    "fields": {
+      "steps_001": {
+        "label": "表示テキスト",
+        "context": "How to Join",
+        "raw": "How to Join",
+        "default": "How to Join",
+        "type": "text"
+      },
+      "steps_002": {
+        "label": "見出し",
+        "context": "入校手順",
+        "raw": "入校手順",
+        "default": "入校手順",
+        "type": "text"
+      },
+      "steps_003": {
+        "label": "小見出し",
+        "context": "お問い合わせ",
+        "raw": "お問い合わせ",
+        "default": "お問い合わせ",
+        "type": "text"
+      },
+      "steps_004": {
+        "label": "説明文",
+        "context": "公式LINEからお気軽にご連絡ください。",
+        "raw": "公式",
+        "default": "公式",
+        "type": "text"
+      },
+      "steps_005": {
+        "label": "強調する文字",
+        "context": "公式LINEからお気軽にご連絡ください。",
+        "raw": "LINE",
+        "default": "LINE",
+        "type": "text"
+      },
+      "steps_006": {
+        "label": "説明文",
+        "context": "公式LINEからお気軽にご連絡ください。",
+        "raw": "から",
+        "default": "から",
+        "type": "text"
+      },
+      "steps_007": {
+        "label": "説明文",
+        "context": "公式LINEからお気軽にご連絡ください。",
+        "raw": "お気軽にご連絡ください。",
+        "default": "お気軽にご連絡ください。",
+        "type": "text"
+      },
+      "steps_008": {
+        "label": "小見出し",
+        "context": "無料LINE相談する",
+        "raw": "無料LINE相談する",
+        "default": "無料LINE相談する",
+        "type": "text"
+      },
+      "steps_009": {
+        "label": "説明文",
+        "context": "スクールの雰囲気を見学し、コースの相談をします。",
+        "raw": "スクールの雰囲気を",
+        "default": "スクールの雰囲気を",
+        "type": "text"
+      },
+      "steps_010": {
+        "label": "強調する文字",
+        "context": "スクールの雰囲気を見学し、コースの相談をします。",
+        "raw": "見学",
+        "default": "見学",
+        "type": "text"
+      },
+      "steps_011": {
+        "label": "説明文",
+        "context": "スクールの雰囲気を見学し、コースの相談をします。",
+        "raw": "し、",
+        "default": "し、",
+        "type": "text"
+      },
+      "steps_012": {
+        "label": "説明文",
+        "context": "スクールの雰囲気を見学し、コースの相談をします。",
+        "raw": "コースの",
+        "default": "コースの",
+        "type": "text"
+      },
+      "steps_013": {
+        "label": "強調する文字",
+        "context": "スクールの雰囲気を見学し、コースの相談をします。",
+        "raw": "相談",
+        "default": "相談",
+        "type": "text"
+      },
+      "steps_014": {
+        "label": "説明文",
+        "context": "スクールの雰囲気を見学し、コースの相談をします。",
+        "raw": "をします。",
+        "default": "をします。",
+        "type": "text"
+      },
+      "steps_015": {
+        "label": "小見出し",
+        "context": "入校手続き",
+        "raw": "入校手続き",
+        "default": "入校手続き",
+        "type": "text"
+      },
+      "steps_016": {
+        "label": "説明文",
+        "context": "申し込み用紙への記入と、授業料のお支払い。",
+        "raw": "申し込み用紙への記入と、",
+        "default": "申し込み用紙への記入と、",
+        "type": "text"
+      },
+      "steps_017": {
+        "label": "説明文",
+        "context": "申し込み用紙への記入と、授業料のお支払い。",
+        "raw": "授業料の",
+        "default": "授業料の",
+        "type": "text"
+      },
+      "steps_018": {
+        "label": "強調する文字",
+        "context": "申し込み用紙への記入と、授業料のお支払い。",
+        "raw": "お支払い",
+        "default": "お支払い",
+        "type": "text"
+      },
+      "steps_019": {
+        "label": "小見出し",
+        "context": "レッスン開始",
+        "raw": "レッスン開始",
+        "default": "レッスン開始",
+        "type": "text"
+      },
+      "steps_020": {
+        "label": "説明文",
+        "context": "教材を受け取り、いよいよネイリストへの第一歩！",
+        "raw": "教材を受け取り、",
+        "default": "教材を受け取り、",
+        "type": "text"
+      },
+      "steps_021": {
+        "label": "説明文",
+        "context": "教材を受け取り、いよいよネイリストへの第一歩！",
+        "raw": "いよいよネイリストへの",
+        "default": "いよいよネイリストへの",
+        "type": "text"
+      },
+      "steps_022": {
+        "label": "強調する文字",
+        "context": "教材を受け取り、いよいよネイリストへの第一歩！",
+        "raw": "第一歩！",
+        "default": "第一歩！",
+        "type": "text"
+      },
+      "steps_023": {
+        "label": "表示テキスト",
+        "context": "First Step ! まずは無料カウンセリング・見学へお越しください。 無料カウンセリング・見学を予約する",
+        "raw": "First Step !",
+        "default": "First Step !",
+        "type": "text"
+      },
+      "steps_024": {
+        "label": "表示テキスト",
+        "context": "First Step ! まずは無料カウンセリング・見学へお越しください。 無料カウンセリング・見学を予約する",
+        "raw": "まずは",
+        "default": "まずは",
+        "type": "text"
+      },
+      "steps_025": {
+        "label": "強調する文字",
+        "context": "First Step ! まずは無料カウンセリング・見学へお越しください。 無料カウンセリング・見学を予約する",
+        "raw": "無料カウンセリング・見学",
+        "default": "無料カウンセリング・見学",
+        "type": "text"
+      },
+      "steps_026": {
+        "label": "表示テキスト",
+        "context": "First Step ! まずは無料カウンセリング・見学へお越しください。 無料カウンセリング・見学を予約する",
+        "raw": "へお越しください。",
+        "default": "へお越しください。",
+        "type": "text"
+      },
+      "steps_027": {
+        "label": "リンクの文字",
+        "context": "無料カウンセリング・見学を予約する",
+        "raw": "無料カウンセリング・見学を予約する",
+        "default": "無料カウンセリング・見学を予約する",
+        "type": "text"
+      },
+      "steps_028": {
+        "label": "表示テキスト",
+        "context": "LINE ※公式LINE 24時間受付中！",
+        "raw": "※公式",
+        "default": "※公式",
+        "type": "text"
+      },
+      "steps_029": {
+        "label": "強調する文字",
+        "context": "LINE ※公式LINE 24時間受付中！",
+        "raw": "LINE",
+        "default": "LINE",
+        "type": "text"
+      },
+      "steps_030": {
+        "label": "表示テキスト",
+        "context": "LINE ※公式LINE 24時間受付中！",
+        "raw": "24時間受付中！",
+        "default": "24時間受付中！",
+        "type": "text"
+      }
+    }
+  },
+  "access": {
+    "title": "アクセス",
+    "fields": {
+      "access_001": {
+        "label": "表示テキスト",
+        "context": "Location アクセス",
+        "raw": "Location",
+        "default": "Location",
+        "type": "text"
+      },
+      "access_002": {
+        "label": "表示テキスト",
+        "context": "アクセス",
+        "raw": "アクセス",
+        "default": "アクセス",
+        "type": "text"
+      },
+      "access_003": {
+        "label": "リンクの文字",
+        "context": "マップで見る",
+        "raw": "マップで見る",
+        "default": "マップで見る",
+        "type": "text"
+      },
+      "access_004": {
+        "label": "表示テキスト",
+        "context": "ICA 池袋キャリアアカデミー",
+        "raw": "ICA",
+        "default": "ICA",
+        "type": "text"
+      },
+      "access_005": {
+        "label": "表示テキスト",
+        "context": "ICA 池袋キャリアアカデミー",
+        "raw": "池袋",
+        "default": "池袋",
+        "type": "text"
+      },
+      "access_006": {
+        "label": "表示テキスト",
+        "context": "ICA 池袋キャリアアカデミー",
+        "raw": "キャリアアカデミー",
+        "default": "キャリアアカデミー",
+        "type": "text"
+      },
+      "access_007": {
+        "label": "表示テキスト",
+        "context": "・所在地",
+        "raw": "・所在地",
+        "default": "・所在地",
+        "type": "text"
+      },
+      "access_008": {
+        "label": "表示テキスト",
+        "context": "〒171-0014池袋駅 徒歩5分",
+        "raw": "〒171-0014",
+        "default": "〒171-0014",
+        "type": "text"
+      },
+      "access_address": {
+        "label": "住所（地図にも反映）",
+        "context": "所在地",
+        "raw": "東京都豊島区池袋2丁目53-12 中條ビル7F",
+        "default": "東京都豊島区池袋2丁目53-12 中條ビル7F",
+        "type": "text"
+      },
+      "access_009": {
+        "label": "表示テキスト",
+        "context": "〒171-0014池袋駅 徒歩5分",
+        "raw": "池袋駅",
+        "default": "池袋駅",
+        "type": "text"
+      },
+      "access_010": {
+        "label": "表示テキスト",
+        "context": "〒171-0014池袋駅 徒歩5分",
+        "raw": "徒歩5分",
+        "default": "徒歩5分",
+        "type": "text"
+      },
+      "access_011": {
+        "label": "表示テキスト",
+        "context": "・営業時間",
+        "raw": "・営業時間",
+        "default": "・営業時間",
+        "type": "text"
+      },
+      "access_012": {
+        "label": "表示テキスト",
+        "context": "平日：11:00 - 21:00土日祝：10:00 - 20:00",
+        "raw": "平日：11:00 - 21:00",
+        "default": "平日：11:00 - 21:00",
+        "type": "text"
+      },
+      "access_013": {
+        "label": "表示テキスト",
+        "context": "平日：11:00 - 21:00土日祝：10:00 - 20:00",
+        "raw": "土日祝：10:00 - 20:00",
+        "default": "土日祝：10:00 - 20:00",
+        "type": "text"
+      },
+      "access_014": {
+        "label": "表示テキスト",
+        "context": "・お問い合わせ",
+        "raw": "・お問い合わせ",
+        "default": "・お問い合わせ",
+        "type": "text"
+      },
+      "access_015": {
+        "label": "リンクの文字",
+        "context": "LINEで相談する",
+        "raw": "LINEで相談する",
+        "default": "LINEで相談する",
+        "type": "text"
+      }
+    }
+  },
+  "faq": {
+    "title": "よくある質問",
+    "fields": {
+      "faq_001": {
+        "label": "表示テキスト",
+        "context": "＼よくある質問／",
+        "raw": "よくある質問",
+        "default": "よくある質問",
+        "type": "text"
+      }
+    }
+  },
+  "sister": {
+    "title": "姉妹アカデミー",
+    "fields": {
+      "sister_001": {
+        "label": "表示テキスト",
+        "context": "Sister Academy",
+        "raw": "Sister Academy",
+        "default": "Sister Academy",
+        "type": "text"
+      },
+      "sister_002": {
+        "label": "見出し",
+        "context": "姉妹アカデミーはこちら",
+        "raw": "姉妹アカデミーは",
+        "default": "姉妹アカデミーは",
+        "type": "text"
+      },
+      "sister_003": {
+        "label": "強調する文字",
+        "context": "姉妹アカデミーはこちら",
+        "raw": "こちら",
+        "default": "こちら",
+        "type": "text"
+      },
+      "sister_004": {
+        "label": "説明文",
+        "context": "東京・池袋で、実力派占い師から本格的な占いを学べる姉妹校です。副業からプロデビューまで、あなたの「なりたい」を全力でサポートします。",
+        "raw": "東京・池袋で、実力派占い師から本格的な占いを学べる姉妹校です。副業からプロデビューまで、あなたの「なりたい」を全力でサポートします。",
+        "default": "東京・池袋で、実力派占い師から本格的な占いを学べる姉妹校です。副業からプロデビューまで、あなたの「なりたい」を全力でサポートします。",
+        "type": "text"
+      },
+      "sister_005": {
+        "label": "表示テキスト",
+        "context": "東京・池袋で、実力派占い師から本格的な占いを学べる姉妹校です。副業からプロデビューまで、あなたの「なりたい」を全力でサポートします。 サイトを見る",
+        "raw": "サイトを見る",
+        "default": "サイトを見る",
+        "type": "text"
+      }
+    }
+  },
+  "manga": {
+    "title": "漫画のご紹介",
+    "fields": {
+      "manga_001": {
+        "label": "見出し",
+        "context": "当スクールを漫画でご紹介",
+        "raw": "当スクールを",
+        "default": "当スクールを",
+        "type": "text"
+      },
+      "manga_002": {
+        "label": "見出し",
+        "context": "当スクールを漫画でご紹介",
+        "raw": "漫画",
+        "default": "漫画",
+        "type": "text"
+      },
+      "manga_003": {
+        "label": "見出し",
+        "context": "当スクールを漫画でご紹介",
+        "raw": "でご紹介",
+        "default": "でご紹介",
+        "type": "text"
+      },
+      "manga_004": {
+        "label": "リンクの文字",
+        "context": "気になる続きはこちらをタップ！",
+        "raw": "気になる続きはこちらをタップ！",
+        "default": "気になる続きはこちらをタップ！",
+        "type": "text"
+      }
+    }
+  },
+  "footer": {
+    "title": "共通フッター・無料相談ボタン",
+    "fields": {
+      "footer_001": {
+        "label": "表示テキスト",
+        "context": "© ICA 池袋キャリアアカデミー",
+        "raw": "ICA 池袋キャリアアカデミー",
+        "default": "ICA 池袋キャリアアカデミー",
+        "type": "text"
+      },
+      "footer_002": {
+        "label": "リンクの文字",
+        "context": "特定商取引法に基づく表記",
+        "raw": "特定商取引法に基づく表記",
+        "default": "特定商取引法に基づく表記",
+        "type": "text"
+      },
+      "footer_003": {
+        "label": "リンクの文字",
+        "context": "無料相談はこちらから！",
+        "raw": "無料相談",
+        "default": "無料相談",
+        "type": "text"
+      },
+      "footer_004": {
+        "label": "リンクの文字",
+        "context": "無料相談はこちらから！",
+        "raw": "はこちらから！",
+        "default": "はこちらから！",
+        "type": "text"
+      }
+    }
+  },
+  "legal": {
+    "title": "特定商取引法に基づく表記",
+    "fields": {
+      "legal_heading_1": {
+        "label": "ページ見出し・前半",
+        "context": "ページ見出し",
+        "raw": "特定商取引法に基づく",
+        "default": "特定商取引法に基づく",
+        "type": "text"
+      },
+      "legal_heading_2": {
+        "label": "ページ見出し・後半",
+        "context": "ページ見出し",
+        "raw": "表記",
+        "default": "表記",
+        "type": "text"
+      },
+      "legal_business_label": {
+        "label": "事業者名の項目名",
+        "context": "事業者名",
+        "raw": "事業者名",
+        "default": "事業者名",
+        "type": "text"
+      },
+      "legal_business": {
+        "label": "事業者名",
+        "context": "事業者名",
+        "raw": "ICA池袋キャリアアカデミー",
+        "default": "ICA池袋キャリアアカデミー",
+        "type": "text"
+      },
+      "legal_manager_label": {
+        "label": "運営責任者の項目名",
+        "context": "運営責任者",
+        "raw": "運営責任者",
+        "default": "運営責任者",
+        "type": "text"
+      },
+      "legal_manager": {
+        "label": "運営責任者",
+        "context": "運営責任者",
+        "raw": "福崎なつみ",
+        "default": "福崎なつみ",
+        "type": "text"
+      },
+      "legal_address_label": {
+        "label": "住所の項目名",
+        "context": "住所",
+        "raw": "住所",
+        "default": "住所",
+        "type": "text"
+      },
+      "legal_address": {
+        "label": "住所",
+        "context": "住所",
+        "raw": "東京都豊島区池袋2丁目53-12 中條ビル7F",
+        "default": "東京都豊島区池袋2丁目53-12 中條ビル7F",
+        "type": "text"
+      },
+      "legal_hours_label": {
+        "label": "営業時間の項目名",
+        "context": "営業時間",
+        "raw": "営業時間",
+        "default": "営業時間",
+        "type": "text"
+      },
+      "legal_hours": {
+        "label": "営業時間",
+        "context": "営業時間",
+        "raw": "12:00～22:00",
+        "default": "12:00～22:00",
+        "type": "text"
+      },
+      "legal_service_label": {
+        "label": "事業内容の項目名",
+        "context": "事業内容",
+        "raw": "事業内容",
+        "default": "事業内容",
+        "type": "text"
+      },
+      "legal_service": {
+        "label": "事業内容",
+        "context": "事業内容",
+        "raw": "アカデミー",
+        "default": "アカデミー",
+        "type": "text"
+      },
+      "legal_price_label": {
+        "label": "料金の項目名",
+        "context": "料金",
+        "raw": "料金",
+        "default": "料金",
+        "type": "text"
+      },
+      "legal_price_link": {
+        "label": "料金リンクの文字",
+        "context": "料金",
+        "raw": "こちら",
+        "default": "こちら",
+        "type": "text"
+      },
+      "legal_price_suffix": {
+        "label": "料金リンク後の文字",
+        "context": "料金",
+        "raw": "をご覧ください",
+        "default": "をご覧ください",
+        "type": "text"
+      },
+      "legal_contact_label": {
+        "label": "お問い合わせの項目名",
+        "context": "お問い合わせ",
+        "raw": "お問い合わせ",
+        "default": "お問い合わせ",
+        "type": "text"
+      },
+      "legal_email": {
+        "label": "メールアドレス（メールリンクにも反映）",
+        "context": "お問い合わせ",
+        "raw": "kaimono.ofuku@gmail.com",
+        "default": "kaimono.ofuku@gmail.com",
+        "type": "email"
+      },
+      "legal_back": {
+        "label": "戻るボタンの文字",
+        "context": "戻るボタン",
+        "raw": "トップページに戻る",
+        "default": "トップページに戻る",
+        "type": "text"
+      }
+    }
+  }
+}

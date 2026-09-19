@@ -4,14 +4,14 @@
 ?>
 <!-- フッター -->
 <footer class="site-footer">
-  <div class="ft-copy">© <?php echo esc_html( date('Y') ); ?> ICA 池袋キャリアアカデミー</div>
-  <div class="ft-legal"><a href="<?php echo esc_url(fee_legal_page_url()); ?>">特定商取引法に基づく表記</a></div>
+  <div class="ft-copy">© <?php echo esc_html( date('Y') ); ?> <?php fee_text('footer_001'); ?></div>
+  <div class="ft-legal"><a href="<?php echo esc_url(fee_legal_page_url()); ?>"><?php fee_text('footer_002'); ?></a></div>
 </footer>
 
 <!-- 画面下部固定CTA -->
 <div class="cta-bar">
   <a class="cta-bar-btn" href="https://lin.ee/IdR5PPL" target="_blank" rel="noopener noreferrer" aria-label="無料相談はこちらから">
-    <span class="cta-bar-tx"><span class="cta-bar-em">無料相談</span>はこちらから！</span>
+    <span class="cta-bar-tx"><span class="cta-bar-em"><?php fee_text('footer_003'); ?></span><?php fee_text('footer_004'); ?></span>
   </a>
 </div>
 

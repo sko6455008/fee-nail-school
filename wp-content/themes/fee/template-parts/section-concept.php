@@ -106,13 +106,13 @@ $u = get_template_directory_uri();
 
   <!-- 紹介文 -->
   <p class="cc-copy">
-    <span class="cc-skills"><span>技術</span> <span>スピード</span> <span>接客</span> <span>デザイン</span> <span>集客</span></span>
-    <span class="cc-message"><span>5つを身につけて、</span><span>卒業後すぐ現場へ！</span></span>
+    <span class="cc-skills"><span><?php fee_text('concept_001'); ?></span> <span><?php fee_text('concept_002'); ?></span> <span><?php fee_text('concept_003'); ?></span> <span><?php fee_text('concept_004'); ?></span> <span><?php fee_text('concept_005'); ?></span></span>
+    <span class="cc-message"><span><?php fee_text('concept_006'); ?></span><span><?php fee_text('concept_007'); ?></span></span>
   </p>
 
   <!-- 締め -->
   <div class="cc-close">
-    <div class="cc-lead"><span class="sl">＼</span>プロのネイリストを目指すなら<span class="sl">／</span></div>
-    <div class="cc-name"><span class="u"><span class="fee">Ica</span>池袋キャリアアカデミー</span></div>
+    <div class="cc-lead"><span class="sl">＼</span><?php fee_text('concept_008'); ?><span class="sl">／</span></div>
+    <div class="cc-name"><span class="u"><span class="fee"><?php fee_text('concept_009'); ?></span><?php fee_text('concept_010'); ?></span></div>
   </div>
 </section>

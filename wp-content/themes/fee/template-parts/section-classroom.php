@@ -91,10 +91,10 @@ $u = get_template_directory_uri();
     <span class="cl-spark" style="left:23.5vw;top:4.5vw;font-size:1.1em;"></span>
     <span class="cl-spark" style="right:27vw;top:2vw;font-size:1.4em;"></span>
     <span class="cl-spark" style="right:24vw;top:5vw;font-size:1em;"></span>
-    <div class="cl-script">Classroom</div>
-    <h2 class="cl-title">授業風景</h2>
+    <div class="cl-script"><?php fee_text('classroom_001'); ?></div>
+    <h2 class="cl-title"><?php fee_text('classroom_002'); ?></h2>
     <span class="cl-title-line"></span>
-    <div class="cl-sub">少人数制で、楽しくしっかり学べる&#9825;</div>
+    <div class="cl-sub"><?php fee_text('classroom_003'); ?></div>
   </div>
 
   <!-- 写真グリッド（支給写真 classroom0N.png。02と05、03と04は表示位置を入れ替えている） -->
@@ -113,18 +113,18 @@ $u = get_template_directory_uri();
   <!-- インフォバー -->
   <div class="cl-info">
     <div>
-      <span class="cl-osusume">こんな方におすすめ！</span>
+      <span class="cl-osusume"><?php fee_text('classroom_004'); ?></span>
       <ul class="cl-check">
-        <li><span class="ck ck-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>ネイルが大好き！</li>
-        <li><span class="ck ck-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>手に職をつけて働きたい！</li>
-        <li><span class="ck ck-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>自分のサロンを持ちたい！</li>
-        <li><span class="ck ck-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>オシャレな仕事がしたい！</li>
+        <li><span class="ck ck-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('classroom_005'); ?></li>
+        <li><span class="ck ck-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('classroom_006'); ?></li>
+        <li><span class="ck ck-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('classroom_007'); ?></li>
+        <li><span class="ck ck-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('classroom_008'); ?></li>
       </ul>
     </div>
-    <div class="cl-blob"><span class="tx">夢をカタチにする<br>第一歩を<br>応援します&#9825;</span></div>
+    <div class="cl-blob"><span class="tx"><?php fee_text('classroom_009'); ?><br><?php fee_text('classroom_010'); ?><br><?php fee_text('classroom_011'); ?></span></div>
     <div class="cl-msg">
-      <span class="cl-msg-t">少人数制だから、一人ひとりにしっかり向き合います。</span>
-      <p class="cl-msg-b">わからないことはすぐに質問できて、苦手なところも丁寧にサポート。<br>楽しく学びながら、着実にスキルを身につけられる環境です。</p>
+      <span class="cl-msg-t"><?php fee_text('classroom_012'); ?></span>
+      <p class="cl-msg-b"><?php fee_text('classroom_013'); ?><br><?php fee_text('classroom_014'); ?></p>
       <img src="<?php echo $u; ?>/assets/images/classroom3.png" alt="" loading="lazy">
     </div>
   </div>

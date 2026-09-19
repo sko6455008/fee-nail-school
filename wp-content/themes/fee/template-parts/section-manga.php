@@ -65,14 +65,14 @@ $mg_link = home_url('/manga/');
 }
 </style>
 <section class="mg" id="manga">
-  <h2 class="mg-head">当スクールを<span class="mg-em">漫画<i class="mg-sp mg-sp1"></i><i class="mg-sp mg-sp2"></i><i class="mg-sp mg-sp3"></i></span>でご紹介</h2>
+  <h2 class="mg-head"><?php fee_text('manga_001'); ?><span class="mg-em"><?php fee_text('manga_002'); ?><i class="mg-sp mg-sp1"></i><i class="mg-sp mg-sp2"></i><i class="mg-sp mg-sp3"></i></span><?php fee_text('manga_003'); ?></h2>
 
   <img class="mg-photo" src="<?php echo $u; ?>/assets/images/manga.webp"
        alt="毎日の仕事にうんざりしていた主人公が、ネイルを仕事にしたいと思いスクールを見つけるまでの漫画"
        width="1704" height="643" loading="lazy" decoding="async">
 
   <a class="mg-btn" href="<?php echo esc_url($mg_link); ?>">
-    <span class="mg-btn-tx">気になる続きはこちらをタップ！</span>
+    <span class="mg-btn-tx"><?php fee_text('manga_004'); ?></span>
     <span class="mg-btn-ic" aria-hidden="true"></span>
   </a>
 </section>

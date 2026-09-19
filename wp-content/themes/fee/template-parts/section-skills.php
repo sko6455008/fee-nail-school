@@ -193,92 +193,92 @@ $u = get_template_directory_uri();
   <div class="sk-head">
     <span class="sk-head-photo sk-head-l<?php echo fee_img_is_custom('skills', 'head_l') ? ' is-custom' : ''; ?>"><img <?php fee_img_attr('skills', 'head_l'); ?> loading="lazy"></span>
     <span class="sk-head-photo sk-head-r"><img <?php fee_img_attr('skills', 'head_r'); ?> loading="lazy"></span>
-    <span class="sk-bubble sk-bub-l">初心者も<br>安心して<br>スタートできる<span class="ht">&#9825;</span></span>
-    <span class="sk-bubble sk-bub-r">好きなことを<br>一生の仕事に<span class="ht">&#9825;</span></span>
+    <span class="sk-bubble sk-bub-l"><?php fee_text('skills_001'); ?><br><?php fee_text('skills_002'); ?><br><?php fee_text('skills_003'); ?><span class="ht">&#9825;</span></span>
+    <span class="sk-bubble sk-bub-r"><?php fee_text('skills_004'); ?><br><?php fee_text('skills_005'); ?><span class="ht">&#9825;</span></span>
     <span class="sk-spark" style="left:31vw;top:4vw;color:#f2c94c;font-size:1.7em;"></span>
     <span class="sk-spark" style="left:33vw;top:8vw;color:#c5a6ec;font-size:1.2em;"></span>
     <span class="sk-spark" style="right:32vw;top:3vw;color:#ef9ec2;font-size:2em;">&#9825;</span>
     <span class="sk-spark" style="right:30vw;top:7.5vw;color:#f2c94c;font-size:1.3em;"></span>
-    <div class="sk-script">Skills You Learn</div>
+    <div class="sk-script"><?php fee_text('skills_006'); ?></div>
     <span class="sk-swoosh"></span>
-    <h2 class="sk-title">学べる技術</h2>
-    <div><span class="sk-ribbon"><span class="sk-ribbon-phrase">基礎から応用まで、</span><span class="sk-ribbon-phrase">トータルで身につける！</span></span></div>
+    <h2 class="sk-title"><?php fee_text('skills_007'); ?></h2>
+    <div><span class="sk-ribbon"><span class="sk-ribbon-phrase"><?php fee_text('skills_008'); ?></span><span class="sk-ribbon-phrase"><?php fee_text('skills_009'); ?></span></span></div>
   </div>
 
   <!-- カード -->
   <div class="sk-grid">
     <div class="sk-card sk-c1">
       <span class="sk-num">01</span>
-      <h3 class="sk-t"><span class="u">基礎知識</span></h3>
+      <h3 class="sk-t"><span class="u"><?php fee_text('skills_010'); ?></span></h3>
       <span class="sk-ic"><img src="<?php echo $u; ?>/assets/images/skills1.png" alt="" loading="lazy" decoding="async"></span>
       <ul class="sk-list">
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>爪の構造</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>病気トラブル</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>衛生管理</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>道具の名称</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>技術理論</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_011'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_012'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_013'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_014'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_015'); ?></li>
       </ul>
       <span class="sk-photo"><img <?php fee_img_attr('skills', '1'); ?> loading="lazy"></span>
     </div>
     <div class="sk-card sk-c2">
       <span class="sk-num">02</span>
-      <h3 class="sk-t"><span class="u">ネイルケア</span></h3>
+      <h3 class="sk-t"><span class="u"><?php fee_text('skills_016'); ?></span></h3>
       <span class="sk-ic"><img src="<?php echo $u; ?>/assets/images/skills2.png" alt="" loading="lazy" decoding="async"></span>
       <ul class="sk-list">
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>ファイリング</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>ハンドケア</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>フットケア</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>ウォーターケア</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_017'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_018'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_019'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_020'); ?></li>
       </ul>
       <span class="sk-photo"><img <?php fee_img_attr('skills', '2'); ?> loading="lazy"></span>
     </div>
     <div class="sk-card sk-c3">
       <span class="sk-num">03</span>
-      <h3 class="sk-t"><span class="u">マシーンケア</span></h3>
+      <h3 class="sk-t"><span class="u"><?php fee_text('skills_021'); ?></span></h3>
       <span class="sk-ic"><img src="<?php echo $u; ?>/assets/images/skills3.png" alt="" loading="lazy" decoding="async"></span>
       <ul class="sk-list">
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>マシーンケア基礎</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>オフ</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>プレパレーション</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>フィルイン</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_022'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_023'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_024'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_025'); ?></li>
       </ul>
       <span class="sk-photo"><img <?php fee_img_attr('skills', '3'); ?> loading="lazy"></span>
     </div>
     <div class="sk-card sk-c4">
       <span class="sk-num">04</span>
-      <h3 class="sk-t"><span class="u">長さ出し・補強</span></h3>
+      <h3 class="sk-t"><span class="u"><?php fee_text('skills_026'); ?></span></h3>
       <span class="sk-ic"><img src="<?php echo $u; ?>/assets/images/skills4.png" alt="" loading="lazy" decoding="async"></span>
       <ul class="sk-list">
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>ジェル</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>チップ</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>アクリル技術</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_027'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_028'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_029'); ?></li>
       </ul>
       <span class="sk-photo"><img <?php fee_img_attr('skills', '4'); ?> loading="lazy"></span>
     </div>
     <div class="sk-card sk-c5">
       <span class="sk-num">05</span>
-      <h3 class="sk-t"><span class="u">ネイルアート</span></h3>
+      <h3 class="sk-t"><span class="u"><?php fee_text('skills_030'); ?></span></h3>
       <span class="sk-ic"><img src="<?php echo $u; ?>/assets/images/skills5.png" alt="" loading="lazy" decoding="async"></span>
       <ul class="sk-list">
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>ワンカラー</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>ラメグラ</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>マグネット</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>トレンドデザイン</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_031'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_032'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_033'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_034'); ?></li>
       </ul>
       <span class="sk-photo"><img <?php fee_img_attr('skills', '5'); ?> loading="lazy"></span>
     </div>
     <div class="sk-card sk-c6">
       <span class="sk-num">06</span>
-      <h3 class="sk-t"><span class="u">サロンワーク技術</span></h3>
+      <h3 class="sk-t"><span class="u"><?php fee_text('skills_035'); ?></span></h3>
       <span class="sk-ic"><img src="<?php echo $u; ?>/assets/images/skills6.png" alt="" loading="lazy" decoding="async"></span>
       <ul class="sk-list">
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>ヒアリング方法</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>メニュー提案</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>施術中の声かけ</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>手元の見せ方</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>時間管理</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>接客マナー</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>ノウハウ</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_036'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_037'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_038'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_039'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_040'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_041'); ?></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span><?php fee_text('skills_042'); ?></li>
       </ul>
       <span class="sk-photo"><img <?php fee_img_attr('skills', '6'); ?> loading="lazy"></span>
     </div>
@@ -288,12 +288,12 @@ $u = get_template_directory_uri();
   <div class="sk-kaigyo">
     <span class="sk-kaigyo-photo"><img src="<?php echo $u; ?>/assets/images/parts/sk-salon.webp" alt="サロンの内装" loading="lazy"></span>
     <div class="sk-kaigyo-c">
-      <span class="sk-kaigyo-ribbon">＋開業サポート&#10024;</span>
-      <div class="sk-kaigyo-t1">ネイル技術、場所・道具、手続き、集客、運営体制など、</div>
-      <div class="sk-kaigyo-t2"><span class="p">開業に必要なこと</span>も学べます。</div>
+      <span class="sk-kaigyo-ribbon"><?php fee_text('skills_043'); ?></span>
+      <div class="sk-kaigyo-t1"><?php fee_text('skills_044'); ?></div>
+      <div class="sk-kaigyo-t2"><span class="p"><?php fee_text('skills_045'); ?></span><?php fee_text('skills_046'); ?></div>
     </div>
     <div class="sk-kaigyo-r">
-      <span class="tx">夢をカタチにする<br>第一歩を<br>応援します&#9825;</span>
+      <span class="tx"><?php fee_text('skills_047'); ?><br><?php fee_text('skills_048'); ?><br><?php fee_text('skills_049'); ?></span>
       <span class="sk-bt"><img src="<?php echo $u; ?>/assets/images/classroom3.png" alt="" loading="lazy" decoding="async"></span>
     </div>
   </div>

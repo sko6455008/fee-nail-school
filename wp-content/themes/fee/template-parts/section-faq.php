@@ -104,7 +104,7 @@ $fq_colors = [
     <span class="fq-deco" style="right:31vw;top:3vw;color:#8ad6df;font-size:1.6em;">&#10022;</span>
     <span class="fq-deco" style="right:26vw;top:6vw;color:#ef7fae;font-size:1.9em;transform:rotate(12deg);">&#9825;</span>
     <div class="fq-qa"><span class="q">Q</span><span class="amp">&amp;</span><span class="a">A</span></div>
-    <div class="fq-jp"><span class="sl">＼</span>よくある質問<span class="sl">／</span></div>
+    <div class="fq-jp"><span class="sl">＼</span><?php fee_text('faq_001'); ?><span class="sl">／</span></div>
   </div>
 
   <!-- アコーディオン -->

@@ -69,14 +69,14 @@ $sa_link = 'https://lutina-academy.jp/';
   <span class="sa-deco" style="right:15vw;top:11vw;font-size:2.2em;color:#f7a8c6;"></span>
 
   <div class="sa-head">
-    <div class="sa-script">Sister Academy</div>
-    <h2 class="sa-title">姉妹アカデミーは<span class="pk">こちら</span></h2>
+    <div class="sa-script"><?php fee_text('sister_001'); ?></div>
+    <h2 class="sa-title"><?php fee_text('sister_002'); ?><span class="pk"><?php fee_text('sister_003'); ?></span></h2>
   </div>
 
   <a class="sa-card" href="<?php echo esc_url($sa_link); ?>" target="_blank" rel="noopener noreferrer">
     <div class="sa-body">
-      <p class="sa-txt">東京・池袋で、実力派占い師から本格的な占いを学べる姉妹校です。副業からプロデビューまで、あなたの「なりたい」を全力でサポートします。</p>
-      <span class="sa-btn">サイトを見る
+      <p class="sa-txt"><?php fee_text('sister_004'); ?></p>
+      <span class="sa-btn"><?php fee_text('sister_005'); ?>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 13.5V19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 19V8a1.5 1.5 0 0 1 1.5-1.5H10"/></svg>
       </span>
     </div>
