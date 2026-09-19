@@ -395,6 +395,37 @@ function fee_create_manga_page() {
 }
 add_action('init', 'fee_create_manga_page', 20);
 
+// 特定商取引法に基づく表記（/legal/）。テーマのアップロード時にもページを用意する。
+// 表示は page-legal.php が担当し、既存ページや管理画面での削除は上書きしない。
+function fee_create_legal_page() {
+    if (get_option('fee_legal_page_created')) {
+        return;
+    }
+    if (get_page_by_path('legal')) {
+        update_option('fee_legal_page_created', 1, false);
+        return;
+    }
+    $page_id = wp_insert_post([
+        'post_type'      => 'page',
+        'post_status'    => 'publish',
+        'post_title'     => '特定商取引法に基づく表記',
+        'post_name'      => 'legal',
+        'post_content'   => '',
+        'comment_status' => 'closed',
+        'ping_status'    => 'closed',
+    ], true);
+    if (!is_wp_error($page_id) && $page_id) {
+        update_option('fee_legal_page_created', 1, false);
+    }
+}
+add_action('init', 'fee_create_legal_page', 20);
+
+// パーマリンク設定が異なる環境でも、固定ページの実際のURLを使う。
+function fee_legal_page_url() {
+    $page = get_page_by_path('legal');
+    return $page ? get_permalink($page) : home_url('/legal/');
+}
+
 // 表示用のQ&A一覧を返す。戻り値: [ ['q' => 質問, 'a' => 回答HTML], ... ]
 // 公開中の投稿のみ。すべて削除するとQ&Aセクション自体が非表示になる。
 function fee_faq_items() {

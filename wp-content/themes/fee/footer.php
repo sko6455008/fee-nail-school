@@ -1,10 +1,11 @@
 <?php
-// 共通フッター（LP・漫画ページで共用）
+// 共通フッター（LP・漫画・表記ページで共用）
 // フッター・画面下部固定CTA・ハンバーガーメニューの開閉JS。スタイルは header.php 側にある。
 ?>
 <!-- フッター -->
 <footer class="site-footer">
   <div class="ft-copy">© <?php echo esc_html( date('Y') ); ?> ICA 池袋キャリアアカデミー</div>
+  <div class="ft-legal"><a href="<?php echo esc_url(fee_legal_page_url()); ?>">特定商取引法に基づく表記</a></div>
 </footer>
 
 <!-- 画面下部固定CTA -->
