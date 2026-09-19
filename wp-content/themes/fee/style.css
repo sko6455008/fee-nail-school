@@ -116,3 +116,218 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .pulse-btn { animation: none; }
 }
+
+/* SP readability. Keep course styles and the desktop composition unchanged.
+   #pagetop takes precedence over the section templates' inline styles. */
+@media (max-width: 768px) {
+  /* Text sizes have a pixel floor so small phones do not shrink the copy. */
+  #pagetop :is(.cc-lead, .rs-tx, .st-sub, .cl-sub, .gl-sub, .gl-foot,
+    .ar-sub, .ar-foot, .hj-tx, .hj-first-tx,
+    .acard2-txt, .pcfaq2-a-text, .sa-txt) {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  #pagetop :is(.rs-title, .st-title, .cl-title, .gl-t2, .sk-title,
+    .ar-title, .ah-jp, .sa-title) {
+    font-size: clamp(28px, 7.2vw, 40px);
+    line-height: 1.5;
+    letter-spacing: .06em;
+  }
+  #pagetop :is(.rs-why, .cl-script, .gl-script, .sk-script, .ar-script,
+    .ah-script, .sa-script) {
+    font-size: clamp(26px, 6.6vw, 36px);
+  }
+  #pagetop :is(.st-lead, .st-ribbon, .cm-name, .cm-model-t, .cm-model-r,
+    .cl-sub, .gl-sub, .gl-foot, .sk-ribbon, .ar-title, .ar-sub, .ar-foot,
+    .hj-t, .hj-first-tx, .acard2-ttl, .sa-title) {
+    text-wrap: balance;
+  }
+
+  /* Hero and campaign */
+  #pagetop .fv { height: calc(113.4vw + 132px); }
+  #pagetop .fv-ribbon { font-size: clamp(14px, 3.5vw, 20px); }
+  #pagetop .fv-college { font-size: clamp(16px, 4.7vw, 28px); letter-spacing: .04em; }
+  #pagetop .fv-badge { left: 65vw; width: 29vw; height: 29vw; }
+  #pagetop .fv-badge-l2 { font-size: clamp(14px, 3.7vw, 22px); }
+  #pagetop .fv-badge-l3 { font-size: clamp(12px, 3.3vw, 20px); }
+  #pagetop .fv-btns { left: 20vw; width: 60vw; gap: 10px; }
+  #pagetop .fv-btns :is(.btn-pink, .btn-white) {
+    box-sizing: border-box; min-height: 46px; padding: 12px 16px; font-size: 16px;
+  }
+  #pagetop .cp-strip { font-size: clamp(14px, 3.7vw, 22px); line-height: 1.7; padding: 12px 8px; }
+  #pagetop .cp-strip .sl { padding: 0; }
+  #pagetop .cp-usually { font-size: clamp(14px, 3.9vw, 24px); }
+  #pagetop .cp-cta { left: 6vw; width: 88vw; min-height: 48px; }
+  #pagetop .cp-cta .t1 { font-size: clamp(24px, 7.4vw, 46px); }
+  #pagetop .cp-cta .t2 { font-size: clamp(16px, 4.25vw, 26px); }
+
+  /* Concept */
+  #pagetop .cc-copy { font-size: clamp(18px, 4.5vw, 24px); line-height: 1.9; }
+  #pagetop .cc-skills { font-size: clamp(18px, 4.8vw, 30px); }
+  #pagetop .cc-lead { padding: 0 16px; letter-spacing: .06em; }
+  #pagetop .cc-name { font-size: clamp(24px, 6vw, 36px); }
+
+  /* Academy introduction: give the copy its own column. */
+  #pagetop .rs-band { font-size: 16px; line-height: 1.6; }
+  #pagetop .rs-six { flex-wrap: wrap; gap: 4px 12px; padding: 8px 16px; }
+  #pagetop .rs-six .pre { font-size: 16px; line-height: 1.6; }
+  #pagetop .rs-six .big { font-size: 26px; }
+  #pagetop .rs-grid { gap: 14px; margin-top: 20px; }
+  #pagetop .rs-card {
+    grid-template-columns: minmax(0, 1fr) 45%;
+    grid-template-rows: auto 1fr; gap: 8px 12px; padding: 18px 14px; min-height: 190px;
+  }
+  #pagetop .rs-ic { grid-column: 1; grid-row: 1; width: 44px; height: 44px; }
+  #pagetop .rs-body { grid-column: 1; grid-row: 2; align-self: start; }
+  #pagetop .rs-t { font-size: 20px; margin-bottom: 8px; }
+  #pagetop .rs-t .c { font-size: 1.1em; }
+  #pagetop .rs-t::after { margin-top: 8px; }
+  #pagetop .rs-pic { grid-column: 2; grid-row: 1 / 3; }
+
+  /* Seven strengths */
+  #pagetop .st-lead { font-size: 16px; line-height: 1.8; padding: 0 16px; }
+  #pagetop :is(.st-grid4, .st-grid3) { gap: 14px; }
+  #pagetop .st-card {
+    --icw: 68px;
+    grid-template-columns: 68px minmax(0, 1fr); gap: 12px;
+    min-height: 156px; padding: 20px 14px;
+  }
+  #pagetop .st-num { width: 32px; height: 32px; top: 10px; left: 10px; font-size: 18px; }
+  #pagetop .st-ic { margin-top: 20px; }
+  #pagetop .st-body { min-width: 0; }
+  #pagetop .st-ribbon { font-size: 18px; line-height: 1.5; letter-spacing: .04em; padding: .3em .65em; }
+  #pagetop .st-big { font-size: 24px; line-height: 1.5; }
+  #pagetop .st-sub { margin-top: 8px; }
+  #pagetop .st-close { font-size: clamp(15px, 4.3vw, 24px); }
+
+  /* Comparison: keep both schools side by side, with room for wrapping. */
+  #pagetop .cm-grid { grid-template-columns: 60% 40%; }
+  #pagetop :is(.cm-l, .cm-r) { min-width: 0; padding: 16px 10px; }
+  #pagetop .cm-name { font-size: 16px; line-height: 1.6; letter-spacing: 0; }
+  #pagetop .cm-name .cm-mk, #pagetop .cm-school-name { display: block; }
+  #pagetop :is(.cm-stat, .cm-phrase) { display: inline-block; }
+  #pagetop .cm-model-t { flex-wrap: wrap; column-gap: 0; }
+  #pagetop :is(.cm-oursc, .cm-other, .cm-tag, .cm-pill,
+    .cm-koma-s, .cm-koma3, .cm-short, .cm-model-t, .cm-model-s,
+    .cm-model-r, .cm-paid-row, .cm-r5-t, .cm-r5r) {
+    font-size: 16px; line-height: 1.7; letter-spacing: .02em;
+  }
+  #pagetop .cm-oursc { padding: .3em 1em; }
+  #pagetop .cm-pill { padding: .25em .65em; }
+  #pagetop .cm-koma { width: 100%; padding: 14px 8px; }
+  #pagetop .cm-koma-t { font-size: 20px; gap: 4px; }
+  #pagetop :is(.cm-koma-t, .cm-model-t) .cm-slash { display: none; }
+  #pagetop .cm-koma3 .n { font-size: 1.75em; }
+  #pagetop .cm-model-s { margin-top: 8px; }
+  #pagetop .cm-zerobox { padding: 14px 6px; }
+  #pagetop .cm-zero { display: grid; grid-template-columns: auto auto auto; justify-content: center; gap: 4px; }
+  #pagetop .cm-zero .t { font-size: 16px; }
+  #pagetop .cm-zero .n { font-size: 54px; }
+  #pagetop .cm-zero .y { font-size: 24px; }
+  #pagetop .cm-zero .t:last-child { grid-column: 1 / -1; }
+  #pagetop .cm-frees { gap: 8px; margin-top: 12px; }
+  #pagetop .cm-free { height: auto; min-height: 52px; padding: 8px; border-radius: 12px; gap: 8px; }
+  #pagetop .cm-free .cm-ic { --icsz: 32px; }
+  #pagetop .cm-free .t { font-size: 18px; white-space: normal; }
+  #pagetop .cm-free3 + .t { font-size: 16px; }
+  #pagetop .cm-paid { padding: 0 4px; }
+  #pagetop .cm-paid-row { flex-direction: column; gap: 6px; padding: 14px 0; text-align: center; }
+  #pagetop .cm-paid-row .cm-ic { --icsz: 28px; }
+  #pagetop :is(.cm-r5l, .cm-r5r) { flex-direction: column; gap: 8px; text-align: center; }
+  #pagetop .cm-r5l .n { font-size: 56px; }
+  #pagetop .cm-r5-n .s { font-size: 16px; }
+  #pagetop .cm-r5r .n { font-size: 40px; }
+
+  /* Classroom, gallery and art */
+  #pagetop .cl-head { padding-top: 24vw; }
+  #pagetop .cl-head-photo { top: 0; }
+  #pagetop :is(.cl-sub, .gl-sub, .gl-foot, .ar-sub, .ar-foot) {
+    padding-right: 20px; padding-left: 20px; letter-spacing: .04em;
+  }
+  #pagetop .gl-t1 { font-size: 22px; }
+
+  /* Skills: full-width, uncropped photos above the readable learning list. */
+  #pagetop .sk-head { display: flex; flex-direction: column; align-items: center; padding: 20px 16px; }
+  #pagetop .sk-bub-r {
+    position: relative; inset: auto; order: 1; margin: 16px auto 0;
+    font-size: 14px; line-height: 1.6; padding: 10px 20px; transform: none;
+  }
+  #pagetop .sk-bub-r::after { display: none; }
+  #pagetop .sk-ribbon { font-size: 16px; line-height: 1.7; letter-spacing: .04em; max-width: 100%; }
+  #pagetop .sk-ribbon-phrase { display: inline-block; }
+  #pagetop .sk-grid { grid-auto-rows: auto; gap: 14px; }
+  #pagetop .sk-card {
+    grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto auto;
+    padding: 20px 16px; gap: 14px;
+  }
+  #pagetop .sk-num { top: 20px; left: 12px; width: 30px; height: 30px; font-size: 18px; }
+  #pagetop .sk-t { grid-column: 1 / -1; grid-row: 1; font-size: 20px; padding: 0 40px; line-height: 1.6; }
+  #pagetop .sk-ic { position: absolute; grid-column: auto; grid-row: auto; right: 14px; top: 18px; width: 36px; height: 36px; --icsz: 30px; }
+  #pagetop .sk-list {
+    grid-column: 1; grid-row: 3; min-width: 0;
+    display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 12px;
+  }
+  #pagetop .sk-list li { font-size: 16px; line-height: 1.7; margin-bottom: 0; padding: 4px 0; gap: 6px; align-items: flex-start; text-wrap: balance; }
+  #pagetop .sk-list .ck { font-size: 14px; margin-top: 3px; }
+  #pagetop .sk-photo { grid-column: 1; grid-row: 2; min-height: 0; align-self: start; width: 100%; }
+  #pagetop .sk-photo img { position: static; width: 100%; height: auto; object-fit: contain; }
+  #pagetop .sk-kaigyo { grid-template-columns: 80px minmax(0, 1fr); gap: 14px; padding: 18px 14px; }
+  #pagetop .sk-kaigyo-photo { height: 100%; min-height: 100px; }
+  #pagetop .sk-kaigyo-ribbon { font-size: 16px; line-height: 1.6; letter-spacing: .02em; padding: .3em .6em; }
+  #pagetop .sk-kaigyo-t2 { font-size: 16px; line-height: 1.8; }
+
+  /* Future: enlarge text only; retain the original alternating photo layout. */
+  #pagetop .fu-script { font-size: clamp(26px, 6.6vw, 36px); }
+  #pagetop .fu-t1 { font-size: clamp(28px, 7.2vw, 40px); }
+  #pagetop .fu-t2 { font-size: max(18px, 3.6vw); }
+  #pagetop .fu-t { font-size: max(18px, 3.8vw); }
+  #pagetop .fu-body { font-size: max(16px, 2.8vw); }
+  #pagetop .fu-foot { font-size: max(16px, 3.2vw); }
+  #pagetop .fu-sign { font-size: max(18px, 4.4vw); }
+
+  /* Enrollment */
+  #pagetop .hj-grid { gap: 14px; }
+  #pagetop .hj-card { grid-template-columns: 64px minmax(0, 1fr); gap: 12px; padding: 20px 16px; }
+  #pagetop .hj-num { width: 28px; height: 28px; top: 8px; left: 8px; font-size: 18px; }
+  #pagetop .hj-ring { grid-column: 1; grid-row: 1 / 4; width: 64px; height: 64px; --icsz: 64px; }
+  #pagetop .hj-t { grid-column: 2; grid-row: 1; font-size: 20px; white-space: normal; line-height: 1.6; margin: 0; }
+  #pagetop .hj-dot { grid-column: 2; grid-row: 2; margin: 0; }
+  #pagetop .hj-tx { grid-column: 2; grid-row: 3; margin: 0; }
+  #pagetop .hj-tx br { display: none; }
+  #pagetop .hj-first { padding: 24px 18px; }
+  #pagetop .hj-first-row { gap: 14px; }
+  #pagetop .hj-first-script { font-size: 28px; }
+  #pagetop .hj-first-tx { white-space: normal; text-align: center; }
+  #pagetop .hj-first-btn { min-height: 48px; height: auto; width: 100%; font-size: 16px; padding: 12px 16px; line-height: 1.6; white-space: normal; text-align: center; }
+  #pagetop .hj-first-note { font-size: 14px; line-height: 1.7; margin-top: 14px; }
+
+  /* Access */
+  #pagetop .ac2-inner { padding: 28px 16px; }
+  #pagetop .ac2-body { gap: 16px; margin-top: 28px; }
+  #pagetop .ac2-mapbtn { font-size: 16px; min-height: 44px; }
+  #pagetop .acard2 { padding: 22px 16px; gap: 16px; font-size: 16px; }
+  #pagetop .acard2-ttl { font-size: 20px; line-height: 1.6; }
+  #pagetop .acard2-school-name { display: inline-block; }
+  #pagetop .acard2-h { font-size: 16px; }
+  #pagetop .acard2-ic { width: 32px; height: 32px; }
+  #pagetop .acard2-row { gap: 10px; }
+  #pagetop .acard2-row > div { min-width: 0; }
+  #pagetop .acard2-tel { font-size: 18px; line-height: 1.8; }
+
+  /* FAQ and sister school */
+  #pagetop .fq-jp { font-size: 24px; letter-spacing: .06em; }
+  #pagetop .pcfaq2-q { gap: 10px; padding: 16px 14px; }
+  #pagetop .pcfaq2-badge { width: 32px; height: 32px; }
+  #pagetop .pcfaq2-qt { min-width: 0; font-size: 18px; line-height: 1.6; }
+  #pagetop .pcfaq2-plus { width: 28px; height: 28px; }
+  #pagetop .pcfaq2-a-in { margin: 8px 0 2px; padding: 14px; }
+  #pagetop .pcfaq2-a-badge { width: 28px; height: 28px; }
+  #pagetop .sa-card { padding: 24px 20px; }
+  #pagetop .sa-txt { text-align: left; }
+  #pagetop .sa-btn { min-height: 48px; font-size: 16px; line-height: 1.6; }
+  body .ft-copy { font-size: 14px; line-height: 1.7; padding-right: 16px; padding-left: 16px; }
+}
+
+@media (max-width: 360px) {
+  #pagetop .sk-list { grid-template-columns: minmax(0, 1fr); }
+}

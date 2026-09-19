@@ -210,7 +210,7 @@ $u = get_template_directory_uri();
       <span class="cm-spark" style="left:5vw;top:5.2vw;font-size:1.9em;"></span>
       <span class="cm-spark" style="left:2.6vw;top:3.4vw;font-size:1.2em;"></span>
       <div class="cm-name">
-        <span class="cm-mk"><span class="fee">Ica</span>池袋キャリアアカデミー</span>
+        <span class="cm-mk"><span class="fee">Ica</span>池袋<span class="cm-school-name">キャリアアカデミー</span></span>
       </div>
       <span class="cm-oursc">当スクール</span>
     </div>
@@ -238,7 +238,7 @@ $u = get_template_directory_uri();
           <span class="cm-mk"><span class="n">1</span>コマ<span class="n">4</span>時間</span>
           <span class="cm-slash r"></span>
         </div>
-        <div class="cm-koma-s">総授業時間 <span class="n">480</span> 時間<span class="pc">　</span><span class="sp"></span>1時間あたり <span class="n">875</span> 円</div>
+        <div class="cm-koma-s">総授業時間 <span class="cm-stat"><span class="n">480</span> 時間</span><span class="pc">　</span><span class="sp"></span>1時間あたり <span class="cm-stat"><span class="n">875</span> 円</span></div>
       </div>
     </div>
     <div class="cm-r cm-row2">
@@ -249,11 +249,11 @@ $u = get_template_directory_uri();
     <!-- 行3: モデル -->
     <div class="cm-l cm-row3">
       <div class="cm-model-t">
-        <span class="cm-slash"></span>モデルはスクールが用意！<span class="cm-slash r"></span>
+        <span class="cm-slash"></span><span class="cm-model-copy"><span class="cm-phrase">モデルは</span><span class="cm-phrase">スクールが用意！</span></span><span class="cm-slash r"></span>
       </div>
       <div class="cm-model-s">自分で探す<span class="cm-mk">必要なし</span></div>
     </div>
-    <div class="cm-r cm-row3"><div class="cm-model-r">自分でモデルを探す<br>必要がある</div></div>
+    <div class="cm-r cm-row3"><div class="cm-model-r"><span class="cm-phrase">自分で</span><span class="cm-phrase">モデルを探す</span><br>必要がある</div></div>
 
     <!-- 行4: 0円 -->
     <div class="cm-l cm-row4">

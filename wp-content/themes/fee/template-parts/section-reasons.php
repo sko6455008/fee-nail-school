@@ -27,7 +27,7 @@ $u = get_template_directory_uri();
 .rs-title .pk { color: #ec5a96; }
 .rs-six { margin-top: 0.3vw; display: flex; align-items: center; justify-content: center; gap: 1.2vw;
   font-family: var(--font-jp); }
-.rs-six .pre { font-size: 1.5em; font-weight: 600; color: #3a3230; }
+.rs-six .pre { font-size: 1.7em; font-weight: 600; color: #3a3230; }
 .rs-six .big { font-size: 2.9em; font-weight: 700; color: #2f2a28; }
 .rs-six .big .n { color: #e8397f; font-size: 1.3em; padding-right: .05em; }
 .rs-deco { position: absolute; pointer-events: none; }
@@ -94,7 +94,7 @@ $u = get_template_directory_uri();
   .rs-title { font-size: 3.8em; }
   /* デザイン準拠: 「〜が選ばれる」と「6つの理由」を2行積みに */
   .rs-six { flex-direction: column; gap: 0.5vw; }
-  .rs-six .pre { font-size: 1.3em; }
+  .rs-six .pre { font-size: 1.7em; }
   .rs-six .big { font-size: 2.6em; }
   /* 全カードとも見出し1〜2行＋一言のみで中身の量が揃うため、min-height で高さを固定する
      （支給デザインのカード高さ 約26vw に合わせている） */

@@ -183,23 +183,26 @@ function fee_image_slots() {
                              'desc' => $note_alpha],
                 '1' => ['label' => '01 基礎知識',       'file' => 'skills01.png',       'alt' => '基礎知識のテキスト教材'],
                 '2' => ['label' => '02 ネイルケア',     'file' => 'skills02.png',       'alt' => 'ネイルケアの実習'],
-                '3' => ['label' => '03 マシーンケア',   'file' => 'parts/sk-p3.webp',   'alt' => 'マシーンケアの実習'],
-                '4' => ['label' => '04 長さ出し・補強', 'file' => 'parts/sk-p4.webp',   'alt' => '長さ出しの作品例'],
-                '5' => ['label' => '05 ネイルアート',   'file' => 'parts/sk-p5.webp',   'alt' => 'カラフルなネイルアート'],
+                '3' => ['label' => '03 マシーンケア',   'file' => 'skills-machine-care.png', 'alt' => 'ネイルマシーンを使ったケアの施術'],
+                '4' => ['label' => '04 長さ出し・補強', 'file' => 'skills-extension-reinforcement.png', 'alt' => '筆を使った長さ出し・補強の施術'],
+                '5' => ['label' => '05 ネイルアート',   'file' => 'skills-nail-art.jpg', 'alt' => 'ピンクのフラワーネイルアート'],
                 '6' => ['label' => '06 サロンワーク技術', 'file' => 'skills06.png',     'alt' => 'サロンワーク研修の様子'],
             ],
         ],
         'courses' => [
-            'title'    => 'コース内容（写真4枚）',
+            'title'    => 'コース内容（写真6枚）',
             'priority' => 270, // LP: 学べる技術 の次
-            'size'     => [390, 349], // コース見出しの写真2枚（即戦力養成 / アートライト）
+            'size'     => [390, 349], // 各コースの見出し写真（SPでは正方形で表示）
             'items' => [
                 // 見出し左右は背景の上に直接置く飾りなので、透過されていないと成立しない
                 'head_l' => ['label' => '見出しの左の写真', 'file' => 'corse_left.png', 'alt' => '', 'size' => [259, 357],
                              'desc' => $note_alpha . '差し替えると、余白を切り詰めた絵柄がそのまま枠に収まる表示に切り替わります。'],
                 'head_r' => ['label' => '見出しの右の写真', 'file' => 'corse_right.png', 'alt' => '', 'size' => [351, 355],
                              'desc' => $note_alpha . '差し替えると、余白を切り詰めた絵柄がそのまま枠に収まる表示に切り替わります。'],
-                '1' => ['label' => '即戦力ネイリスト養成コース', 'file' => 'course01.jpg',  'alt' => '即戦力ネイリスト養成コースの作品例'],
+                // 既存の設定キーは残し、6ヶ月・9ヶ月だけ独立した画像枠にする。
+                '1' => ['label' => '即戦力ネイリストコース 3ヶ月', 'file' => 'course01.jpg',  'alt' => '即戦力ネイリスト養成コースの作品例'],
+                '6m' => ['label' => '即戦力ネイリストコース 6ヶ月', 'file' => 'course-6months.jpg', 'alt' => '6ヶ月コースの作品例：レオパード柄フレンチネイル'],
+                '9m' => ['label' => '即戦力ネイリストコース 9ヶ月', 'file' => 'course-9months.jpg', 'alt' => '9ヶ月コースの作品例：ビジューと赤いリボンのネイル'],
                 '2' => ['label' => 'アートライトプラン',         'file' => 'course02.jpeg', 'alt' => 'アートライトプランの作品例'],
             ],
         ],
@@ -210,7 +213,7 @@ function fee_image_slots() {
             'items' => [
                 '1' => ['label' => '人気サロンへ就職',       'file' => 'parts/fu-p1.webp', 'alt' => 'サロンで施術したネイル', 'size' => [250, 252]],
                 '2' => ['label' => '自宅サロン開業',         'file' => 'parts/fu-p2.webp', 'alt' => '自宅サロンでのネイル', 'size' => [250, 303]],
-                '3' => ['label' => 'フリーランスとして活躍', 'file' => 'parts/fu-p3.webp', 'alt' => 'フリーランスネイリストの作品', 'size' => [250, 297]],
+                '3' => ['label' => 'フリーランスで', 'file' => 'parts/fu-p3.webp', 'alt' => 'フリーランスネイリストの作品', 'size' => [250, 297]],
             ],
         ],
     ];

@@ -202,7 +202,7 @@ $u = get_template_directory_uri();
     <div class="sk-script">Skills You Learn</div>
     <span class="sk-swoosh"></span>
     <h2 class="sk-title">学べる技術</h2>
-    <div><span class="sk-ribbon">基礎から応用まで、トータルで身につける！</span></div>
+    <div><span class="sk-ribbon"><span class="sk-ribbon-phrase">基礎から応用まで、</span><span class="sk-ribbon-phrase">トータルで身につける！</span></span></div>
   </div>
 
   <!-- カード -->
@@ -273,7 +273,7 @@ $u = get_template_directory_uri();
       <span class="sk-ic"><img src="<?php echo $u; ?>/assets/images/skills6.png" alt="" loading="lazy" decoding="async"></span>
       <ul class="sk-list">
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>ヒアリング方法</li>
-        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>メニュー提案の仕方</li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>メニュー提案</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>施術中の声かけ</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>手元の見せ方</li>
         <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5 10-11"/></svg></span>時間管理</li>

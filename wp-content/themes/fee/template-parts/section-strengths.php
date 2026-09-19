@@ -91,16 +91,16 @@ $u = get_template_directory_uri();
 .st-grid3 .st-c6 .st-sub { font-size: 1.25em; }
 .st-grid3 .st-c7 .st-sub { font-size: 1.3em; }
 
-/* --- 締めの一言 --- */
-.st-close { position: relative; z-index: 1; text-align: center; padding: 2vw 0 2.6vw;
-  font-weight: 700; font-size: 1.75em; }
-.st-close .c1 { color: #ef8bab; }
-.st-close .c2 { color: #f0a63c; }
-.st-close .c3 { color: #5bbfc9; }
-.st-close .dark { color: #3a3230; display: block; margin-top: .2em; } /* 校名が長くなったので締めの一文は2行目に分ける */
-.st-close .fee { font-family: var(--font-script); color: #e0569a; font-size: 1.25em; padding: 0 .1em; }
-/* SPだけ「夢に向かうあなたを、」の後ろで改行する */
-.st-br-sp { display: none; }
+/* --- 費用の案内（この周囲は無地にして背景画像のキラキラを表示しない） --- */
+.st-close { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center;
+  gap: .2em; text-align: center; margin-top: clamp(12px, 2vw, 28px); padding: 2.4vw 3vw 3vw;
+  font-weight: 800; font-size: clamp(20px, 2.2vw, 40px); line-height: 1.6; }
+.st-close::before { content: ""; position: absolute; left: 0; right: 0; bottom: 100%;
+  height: clamp(12px, 2vw, 28px); pointer-events: none;
+  background: linear-gradient(transparent, #fffdfc); }
+.st-cost { white-space: nowrap; }
+.st-cost:last-child { color: #cf3978; }
+.st-divider { color: #bca6ae; font-weight: 500; font-size: .8em; }
 
 /* ===== SP（1080px基準: font-size 2vw） ===== */
 @media (max-width: 768px) {
@@ -120,8 +120,7 @@ $u = get_template_directory_uri();
   .st-sub, .st-grid3 .st-sub { font-size: 1.4em; }
   .st-grid3 .st-c5 .st-big { font-size: 1.75em; }
   .st-grid3 .st-c6 .st-sub, .st-grid3 .st-c7 .st-sub { font-size: 1.4em; }
-  .st-close { padding: 4vw 3vw 6vw; font-size: 1.5em; }
-  .st-br-sp { display: inline; }
+  .st-close { padding: 5vw 3vw 6vw; font-size: clamp(15px, 4vw, 22px); gap: .1em; }
 }
 </style>
 <section class="st" id="strengths">
@@ -217,9 +216,8 @@ $u = get_template_directory_uri();
     </div>
   </div>
 
-  <!-- 締め -->
+  <!-- 費用の案内 -->
   <div class="st-close">
-    <span class="c1">学ぶ環境も、</span><span class="c2">サポートも、</span><span class="c3">すべてが充実！</span>
-    <span class="dark">夢に向かうあなたを、<br class="st-br-sp"><span class="fee">Ica</span> 池袋キャリアアカデミー が全力で応援します！</span>
+    <span class="st-cost">教材費込み</span><span class="st-divider">／</span><span class="st-cost">モデル代込み</span><span class="st-divider">／</span><span class="st-cost">追加料金なし</span>
   </div>
 </section>

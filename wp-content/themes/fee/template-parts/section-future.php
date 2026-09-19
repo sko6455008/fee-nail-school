@@ -121,7 +121,7 @@ $u = get_template_directory_uri();
       <span class="fu-sign">My Salon &#9825;</span>
     </div>
     <div class="fu-card fu-c3">
-      <h3 class="fu-t">フリーランスとして活躍<span class="fu-t-line">･----･&#10022;----&#9825;</span></h3>
+      <h3 class="fu-t">フリーランスで<span class="fu-t-line">･----･&#10022;----&#9825;</span></h3>
       <span class="fu-photo"><img <?php fee_img_attr('future', '3'); ?> loading="lazy"></span>
       <p class="fu-body">シェアサロンを利用したり、出張ネイリストとして自由に働く道もサポートします。</p>
       <span class="fu-sign">Freelance &#9825;</span>

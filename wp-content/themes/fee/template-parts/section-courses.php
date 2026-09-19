@@ -3,9 +3,8 @@
 // 見出しまわりの寸法はデザインカンプ（全幅=100vw基準）から採寸した値
 // ヘッダー左右の素材: corse_left.png / corse_right.png（余白入り透過PNG）
 // 構成:
-//   グループ1「即戦力ネイリスト養成コース」… 3ヶ月 / 6ヶ月 / 9ヶ月 のタブで切り替え（2枚 / 1枚 / 2枚）
-//   グループ2「アートライトプラン」        … タブなしで2枚を表示
-// 7コースすべてHTMLに書き出してあり、タブは表示・非表示を切り替えるだけ（JSはこのファイル末尾）。
+//   即戦力ネイリストコースの3ヶ月 / 6ヶ月 / 9ヶ月、アートコースの4グループ。
+// 7つのプランをカードで常時表示。SPではカードの説明文（co-item-body）を省略。
 // コース名・時間・料金・説明文はこのファイルに直書き。料金はすべて税込表記。
 $u = get_template_directory_uri();
 ?>
@@ -58,12 +57,12 @@ $u = get_template_directory_uri();
 .co-spark { position: absolute; z-index: 1; pointer-events: none; }
 .co-spark::before { content: "\2726"; }
 
-/* --- コースグループ（白い大枠。1グループ = 見出し + タブ + コースカード） --- */
+/* --- コースグループ（期間ごとに見出しとカードを常時表示） --- */
 .co-group { position: relative; z-index: 1; max-width: 95.4vw; margin: 0.9vw auto 0;
-  background: #fff; border-radius: 1.2vw; padding: 1.6vw 1.9vw 1.9vw;
+  background: #fff; border-radius: 1.2vw; padding: 1.6vw 1.9vw 1.9vw; font-size: clamp(16px, 1.25vw, 22px);
   box-shadow: 0 0.3vw 1vw rgba(210,150,170,0.14);
   --gc: #21a89c; --gc-l: rgba(110,200,190,.18); --gline: #e3f1ef; }   /* グループ色（初期値: ティール） */
-.co-group + .co-group { margin-top: 1.4vw; }
+.co-group + .co-group { margin-top: clamp(24px, 2.4vw, 48px); }
 .co-g1 { border: 0.1vw solid #cfe9e5; }
 .co-g2 { border: 0.1vw solid #f3cfdf; --gc: #d9569a; --gc-l: rgba(236,140,180,.18); --gline: #f6e6ec; }
 
@@ -83,8 +82,12 @@ $u = get_template_directory_uri();
   border-radius: 46% 54% 52% 48% / 52% 46% 54% 48%; }
 .co-g1 .co-num { background: radial-gradient(circle at 45% 38%, #7cd6ca, #29a99a 72%); }
 .co-g2 .co-num { background: radial-gradient(circle at 45% 38%, #cbaaee, #9b6fd6 72%); }
-.co-t { margin: 0; font-weight: 700; font-size: 2.28em; line-height: 1.3; letter-spacing: .02em; }
-.co-t .p { color: #e8397f; font-size: 1.12em; padding: 0 .1em; }
+.co-t { display: flex; align-items: center; flex-wrap: wrap; gap: .25em .6em;
+  margin: 0; font-weight: 700; font-size: clamp(26px, 2.4vw, 44px); line-height: 1.4; letter-spacing: .02em; }
+.co-t .p { display: inline-block; color: #e8397f; font-size: 1.12em; padding: 0 .1em; }
+.co-duration { display: inline-flex; align-items: baseline; gap: .08em; padding: .08em .45em .13em;
+  border-radius: .25em; background: var(--gc-l); color: var(--gc); white-space: nowrap; }
+.co-duration strong { font-family: var(--font-en); font-size: 1.5em; line-height: 1; }
 .co-gdesc { min-width: 0; }
 /* リード文の下線は端がぼけた筆跡風。文字より少し長く引く */
 .co-lead { position: relative; display: inline-block; margin: 0;
@@ -112,56 +115,40 @@ $u = get_template_directory_uri();
 .co-i5 { --sw: 2.138; --tx:  0.002;  --ty: 0.083; }
 .co-i6 { --sw: 2.086; --tx: -0.069;  --ty: 0.053; }
 
-/* --- 期間タブ（グループ1のみ。見出しとの間に薄い区切り線） --- */
-.co-tabs { display: flex; justify-content: center; gap: 0.8vw; margin-top: 1.5vw;
-  padding-top: 1.4vw; border-top: 0.1vw solid var(--gline); }
-.co-tab { appearance: none; -webkit-appearance: none; cursor: pointer; margin: 0; min-width: 13vw;
-  border: 0.12vw solid #29a99a; background: #fff; color: #1e8f86;
-  font-family: var(--font-jp); font-weight: 700; font-size: 1.2em; letter-spacing: .06em;
-  padding: 0.55em 1.6em; border-radius: 999px; line-height: 1.3; white-space: nowrap; text-align: center;
-  transition: background .15s ease, color .15s ease, transform .12s ease;
-  outline: none; -webkit-tap-highlight-color: transparent; }
-.co-tab:hover { background: #eef9f8; }
-.co-tab:active { transform: scale(.97); }
-.co-tab:focus-visible { box-shadow: 0 0 0 0.25vw rgba(30,163,168,.3); }
-.co-tab.is-active { background: linear-gradient(135deg, #4fcbb8, #1ea3a8); color: #fff;
-  border-color: transparent; box-shadow: 0 0.3vw 0.9vw rgba(30,163,168,.3); }
-.co-tab.is-active:hover { background: linear-gradient(135deg, #4fcbb8, #1ea3a8); }
-.co-panel[hidden] { display: none; }
-
-/* --- コースカード（PC2列。1枚だけのタブは中央に置く） --- */
-.co-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.4vw; margin-top: 1.4vw; }
-/* タブのないグループ2は、見出しとカードの間にタブと同じ区切り線を入れて揃える */
-.co-g2 .co-items { margin-top: 1.5vw; padding-top: 1.4vw; border-top: 0.1vw solid var(--gline); }
-.co-item { flex: 0 0 calc((100% - 1.4vw) / 2); display: flex; flex-direction: column;
-  border-radius: 1vw; padding: 1.3vw 1.5vw 1.4vw; border: 0.1vw solid; }
+/* --- コースカード（PC2列、1プランのグループは全幅） --- */
+.co-items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(16px, 1.6vw, 32px);
+  margin-top: 1.5vw; padding-top: 1.4vw; border-top: 1px solid var(--gline); }
+.co-item { min-width: 0; display: flex; flex-direction: column;
+  border-radius: 1vw; padding: clamp(20px, 1.8vw, 36px); border: 1px solid; }
+.co-item:only-child { grid-column: 1 / -1; }
 .co-g1 .co-item { background: #f4fbfa; border-color: #cfe9e5; }
 .co-g2 .co-item { background: #fff5f9; border-color: #f3cfdf; }
-/* 期間バッジ ＋ 授業時間（タブ内では時間数が主役なので大きめ） */
+/* 期間バッジ ＋ 授業時間 */
 .co-item-head { display: flex; align-items: center; flex-wrap: wrap; gap: 0.5vw 0.9vw; }
 .co-item-term { display: inline-block; color: #fff; font-weight: 700; font-size: 0.95em;
   letter-spacing: .06em; padding: 0.3em 0.95em; border-radius: 999px; line-height: 1.3; white-space: nowrap; }
 .co-g1 .co-item-term { background: linear-gradient(135deg, #4fcbb8, #1ea3a8); }
 .co-g2 .co-item-term { background: linear-gradient(135deg, #f37bab, #e0439a); }
-.co-item-hours { font-weight: 700; font-size: 1.35em; line-height: 1.3; color: #2f2a28; white-space: nowrap; }
+.co-item-hours { display: flex; align-items: baseline; flex-wrap: wrap; column-gap: .12em;
+  font-weight: 700; font-size: 1.5em; line-height: 1.4; color: #2f2a28; }
 .co-item-hours .n { font-family: var(--font-en); font-size: 1.45em; padding: 0 .04em; color: var(--gc); }
-.co-item-hours small { font-size: .72em; font-weight: 600; color: #6b5b57; }
+.co-item-hours small { font-size: .65em; font-weight: 600; color: #6b5b57; white-space: nowrap; }
 /* 説明文（支給テキストをそのまま掲載） */
-.co-item-body { margin: 0.8vw 0 0; font-weight: 500; font-size: 0.95em; line-height: 1.78; color: #4a4340; }
+.co-item-body { margin: 1em 0 0; font-weight: 500; font-size: 1em; line-height: 1.85; color: #4a4340; }
 .co-item-body p { margin: 0; }
 .co-item-body p + p { margin-top: 0.5em; }
 /* 「〜な方におすすめ」は薄い黄色の箱で目立たせる */
-.co-item-rec { margin: 0.9vw 0 1.1vw; padding: 0.55em 0.8em; border-radius: 0.5em;
-  background: rgba(255,209,102,.26); font-weight: 700; font-size: 0.95em; line-height: 1.7; color: #2f2a28; }
+.co-item-rec { margin: 1em 0 1.2em; padding: 0.65em 0.8em; border-radius: 0.5em;
+  background: rgba(255,209,102,.26); font-weight: 700; font-size: 1em; line-height: 1.7; color: #2f2a28; }
 /* 下段: 左に料金、右に相談ボタン（カードの高さが揃うよう常に最下部へ） */
 .co-item-foot { margin-top: auto; padding-top: 1vw; border-top: 0.1vw solid #e6ddd9;
   display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.8vw 1vw; }
-.co-item-price { display: flex; align-items: baseline; gap: 0.5vw; white-space: nowrap; }
+.co-item-price { display: flex; align-items: baseline; flex-wrap: wrap; gap: .2em .5em; }
 .co-item-fee { font-size: 0.9em; font-weight: 600; letter-spacing: .1em; color: #6b5b57; }
-.co-price { font-family: var(--font-en); font-weight: 600; font-size: 2em; letter-spacing: .01em;
-  line-height: 1.2; color: var(--gc); }
+.co-price { font-family: var(--font-en); font-weight: 600; font-size: 2.3em; letter-spacing: .01em;
+  line-height: 1.2; color: var(--gc); white-space: nowrap; }
 .co-price .tax { font-family: var(--font-jp); font-size: 0.42em; font-weight: 600; color: #4a4340; }
-.co-cta { flex: 0 0 auto; height: 3.1vw; padding: 0 1.6em; display: inline-flex; align-items: center; justify-content: center;
+.co-cta { flex: 0 0 auto; min-height: 48px; padding: .65em 1.4em; display: inline-flex; align-items: center; justify-content: center;
   gap: 0.4vw; color: #fff; font-weight: 700; font-size: 1em; white-space: nowrap;
   border-radius: 999px; text-decoration: none; line-height: 1.3;
   transition: transform .12s ease, filter .15s ease;
@@ -170,11 +157,12 @@ $u = get_template_directory_uri();
 .co-g2 .co-cta { background: linear-gradient(135deg, #f37bab, #e0439a); }
 .co-cta:hover { filter: brightness(1.05); }
 .co-cta:active { transform: scale(0.98); }
+.co-cta:focus-visible { outline: 3px solid var(--gc); outline-offset: 4px; }
 .co-cta .ar { font-family: sans-serif; font-size: 1.15em; }
 
 /* --- 注記 --- */
 .co-notes { position: relative; z-index: 1; text-align: center; padding: 1.4vw 0 2.4vw;
-  font-weight: 500; font-size: 1.05em; line-height: 2; color: #6b5b57; }
+  font-weight: 500; font-size: clamp(16px, 1.2vw, 22px); line-height: 2; color: #6b5b57; }
 
 /* ===== SP（全幅=100vw基準: font-size 2vw = 1em） ===== */
 @media (max-width: 768px) {
@@ -185,47 +173,54 @@ $u = get_template_directory_uri();
   .co-head-r { right: 0; top: 0; width: 24.6vw; height: 33.8vw; --base: 24.6vw; }
   .co-script { font-size: 2.55em; }
   .co-title { font-size: 3.24em; }
-  .co-ribbon { font-size: 1.21em; padding: 0.42em 1.3em; }
-  /* SPは吹き出しと帯が近いので回転させない */
-  .co-bubble { width: 17vw; height: 13.4vw; font-size: 0.92em; line-height: 1.7;
-    transform: none; }
-  .co-bub-l { left: 7.4vw; top: 14.1vw; }
-  .co-bub-r { right: 7.4vw; top: 15.3vw; }
+  .co-ribbon { font-size: 1.7em; padding: 0.42em 1.3em; }
+  /* SPでは左右の吹き出しを非表示にする */
+  .co-bubble.co-bub-l, .co-bubble.co-bub-r { display: none; }
 
-  .co-group { max-width: 95.3vw; margin-top: 3vw; padding: 3.2vw; border-radius: 2.4vw; }
-  .co-group + .co-group { margin-top: 4vw; }
-  /* SPは 1行目: 写真（正方形）＋ナンバー・コース名 / 2行目: リード＋チップ（全幅） */
-  .co-ghead { grid-template-columns: 24vw minmax(0, 1fr); column-gap: 2.5vw; row-gap: 2.4vw; align-items: center; }
-  .co-gpic { grid-row: 1; height: 24vw; min-height: 0; border-radius: 1.8vw; }
-  .co-gtitle { flex-direction: column; align-items: flex-start; gap: 1.4vw; }
-  .co-num { width: 6.4vw; height: 6vw; font-size: 1.4em; }
-  .co-t { font-size: 2em; line-height: 1.3; }
-  .co-gdesc { grid-column: 1 / -1; }
+  .co-group { max-width: 95.3vw; margin-top: 3vw; padding: 4vw; border-radius: 3vw;
+    font-size: clamp(16px, 3.6vw, 20px); }
+  .co-group + .co-group { margin-top: 6vw; }
+  /* SPは正方形の写真の下側を白く透かし、コース名と期間を左下にまとめる */
+  .co-ghead { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto auto;
+    row-gap: clamp(18px, 5vw, 28px); align-items: start; }
+  .co-gpic { grid-area: 1 / 1; width: 100%; max-width: 440px; height: auto; aspect-ratio: 1 / 1;
+    min-height: 0; justify-self: center; align-self: start; border-radius: clamp(12px, 3vw, 20px); background: #fff; }
+  .co-gpic::after { content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(255, 253, 252, 0) 20%, rgba(255, 253, 252, .3) 50%,
+      rgba(255, 253, 252, .9) 100%, #fffdfc 100%); }
+  .co-gtitle { grid-area: 1 / 1; position: relative; z-index: 1; width: 100%; max-width: 440px;
+    justify-self: center; align-self: stretch; align-items: flex-end; justify-content: flex-start;
+    padding: clamp(18px, 5vw, 28px); color: #3a3230; text-align: left; }
+  .co-num { display: none; }
+  .co-t { align-items: flex-start; flex-direction: column; flex-wrap: nowrap; gap: .4em;
+    font-size: clamp(20px, 5.7vw, 28px); line-height: 1.5; letter-spacing: .02em; }
+  .co-t .p { display: inline; color: inherit; font-size: 1em; padding: 0; }
+  .co-duration { gap: .15em; padding: 0; border: 0; border-radius: 0;
+    background: none; color: #287b72; font-size: 1em; line-height: 1.1; }
+  .co-duration strong { font-size: 3em; font-weight: 600; }
+  .co-g2 .co-t { font-size: clamp(26px, 6.8vw, 36px); }
+  .co-gdesc { grid-area: 2 / 1; }
   .co-lead { font-size: 1.04em; padding-bottom: 0.6em; }
   .co-recs { gap: 1.2vw 1.5vw; margin-top: 2vw; }
   .co-recs-t { font-size: 0.95em; width: 100%; margin-right: 0; }
-  .co-chip { font-size: 0.9em; gap: 1vw; padding: 0.5vw 1.8vw 0.5vw 0.8vw; }
-  .co-icb { width: 5.6vw; height: 5.6vw; --icsz: 3.4vw; }
+  .co-chip { font-size: 0.9em; gap: 2vw; padding: 1vw 2.5vw 1vw 1vw; max-width: 100%; white-space: normal; }
+  .co-icb { width: 28px; height: 28px; --icsz: 18px; }
 
-  .co-tabs { gap: 1.5vw; margin-top: 3vw; padding-top: 2.6vw; border-top-width: 0.2vw; }
-  .co-tab { flex: 1 1 0; min-width: 0; font-size: 1.15em; padding: 0.65em 0.4em; border-width: 0.3vw; }
-
-  .co-items { flex-direction: column; gap: 3vw; margin-top: 3vw; }
-  .co-g2 .co-items { margin-top: 3vw; padding-top: 2.6vw; border-top-width: 0.2vw; }
-  .co-item { flex: 1 1 auto; padding: 3vw 3.2vw 3.4vw; border-radius: 2vw; }
-  .co-item-head { gap: 1vw 2vw; }
-  .co-item-term { font-size: 1.05em; }
-  .co-item-hours { font-size: 1.4em; }
-  .co-item-body { margin-top: 1.8vw; font-size: 1em; line-height: 1.76; }
-  .co-item-rec { margin: 1.8vw 0 2.4vw; font-size: 1em; }
+  .co-items { grid-template-columns: minmax(0, 1fr); gap: 4vw; margin-top: 4vw; padding-top: 4vw; }
+  .co-item { padding: 4vw; border-radius: 2.5vw; }
+  .co-item-head { gap: 2vw; }
+  .co-item-term { font-size: .95em; }
+  .co-item-hours { font-size: 1.4em; width: 100%; }
+  .co-item-body { display: none; }
+  .co-item-rec { margin: 3vw 0 4vw; font-size: 1em; }
   /* SPは料金を中央、ボタンを全幅に */
-  .co-item-foot { flex-direction: column; align-items: stretch; gap: 2vw; padding-top: 2.4vw; border-top-width: 0.2vw; }
+  .co-item-foot { flex-direction: column; align-items: stretch; gap: 3vw; padding-top: 4vw; border-top-width: 1px; }
   .co-item-price { justify-content: center; gap: 1vw; }
   .co-item-fee { font-size: 0.95em; }
-  .co-price { font-size: 2.6em; }
-  .co-cta { height: 6.2vw; font-size: 1.25em; }
+  .co-price { font-size: 2.1em; }
+  .co-cta { min-height: 48px; font-size: 1em; padding: .8em .6em; }
 
-  .co-notes { font-size: 1.2em; padding: 3vw 4vw 5vw; }
+  .co-notes { font-size: 16px; padding: 5vw 4vw 7vw; }
 }
 </style>
 <section class="co" id="courses">
@@ -248,34 +243,26 @@ $u = get_template_directory_uri();
     <div><span class="co-ribbon">なりたい未来に合わせて選べる&#9825;</span></div>
   </div>
 
-  <!-- グループ1: 即戦力ネイリスト養成コース（3ヶ月 / 6ヶ月 / 9ヶ月 のタブ切り替え） -->
-  <div class="co-group co-g1">
+  <!-- グループ1: 即戦力ネイリストコース 3ヶ月 -->
+  <section class="co-group co-g1" aria-labelledby="co-title-3m">
     <div class="co-ghead">
       <span class="co-gpic"><img <?php fee_img_attr('courses', '1'); ?> loading="lazy"></span>
       <div class="co-gtitle">
         <span class="co-num">01</span>
-        <h3 class="co-t">即戦力ネイリスト養成<span class="p">コース</span></h3>
+        <h3 class="co-t" id="co-title-3m"><span>即戦力ネイリスト<span class="p">コース</span></span><span class="co-duration"><strong>3</strong>ヶ月</span></h3>
       </div>
       <div class="co-gdesc">
-        <p class="co-lead">期間は3ヶ月・6ヶ月・9ヶ月から。基礎技術からサロンワークまで学び、プロデビューを目指すコース</p>
+        <p class="co-lead">基礎技術からサロンワークまで集中的に学び、短期間でプロデビューを目指すコース</p>
         <div class="co-recs">
           <span class="co-recs-t">こんな方におすすめ</span>
           <span class="co-chip"><span class="co-icb co-i1"><img src="<?php echo $u; ?>/assets/images/course1.png" alt="" loading="lazy" decoding="async"></span>基礎からサロンワークまで</span>
-          <span class="co-chip"><span class="co-icb co-i2"><img src="<?php echo $u; ?>/assets/images/course2.png" alt="" loading="lazy" decoding="async"></span>期間を選んでプロデビュー</span>
+          <span class="co-chip"><span class="co-icb co-i2"><img src="<?php echo $u; ?>/assets/images/course2.png" alt="" loading="lazy" decoding="async"></span>短期集中でプロデビュー</span>
           <span class="co-chip"><span class="co-icb co-i3"><img src="<?php echo $u; ?>/assets/images/course3.png" alt="" loading="lazy" decoding="async"></span>サロンワーク特化</span>
         </div>
       </div>
     </div>
 
-    <!-- 期間タブ -->
-    <div class="co-tabs" role="tablist" aria-label="コースの期間">
-      <button class="co-tab is-active" type="button" role="tab" id="co-tab-3m" aria-controls="co-panel-3m" aria-selected="true" tabindex="0">3ヶ月コース</button>
-      <button class="co-tab" type="button" role="tab" id="co-tab-6m" aria-controls="co-panel-6m" aria-selected="false" tabindex="-1">6ヶ月コース</button>
-      <button class="co-tab" type="button" role="tab" id="co-tab-9m" aria-controls="co-panel-9m" aria-selected="false" tabindex="-1">9ヶ月コース</button>
-    </div>
-
-    <!-- 3ヶ月 -->
-    <div class="co-panel co-items" id="co-panel-3m" role="tabpanel" aria-labelledby="co-tab-3m">
+    <div class="co-items">
       <div class="co-item">
         <div class="co-item-head">
           <span class="co-item-term">3ヶ月コース</span>
@@ -309,8 +296,27 @@ $u = get_template_directory_uri();
       </div>
     </div>
 
-    <!-- 6ヶ月 -->
-    <div class="co-panel co-items" id="co-panel-6m" role="tabpanel" aria-labelledby="co-tab-6m" hidden>
+  </section>
+
+  <!-- グループ2: 即戦力ネイリストコース 6ヶ月 -->
+  <section class="co-group co-g1" aria-labelledby="co-title-6m">
+    <div class="co-ghead">
+      <span class="co-gpic"><img <?php fee_img_attr('courses', '6m'); ?> loading="lazy"></span>
+      <div class="co-gtitle">
+        <span class="co-num">02</span>
+        <h3 class="co-t" id="co-title-6m"><span>即戦力ネイリスト<span class="p">コース</span></span><span class="co-duration"><strong>6</strong>ヶ月</span></h3>
+      </div>
+      <div class="co-gdesc">
+        <p class="co-lead">基礎からサロンワークまで段階的に学び、自分のペースで技術を身につけるコース</p>
+        <div class="co-recs">
+          <span class="co-recs-t">こんな方におすすめ</span>
+          <span class="co-chip"><span class="co-icb co-i1"><img src="<?php echo $u; ?>/assets/images/course1.png" alt="" loading="lazy" decoding="async"></span>基礎からサロンワークまで</span>
+          <span class="co-chip"><span class="co-icb co-i2"><img src="<?php echo $u; ?>/assets/images/course2.png" alt="" loading="lazy" decoding="async"></span>仕事や生活と両立</span>
+          <span class="co-chip"><span class="co-icb co-i3"><img src="<?php echo $u; ?>/assets/images/course3.png" alt="" loading="lazy" decoding="async"></span>無理なく技術を習得</span>
+        </div>
+      </div>
+    </div>
+    <div class="co-items">
       <div class="co-item">
         <div class="co-item-head">
           <span class="co-item-term">6ヶ月コース</span>
@@ -328,8 +334,27 @@ $u = get_template_directory_uri();
       </div>
     </div>
 
-    <!-- 9ヶ月 -->
-    <div class="co-panel co-items" id="co-panel-9m" role="tabpanel" aria-labelledby="co-tab-9m" hidden>
+  </section>
+
+  <!-- グループ3: 即戦力ネイリストコース 9ヶ月 -->
+  <section class="co-group co-g1" aria-labelledby="co-title-9m">
+    <div class="co-ghead">
+      <span class="co-gpic"><img <?php fee_img_attr('courses', '9m'); ?> loading="lazy"></span>
+      <div class="co-gtitle">
+        <span class="co-num">03</span>
+        <h3 class="co-t" id="co-title-9m"><span>即戦力ネイリスト<span class="p">コース</span></span><span class="co-duration"><strong>9</strong>ヶ月</span></h3>
+      </div>
+      <div class="co-gdesc">
+        <p class="co-lead">十分な練習期間を確保し、サロンワークに必要な実践力をじっくり養うコース</p>
+        <div class="co-recs">
+          <span class="co-recs-t">こんな方におすすめ</span>
+          <span class="co-chip"><span class="co-icb co-i1"><img src="<?php echo $u; ?>/assets/images/course1.png" alt="" loading="lazy" decoding="async"></span>基礎から応用まで</span>
+          <span class="co-chip"><span class="co-icb co-i2"><img src="<?php echo $u; ?>/assets/images/course2.png" alt="" loading="lazy" decoding="async"></span>じっくり着実に学べる</span>
+          <span class="co-chip"><span class="co-icb co-i3"><img src="<?php echo $u; ?>/assets/images/course3.png" alt="" loading="lazy" decoding="async"></span>実践力を身につけたい</span>
+        </div>
+      </div>
+    </div>
+    <div class="co-items">
       <div class="co-item">
         <div class="co-item-head">
           <span class="co-item-term">9ヶ月コース</span>
@@ -362,18 +387,18 @@ $u = get_template_directory_uri();
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- グループ2: アートライトプラン（3ヶ月・タブなし） -->
-  <div class="co-group co-g2">
+  <!-- グループ4: アートコース -->
+  <section class="co-group co-g2" aria-labelledby="co-title-art">
     <div class="co-ghead">
       <span class="co-gpic"><img <?php fee_img_attr('courses', '2'); ?> loading="lazy"></span>
       <div class="co-gtitle">
-        <span class="co-num">02</span>
-        <h3 class="co-t">アートライト<span class="p">プラン</span></h3>
+        <span class="co-num">04</span>
+        <h3 class="co-t" id="co-title-art"><span>アート<span class="p">コース</span></span></h3>
       </div>
       <div class="co-gdesc">
-        <p class="co-lead">アート技術に絞って、必要な内容を効率よく学べる3ヶ月のプラン</p>
+        <p class="co-lead">アート技術に絞って、必要な内容を効率よく学べる3ヶ月のライトプラン</p>
         <div class="co-recs">
           <span class="co-recs-t">こんな方におすすめ</span>
           <span class="co-chip"><span class="co-icb co-i4"><img src="<?php echo $u; ?>/assets/images/course4.png" alt="" loading="lazy" decoding="async"></span>短期間で効率よく学べる</span>
@@ -416,39 +441,10 @@ $u = get_template_directory_uri();
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- 注記 -->
   <div class="co-notes">
     ※分割払いも可能ですのでご相談ください。<br>
   </div>
 </section>
-
-<script>
-// コース内容: 期間タブ（3ヶ月 / 6ヶ月 / 9ヶ月）の切り替え。左右キーでも移動できる
-(function(){
-  var wrap = document.querySelector('.co-g1');
-  if(!wrap) return;
-  var tabs = Array.prototype.slice.call(wrap.querySelectorAll('.co-tab'));
-  var panels = Array.prototype.slice.call(wrap.querySelectorAll('.co-panel'));
-  if(!tabs.length || tabs.length !== panels.length) return;
-  function activate(idx){
-    tabs.forEach(function(t, k){
-      var on = (k === idx);
-      t.classList.toggle('is-active', on);
-      t.setAttribute('aria-selected', on ? 'true' : 'false');
-      t.setAttribute('tabindex', on ? '0' : '-1');
-    });
-    panels.forEach(function(p, k){ p.hidden = (k !== idx); });
-  }
-  tabs.forEach(function(t, i){
-    t.addEventListener('click', function(){ activate(i); });
-    t.addEventListener('keydown', function(e){
-      var n = null;
-      if(e.key === 'ArrowRight'){ n = (i + 1) % tabs.length; }
-      else if(e.key === 'ArrowLeft'){ n = (i - 1 + tabs.length) % tabs.length; }
-      if(n !== null){ e.preventDefault(); activate(n); tabs[n].focus(); }
-    });
-  });
-})();
-</script>

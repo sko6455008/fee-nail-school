@@ -1,8 +1,11 @@
 <?php
 // アクセス（Location）セクション — コーディング版
 // index.php（画像版）のオーバーレイ実装（$access_html / .access / .acard）を通常フローに移設したもの。
-// 住所・営業時間などの情報は index.php の現行コード化済み内容を正とする。
-$mapurl = "https://www.google.com/maps/search/?api=1&query=%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%B1%8A%E5%B3%B6%E5%8C%BA%E6%B1%A0%E8%A2%8B2-53-12";
+// 所在地の表示・地図リンク・埋め込み地図で同じ住所を使用する。
+$address = '東京都豊島区池袋2丁目53-12 中條ビル7F';
+$mapquery = rawurlencode($address);
+$mapurl = 'https://www.google.com/maps/search/?api=1&query=' . $mapquery;
+$mapembedurl = 'https://maps.google.com/maps?q=' . $mapquery . '&z=16&hl=ja&output=embed';
 $u = get_template_directory_uri();
 ?>
 <style>
@@ -107,18 +110,18 @@ $u = get_template_directory_uri();
     </div>
     <div class="ac2-body">
       <div class="ac2-map">
-        <iframe src="https://maps.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E8%B1%8A%E5%B3%B6%E5%8C%BA%E6%B1%A0%E8%A2%8B2-53-12&z=16&hl=ja&output=embed" loading="lazy" title="ICA 池袋キャリアアカデミー アクセスマップ" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="<?php echo esc_url( $mapembedurl ); ?>" loading="lazy" title="ICA 池袋キャリアアカデミー アクセスマップ" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <a class="ac2-mapbtn" href="<?php echo esc_url( $mapurl ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Googleマップで見る">
           <svg class="mb-pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span>マップで見る</span><svg class="mb-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 13.5V19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 19V8a1.5 1.5 0 0 1 1.5-1.5H10"/></svg>
         </a>
       </div>
       <div class="acard2">
-        <div class="acard2-ttl"><span class="acard2-ttl-em">ICA</span> 池袋キャリアアカデミー</div>
+        <div class="acard2-ttl"><span class="acard2-ttl-em">ICA</span> 池袋<span class="acard2-school-name">キャリアアカデミー</span></div>
         <div class="acard2-row">
           <span class="acard2-ic acard2-ic-pin"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg></span>
           <div>
             <div class="acard2-h acard2-h-pink">・所在地</div>
-            <div class="acard2-txt">〒171-0014<br>東京都豊島区池袋2-53-12<br>池袋駅西口 <span class="acard2-pink">徒歩3分</span></div>
+            <div class="acard2-txt">〒171-0014<br><?php echo esc_html( $address ); ?><br>池袋駅 <span class="acard2-pink">徒歩5分</span></div>
           </div>
         </div>
         <hr class="acard2-div">
