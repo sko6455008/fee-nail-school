@@ -22,7 +22,6 @@ get_header();
   <?php get_template_part('template-parts/section-steps'); ?>
   <?php get_template_part('template-parts/section-access'); ?>
   <?php get_template_part('template-parts/section-faq'); ?>
-  <?php get_template_part('template-parts/section-sister'); ?>
   <?php get_template_part('template-parts/section-manga'); ?>
 </main>
 
