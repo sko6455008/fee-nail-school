@@ -111,13 +111,18 @@ $u = get_template_directory_uri();
 .fv-btns .btn-ic { display: inline-flex; }
 .fv-btns .btn-ic svg { width: 1.15em; height: 1.15em; }
 
+/* 横向きの大型タブレットまで、見出しの右端とネイルの実画像の間に余白を確保する。 */
+@media (min-width: 769px) and (max-width: 1366px) {
+  .fv-hero { left: 62vw; top: -7vw; width: 47vw; }
+}
+
 /* ===== SP（1080px基準: font-size 2vw = 21.6px相当） ===== */
 @media (max-width: 768px) {
   .fv { font-size: 2vw; height: 135vw;
     background-image: url('<?php echo $u; ?>/assets/images/FV_bg_sp.png'); }
   /* 写真（SPはPCより大きく、ネイルは右上いっぱい・ジェルは左下・チャートは右下） */
-  /* SPも支給デザインSP版に合わせる（右端は画面外へ見切れる） */
-  .fv-hero { left: 40vw; width: 90.2vw; }
+  /* 3行の見出しを大きく保ち、ネイル写真は右側に収める。 */
+  .fv-hero { left: 48vw; top: 0; width: 80vw; }
   .fv-powder { left: -12vw; top: 65vw; width: 57vw; }
   .fv-color { left: 55.7vw; top: 81.9vw; width: 55vw; }
   .fv-splash { filter: blur(0.7vw); }
