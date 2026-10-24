@@ -540,23 +540,23 @@
       },
       "strengths_008": {
         "label": "表示テキスト",
-        "context": "総授業時間 480時間以上 即戦力を目指せる！",
+        "context": "総授業時間 圧倒的時間数 即戦力を目指せる！",
         "raw": "総授業時間",
         "default": "総授業時間",
         "type": "text"
       },
       "strengths_009": {
-        "label": "数字",
-        "context": "480時間以上",
-        "raw": "480",
-        "default": "480",
+        "label": "強調する文字",
+        "context": "圧倒的時間数",
+        "raw": "圧倒的",
+        "default": "圧倒的",
         "type": "text"
       },
       "strengths_010": {
         "label": "表示テキスト",
-        "context": "480時間以上",
-        "raw": "時間以上",
-        "default": "時間以上",
+        "context": "圧倒的時間数",
+        "raw": "時間数",
+        "default": "時間数",
         "type": "text"
       },
       "strengths_011": {
@@ -596,44 +596,44 @@
       },
       "strengths_016": {
         "label": "表示テキスト",
-        "context": "自習室 使い放題 授業がない日も自由に使える！",
-        "raw": "自習室",
-        "default": "自習室",
+        "context": "中途解約制度あり 受講途中でも解約OK ※申出期限・解約手数料等は受講契約書に基づきます。",
+        "raw": "中途解約制度あり",
+        "default": "中途解約制度あり",
         "type": "text"
       },
       "strengths_017": {
         "label": "表示テキスト",
-        "context": "使い放題",
-        "raw": "使い放題",
-        "default": "使い放題",
+        "context": "受講途中でも解約OK",
+        "raw": "受講途中でも解約OK",
+        "default": "受講途中でも解約OK",
         "type": "text"
       },
       "strengths_018": {
         "label": "表示テキスト",
-        "context": "授業がない日も自由に使える！",
-        "raw": "授業がない日も",
-        "default": "授業がない日も",
+        "context": "※申出期限・解約手数料等は受講契約書に基づきます。",
+        "raw": "※申出期限・解約手数料等は",
+        "default": "※申出期限・解約手数料等は",
         "type": "text"
       },
       "strengths_019": {
         "label": "強調する文字",
-        "context": "授業がない日も自由に使える！",
-        "raw": "自由に使える！",
-        "default": "自由に使える！",
+        "context": "※申出期限・解約手数料等は受講契約書に基づきます。",
+        "raw": "受講契約書に基づきます。",
+        "default": "受講契約書に基づきます。",
         "type": "text"
       },
       "strengths_020": {
         "label": "表示テキスト",
-        "context": "人気セミナー トレンドアート受け放題 最新デザインが学べる！",
+        "context": "人気セミナー トレンドアート 最新デザインが学べる！",
         "raw": "人気セミナー",
         "default": "人気セミナー",
         "type": "text"
       },
       "strengths_021": {
         "label": "表示テキスト",
-        "context": "トレンドアート受け放題",
-        "raw": "トレンドアート受け放題",
-        "default": "トレンドアート受け放題",
+        "context": "トレンドアート",
+        "raw": "トレンドアート",
+        "default": "トレンドアート",
         "type": "text"
       },
       "strengths_022": {
@@ -687,21 +687,21 @@
       },
       "strengths_029": {
         "label": "表示テキスト",
-        "context": "教材費込み／モデル代込み／追加料金なし",
-        "raw": "教材費込み",
-        "default": "教材費込み",
+        "context": "材料代込み／モデル代込み／追加料金なし",
+        "raw": "材料代込み",
+        "default": "材料代込み",
         "type": "text"
       },
       "strengths_030": {
         "label": "表示テキスト",
-        "context": "教材費込み／モデル代込み／追加料金なし",
+        "context": "材料代込み／モデル代込み／追加料金なし",
         "raw": "モデル代込み",
         "default": "モデル代込み",
         "type": "text"
       },
       "strengths_031": {
         "label": "表示テキスト",
-        "context": "教材費込み／モデル代込み／追加料金なし",
+        "context": "材料代込み／モデル代込み／追加料金なし",
         "raw": "追加料金なし",
         "default": "追加料金なし",
         "type": "text"

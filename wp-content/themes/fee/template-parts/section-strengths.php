@@ -69,8 +69,9 @@ $u = get_template_directory_uri();
 .st-c3 .st-big .n2 { color: #6bbf7e; font-size: 1.25em; }
 .st-c4 { background: #e9f2fb; --acc: #5a9fdb; }
 .st-c4 .st-ic { --sw: 1.832; --ty: 0.048; }
-.st-c4 .st-big { color: #4a90d0; }
-.st-c4 .st-sub .b { color: #4a90d0; }
+#pagetop .st-c4 .st-ribbon { font-size: 1.6em; letter-spacing: .05em; padding: .3em .8em; }
+#pagetop .st-c4 .st-big { color: #4a90d0; font-size: 2.1em; }
+#pagetop .st-c4 .st-sub { font-size: clamp(12px, 1.1vw, 18px); line-height: 1.6; font-weight: 500; }
 .st-c5 { background: #f3edfb; --acc: #a98ce4; }
 .st-c5 .st-ic { --sw: 1.657; --ty: 0.095; }
 .st-c5 .st-big { color: #8a68cc; }
@@ -118,6 +119,9 @@ $u = get_template_directory_uri();
   .st-ribbon, .st-grid3 .st-ribbon { font-size: 2em; letter-spacing: .22em; padding: 0.22em 1.1em; }
   .st-big, .st-grid3 .st-big { font-size: 2.1em; }
   .st-sub, .st-grid3 .st-sub { font-size: 1.4em; }
+  #pagetop .st-c4 .st-ribbon { font-size: 18px; }
+  #pagetop .st-c4 .st-big { font-size: 20px; }
+  #pagetop .st-c4 .st-sub { font-size: 12px; }
   .st-grid3 .st-c5 .st-big { font-size: 1.75em; }
   .st-grid3 .st-c6 .st-sub, .st-grid3 .st-c7 .st-sub { font-size: 1.4em; }
   .st-close { padding: 5vw 3vw 6vw; font-size: clamp(15px, 4vw, 22px); gap: .1em; }
