@@ -446,5 +446,6 @@ $u = get_template_directory_uri();
   <!-- 注記 -->
   <div class="co-notes">
     <?php fee_text('courses_130'); ?><br>
+    <?php fee_text('courses_131'); ?>
   </div>
 </section>

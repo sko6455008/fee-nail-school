@@ -31,6 +31,10 @@ get_header();
         <dd><a href="<?php echo esc_url(home_url('/#courses')); ?>"><?php fee_text('legal_price_link'); ?></a><?php fee_text('legal_price_suffix'); ?></dd>
       </div>
       <div class="legal-row">
+        <dt><?php fee_text('legal_card_statement_label'); ?></dt>
+        <dd><?php fee_text('legal_card_statement'); ?></dd>
+      </div>
+      <div class="legal-row">
         <dt><?php fee_text('legal_contact_label'); ?></dt>
         <dd><a href="<?php echo esc_url('mailto:' . fee_text_value('legal_email')); ?>"><?php fee_text('legal_email'); ?></a></dd>
       </div>
