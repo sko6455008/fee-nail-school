@@ -275,7 +275,6 @@ body {
   #pagetop .cm-free { height: auto; min-height: 52px; padding: 8px; border-radius: 12px; gap: 8px; }
   #pagetop .cm-free .cm-ic { --icsz: 32px; }
   #pagetop .cm-free .t { font-size: 18px; white-space: normal; }
-  #pagetop .cm-free3 + .t { font-size: 16px; }
   #pagetop .cm-paid { padding: 0 4px; }
   #pagetop .cm-paid-row { flex-direction: column; gap: 6px; padding: 14px 0; text-align: center; }
   #pagetop .cm-paid-row .cm-ic { --icsz: 28px; }

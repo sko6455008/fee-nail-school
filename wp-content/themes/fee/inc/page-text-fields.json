@@ -991,20 +991,6 @@
         "default": "無料",
         "type": "text"
       },
-      "compare_041": {
-        "label": "強調する文字",
-        "context": "アートセミナー無料",
-        "raw": "アートセミナー",
-        "default": "アートセミナー",
-        "type": "text"
-      },
-      "compare_042": {
-        "label": "表示テキスト",
-        "context": "アートセミナー無料",
-        "raw": "無料",
-        "default": "無料",
-        "type": "text"
-      },
       "compare_043": {
         "label": "表示テキスト",
         "context": "商材も有料",

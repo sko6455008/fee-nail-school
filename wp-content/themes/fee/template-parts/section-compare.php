@@ -97,13 +97,12 @@ $u = get_template_directory_uri();
   padding: 0 .04em 0 .1em; }
 .cm-zero .y { color: var(--pink); font-weight: 800; font-size: 4em; padding-right: .12em; }
 .cm-frees { display: flex; gap: 1.3vw; margin-top: 0.8vw; justify-content: center; }
-.cm-free { background: #fff; border-radius: 0.8vw; flex: 1 1 0; max-width: 19.7vw; height: 7.7vw;
+.cm-free { background: #fff; border-radius: 0.8vw; flex: 1 1 0; max-width: 26vw; height: 7.7vw;
   display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center;
   padding: 0 0.7vw; }
 .cm-free .t { font-weight: 800; font-size: 2em; line-height: 1.3; text-align: center;
   white-space: nowrap; }
 .cm-free .t .p { color: var(--pink); }
-.cm-free3 + .t { font-size: 1.35em; }   /* 「アートセミナー無料」は文字数が多いので小さめ */
 .cm-paid { background: #fff; border-radius: 0.9vw; width: 28.6vw; height: 14.3vw;
   display: flex; flex-direction: column; justify-content: center; padding: 0 1.3vw; }
 .cm-paid-row { display: flex; align-items: center; gap: 0.5vw; flex: 1 1 0;
@@ -129,7 +128,6 @@ $u = get_template_directory_uri();
 .cm-free .cm-ic { --icsz: 6.4vw; }
 .cm-free1 { --sw: 2.306; --tx: 0;      --ty: 0.039; }
 .cm-free2 { --sw: 2.560; --tx: 0;      --ty: 0.028; }
-.cm-free3 { --sw: 2.070; --tx: 0.024;  --ty: 0.030; }
 .cm-paid-row .cm-ic { --icsz: 4.3vw; }
 .cm-paid1 { --sw: 3.000; --tx: 0; --ty: 0.093; }
 .cm-paid2 { --sw: 2.926; --tx: 0; --ty: 0.057; }
@@ -177,7 +175,7 @@ $u = get_template_directory_uri();
   .cm-model-s { margin-top: 0.6vw; font-size: 2.15em; }
   .cm-model-r { font-size: 1.8em; line-height: 1.55; }
 
-  /* SP はピンク枠の中に「0円」とバナー3本をまとめる */
+  /* SP はピンク枠の中に「0円」とバナー2本をまとめる */
   .cm-zerobox { border: 0.3vw solid var(--pink-l); border-radius: 3vw; padding: 1vw 3.1vw 1.4vw; }
   .cm-zero .t { font-size: 2.86em; }
   .cm-zero .n { font-size: 8.2em; }
@@ -185,7 +183,6 @@ $u = get_template_directory_uri();
   .cm-frees { flex-direction: column; gap: 0.7vw; margin-top: 1vw; }
   .cm-free { max-width: none; height: 9.4vw; border-radius: 999px; padding: 0 1.2vw; }
   .cm-free .t { font-size: 3.4em; }
-  .cm-free3 + .t { font-size: 2.5em; }
   .cm-paid { width: 100%; height: auto; border-radius: 2vw; padding: 1vw 1vw; }
   .cm-paid-row { gap: 1.3vw; font-size: 1.75em; padding: 1.4vw 0; }
   .cm-paid-row + .cm-paid-row { border-top-width: 0.25vw; }
@@ -271,10 +268,6 @@ $u = get_template_directory_uri();
           <div class="cm-free">
             <span class="cm-ic cm-free2"><img src="<?php echo $u; ?>/assets/images/compare_icon2.png" alt="" loading="lazy" decoding="async"></span>
             <span class="t"><span class="p"><?php fee_text('compare_039'); ?></span><?php fee_text('compare_040'); ?></span>
-          </div>
-          <div class="cm-free">
-            <span class="cm-ic cm-free3"><img src="<?php echo $u; ?>/assets/images/compare_icon3.png" alt="" loading="lazy" decoding="async"></span>
-            <span class="t"><span class="p"><?php fee_text('compare_041'); ?></span><?php fee_text('compare_042'); ?></span>
           </div>
         </div>
       </div>
