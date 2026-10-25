@@ -4,16 +4,16 @@
     "fields": {
       "header_001": {
         "label": "リンクの文字",
-        "context": "Ica 池袋キャリアアカデミー",
-        "raw": "Ica",
-        "default": "Ica",
+        "context": "Fee ネイルアカデミー",
+        "raw": "Fee",
+        "default": "Fee",
         "type": "text"
       },
       "header_002": {
         "label": "リンクの文字",
-        "context": "Ica 池袋キャリアアカデミー",
-        "raw": "池袋キャリアアカデミー",
-        "default": "池袋キャリアアカデミー",
+        "context": "Fee ネイルアカデミー",
+        "raw": "ネイルアカデミー",
+        "default": "ネイルアカデミー",
         "type": "text"
       },
       "header_003": {
@@ -149,16 +149,16 @@
       },
       "fv_008": {
         "label": "表示テキスト",
-        "context": "池袋キャリアアカデミー",
-        "raw": "池袋キャリアアカデミー",
-        "default": "池袋キャリアアカデミー",
+        "context": "ネイルアカデミー",
+        "raw": "ネイルアカデミー",
+        "default": "ネイルアカデミー",
         "type": "text"
       },
       "fv_009": {
         "label": "表示テキスト",
-        "context": "Ica",
-        "raw": "Ica",
-        "default": "Ica",
+        "context": "Fee",
+        "raw": "Fee",
+        "default": "Fee",
         "type": "text"
       },
       "fv_010": {
@@ -327,16 +327,16 @@
       },
       "concept_009": {
         "label": "表示テキスト",
-        "context": "Ica池袋キャリアアカデミー",
-        "raw": "Ica",
-        "default": "Ica",
+        "context": "Fee ネイルアカデミー",
+        "raw": "Fee",
+        "default": "Fee",
         "type": "text"
       },
       "concept_010": {
         "label": "表示テキスト",
-        "context": "Ica池袋キャリアアカデミー",
-        "raw": "池袋キャリアアカデミー",
-        "default": "池袋キャリアアカデミー",
+        "context": "Fee ネイルアカデミー",
+        "raw": "ネイルアカデミー",
+        "default": "ネイルアカデミー",
         "type": "text"
       }
     }
@@ -374,21 +374,21 @@
       },
       "reasons_005": {
         "label": "表示テキスト",
-        "context": "ICA 池袋キャリアアカデミー が選ばれる 6つの理由",
-        "raw": "ICA 池袋キャリアアカデミー が選ばれる",
-        "default": "ICA 池袋キャリアアカデミー が選ばれる",
+        "context": "Fee Nail Academy が選ばれる 6つの理由",
+        "raw": "Fee Nail Academy が選ばれる",
+        "default": "Fee Nail Academy が選ばれる",
         "type": "text"
       },
       "reasons_006": {
         "label": "数字",
-        "context": "ICA 池袋キャリアアカデミー が選ばれる 6つの理由",
+        "context": "Fee Nail Academy が選ばれる 6つの理由",
         "raw": "6",
         "default": "6",
         "type": "text"
       },
       "reasons_007": {
         "label": "表示テキスト",
-        "context": "ICA 池袋キャリアアカデミー が選ばれる 6つの理由",
+        "context": "Fee Nail Academy が選ばれる 6つの理由",
         "raw": "つの理由",
         "default": "つの理由",
         "type": "text"
@@ -491,9 +491,9 @@
     "fields": {
       "strengths_001": {
         "label": "表示テキスト",
-        "context": "＼ICA 池袋キャリアアカデミー が選ばれる理由／",
-        "raw": "ICA 池袋キャリアアカデミー が選ばれる理由",
-        "default": "ICA 池袋キャリアアカデミー が選ばれる理由",
+        "context": "＼Fee Nail Academy が選ばれる理由／",
+        "raw": "Fee Nail Academy が選ばれる理由",
+        "default": "Fee Nail Academy が選ばれる理由",
         "type": "text"
       },
       "strengths_002": {
@@ -713,28 +713,28 @@
     "fields": {
       "compare_001": {
         "label": "表示テキスト",
-        "context": "Ica池袋キャリアアカデミー",
-        "raw": "Ica",
-        "default": "Ica",
+        "context": "Fee ネイルアカデミー",
+        "raw": "Fee",
+        "default": "Fee",
         "type": "text"
       },
       "compare_002": {
         "label": "表示テキスト",
-        "context": "Ica池袋キャリアアカデミー",
-        "raw": "池袋",
-        "default": "池袋",
+        "context": "Fee ネイルアカデミー",
+        "raw": "ネイル",
+        "default": "ネイル",
         "type": "text"
       },
       "compare_003": {
         "label": "表示テキスト",
-        "context": "Ica池袋キャリアアカデミー",
-        "raw": "キャリアアカデミー",
-        "default": "キャリアアカデミー",
+        "context": "Fee ネイルアカデミー",
+        "raw": "アカデミー",
+        "default": "アカデミー",
         "type": "text"
       },
       "compare_004": {
         "label": "表示テキスト",
-        "context": "Ica池袋キャリアアカデミー 当スクール",
+        "context": "Fee ネイルアカデミー 当スクール",
         "raw": "当スクール",
         "default": "当スクール",
         "type": "text"
@@ -2660,9 +2660,9 @@
       },
       "future_003": {
         "label": "表示テキスト",
-        "context": "ICA 池袋キャリアアカデミー を卒業すると...",
-        "raw": "ICA 池袋キャリアアカデミー を卒業すると...",
-        "default": "ICA 池袋キャリアアカデミー を卒業すると...",
+        "context": "Fee Nail Academy を卒業すると...",
+        "raw": "Fee Nail Academy を卒業すると...",
+        "default": "Fee Nail Academy を卒業すると...",
         "type": "text"
       },
       "future_004": {
@@ -2999,23 +2999,23 @@
       },
       "access_004": {
         "label": "表示テキスト",
-        "context": "ICA 池袋キャリアアカデミー",
-        "raw": "ICA",
-        "default": "ICA",
+        "context": "Fee Nail Academy",
+        "raw": "Fee",
+        "default": "Fee",
         "type": "text"
       },
       "access_005": {
         "label": "表示テキスト",
-        "context": "ICA 池袋キャリアアカデミー",
-        "raw": "池袋",
-        "default": "池袋",
+        "context": "Fee Nail Academy",
+        "raw": "ネイル",
+        "default": "ネイル",
         "type": "text"
       },
       "access_006": {
         "label": "表示テキスト",
-        "context": "ICA 池袋キャリアアカデミー",
-        "raw": "キャリアアカデミー",
-        "default": "キャリアアカデミー",
+        "context": "Fee Nail Academy",
+        "raw": "アカデミー",
+        "default": "アカデミー",
         "type": "text"
       },
       "access_007": {
@@ -3180,9 +3180,9 @@
     "fields": {
       "footer_001": {
         "label": "表示テキスト",
-        "context": "© ICA 池袋キャリアアカデミー",
-        "raw": "ICA 池袋キャリアアカデミー",
-        "default": "ICA 池袋キャリアアカデミー",
+        "context": "© Fee Nail Academy",
+        "raw": "Fee Nail Academy",
+        "default": "Fee Nail Academy",
         "type": "text"
       },
       "footer_002": {
@@ -3235,8 +3235,8 @@
       "legal_business": {
         "label": "事業者名",
         "context": "事業者名",
-        "raw": "ICA池袋キャリアアカデミー",
-        "default": "ICA池袋キャリアアカデミー",
+        "raw": "Fee Nail Academy",
+        "default": "Fee Nail Academy",
         "type": "text"
       },
       "legal_manager_label": {

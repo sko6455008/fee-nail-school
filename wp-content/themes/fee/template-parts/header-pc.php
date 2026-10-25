@@ -46,7 +46,7 @@ $a = is_front_page() ? '' : esc_url( home_url('/') );
 }
 </style>
 <header class="pchead2">
-  <a class="pchead2-logo" href="<?php echo $a; ?>#pagetop" aria-label="ICA 池袋キャリアアカデミー トップへ">
+  <a class="pchead2-logo" href="<?php echo $a; ?>#pagetop" aria-label="Fee Nail Academy トップへ">
     <span class="pchead2-fee"><?php fee_text('header_001'); ?></span>
     <span class="pchead2-sub"><?php fee_text('header_002'); ?></span>
   </a>

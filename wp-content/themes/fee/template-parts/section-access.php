@@ -110,7 +110,7 @@ $u = get_template_directory_uri();
     </div>
     <div class="ac2-body">
       <div class="ac2-map">
-        <iframe src="<?php echo esc_url( $mapembedurl ); ?>" loading="lazy" title="ICA 池袋キャリアアカデミー アクセスマップ" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="<?php echo esc_url( $mapembedurl ); ?>" loading="lazy" title="Fee Nail Academy アクセスマップ" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <a class="ac2-mapbtn" href="<?php echo esc_url( $mapurl ); ?>" target="_blank" rel="noopener noreferrer" aria-label="Googleマップで見る">
           <svg class="mb-pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.1 2 5 5.1 5 9c0 5.2 7 13 7 13s7-7.8 7-13c0-3.9-3.1-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span><?php fee_text('access_003'); ?></span><svg class="mb-ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 13.5V19a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 4 19V8a1.5 1.5 0 0 1 1.5-1.5H10"/></svg>
         </a>

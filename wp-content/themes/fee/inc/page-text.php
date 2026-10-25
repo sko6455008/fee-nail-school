@@ -75,6 +75,67 @@ function fee_text_prepare_pages() {
 }
 add_action('init', 'fee_text_prepare_pages', 25);
 
+// 旧名称のまま保存された初期値も一度だけ更新する。独自の文章やカード明細名は維持。
+function fee_text_restore_fee_brand() {
+    if (get_option('fee_brand_restored_v1')) {
+        return;
+    }
+    $old_values = [
+        'header_001' => 'Ica',
+        'header_002' => '池袋キャリアアカデミー',
+        'fv_008' => '池袋キャリアアカデミー',
+        'fv_009' => 'Ica',
+        'concept_009' => 'Ica',
+        'concept_010' => '池袋キャリアアカデミー',
+        'reasons_005' => 'ICA 池袋キャリアアカデミー が選ばれる',
+        'strengths_001' => 'ICA 池袋キャリアアカデミー が選ばれる理由',
+        'compare_001' => 'Ica',
+        'compare_002' => '池袋',
+        'compare_003' => 'キャリアアカデミー',
+        'future_003' => 'ICA 池袋キャリアアカデミー を卒業すると...',
+        'access_004' => 'ICA',
+        'access_005' => '池袋',
+        'access_006' => 'キャリアアカデミー',
+        'footer_001' => 'ICA 池袋キャリアアカデミー',
+        'legal_business' => 'ICA池袋キャリアアカデミー',
+    ];
+    foreach (['lp', 'legal'] as $scope) {
+        $page_id = fee_text_page_id($scope);
+        if (!$page_id) {
+            return; // 固定ページの準備が終わるまで完了扱いにしない。
+        }
+        $values = get_post_meta($page_id, '_fee_page_text', true);
+        if (!is_array($values)) {
+            continue;
+        }
+        $updated = $values;
+        foreach (fee_text_fields($scope) as $key => $field) {
+            if (isset($old_values[$key], $values[$key]) && $values[$key] === $old_values[$key]) {
+                $updated[$key] = $field['default'];
+            }
+        }
+        if ($updated !== $values && !update_post_meta($page_id, '_fee_page_text', wp_slash($updated))) {
+            return;
+        }
+    }
+    $name = get_option('blogname', '');
+    $restored_name = strtr($name, [
+        'ICA 池袋キャリアアカデミー' => 'Fee Nail Academy',
+        'ICA池袋キャリアアカデミー' => 'Fee Nail Academy',
+        'Ica 池袋キャリアアカデミー' => 'Fee Nail Academy',
+        'Ica池袋キャリアアカデミー' => 'Fee Nail Academy',
+        '池袋キャリアアカデミー' => 'Fee Nail Academy',
+    ]);
+    if (in_array($name, ['ICA', 'Ica'], true)) {
+        $restored_name = 'Fee Nail Academy';
+    }
+    if ($restored_name !== $name && !update_option('blogname', $restored_name)) {
+        return;
+    }
+    update_option('fee_brand_restored_v1', 1, false);
+}
+add_action('init', 'fee_text_restore_fee_brand', 30);
+
 // ページ名やスラッグを編集しても専用の表示を維持する。
 add_filter('template_include', function ($template) {
     $scope = fee_text_page_scope(get_queried_object_id());

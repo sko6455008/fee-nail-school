@@ -1,5 +1,5 @@
 <?php
-// 比較表セクション（ICA 池袋キャリアアカデミー vs 一般的なスクール）— コーディング版
+// 比較表セクション（Fee Nail Academy vs 一般的なスクール）— コーディング版
 // アイコン素材: compare_icon1〜6.png / compare_badge.png / compare_person.png
 // 寸法はデザインカンプ（PC 全幅=100vw基準 / SP 全幅=100vw基準）から採寸した値
 $u = get_template_directory_uri();

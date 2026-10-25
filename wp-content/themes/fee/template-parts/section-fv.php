@@ -62,7 +62,7 @@ $u = get_template_directory_uri();
   background-size: 0.25em 100%; background-repeat: repeat-x; }
 /* SP用のドット（デザインでは見出しの最終行の下に入る） */
 
-/* --- 池袋キャリアアカデミー 枠（角丸・ピンク〜ゴールドの細いグラデ罫） --- */
+/* --- ネイルアカデミー 枠（角丸・ピンク〜ゴールドの細いグラデ罫） --- */
 /* 校名が2文字長くなったため、枠を少し広げて文字も少し小さくしている（左右の中心位置は変えていない） */
 .fv-college { position: absolute; z-index: 3; left: 14vw; top: 26.3vw; width: 34.6vw;
   padding: 0.5em 0; text-align: center; line-height: 1.2;
@@ -73,7 +73,7 @@ $u = get_template_directory_uri();
   -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   mask-composite: exclude; pointer-events: none; }
 
-/* --- ICA スクリプトロゴ --- */
+/* --- Fee スクリプトロゴ --- */
 /* スクリプト体(Great Vibes)は字面がemボックスの上下にはみ出すが、background-clip:text は
    ボックスの中しか塗らないため、そのままだとロゴの上端が水平に欠ける。パディングで塗り
    範囲を広げ、同じ量のネガティブマージンで位置を元に戻している（topの値は変えない）。 */

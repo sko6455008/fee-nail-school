@@ -1,5 +1,5 @@
 <?php
-// ICA 池袋キャリアアカデミー LP — コーディング版
+// Fee Nail Academy LP — コーディング版
 // 各セクションは template-parts/section-*.php に分割（1セクション=1ファイル）。
 // 文字は「固定ページ > LP（トップページ）」、写真は「外観 > カスタマイズ」で編集できる。
 // <head>とヘッダーは header.php、フッターとCTAバーは footer.php（漫画ページと共用）。
